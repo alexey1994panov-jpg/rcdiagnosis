@@ -1,5 +1,3 @@
-# engine/topology_1p.py
-
 from dataclasses import dataclass
 from typing import Tuple, Optional
 

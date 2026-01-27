@@ -81,11 +81,6 @@ def compute_local_adjacency(
     rc_states = step.rc_states or {}
     sw = step.switch_states or {}
 
-    if ctrl_rc_id == "1P":
-        print(
-            f"[ADJ_DBG] ctrl=1P Sw10={sw.get('Sw10')} "
-            f"Sw1={sw.get('Sw1')} Sw5={sw.get('Sw5')}"
-        )
 
     node = RC_TOPOLOGY_1P.get(ctrl_rc_id)
 

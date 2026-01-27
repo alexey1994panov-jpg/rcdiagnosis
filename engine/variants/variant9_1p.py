@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from turtle import mode
 from typing import Any, Tuple
 
 from ..station_visochino_1p import rc_is_free, rc_is_occupied, rc_is_locked
@@ -97,6 +98,8 @@ class Variant9Detector:
             ids.append(adj.prev_rc_id)
         if adj.next_rc_id is not None and not adj.next_nc:
             ids.append(adj.next_rc_id)
+        
+
         return ids
 
     def _adj_states(self, step: Any, ctrl_locked_now: bool) -> tuple[bool, bool, bool]:
@@ -114,8 +117,11 @@ class Variant9Detector:
             adj_ids = self.adjacent_rc_ids_topology
 
         if not adj_ids:
+            
             # нет определяемых смежных — вариант 9 по смыслу не работает
             return True, False, False
+        
+        
 
         any_free = False
         all_free = True
@@ -156,6 +162,8 @@ class Variant9Detector:
 
         ctrl_free, ctrl_occ, ctrl_locked_now = self._ctrl_states(step)
         adj_all_free, adj_any_free, adj_any_occ = self._adj_states(step, ctrl_locked_now)
+
+        
 
         # --- Завершение ДС, если уже активен ---
         if self.active and self.phase == "active":

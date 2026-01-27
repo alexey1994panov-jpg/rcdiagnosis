@@ -28,8 +28,8 @@ RC_TOPOLOGY_1P: Dict[str, RcNode] = {
         rc_id="1P",
         prev_candidates=("10-12SP",),
         next_candidates=("1-7SP",),
-        prev_switches=(),              # связь секция-секция
-        next_switches=(),
+        prev_switches=("Sw10",),              # связь секция-секция
+        next_switches=("Sw1", "Sw5"),
     ),
     # 10-12СП — знает следующую секцию и стрелку 10, которая в неё входит
     "10-12SP": RcNode(
@@ -42,10 +42,10 @@ RC_TOPOLOGY_1P: Dict[str, RcNode] = {
     # 1-7СП — знает предыдущую секцию (НП) и стрелки 1 и 5, входящие в неё
     "1-7SP": RcNode(
         rc_id="1-7SP",
-        prev_candidates=("NP",),       # пока формально, фактической НП ещё нет в модели
-        next_candidates=(),
-        prev_switches=("Sw1", "Sw5"),
-        next_switches=(),
+        prev_candidates=(),       # пока формально, фактической НП ещё нет в модели
+        next_candidates=("1P",),
+        prev_switches=(),
+        next_switches=("Sw1", "Sw5"),
     ),
 }
 
@@ -82,42 +82,49 @@ def compute_local_adjacency(
     sw = step.switch_states or {}
 
     if ctrl_rc_id == "1P":
-        # базовая логика: слева 10-12SP через Sw10, справа 1-7SP через Sw1+Sw5
-        prev_rc_id = "10-12SP"
-        next_rc_id = "1-7SP"
+        print(
+            f"[ADJ_DBG] ctrl=1P Sw10={sw.get('Sw10')} "
+            f"Sw1={sw.get('Sw1')} Sw5={sw.get('Sw5')}"
+        )
 
-        sw10 = sw.get("Sw10", 0)
-        sw1 = sw.get("Sw1", 0)
-        sw5 = sw.get("Sw5", 0)
+    node = RC_TOPOLOGY_1P.get(ctrl_rc_id)
 
-        st_prev = rc_states.get(prev_rc_id, 0) if sw_is_plus(sw10) else 0
-        st_next = rc_states.get(next_rc_id, 0) if (sw_is_plus(sw1) and sw_is_plus(sw5)) else 0
-
-    elif ctrl_rc_id == "10-12SP":
-        # Относительно 10-12SP: слева край (NC), справа 1P по плюсу Sw10.
-        prev_rc_id = None
-        next_rc_id = "1P"
-
-        sw10 = sw.get("Sw10", 0)
-        st_prev = 0
-        st_next = rc_states.get(next_rc_id, 0) if sw_is_plus(sw10) else 0
-
-    elif ctrl_rc_id == "1-7SP":
-        # Относительно 1-7SP: слева край (NC), справа 1P по плюсу Sw1+Sw5.
-        prev_rc_id = None
-        next_rc_id = "1P"
-
-        sw1 = sw.get("Sw1", 0)
-        sw5 = sw.get("Sw5", 0)
-        st_prev = 0
-        st_next = rc_states.get(next_rc_id, 0) if (sw_is_plus(sw1) and sw_is_plus(sw5)) else 0
-
-    else:
-        # дефолт: нет явной топологии — считаем края
+    # если нет описания в топологии — ведём себя как раньше в "else"
+    if node is None:
         prev_rc_id = None
         next_rc_id = None
         st_prev = 0
         st_next = 0
+    else:
+        # базовые кандидаты слева/справа из топологии
+        prev_rc_id = node.prev_candidates[0] if node.prev_candidates else None
+        next_rc_id = node.next_candidates[0] if node.next_candidates else None
+
+        # состояние "слева"
+        if prev_rc_id is None:
+            st_prev = 0
+        else:
+            if not node.prev_switches:
+                # чистая секция-секция, без стрелок
+                st_prev = rc_states.get(prev_rc_id, 0)
+            else:
+                # все стрелки должны быть "плюс"
+                if all(sw_is_plus(sw.get(sw_name, 0)) for sw_name in node.prev_switches):
+                    st_prev = rc_states.get(prev_rc_id, 0)
+                else:
+                    st_prev = 0
+
+        # состояние "справа"
+        if next_rc_id is None:
+            st_next = 0
+        else:
+            if not node.next_switches:
+                st_next = rc_states.get(next_rc_id, 0)
+            else:
+                if all(sw_is_plus(sw.get(sw_name, 0)) for sw_name in node.next_switches):
+                    st_next = rc_states.get(next_rc_id, 0)
+                else:
+                    st_next = 0
 
     prev_nc = rc_no_control(st_prev)
     next_nc = rc_no_control(st_next)
@@ -130,6 +137,7 @@ def compute_local_adjacency(
         prev_nc=prev_nc,
         next_nc=next_nc,
     )
+
 
 
 def update_adjacency(

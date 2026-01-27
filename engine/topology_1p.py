@@ -1,5 +1,5 @@
+from typing import Tuple, Optional, Dict
 from dataclasses import dataclass
-from typing import Tuple, Optional
 
 from .station_visochino_1p import (
     StationModel1P,
@@ -10,10 +10,50 @@ from .config_1p import T_PK
 from .types_1p import ScenarioStep
 
 
+@dataclass(frozen=True)
+class RcNode:
+    rc_id: str
+    # кандидаты слева/справа, в терминах id РЦ (аналог PrevSec/NextSec из XML)
+    prev_candidates: Tuple[str, ...]
+    next_candidates: Tuple[str, ...]
+    # имена стрелок, которые должны быть "плюс", чтобы связь была активна
+    prev_switches: Tuple[str, ...]
+    next_switches: Tuple[str, ...]
+
+
+# минимальный словарь топологии для 10-12SP – 1P – 1-7SP
+RC_TOPOLOGY_1P: Dict[str, RcNode] = {
+    # 1П — бесстрелочная, хранит только отношения к секциям
+    "1P": RcNode(
+        rc_id="1P",
+        prev_candidates=("10-12SP",),
+        next_candidates=("1-7SP",),
+        prev_switches=(),              # связь секция-секция
+        next_switches=(),
+    ),
+    # 10-12СП — знает следующую секцию и стрелку 10, которая в неё входит
+    "10-12SP": RcNode(
+        rc_id="10-12SP",
+        prev_candidates=(),            # позже здесь будет "1AP"
+        next_candidates=("1P",),
+        prev_switches=(),
+        next_switches=("Sw10",),
+    ),
+    # 1-7СП — знает предыдущую секцию (НП) и стрелки 1 и 5, входящие в неё
+    "1-7SP": RcNode(
+        rc_id="1-7SP",
+        prev_candidates=("NP",),       # пока формально, фактической НП ещё нет в модели
+        next_candidates=(),
+        prev_switches=("Sw1", "Sw5"),
+        next_switches=(),
+    ),
+}
+
+
 @dataclass
 class LocalAdjacency:
-    prev_rc_id: str | None
-    next_rc_id: str | None
+    prev_rc_id: Optional[str]
+    next_rc_id: Optional[str]
     prev_state: int
     next_state: int
     prev_nc: bool
@@ -36,7 +76,7 @@ def compute_local_adjacency(
     """
     Локальная смежность для заданной ctrl_rc_id на участке 10-12SP–1P–1-7SP.
 
-    Используется per‑РЦ вариантами (v4/v12/v13 и т.п.).
+    Используется per-РЦ вариантами (v4/v12/v13 и т.п.).
     """
     rc_states = step.rc_states or {}
     sw = step.switch_states or {}
@@ -57,11 +97,10 @@ def compute_local_adjacency(
         # Относительно 10-12SP: слева край (NC), справа 1P по плюсу Sw10.
         prev_rc_id = None
         next_rc_id = "1P"
-        
+
         sw10 = sw.get("Sw10", 0)
         st_prev = 0
         st_next = rc_states.get(next_rc_id, 0) if sw_is_plus(sw10) else 0
-        
 
     elif ctrl_rc_id == "1-7SP":
         # Относительно 1-7SP: слева край (NC), справа 1P по плюсу Sw1+Sw5.

@@ -1,0 +1,217 @@
+{
+  "name": "ЛЗ В4 1-7СП",
+  "scenario": {
+    "station": "Visochino",
+    "target_rc": "1P",
+    "dt": 1,
+    "options": {
+      "t_s0101": 3,
+      "t_lz01": 3,
+      "t_kon_v1": 3,
+      "t_pause_v1": 0,
+      "enable_v1": false,
+      "t_s0102": 3,
+      "t_s0202": 3,
+      "t_lz02": 3,
+      "t_kon_v2": 3,
+      "t_pause_v2": 0,
+      "enable_v2": false,
+      "t_s0103": 3,
+      "t_s0203": 3,
+      "t_lz03": 3,
+      "t_kon_v3": 3,
+      "t_pause_v3": 0,
+      "enable_v3": false,
+      "t_s0401": 3,
+      "t_lz04": 3,
+      "t_kon_v4": 3,
+      "t_pause_v4": 0,
+      "enable_v4": true,
+      "t_s05": 3,
+      "t_lz05": 3,
+      "t_pk": 30,
+      "t_kon_v5": 3,
+      "t_pause_v5": 0,
+      "enable_v5": false,
+      "t_s06": 3,
+      "t_lz06": 3,
+      "t_kon_v6": 3,
+      "t_pause_v6": 0,
+      "enable_v6": false,
+      "t_s07": 3,
+      "t_lz07": 3,
+      "t_kon_v7": 3,
+      "t_pause_v7": 0,
+      "enable_v7": false,
+      "t_s0108": 3,
+      "t_s0208": 3,
+      "t_lz08": 3,
+      "t_kon_v8": 3,
+      "t_pause_v8": 0,
+      "enable_v8": false,
+      "t_s0109": 3,
+      "t_lz09": 3,
+      "t_kon_v9": 3,
+      "t_pause_v9": 0,
+      "enable_v9": false,
+      "t_s0110": 3,
+      "t_s0210": 3,
+      "t_s0310": 3,
+      "t_lz10": 3,
+      "t_kon_v10": 3,
+      "t_pause_v10": 0,
+      "enable_v10": false,
+      "t_s11": 3,
+      "t_lz11": 3,
+      "t_kon_v11": 3,
+      "t_pause_v11": 0,
+      "enable_v11": false,
+      "t_s0112": 3,
+      "t_s0212": 3,
+      "t_lz12": 3,
+      "t_kon_v12": 3,
+      "t_pause_v12": 0,
+      "enable_v12": false,
+      "t_s0113": 10,
+      "t_s0213": 10,
+      "t_lz13": 10,
+      "t_kon_v13": 10,
+      "t_pause_v13": 0,
+      "enable_v13": false,
+      "v13_ctrl_rc_id": "10-12SP",
+      "t_c0101_ls": 3,
+      "t_ls01": 3,
+      "t_kon_ls1": 3,
+      "t_pause_ls1": 0,
+      "enable_ls1": false,
+      "t_s0102_ls": 3,
+      "t_s0202_ls": 3,
+      "t_ls0102": 2,
+      "t_ls0202": 10,
+      "t_kon_ls2": 3,
+      "t_pause_ls2": 0,
+      "enable_ls2": false,
+      "t_s0104_ls": 3,
+      "t_s0204_ls": 3,
+      "t_ls0104": 3,
+      "t_ls0204": 10,
+      "t_kon_ls4": 3,
+      "t_pause_ls4": 0,
+      "enable_ls4": false,
+      "t_s0109_ls": 2,
+      "t_s0209_ls": 2,
+      "t_ls0109": 1,
+      "t_ls0209": 3,
+      "t_kon_ls9": 3,
+      "t_pause_ls9": 0,
+      "enable_ls9": false,
+      "t_mu": 0,
+      "t_recent_ls": 0,
+      "t_min_maneuver_v8": 0,
+      "enable_lz_exc_mu": true,
+      "enable_lz_exc_recent_ls": true,
+      "enable_lz_exc_dsp": true,
+      "t_ls_mu": 0,
+      "t_ls_after_lz": 0,
+      "t_ls_dsp": 0,
+      "enable_ls_exc_mu": true,
+      "enable_ls_exc_after_lz": true,
+      "enable_ls_exc_dsp": true
+    },
+    "steps": [
+      {
+        "t": 3,
+        "rc_states": {
+          "10-12SP": 3,
+          "1P": 3,
+          "1-7SP": 3
+        },
+        "switch_states": {
+          "Sw10": 3,
+          "Sw1": 3,
+          "Sw5": 3
+        },
+        "modes": {},
+        "mu": {
+          "10-12SP": 3,
+          "1P": 3,
+          "1-7SP": 3
+        },
+        "dispatcher_control_state": 4,
+        "auto_actions": {
+          "NAS": 4,
+          "CHAS": 4
+        },
+        "signal_states": {
+          "Ч1": 0,
+          "НМ1": 0,
+          "ЧМ1": 3,
+          "М1": 3
+        }
+      },
+      {
+        "t": 3,
+        "rc_states": {
+          "10-12SP": 3,
+          "1P": 3,
+          "1-7SP": 6
+        },
+        "switch_states": {
+          "Sw10": 3,
+          "Sw1": 3,
+          "Sw5": 3
+        },
+        "modes": {},
+        "mu": {
+          "10-12SP": 3,
+          "1P": 3,
+          "1-7SP": 3
+        },
+        "dispatcher_control_state": 4,
+        "auto_actions": {
+          "NAS": 4,
+          "CHAS": 4
+        },
+        "signal_states": {
+          "Ч1": 0,
+          "НМ1": 0,
+          "ЧМ1": 3,
+          "М1": 3
+        }
+      },
+      {
+        "t": 3,
+        "rc_states": {
+          "10-12SP": 3,
+          "1P": 3,
+          "1-7SP": 3
+        },
+        "switch_states": {
+          "Sw10": 3,
+          "Sw1": 3,
+          "Sw5": 3
+        },
+        "modes": {},
+        "mu": {
+          "10-12SP": 3,
+          "1P": 3,
+          "1-7SP": 3
+        },
+        "dispatcher_control_state": 4,
+        "auto_actions": {
+          "NAS": 4,
+          "CHAS": 4
+        },
+        "signal_states": {
+          "Ч1": 0,
+          "НМ1": 0,
+          "ЧМ1": 3,
+          "М1": 3
+        }
+      }
+    ]
+  },
+  "lastStatus": "ok",
+  "comment": "",
+  "id": "test_1768986163"
+}

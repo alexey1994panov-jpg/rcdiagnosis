@@ -1,0 +1,358 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  margin: 20px;
+}
+
+textarea {
+  width: 100%;
+  height: 260px;
+  font-family: Consolas, monospace;
+  font-size: 13px;
+  white-space: pre;
+}
+
+table {
+  border-collapse: collapse;
+  margin-top: 8px;
+}
+
+table th,
+table td {
+  border: 1px solid #ccc;
+  padding: 4px 6px;
+  font-size: 13px;
+}
+
+th {
+  background: #f0f0f0;
+}
+
+.controls {
+  margin: 10px 0;
+}
+
+.controls input[type="number"] {
+  width: 60px;
+}
+
+.inline {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.scenario-block {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Подсветка состояний РЦ (совместимо с app.js и scenario.js) */
+.rc-state-free {
+  background-color: rgba(128, 128, 128, 0.25);
+}
+
+.rc-state-occupied {
+  background-color: rgba(255, 0, 0, 0.25);
+}
+
+.rc-state-nocontrol {
+  background-color: rgba(0, 160, 255, 0.25);
+}
+
+/* Состояния стрелок (совместимо с swClassForValue) */
+.sw-state-plus {
+  background-color: rgba(0, 200, 0, 0.35);
+}
+
+.sw-state-minus {
+  background-color: rgba(255, 215, 0, 0.5);
+}
+
+.sw-state-nocontrol {
+  background-color: rgba(0, 160, 255, 0.25);
+}
+
+/* Схема участка (контейнер) */
+.track-scheme {
+  margin: 15px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  display: inline-block;
+  position: relative;
+}
+
+/* Индикаторы местного управления и автодействий */
+.mu-indicator,
+.aa-indicator {
+  display: inline-block;
+  min-width: 40px;
+  padding: 2px 6px;
+  margin: 0 4px 4px 4px;
+  text-align: center;
+  font-size: 11px;
+  border-radius: 4px;
+  background-color: #ccc;
+  color: #000;
+}
+
+.mu-indicator-active,
+.aa-indicator-active {
+  background-color: #c00;
+  color: #fff;
+}
+
+/* Лента времени (контейнер) */
+.timebar {
+  margin: 10px 0;
+}
+
+#timebarcontainer {
+  display: flex;
+  width: 100%;
+  height: 16px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Сегмент внутри гибкого контейнера timebarcontainer */
+.timebar-segment {
+  height: 100%;
+  background-color: #ddd;
+  box-sizing: border-box;
+  border: none;
+}
+
+/* ЛЗ внутри сегмента */
+.timebar-segment-lz {
+  background-color: rgba(255, 0, 0, 0.35);
+}
+
+/* Открытие/закрытие детекторов */
+.timebar-segment-open {
+  border: 2px solid #008000;
+}
+
+/* Закрытие */
+.timebar-segment-closed {
+  border: none;
+}
+
+/* Подавленная ЛЗ (исключения, lz_suppressed:*) */
+.timebar-segment-suppressed {
+  border-bottom: 3px dotted #ff8800;
+}
+
+/* Выделенный сегмент: замкнутый контур */
+.timebar-segment-selected {
+  outline: 2px solid #000;
+  outline-offset: -1px;
+}
+
+/* Выбранная строка таймлайна */
+tr.timeline-selected {
+  background-color: #ffeeba;
+}
+
+/* Для старой подсветки */
+tr.selected-row {
+  outline: 2px solid #000;
+}
+
+/* Компактное оформление блоков настроек логики */
+.logic-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 4px 2px;
+}
+
+.logic-col {
+  vertical-align: top;
+  width: 25%;
+}
+
+.logic-variant {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 10px;
+}
+
+.logic-variant th {
+  background: #f5f5f5;
+  text-align: left;
+  padding: 2px 4px;
+}
+
+.logic-variant td {
+  border: 1px solid #ddd;
+  padding: 2px 3px;
+}
+
+.logic-variant input[type="number"] {
+  width: 30px;
+}
+
+.logic-separator-row td {
+  height: 8px;
+  border: none;
+}
+
+/* Лёгкая фоновая подсветка вариантов */
+.logic-variant-v1  { background-color: rgba(156, 214, 248, 0.06); }
+.logic-variant-v2  { background-color: rgba(0, 200, 0, 0.06); }
+.logic-variant-v3  { background-color: rgba(255, 215, 0, 0.06); }
+.logic-variant-v4  { background-color: rgba(112, 243, 95, 0.06); }
+.logic-variant-v8  { background-color: rgba(255, 0, 0, 0.06); }
+.logic-variant-ls1 { background-color: rgba(128, 0, 128, 0.06); }
+.logic-variant-ls2 { background-color: rgba(255, 140, 0, 0.06); }
+.logic-variant-ls4 { background-color: rgba(0, 128, 128, 0.06); }
+
+/* --- SVG-схема участка --- */
+
+.rc-line {
+  stroke: #00b5b5;
+  stroke-linecap: round;
+}
+
+.rc-main {
+  stroke-width: 6;
+}
+
+.rc-branch {
+  stroke-width: 4;
+}
+
+/* Толщина по ПК/МК */
+.rc-main-thick {
+  stroke-width: 8;
+}
+
+.rc-main-thin {
+  stroke-width: 4;
+}
+
+.rc-branch-thick {
+  stroke-width: 7;
+}
+
+.rc-branch-thin {
+  stroke-width: 3;
+}
+
+/* Подчёркивания (сторона ПК) */
+.pk-line {
+  stroke: #000;
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+/* Подписи РЦ и стрелок */
+.rc-label {
+  font-size: 18px;
+  font-weight: bold;
+  text-anchor: middle;
+}
+
+.sw-label {
+  font-size: 14px;
+  text-anchor: middle;
+}
+
+/* Базовый круг светофора */
+.signal-circle {
+  stroke: #000;
+  stroke-width: 3;
+  fill: #00b5b5; /* фон по умолчанию */
+}
+
+/* Состояния светофоров:
+   - SVG: fill
+   - таблица сценария: background-color */
+.signal-free {
+  fill: #00c000;
+  background-color: rgba(0, 192, 0, 0.25);
+}
+
+.signal-stop {
+  fill: #ff0000;
+  background-color: rgba(255, 0, 0, 0.25);
+}
+
+.signal-warning {
+  fill: #ffd700;
+  background-color: rgba(255, 215, 0, 0.35);
+}
+
+.signal-nocontrol {
+  fill: #00b5b5;
+  background-color: rgba(0, 181, 181, 0.25);
+}
+
+/* Маневровые специальные состояния */
+.signal-maneuver-forbidden {
+  fill: #0000ff;
+  background-color: rgba(0, 0, 255, 0.25);
+}
+
+.signal-maneuver-allowed {
+  fill: #ffffff;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid #ccc;
+}
+
+.signal-maneuver-failure {
+  fill: #ffff00;
+  background-color: rgba(255, 255, 0, 0.35);
+  border: 2px solid #ff0000;
+}
+
+/* Поездные агрегированные состояния */
+.signal-open {
+  fill: #00c000;
+  background-color: rgba(0, 192, 0, 0.25);
+}
+
+.signal-closed {
+  fill: #ff0000;
+  background-color: rgba(255, 0, 0, 0.25);
+}
+
+/* Базовый цвет линий РЦ (если нет состояния) */
+.rc-line {
+  stroke: #00b5b5;
+  stroke-linecap: round;
+}
+
+/* Цветовая подсветка РЦ на SVG по состоянию */
+.rc-line-free {
+  stroke: #808080; /* свободна, серая */
+}
+
+.rc-line-locked {
+  stroke: #ffd700; /* замкнута, жёлтая */
+}
+
+.rc-line-occupied {
+  stroke: #ff0000; /* занята, красная */
+}
+
+/* Цвет индикатора стрелки по положению/контролю */
+.sw-indicator-plus {
+  color: #00c000; /* для HTML */
+  fill:  #00c000; /* для SVG <text> */
+}
+
+.sw-indicator-minus {
+  color: #ffd700;
+  fill:  #ffd700;
+}
+
+.sw-indicator-unknown {
+  color: #0066ff;
+  fill:  #0066ff;
+}
+
+.sw-indicator-lost {
+  color: #ff0000;
+  fill:  #ff0000;
+}

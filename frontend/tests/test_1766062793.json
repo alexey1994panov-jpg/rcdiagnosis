@@ -1,0 +1,125 @@
+{
+  "id": "test_1766062793",
+  "name": "ЛС В1 КЛассика с завершением",
+  "variant": null,
+  "direction": "Центр",
+  "json": {
+    "station": "Visochino",
+    "target_rc": "1P",
+    "dt": 1,
+    "options": {
+      "t_c0101_ls": 3,
+      "t_ls01": 2,
+      "t_kon_ls1": 3,
+      "t_pause_ls1": 0
+    },
+    "steps": [
+      {
+        "t": 1,
+        "rc_states": {
+          "10-12SP": 3,
+          "1P": 6,
+          "1-7SP": 3
+        },
+        "switch_states": {
+          "Sw10": 3,
+          "Sw1": 3,
+          "Sw5": 3
+        }
+      },
+      {
+        "t": 1,
+        "rc_states": {
+          "10-12SP": 3,
+          "1P": 6,
+          "1-7SP": 3
+        },
+        "switch_states": {
+          "Sw10": 3,
+          "Sw1": 3,
+          "Sw5": 3
+        }
+      },
+      {
+        "t": 1,
+        "rc_states": {
+          "10-12SP": 3,
+          "1P": 6,
+          "1-7SP": 3
+        },
+        "switch_states": {
+          "Sw10": 3,
+          "Sw1": 3,
+          "Sw5": 3
+        }
+      },
+      {
+        "t": 1,
+        "rc_states": {
+          "10-12SP": 3,
+          "1P": 3,
+          "1-7SP": 3
+        },
+        "switch_states": {
+          "Sw10": 3,
+          "Sw1": 3,
+          "Sw5": 3
+        }
+      },
+      {
+        "t": 1,
+        "rc_states": {
+          "10-12SP": 3,
+          "1P": 3,
+          "1-7SP": 3
+        },
+        "switch_states": {
+          "Sw10": 3,
+          "Sw1": 3,
+          "Sw5": 3
+        }
+      },
+      {
+        "t": 1,
+        "rc_states": {
+          "10-12SP": 3,
+          "1P": 6,
+          "1-7SP": 3
+        },
+        "switch_states": {
+          "Sw10": 3,
+          "Sw1": 3,
+          "Sw5": 3
+        }
+      },
+      {
+        "t": 1,
+        "rc_states": {
+          "10-12SP": 3,
+          "1P": 6,
+          "1-7SP": 3
+        },
+        "switch_states": {
+          "Sw10": 3,
+          "Sw1": 3,
+          "Sw5": 3
+        }
+      },
+      {
+        "t": 1,
+        "rc_states": {
+          "10-12SP": 3,
+          "1P": 6,
+          "1-7SP": 3
+        },
+        "switch_states": {
+          "Sw10": 3,
+          "Sw1": 3,
+          "Sw5": 3
+        }
+      }
+    ]
+  },
+  "comment": "",
+  "lastStatus": "ok"
+}

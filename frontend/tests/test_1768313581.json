@@ -1,0 +1,357 @@
+{
+  "id": "test_1768313581",
+  "name": "ЛЗ В2 Базовый случай",
+  "variant": null,
+  "direction": "L2R",
+  "json": {
+    "station": "Visochino",
+    "target_rc": "1P",
+    "dt": 1,
+    "options": {
+      "t_s0101": 3,
+      "t_lz01": 3,
+      "t_kon_v1": 3,
+      "t_pause_v1": 0,
+      "enable_v1": true,
+      "t_s0102": 3,
+      "t_s0202": 3,
+      "t_lz02": 3,
+      "t_kon_v2": 3,
+      "t_pause_v2": 0,
+      "enable_v2": true,
+      "t_s0103": 3,
+      "t_s0203": 3,
+      "t_lz03": 3,
+      "t_kon_v3": 3,
+      "t_pause_v3": 0,
+      "enable_v3": true,
+      "t_s0108": 3,
+      "t_s0208": 3,
+      "t_lz08": 3,
+      "t_kon_v8": 3,
+      "t_pause_v8": 0,
+      "enable_v8": true,
+      "t_c0101_ls": 3,
+      "t_ls01": 3,
+      "t_kon_ls1": 3,
+      "t_pause_ls1": 0,
+      "enable_ls1": true,
+      "t_s0102_ls": 3,
+      "t_s0202_ls": 3,
+      "t_ls0102": 2,
+      "t_ls0202": 10,
+      "t_kon_ls2": 3,
+      "t_pause_ls2": 0,
+      "enable_ls2": true,
+      "t_s0104_ls": 3,
+      "t_s0204_ls": 3,
+      "t_ls0104": 3,
+      "t_ls0204": 10,
+      "t_kon_ls4": 3,
+      "t_pause_ls4": 0,
+      "enable_ls4": true,
+      "t_s0109_ls": 2,
+      "t_s0209_ls": 2,
+      "t_ls0109": 1,
+      "t_ls0209": 3,
+      "t_kon_ls9": 3,
+      "t_pause_ls9": 0,
+      "enable_ls9": true,
+      "t_mu": 15,
+      "t_recent_ls": 30,
+      "t_min_maneuver_v8": 600
+    },
+    "steps": [
+      {
+        "t": 1,
+        "rc_states": {
+          "10-12SP": 6,
+          "1P": 3,
+          "1-7SP": 3
+        },
+        "switch_states": {
+          "Sw10": 3,
+          "Sw1": 3,
+          "Sw5": 3
+        },
+        "modes": {},
+        "mu": {
+          "10-12SP": 3,
+          "1P": 3,
+          "1-7SP": 3
+        },
+        "dispatcher_control_state": 4,
+        "auto_actions": {
+          "NAS": 4,
+          "CHAS": 4
+        }
+      },
+      {
+        "t": 1,
+        "rc_states": {
+          "10-12SP": 6,
+          "1P": 3,
+          "1-7SP": 3
+        },
+        "switch_states": {
+          "Sw10": 3,
+          "Sw1": 3,
+          "Sw5": 3
+        },
+        "modes": {},
+        "mu": {
+          "10-12SP": 3,
+          "1P": 3,
+          "1-7SP": 3
+        },
+        "dispatcher_control_state": 4,
+        "auto_actions": {
+          "NAS": 4,
+          "CHAS": 4
+        }
+      },
+      {
+        "t": 1,
+        "rc_states": {
+          "10-12SP": 6,
+          "1P": 3,
+          "1-7SP": 3
+        },
+        "switch_states": {
+          "Sw10": 3,
+          "Sw1": 3,
+          "Sw5": 3
+        },
+        "modes": {},
+        "mu": {
+          "10-12SP": 3,
+          "1P": 3,
+          "1-7SP": 3
+        },
+        "dispatcher_control_state": 4,
+        "auto_actions": {
+          "NAS": 4,
+          "CHAS": 4
+        }
+      },
+      {
+        "t": 1,
+        "rc_states": {
+          "10-12SP": 6,
+          "1P": 6,
+          "1-7SP": 3
+        },
+        "switch_states": {
+          "Sw10": 3,
+          "Sw1": 3,
+          "Sw5": 3
+        },
+        "modes": {},
+        "mu": {
+          "10-12SP": 3,
+          "1P": 3,
+          "1-7SP": 3
+        },
+        "dispatcher_control_state": 4,
+        "auto_actions": {
+          "NAS": 4,
+          "CHAS": 4
+        }
+      },
+      {
+        "t": 1,
+        "rc_states": {
+          "10-12SP": 6,
+          "1P": 6,
+          "1-7SP": 3
+        },
+        "switch_states": {
+          "Sw10": 3,
+          "Sw1": 3,
+          "Sw5": 3
+        },
+        "modes": {},
+        "mu": {
+          "10-12SP": 3,
+          "1P": 3,
+          "1-7SP": 3
+        },
+        "dispatcher_control_state": 4,
+        "auto_actions": {
+          "NAS": 4,
+          "CHAS": 4
+        }
+      },
+      {
+        "t": 1,
+        "rc_states": {
+          "10-12SP": 6,
+          "1P": 6,
+          "1-7SP": 3
+        },
+        "switch_states": {
+          "Sw10": 3,
+          "Sw1": 3,
+          "Sw5": 3
+        },
+        "modes": {},
+        "mu": {
+          "10-12SP": 3,
+          "1P": 3,
+          "1-7SP": 3
+        },
+        "dispatcher_control_state": 4,
+        "auto_actions": {
+          "NAS": 4,
+          "CHAS": 4
+        }
+      },
+      {
+        "t": 1,
+        "rc_states": {
+          "10-12SP": 6,
+          "1P": 3,
+          "1-7SP": 3
+        },
+        "switch_states": {
+          "Sw10": 3,
+          "Sw1": 3,
+          "Sw5": 3
+        },
+        "modes": {},
+        "mu": {
+          "10-12SP": 3,
+          "1P": 3,
+          "1-7SP": 3
+        },
+        "dispatcher_control_state": 4,
+        "auto_actions": {
+          "NAS": 4,
+          "CHAS": 4
+        }
+      },
+      {
+        "t": 1,
+        "rc_states": {
+          "10-12SP": 6,
+          "1P": 3,
+          "1-7SP": 3
+        },
+        "switch_states": {
+          "Sw10": 3,
+          "Sw1": 3,
+          "Sw5": 3
+        },
+        "modes": {},
+        "mu": {
+          "10-12SP": 3,
+          "1P": 3,
+          "1-7SP": 3
+        },
+        "dispatcher_control_state": 4,
+        "auto_actions": {
+          "NAS": 4,
+          "CHAS": 4
+        }
+      },
+      {
+        "t": 1,
+        "rc_states": {
+          "10-12SP": 6,
+          "1P": 3,
+          "1-7SP": 3
+        },
+        "switch_states": {
+          "Sw10": 3,
+          "Sw1": 3,
+          "Sw5": 3
+        },
+        "modes": {},
+        "mu": {
+          "10-12SP": 3,
+          "1P": 3,
+          "1-7SP": 3
+        },
+        "dispatcher_control_state": 4,
+        "auto_actions": {
+          "NAS": 4,
+          "CHAS": 4
+        }
+      },
+      {
+        "t": 1,
+        "rc_states": {
+          "10-12SP": 6,
+          "1P": 3,
+          "1-7SP": 3
+        },
+        "switch_states": {
+          "Sw10": 3,
+          "Sw1": 3,
+          "Sw5": 3
+        },
+        "modes": {},
+        "mu": {
+          "10-12SP": 3,
+          "1P": 3,
+          "1-7SP": 3
+        },
+        "dispatcher_control_state": 4,
+        "auto_actions": {
+          "NAS": 4,
+          "CHAS": 4
+        }
+      },
+      {
+        "t": 1,
+        "rc_states": {
+          "10-12SP": 6,
+          "1P": 3,
+          "1-7SP": 3
+        },
+        "switch_states": {
+          "Sw10": 3,
+          "Sw1": 3,
+          "Sw5": 3
+        },
+        "modes": {},
+        "mu": {
+          "10-12SP": 3,
+          "1P": 3,
+          "1-7SP": 3
+        },
+        "dispatcher_control_state": 4,
+        "auto_actions": {
+          "NAS": 4,
+          "CHAS": 4
+        }
+      },
+      {
+        "t": 1,
+        "rc_states": {
+          "10-12SP": 6,
+          "1P": 3,
+          "1-7SP": 3
+        },
+        "switch_states": {
+          "Sw10": 3,
+          "Sw1": 3,
+          "Sw5": 3
+        },
+        "modes": {},
+        "mu": {
+          "10-12SP": 3,
+          "1P": 3,
+          "1-7SP": 3
+        },
+        "dispatcher_control_state": 4,
+        "auto_actions": {
+          "NAS": 4,
+          "CHAS": 4
+        }
+      }
+    ]
+  },
+  "comment": "",
+  "lastStatus": "ok"
+}

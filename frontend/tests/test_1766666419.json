@@ -1,0 +1,191 @@
+{
+  "id": "test_1766666419",
+  "name": "Тест ЛС 1 потеря контроля",
+  "variant": null,
+  "direction": "L2R",
+  "json": {
+    "station": "Visochino",
+    "target_rc": "1P",
+    "dt": 1,
+    "options": {
+      "t_c0101_ls": 3,
+      "t_ls01": 2,
+      "t_kon_ls1": 3,
+      "t_pause_ls1": 0
+    },
+    "steps": [
+      {
+        "t": 1,
+        "rc_states": {
+          "10-12SP": 3,
+          "1P": 6,
+          "1-7SP": 3
+        },
+        "switch_states": {
+          "Sw10": 3,
+          "Sw1": 3,
+          "Sw5": 3
+        },
+        "modes": {
+          "prev_control_ok": true,
+          "next_control_ok": true
+        }
+      },
+      {
+        "t": 1,
+        "rc_states": {
+          "10-12SP": 3,
+          "1P": 6,
+          "1-7SP": 3
+        },
+        "switch_states": {
+          "Sw10": 15,
+          "Sw1": 15,
+          "Sw5": 15
+        },
+        "modes": {
+          "prev_control_ok": false,
+          "next_control_ok": false
+        }
+      },
+      {
+        "t": 1,
+        "rc_states": {
+          "10-12SP": 3,
+          "1P": 6,
+          "1-7SP": 3
+        },
+        "switch_states": {
+          "Sw10": 15,
+          "Sw1": 15,
+          "Sw5": 15
+        },
+        "modes": {
+          "prev_control_ok": false,
+          "next_control_ok": false
+        }
+      },
+      {
+        "t": 1,
+        "rc_states": {
+          "10-12SP": 3,
+          "1P": 6,
+          "1-7SP": 3
+        },
+        "switch_states": {
+          "Sw10": 15,
+          "Sw1": 15,
+          "Sw5": 15
+        },
+        "modes": {
+          "prev_control_ok": false,
+          "next_control_ok": false
+        }
+      },
+      {
+        "t": 1,
+        "rc_states": {
+          "10-12SP": 3,
+          "1P": 6,
+          "1-7SP": 3
+        },
+        "switch_states": {
+          "Sw10": 15,
+          "Sw1": 15,
+          "Sw5": 15
+        },
+        "modes": {
+          "prev_control_ok": false,
+          "next_control_ok": false
+        }
+      },
+      {
+        "t": 1,
+        "rc_states": {
+          "10-12SP": 3,
+          "1P": 3,
+          "1-7SP": 3
+        },
+        "switch_states": {
+          "Sw10": 15,
+          "Sw1": 15,
+          "Sw5": 15
+        },
+        "modes": {
+          "prev_control_ok": false,
+          "next_control_ok": false
+        }
+      },
+      {
+        "t": 1,
+        "rc_states": {
+          "10-12SP": 3,
+          "1P": 3,
+          "1-7SP": 3
+        },
+        "switch_states": {
+          "Sw10": 15,
+          "Sw1": 15,
+          "Sw5": 15
+        },
+        "modes": {
+          "prev_control_ok": false,
+          "next_control_ok": false
+        }
+      },
+      {
+        "t": 1,
+        "rc_states": {
+          "10-12SP": 3,
+          "1P": 3,
+          "1-7SP": 3
+        },
+        "switch_states": {
+          "Sw10": 15,
+          "Sw1": 15,
+          "Sw5": 15
+        },
+        "modes": {
+          "prev_control_ok": false,
+          "next_control_ok": false
+        }
+      },
+      {
+        "t": 1,
+        "rc_states": {
+          "10-12SP": 3,
+          "1P": 3,
+          "1-7SP": 3
+        },
+        "switch_states": {
+          "Sw10": 15,
+          "Sw1": 15,
+          "Sw5": 15
+        },
+        "modes": {
+          "prev_control_ok": false,
+          "next_control_ok": false
+        }
+      },
+      {
+        "t": 1,
+        "rc_states": {
+          "10-12SP": 3,
+          "1P": 3,
+          "1-7SP": 3
+        },
+        "switch_states": {
+          "Sw10": 15,
+          "Sw1": 15,
+          "Sw5": 15
+        },
+        "modes": {
+          "prev_control_ok": false,
+          "next_control_ok": false
+        }
+      }
+    ]
+  },
+  "comment": "",
+  "lastStatus": "ok"
+}

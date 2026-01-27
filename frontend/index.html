@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>RC Diagnosis MVP</title>
+    <link rel="stylesheet" href="static/style.css">
+    <style>
+        /* Стили для табов */
+        .tabs {
+            display: flex;
+            border-bottom: 2px solid #ccc;
+            margin-bottom: 20px;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+        .tab-button {
+            padding: 10px 20px;
+            background: #f0f0f0;
+            border: 1px solid #ccc;
+            border-bottom: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+        .tab-button:hover {
+            background: #e0e0e0;
+        }
+        .tab-button.active {
+            background: white;
+            border-bottom: 2px solid white;
+            margin-bottom: -2px;
+            font-weight: bold;
+        }
+        .tab-content {
+            display: none;
+            min-height: 300px;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .loading {
+            color: #999;
+            font-style: italic;
+        }
+        /* Дополнительно для выделения строки таймлайна */
+        .timeline-selected {
+            background-color: #ffeeba;
+        }
+        .timebar {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+        .timebar button {
+            padding: 2px 8px;
+        }
+        #timebarcontainer {
+            display: flex;
+            width: 100%;
+            height: 16px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        .timebar-segment {
+            height: 100%;
+            background-color: #ddd;
+        }
+        .timebar-segment-lz {
+            background-color: #f99;
+        }
+    </style>
+</head>
+<body>
+    <h1>RC Diagnosis MVP</h1>
+
+    <!-- Табы навигации -->
+    <div class="tabs">
+        <button class="tab-button active" data-tab="tab-lz-exc">ЛЗ</button>
+        <button class="tab-button" data-tab="tab-ls-exc">ЛС</button>
+        <button class="tab-button" data-tab="tab-simulation">Симуляция</button>
+    </div>
+
+    <!-- Контейнеры табов -->
+    <div id="tab-lz-exc" class="tab-content active">
+        <div class="loading">Загрузка ЛЗ + исключений...</div>
+    </div>
+
+    <div id="tab-ls-exc" class="tab-content">
+        <div class="loading">Загрузка ЛС + исключений...</div>
+    </div>
+
+    <!-- Таб: Симуляция (сценарий + результаты) -->
+    <div id="tab-simulation" class="tab-content">
+        <h2>Сценарий</h2>
+        <p><b>Участок:</b> 10-12SP – <b>Sw10</b> – 1P – 1-7SP – <b>Sw1</b>, <b>Sw5</b>.</p>
+
+        <table id="scenariotable" class="scenario-table">
+            <thead>
+            <tr>
+                <th>Δt, с</th>
+                <th>10-12SP</th>
+                <th>1P</th>
+                <th>1-7SP</th>
+                <th>Sw10</th>
+                <th>Sw1</th>
+                <th>Sw5</th>
+                <th>Ч1</th>
+                <th>НМ1</th>
+                <th>ЧМ1</th>
+                <th>М1</th>
+                <th>MU 10-12SP</th>
+                <th>MU 1P</th>
+                <th>MU 1-7SP</th>
+                <th>ДСП</th>
+                <th>НАС</th>
+                <th>ЧАС</th>
+                <th>Действия</th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <div class="controls">
+            <button type="button" id="addsteprow">Добавить строку</button>
+            <button type="button" id="repeatprevrow">Повторить предыдущую</button>
+            <button type="button" id="applyscenariotable">Применить таблицу → JSON</button>
+        </div>
+
+        <h2>Сценарий JSON</h2>
+        <p>JSON представление сценария:</p>
+        <textarea id="scenariotext"></textarea>
+        <div class="controls">
+            <button type="button" onclick="runSimulation()">Запустить симуляцию</button>
+        </div>
+
+        <!-- Управление тестами -->
+        <div class="scenario-block">
+            <h3>Управление тестами</h3>
+            <div class="controls">
+                <select id="testsselect" style="min-width: 260px;"></select>
+                <button type="button" onclick="loadSelectedTest()">Загрузить тест</button>
+                <button type="button" onclick="saveCurrentAsTest()">Сохранить как тест</button>
+                <button type="button" onclick="markTestStatus('ok')">✓ OK</button>
+                <button type="button" onclick="markTestStatus('fail')">✗ FAIL</button>
+                <button type="button" onclick="deleteSelectedTest()">Удалить тест</button>
+            </div>
+            <div class="controls">
+                <span id="testinfo"></span>
+            </div>
+        </div>
+
+        <!-- Результаты симуляции -->
+        <div style="margin-top: 40px; border-top: 2px solid #333; padding-top: 20px;">
+            <h2>Результаты симуляции</h2>
+
+            <!-- Индикаторы МУ/ДСП/Автодействия -->
+            <div class="controls">
+                <span id="muindicatorprev" class="mu-indicator">МУ 10-12SP</span>
+                <span id="muindicatorcurr" class="mu-indicator">МУ 1P</span>
+                <span id="muindicatornext" class="mu-indicator">МУ 1-7SP</span>
+                <span id="nasindicator" class="aa-indicator">НАС</span>
+                <span id="chasindicator" class="aa-indicator">ЧАС</span>
+            </div>
+
+            <div class="track-scheme">
+                <svg id="track-svg" width="900" height="220">
+                    <!-- РЦ как отдельные участки с небольшими зазорами (поверх веток) -->
+                    <!-- 10-12СП -->
+                    <line id="rc-10-12"
+                          x1="80"  y1="120" x2="260" y2="120"
+                          class="rc-line rc-main" />
+                    <!-- 1П -->
+                    <line id="rc-1p"
+                          x1="280" y1="120" x2="540" y2="120"
+                          class="rc-line rc-main" />
+                    <!-- 1-7СП -->
+                    <line id="rc-1-7"
+                          x1="560" y1="120" x2="780" y2="120"
+                          class="rc-line rc-main" />
+
+                    <!-- Подчёркивания под прямыми ветками (слегка над линией РЦ) -->
+                    <line id="sw10-pk"
+                          x1="130" y1="128" x2="180" y2="128"
+                          class="pk-line" />
+                    <line id="sw5-pk"
+                          x1="620" y1="128" x2="670" y2="128"
+                          class="pk-line" />
+                    <line id="sw1-pk"
+                          x1="710" y1="112" x2="760" y2="112"
+                          class="pk-line" />
+
+                    <!-- Подписи РЦ сверху (по центрам участков) -->
+                    <text x="170" y="40" class="rc-label">10-12СП</text>
+                    <text x="410" y="40" class="rc-label">1П</text>
+                    <text x="670" y="40" class="rc-label">1-7СП</text>
+
+                    <!-- Номера стрелок рядом с местом ответвления (индикаторы) -->
+                    <text id="sw10-label" x="190" y="110" class="sw-label">10</text>
+                    <text id="sw5-label"  x="610" y="110" class="sw-label">5</text>
+                    <text id="sw1-label"  x="760" y="140" class="sw-label">1</text>
+
+                    <!-- Светофоры: кружок и подпись рядом, без наложений -->
+                    <!-- ЧМ1 слева внизу -->
+                    <circle id="sig-chm1" cx="80" cy="180" r="14" class="signal-circle" />
+                    <text x="35" y="186" class="signal-text">ЧМ1</text>
+
+                    <!-- НМ1 над участком между 10-12СП и 1П -->
+                    <circle id="sig-nm1" cx="270" cy="80" r="14" class="signal-circle" />
+                    <text x="290" y="85" class="signal-text">НМ1</text>
+
+                    <!-- Ч1 под участком между 1П и 1-7СП -->
+                    <circle id="sig-ch1" cx="560" cy="170" r="14" class="signal-circle" />
+                    <text x="525" y="175" class="signal-text">Ч1</text>
+
+                    <!-- М1 справа над правым концом 1-7СП -->
+                    <circle id="sig-m1" cx="830" cy="80" r="14" class="signal-circle" />
+                    <text x="845" y="85" class="signal-text">М1</text>
+                </svg>
+            </div>
+
+            <!-- Таймбар -->
+            <div class="timebar">
+                <button type="button" onclick="moveSelectionRelative(-1)">◀</button>
+                <span id="timebarinfo"></span>
+                <button type="button" onclick="moveSelectionRelative(1)">▶</button>
+            </div>
+            <div id="timebarcontainer"></div>
+
+            <!-- Таблица результатов -->
+            <div style="max-height: 640px; overflow-y: auto; border: 1px solid #ccc;">
+                <table id="timelinetable">
+                    <thead>
+                    <tr>
+                        <th>t, с</th>
+                        <th>Δt, с</th>
+                        <th>ЛЗ</th>
+                        <th>Вар</th>
+                        <th>Пред</th>
+                        <th>10-12SP</th>
+                        <th>Ст.10-12SP</th>
+                        <th>Sw10</th>
+                        <th>1P</th>
+                        <th>Ст.1P</th>
+                        <th>1-7SP</th>
+                        <th>Ст.1-7SP</th>
+                        <th>Sw1</th>
+                        <th>Sw5</th>
+                        <th>MU 10-12SP</th>
+                        <th>MU 1P</th>
+                        <th>MU 1-7SP</th>
+                        <th>ДСП</th>
+                        <th>НАС</th>
+                        <th>ЧАС</th>
+                        <th>Flags</th>
+                        <th>Описание</th>
+                    </tr>
+                    </thead>
+                    <tbody id="timeline-body"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модули -->
+    <script type="module" src="static/timeline-flags.js"></script>
+    <script type="module" src="static/timeline-scheme.js"></script>
+    <script type="module" src="static/timeline-render.js"></script>
+    <script type="module" src="static/timeline.js"></script>
+
+    <script src="static/tabs.js"></script>
+    <script src="static/options.js"></script>
+    <script src="static/scenario.js"></script>
+    <script src="static/tests.js"></script>
+    <script src="static/app.js"></script>
+
+    <script>
+        function moveSelectionRelative(delta) {
+            if (window.moveSelectionRelativeImpl) {
+                window.moveSelectionRelativeImpl(delta);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -88,7 +88,7 @@ from .config_1p import (
     T_LS_DSP,
     T_PK,
 )
-from .adjacency_1p import AdjacencyState, update_adjacency, compute_local_adjacency
+from .topology_1p import AdjacencyState, update_adjacency, compute_local_adjacency
 from .detectors_runner_1p import (
     DetectorsState,
     DetectorsResult,

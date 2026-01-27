@@ -93,7 +93,7 @@ def test_adjacency_1012_by_switches_only(case_id, sw10, expect_next):
 
     adj = compute_local_adjacency(station, step, ctrl_rc_id="10-12SP")
 
-    assert adj.prev_rc_id is None
+    assert adj.prev_rc_id == "1AP"
     assert adj.prev_state == 0
     assert adj.prev_nc is True
 
@@ -135,7 +135,7 @@ def test_adjacency_17_by_switches_only(case_id, sw1, sw5, expect_next):
 
     adj = compute_local_adjacency(station, step, ctrl_rc_id="1-7SP")
 
-    assert adj.prev_rc_id is None
+    assert adj.prev_rc_id == "NP"
     assert adj.prev_state == 0
     assert adj.prev_nc is True
 

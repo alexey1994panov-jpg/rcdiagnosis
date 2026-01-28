@@ -150,8 +150,8 @@ SW_TOPOLOGY_1P: Dict[str, SwNode] = {
         sw_id="Sw1",
         sw_section="1-7SP",
         prev_sec="NP",
-        plus_sections=("3SP",),     # по плюсу в 3СП
-        minus_sections=(),          # минус идёт на стрелку 5 (цепочка, пока не моделируем)
+        plus_sections=(),     # по плюсу в 5 стрелку
+        minus_sections=("3SP",),          # минус идёт на стрелку 5 (цепочка, пока не моделируем)
     ),
 
     # Стрелка 5:

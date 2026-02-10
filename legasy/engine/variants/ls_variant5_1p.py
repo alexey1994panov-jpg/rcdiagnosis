@@ -71,6 +71,8 @@ class VariantLS5Detector:
         st_curr = step.rc_states.get(self.ctrl_rc_id, 0)
         st_next = step.rc_states.get(self.next_rc_id, 0)
 
+        
+
         prev_free = rc_is_free(st_prev)
         prev_occ = rc_is_occupied(st_prev)
 

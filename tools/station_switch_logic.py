@@ -1,0 +1,18 @@
+# -*- coding: utf-8 -*-
+SWITCH_LOGIC = {'10-12СП': {'PrevSec': '1АП', 'NextSec': None, 'stem': ['10'], 'plus_rc': ['1П'], 'minus_rc': ['3П']},
+ '14-16СП': {'PrevSec': None, 'NextSec': '2П', 'stem': ['16'], 'plus_rc': ['2АП'], 'minus_rc': ['4П']},
+ '1-7СП': {'PrevSec': None, 'NextSec': 'НП', 'stem': ['1', '5'], 'plus_rc': ['1П'], 'minus_rc': ['3П', '3СП']},
+ '1АП': {'PrevSec': '4СП', 'NextSec': '10-12СП', 'stem': [], 'plus_rc': [], 'minus_rc': []},
+ '1П': {'PrevSec': '10-12СП', 'NextSec': '1-7СП', 'stem': [], 'plus_rc': [], 'minus_rc': []},
+ '2-8СП': {'PrevSec': 'ЧП', 'NextSec': None, 'stem': ['2'], 'plus_rc': ['6СП'], 'minus_rc': ['4П']},
+ '2АП': {'PrevSec': '6СП', 'NextSec': '14-16СП', 'stem': [], 'plus_rc': [], 'minus_rc': []},
+ '2П': {'PrevSec': '14-16СП', 'NextSec': '3СП', 'stem': [], 'plus_rc': [], 'minus_rc': []},
+ '3П': {'PrevSec': '10-12СП', 'NextSec': '1-7СП', 'stem': [], 'plus_rc': [], 'minus_rc': []},
+ '3СП': {'PrevSec': '2П', 'NextSec': None, 'stem': ['3'], 'plus_rc': ['НДП'], 'minus_rc': ['1-7СП']},
+ '4П': {'PrevSec': '2-8СП', 'NextSec': '14-16СП', 'stem': [], 'plus_rc': [], 'minus_rc': []},
+ '4СП': {'PrevSec': 'ЧДП', 'NextSec': None, 'stem': ['4'], 'plus_rc': ['1АП'], 'minus_rc': ['6СП']},
+ '6СП': {'PrevSec': None, 'NextSec': '2АП', 'stem': ['6'], 'plus_rc': ['2-8СП'], 'minus_rc': ['4СП']},
+ 'НДП': {'PrevSec': '3СП', 'NextSec': None, 'stem': [], 'plus_rc': [], 'minus_rc': []},
+ 'НП': {'PrevSec': '1-7СП', 'NextSec': None, 'stem': [], 'plus_rc': [], 'minus_rc': []},
+ 'ЧДП': {'PrevSec': None, 'NextSec': '4СП', 'stem': [], 'plus_rc': [], 'minus_rc': []},
+ 'ЧП': {'PrevSec': None, 'NextSec': '2-8СП', 'stem': [], 'plus_rc': [], 'minus_rc': []}}

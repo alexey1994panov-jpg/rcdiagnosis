@@ -187,31 +187,31 @@ def init_detectors(
     if getattr(opts, "enable_v4", False):
         det_v4_1012 = Variant4Detector(
             prev_rc_id="",
-            ctrl_rc_id="10-12SP",
-            next_rc_id="1P",
+            ctrl_rc_id="1AP",
+            next_rc_id="10-12SP",
             t_s0401=opts.t_s0401,
             t_lz04=opts.t_lz04,
             t_kon=opts.t_kon_v4,
-            signal_prev_to_ctrl_id="ЧМ1",
-            signal_ctrl_to_next_id="Ч1",
+            signal_prev_to_ctrl_id="Н1",
+            signal_ctrl_to_next_id="ЧМ1",
             ctrl_to_next_is_shunting=False,
         )
-        v4_by_rc["10-12SP"] = det_v4_1012
-        ds_active_v4_by_rc["10-12SP"] = False
+        v4_by_rc["1AP"] = det_v4_1012
+        ds_active_v4_by_rc["1AP"] = False
 
         det_v4_17 = Variant4Detector(
             prev_rc_id="",
-            ctrl_rc_id="1-7SP",
-            next_rc_id="1P",
+            ctrl_rc_id="NP",
+            next_rc_id="1-7SP",
             t_s0401=opts.t_s0401,
             t_lz04=opts.t_lz04,
             t_kon=opts.t_kon_v4,
-            signal_prev_to_ctrl_id="Ч1",
-            signal_ctrl_to_next_id="М1",
+            signal_prev_to_ctrl_id="М1",
+            signal_ctrl_to_next_id="Н",
             ctrl_to_next_is_shunting=True,
         )
-        v4_by_rc["1-7SP"] = det_v4_17
-        ds_active_v4_by_rc["1-7SP"] = False
+        v4_by_rc["NP"] = det_v4_17
+        ds_active_v4_by_rc["NP"] = False
 
     # ЛЗ v6 по всем РЦ без замыкания
     if getattr(opts, "enable_v6", False):
@@ -296,34 +296,34 @@ def init_detectors(
         # для 1-7SP есть замыкание
         if rc_has_route_lock is None or rc_has_route_lock.get("1-7SP", False):
             det_ls6_17 = VariantLS6Detector(
-                prev_rc_id="",
-                ctrl_rc_id="1-7SP",
-                next_rc_id="1P",
+                prev_rc_id="1-7SP",
+                ctrl_rc_id="NP",
+                next_rc_id="",
                 t_s0106=opts.t_s0106_ls,
                 t_ls06=opts.t_ls06,
                 t_kon=opts.t_kon_ls6,
-                signal_prev_to_ctrl_id="М1",
-                signal_ctrl_to_next_id="M1",
+                signal_prev_to_ctrl_id="Н",
+                signal_ctrl_to_next_id="М1",
                 ctrl_to_next_is_shunting=True,
             )
-            ls6_by_rc["1-7SP"] = det_ls6_17
-            ls_active_v6_by_rc["1-7SP"] = False
+            ls6_by_rc["NP"] = det_ls6_17
+            ls_active_v6_by_rc["NP"] = False
 
         # для 10-12SP замыкания нет — не создаём детектор, если явно запрещено
         if rc_has_route_lock is None or rc_has_route_lock.get("10-12SP", False):
             det_ls6_1012 = VariantLS6Detector(
                 prev_rc_id="",
-                ctrl_rc_id="10-12SP",
-                next_rc_id="1P",
+                ctrl_rc_id="1AP",
+                next_rc_id="10-12SP",
                 t_s0106=opts.t_s0106_ls,
                 t_ls06=opts.t_ls06,
                 t_kon=opts.t_kon_ls6,
-                signal_prev_to_ctrl_id="ЧМ1",
-                signal_ctrl_to_next_id="ЧМ1",
+                signal_prev_to_ctrl_id="Н1",
+                signal_ctrl_to_next_id="",
                 ctrl_to_next_is_shunting=False,
             )
-            ls6_by_rc["10-12SP"] = det_ls6_1012
-            ls_active_v6_by_rc["10-12SP"] = False
+            ls6_by_rc["1AP"] = det_ls6_1012
+            ls_active_v6_by_rc["1AP"] = False
 
     # ЛЗ v10
     v10: Optional[Variant10Detector] = None
@@ -353,55 +353,55 @@ def init_detectors(
         if rc_has_route_lock is None or rc_has_route_lock.get("1-7SP", False):
             det_v12_17 = Variant12Detector(
                 prev_rc_id="",
-                ctrl_rc_id="1-7SP",
-                next_rc_id="1P",
+                ctrl_rc_id="NP",
+                next_rc_id="1-7SP",
                 t_s0112=opts.t_s0112,
                 t_s0212=opts.t_s0212,
                 t_lz12=opts.t_lz12,
                 t_kon=opts.t_kon_v12,
             )
-            v12_by_rc["1-7SP"] = det_v12_17
-            ds_active_v12_by_rc["1-7SP"] = False
+            v12_by_rc["NP"] = det_v12_17
+            ds_active_v12_by_rc["NP"] = False
 
         # для 10-12SP замыкания нет — не создаём детектор
         if rc_has_route_lock is None or rc_has_route_lock.get("10-12SP", False):
             det_v12_1012 = Variant12Detector(
                 prev_rc_id="",
-                ctrl_rc_id="10-12SP",
-                next_rc_id="1P",
+                ctrl_rc_id="1AP",
+                next_rc_id="10-12SP",
                 t_s0112=opts.t_s0112,
                 t_s0212=opts.t_s0212,
                 t_lz12=opts.t_lz12,
                 t_kon=opts.t_kon_v12,
             )
-            v12_by_rc["10-12SP"] = det_v12_1012
-            ds_active_v12_by_rc["10-12SP"] = False
+            v12_by_rc["1AP"] = det_v12_1012
+            ds_active_v12_by_rc["1AP"] = False
 
     # ЛЗ v13 — per‑РЦ
     if getattr(opts, "enable_v13", False):
         det_v13_1012 = Variant13Detector(
-            ctrl_rc_id="10-12SP",
-            adj_rc_id="1P",
-            signal_id="НМ1",
+            ctrl_rc_id="1AP",
+            adj_rc_id="10-12SP",
+            signal_id="ЧМ1",
             t_s0113=opts.t_s0113,
             t_s0213=opts.t_s0213,
             t_lz13=opts.t_lz13,
             t_kon=opts.t_kon_v13,
         )
-        v13_by_rc["10-12SP"] = det_v13_1012
-        ds_active_v13_by_rc["10-12SP"] = False
+        v13_by_rc["1AP"] = det_v13_1012
+        ds_active_v13_by_rc["1AP"] = False
 
         det_v13_17 = Variant13Detector(
-            ctrl_rc_id="1-7SP",
-            adj_rc_id="1P",
-            signal_id="Ч1",
+            ctrl_rc_id="NP",
+            adj_rc_id="1-7SP",
+            signal_id="М1",
             t_s0113=opts.t_s0113,
             t_s0213=opts.t_s0213,
             t_lz13=opts.t_lz13,
             t_kon=opts.t_kon_v13,
         )
-        v13_by_rc["1-7SP"] = det_v13_17
-        ds_active_v13_by_rc["1-7SP"] = False
+        v13_by_rc["NP"] = det_v13_17
+        ds_active_v13_by_rc["NP"] = False
 
     return DetectorsState(
         v1=Variant1Detector(opts.t_s0101, opts.t_lz01, opts.t_kon_v1)
@@ -675,7 +675,7 @@ def run_detectors(
             if not state.ds_active_v13:
                 state.ds_ctrl_rc_v13 = None
 
-    # ЛС v1
+     # ЛС v1
     if state.ls1 is not None:
         o_ls1, c_ls1 = state.ls1.update(step, dt_interval)
         if o_ls1:
@@ -747,3 +747,4 @@ def run_detectors(
                     res.closed_ls9 = True
 
     return state, res
+

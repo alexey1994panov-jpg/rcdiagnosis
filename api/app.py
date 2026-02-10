@@ -153,7 +153,7 @@ class ScenarioOptionsIn(BaseModel):
     # Вариант 4 ЛЗ
     t_s0401: int | float = T_S0401_DEFAULT
     t_lz04: int | float = T_LZ04_DEFAULT
-    t_kon_v4: int | float = T_KON_V4_DEFAULT
+    t_kон_v4: int | float = T_KON_V4_DEFAULT
     t_pause_v4: int | float = T_PAUSE_DEFAULT
     enable_v4: bool = False
 
@@ -264,7 +264,6 @@ class ScenarioOptionsIn(BaseModel):
     t_pause_ls6: int | float = T_PAUSE_DEFAULT
     enable_ls6: bool = True
 
-
     # Вариант 9 ЛС
     t_s0109_ls: int | float = T_S0109_LS_DEFAULT
     t_s0209_ls: int | float = T_S0209_LS_DEFAULT
@@ -310,7 +309,7 @@ class TimelineStepOut(BaseModel):
     variant: int
     effective_prev_rc: str
     effective_next_rc: str
-    flags: List[str]
+    flags: List[Dict[str, Any]]
     rc_states: Dict[str, int]
     switch_states: Dict[str, int]
     # НОВОЕ: состояния светофоров по шагу
@@ -351,7 +350,7 @@ def get_defaults() -> Dict[str, Any]:
         "t_s0102": T_S0102_DEFAULT,
         "t_s0202": T_S0202_DEFAULT,
         "t_lz02": T_LZ02_DEFAULT,
-        "t_kon_v2": T_KON,
+        "t_kон_v2": T_KON,
         "t_pause_v2": T_PAUSE_DEFAULT,
         "enable_v2": True,
         # ЛЗ v3
@@ -451,7 +450,7 @@ def get_defaults() -> Dict[str, Any]:
         # ЛС v5
         "t_s0105_ls": T_S0105_LS_DEFAULT,
         "t_ls05": T_LS05_DEFAULT,
-        "t_kon_ls5":T_KON_LS5_DEFAULT,
+        "t_kon_ls5": T_KON_LS5_DEFAULT,
         "t_pause_ls5": T_PAUSE_DEFAULT,
         "enable_ls5": True,
         # ЛС v6
@@ -485,11 +484,49 @@ def get_defaults() -> Dict[str, Any]:
     }
 
 
+def _parse_flag(raw: str, ctrl_rc_id: str | None) -> Dict[str, Any]:
+    variant = ""
+    ftype = ""
+    phase: str | None = None
+
+    if raw.startswith("llz_v"):
+        ftype = "LZ"
+        body = raw[len("llz_"):]
+        if body.endswith("_open"):
+            phase = "opened"
+            variant = body[:-len("_open")]
+        elif body.endswith("_closed"):
+            phase = "closed"
+            variant = body[:-len("_closed")]
+        else:
+            variant = body
+    elif raw.startswith("lls_v"):
+        ftype = "LS"
+        body = raw[len("lls_"):]
+        if body.endswith("_open"):
+            phase = "opened"
+            variant = body[:-len("_open")]
+        elif body.endswith("_closed"):
+            phase = "closed"
+            variant = body[:-len("_closed")]
+        else:
+            variant = body
+
+    return {
+        "variant": variant,
+        "type": ftype,
+        "rc_id": ctrl_rc_id,
+        "phase": phase,
+        "raw": raw,
+    }
+
+
 @app.post("/simulate", response_model=List[TimelineStepOut])
 def simulate_endpoint(scenario: ScenarioIn):
-    # 1. Больше не опираемся на target_rc для выбора модели
-    #    Всегда используем базовую модель 1P — детекторы внутри уже навешены на нужные РЦ
-    station = get_station_model_1p()
+    if scenario.target_rc not in ALLOWED_CTRL_RCS:
+        raise HTTPException(status_code=400, detail="Unsupported target_rc")
+
+    station = get_station_for_target_rc(scenario.target_rc)
 
     steps_internal: List[ScenarioStep] = []
     for s in scenario.steps:
@@ -625,7 +662,7 @@ def simulate_endpoint(scenario: ScenarioIn):
             "t_s0106_ls": float(opt_in.t_s0106_ls),
             "t_ls06": float(opt_in.t_ls06),
             "t_kon_ls6": float(opt_in.t_kon_ls6),
-            "t_pause_ls6": float(opt_in.t_pause_ls6),   
+            "t_pause_ls6": float(opt_in.t_pause_ls6),
             "enable_ls6": bool(opt_in.enable_ls6),
             # ЛС v9
             "t_s0109_ls": float(opt_in.t_s0109_ls),
@@ -662,6 +699,9 @@ def simulate_endpoint(scenario: ScenarioIn):
 
     result: List[TimelineStepOut] = []
     for row in timeline:
+        flags_parsed = [
+            _parse_flag(f, getattr(row, "ctrl_rc_id", None)) for f in row.flags
+        ]
         result.append(
             TimelineStepOut(
                 t=float(row.t),
@@ -670,7 +710,7 @@ def simulate_endpoint(scenario: ScenarioIn):
                 variant=int(row.variant),
                 effective_prev_rc=row.effective_prev_rc,
                 effective_next_rc=row.effective_next_rc,
-                flags=list(row.flags),
+                flags=flags_parsed,
                 rc_states=dict(row.rc_states),
                 switch_states=dict(row.switch_states),
                 signal_states=dict(getattr(row, "signal_states", {}) or {}),

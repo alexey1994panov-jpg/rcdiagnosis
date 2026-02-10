@@ -1,0 +1,50 @@
+{
+  "id": "scenario_1012_1p_17_route",
+  "name": "Маршрут 10-12SP -> 1P -> 1-7SP, прямой путь",
+  "variant": null,
+  "direction": "10-12SP_to_1-7SP",
+  "lastStatus": "unknown",
+  "comment": "Базовый проход поезда 10-12SP -> 1P -> 1-7SP при Sw10+, Sw1+, Sw5+",
+  "station": "Visochino",
+  "target_rc": "1P",
+  "dt": 1.0,
+  "options": {
+    "enable_v5": true,
+    "enable_v6": true,
+    "enable_ls5": true,
+    "enable_ls6": true,
+    "enable_ls9": true
+  },
+  "steps": [
+    {
+      "t": 1.0,
+      "rc_states": { "10-12SP": 3, "1P": 3, "1-7SP": 3 },
+      "switch_states": { "Sw10": 3, "Sw1": 3, "Sw5": 3 },
+      "modes": {},
+      "mu": { "10-12SP": 3, "1P": 3, "1-7SP": 3 },
+      "dispatcher_control_state": 4,
+      "auto_actions": { "NAS": 4, "CHAS": 4 },
+      "signal_states": {}
+    },
+    {
+      "t": 1.0,
+      "rc_states": { "10-12SP": 6, "1P": 3, "1-7SP": 3 },
+      "switch_states": { "Sw10": 3, "Sw1": 3, "Sw5": 3 },
+      "modes": {},
+      "mu": { "10-12SP": 3, "1P": 3, "1-7SP": 3 },
+      "dispatcher_control_state": 4,
+      "auto_actions": { "NAS": 4, "CHAS": 4 },
+      "signal_states": {}
+    },
+    {
+      "t": 1.0,
+      "rc_states": { "10-12SP": 3, "1P": 6, "1-7SP": 6 },
+      "switch_states": { "Sw10": 3, "Sw1": 3, "Sw5": 3 },
+      "modes": {},
+      "mu": { "10-12SP": 3, "1P": 3, "1-7SP": 3 },
+      "dispatcher_control_state": 4,
+      "auto_actions": { "NAS": 4, "CHAS": 4 },
+      "signal_states": {}
+    }
+  ]
+}

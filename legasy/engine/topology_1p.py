@@ -49,10 +49,10 @@ RC_TOPOLOGY_1P: Dict[str, RcNode] = {
     # 1-7СП — знает предыдущую секцию (НП) и стрелки 1 и 5, входящие в неё
     "1-7SP": RcNode(
         rc_id="1-7SP",
-        prev_candidates=("NP",),
-        next_candidates=("1P",),
-        prev_switches=(),
-        next_switches=("Sw1", "Sw5"),
+        prev_candidates=("1P",),
+        next_candidates=("NP",),
+        prev_switches=("Sw1", "Sw5"),
+        next_switches=(),
     ),
     
     # === Расширение: соседние РЦ ===
@@ -66,7 +66,7 @@ RC_TOPOLOGY_1P: Dict[str, RcNode] = {
         prev_candidates=(),
         next_candidates=("10-12SP",),
         prev_switches=(),
-        next_switches=("Sw10",),
+        next_switches=(),
     ),
     
     # НП (НеПоименованная) — предыдущая РЦ перед 1-7СП
@@ -75,10 +75,10 @@ RC_TOPOLOGY_1P: Dict[str, RcNode] = {
     # Смежность определяется стрелкой Sw1 (по XML: PrevSec=НП, SwSection=1-7СП)
     "NP": RcNode(
         rc_id="NP",
-        prev_candidates=(),
-        next_candidates=("1-7SP",),
+        prev_candidates=("1-7SP",),
+        next_candidates=(),
         prev_switches=(),
-        next_switches=("Sw1",),
+        next_switches=(),
     ),
     
     # 3П — развязка (тупик по минусу для стрелок Sw10 и Sw5)
@@ -86,11 +86,11 @@ RC_TOPOLOGY_1P: Dict[str, RcNode] = {
     # Пока только заглушка — нет известных связей
     "3P": RcNode(
         rc_id="3P",
-        prev_candidates=(),
+        prev_candidates=(),      # не моделируем, тупиковая/ответвление
         next_candidates=(),
         prev_switches=(),
         next_switches=(),
-    ),
+        ),
     
     # 3СП — развязка (по плюсу для стрелки Sw1)
     # По XML: NextMi=3СП (промежуточная секция при плюсовом направлении стрелки 1)
@@ -99,6 +99,86 @@ RC_TOPOLOGY_1P: Dict[str, RcNode] = {
         rc_id="3SP",
         prev_candidates=(),
         next_candidates=(),
+        prev_switches=(),
+        next_switches=(),
+    ),
+
+    # --- Дополнительные РЦ, упомянутые в Objects.xml (заглушки для согласованности) ---
+    "2-8SP": RcNode(
+        rc_id="2-8SP",
+        prev_candidates=("CHP",),
+        next_candidates=("4SP",),
+        prev_switches=("Sw2",),
+        next_switches=("Sw4",),
+    ),
+
+    "14-16SP": RcNode(
+        rc_id="14-16SP",
+        prev_candidates=("4P",),
+        next_candidates=("2P",),
+        prev_switches=(),
+        next_switches=(),
+    ),
+
+    "4SP": RcNode(
+        rc_id="4SP",
+        prev_candidates=("2-8SP",),
+        next_candidates=("1AP",),
+        prev_switches=("Sw4",),
+        next_switches=("Sw4",),
+    ),
+
+    "6SP": RcNode(
+        rc_id="6SP",
+        prev_candidates=("2-8SP",),
+        next_candidates=("2AP",),
+        prev_switches=("Sw2",),
+        next_switches=("Sw6",),
+    ),
+
+    "CHP": RcNode(
+        rc_id="CHP",
+        prev_candidates=(),
+        next_candidates=("2-8SP",),
+        prev_switches=(),
+        next_switches=("Sw2",),
+    ),
+
+    "NDP": RcNode(
+        rc_id="NDP",
+        prev_candidates=(),
+        next_candidates=("3SP",),
+        prev_switches=(),
+        next_switches=("Sw3",),
+    ),
+
+    "2AP": RcNode(
+        rc_id="2AP",
+        prev_candidates=("6SP",),
+        next_candidates=("14-16SP",),
+        prev_switches=("Sw6",),
+        next_switches=(),
+    ),
+
+    "2P": RcNode(
+        rc_id="2P",
+        prev_candidates=("14-16SP",),
+        next_candidates=("3SP",),
+        prev_switches=(),
+        next_switches=("Sw3",),
+    ),
+
+    "4P": RcNode(
+        rc_id="4P",
+        prev_candidates=(),
+        next_candidates=("2-8SP",),
+        prev_switches=(),
+        next_switches=("Sw2",),
+    ),
+    "CHDP": RcNode(
+        rc_id="CHDP",
+        prev_candidates=(),
+        next_candidates=("4SP",),  # по XML NextSec = 4СП → "4SP"
         prev_switches=(),
         next_switches=(),
     ),
@@ -165,6 +245,40 @@ SW_TOPOLOGY_1P: Dict[str, SwNode] = {
         prev_sec=None,              # PrevSw = 1, цепочка стрелок
         plus_sections=("1P",),      # по плюсу в 1П
         minus_sections=("3P",),     # по минусу в 3П
+    ),
+
+    # Заглушки для стрелок, упомянутых в Objects.xml
+    "Sw2": SwNode(
+        sw_id="Sw2",
+        sw_section="2-8SP",
+        prev_sec="CHP",
+        plus_sections=("6SP",),
+        minus_sections=("4P",),
+        transit_sections=("4P",),
+    ),
+
+    "Sw3": SwNode(
+        sw_id="Sw3",
+        sw_section="3SP",
+        prev_sec="2P",
+        plus_sections=("1-7SP",),
+        minus_sections=("NDP",),
+    ),
+
+    "Sw4": SwNode(
+        sw_id="Sw4",
+        sw_section="4SP",
+        prev_sec=None,
+        plus_sections=("1AP",),
+        minus_sections=("6SP",),
+    ),
+
+    "Sw6": SwNode(
+        sw_id="Sw6",
+        sw_section="6SP",
+        prev_sec=None,
+        plus_sections=("2AP",),
+        minus_sections=(),
     ),
 }
 

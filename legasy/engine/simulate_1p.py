@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 from typing import Dict, List
+from .flags_1p import build_flags, FlagsResult
 
 from engine.occupancy.exceptions.exc_recent_ls_on_adjacent import (
     RecentLsOnAdjacentException,
@@ -403,6 +404,8 @@ def simulate_1p(
                 idx=idx,
             )
 
+            
+
             opened_any = any(
                 [
                     res.opened_v1,
@@ -525,6 +528,8 @@ def simulate_1p(
         sw10_state = step.switch_states.get("Sw10", 0)
 
         # выбор варианта по активным детекторам (ЛЗ)
+                # выбор варианта по активным детекторам (ЛЗ)
+        # сначала старые флаги (для совместимости с тестами)
         if detectors_state.ds_active_v1:
             variant = 1
             flags.append("llz_v1")
@@ -574,7 +579,7 @@ def simulate_1p(
             variant = 13
             flags.append("llz_v13")
 
-        # ЛС-флаги (без изменения номера варианта)
+        # ЛС-флаги (без изменения номера варианта) — старые имена
         if detectors_state.ls_active_v1:
             flags.append("lls_v1")
         if detectors_state.ls_active_v2:
@@ -594,7 +599,7 @@ def simulate_1p(
         ):
             flags.append("lls_v6")
 
-        # события открытий/закрытий
+        # события открытий/закрытий — старые имена
         if res.opened_v1:
             flags.append("llz_v1_open")
         if res.opened_v2:
@@ -672,6 +677,185 @@ def simulate_1p(
             flags.append("lls_v6_closed")
         if res.closed_ls9:
             flags.append("lls_v9_closed")
+
+        # --- новые флаги с указанием РЦ (дополнительные, не ломают старые) ---
+
+        def _lz_flag(name: str, rc_id: str) -> str:
+            return f"{name}:rc={rc_id}"
+
+        def _ls_flag(name: str, rc_id: str) -> str:
+            return f"{name}:rc={rc_id}"
+
+        # централизованные ЛЗ по ctrl_rc_id
+        if detectors_state.ds_active_v1:
+            flags.append(_lz_flag("llz_v1", step_ctrl_rc_id))
+        if detectors_state.ds_active_v2:
+            flags.append(_lz_flag("llz_v2", step_ctrl_rc_id))
+        if detectors_state.ds_active_v3:
+            flags.append(_lz_flag("llz_v3", step_ctrl_rc_id))
+        if getattr(detectors_state, "ds_active_v7", False):
+            flags.append(_lz_flag("llz_v7", step_ctrl_rc_id))
+        if detectors_state.ds_active_v8:
+            flags.append(_lz_flag("llz_v8", step_ctrl_rc_id))
+        if getattr(detectors_state, "ds_active_v9", False):
+            flags.append(_lz_flag("llz_v9", step_ctrl_rc_id))
+        if detectors_state.ds_active_v10:
+            flags.append(_lz_flag("llz_v10", step_ctrl_rc_id))
+        if getattr(detectors_state, "ds_active_v11", False):
+            flags.append(_lz_flag("llz_v11", step_ctrl_rc_id))
+
+        # per‑RC ЛЗ
+        if ds4:
+            for rc_id, active in ds4.items():
+                if active:
+                    flags.append(_lz_flag("llz_v4", rc_id))
+        if ds5:
+            for rc_id, active in ds5.items():
+                if active:
+                    flags.append(_lz_flag("llz_v5", rc_id))
+        if ds6:
+            for rc_id, active in ds6.items():
+                if active:
+                    flags.append(_lz_flag("llz_v6", rc_id))
+        if ds12:
+            for rc_id, active in ds12.items():
+                if active:
+                    flags.append(_lz_flag("llz_v12", rc_id))
+        if getattr(detectors_state, "ds_active_v13", False):
+            flags.append(_lz_flag("llz_v13", step_ctrl_rc_id))
+
+        # ЛС централизованные
+        if detectors_state.ls_active_v1:
+            flags.append(_ls_flag("lls_v1", step_ctrl_rc_id))
+        if detectors_state.ls_active_v2:
+            flags.append(_ls_flag("lls_v2", step_ctrl_rc_id))
+        if detectors_state.ls_active_v4:
+            flags.append(_ls_flag("lls_v4", step_ctrl_rc_id))
+        if detectors_state.ls_active_v5:
+            flags.append(_ls_flag("lls_v5", step_ctrl_rc_id))
+
+        # ЛС per‑RC
+        if (
+            detectors_state.ls_active_v9_by_rc
+            and any(detectors_state.ls_active_v9_by_rc.values())
+        ):
+            for rc_id, active in detectors_state.ls_active_v9_by_rc.items():
+                if active:
+                    flags.append(_ls_flag("lls_v9", rc_id))
+
+        if (
+            detectors_state.ls_active_v6_by_rc
+            and any(detectors_state.ls_active_v6_by_rc.values())
+        ):
+            for rc_id, active in detectors_state.ls_active_v6_by_rc.items():
+                if active:
+                    flags.append(_ls_flag("lls_v6", rc_id))
+
+        # события открытий/закрытий ЛЗ с rc
+        if res.opened_v1:
+            flags.append(_lz_flag("llz_v1_open", step_ctrl_rc_id))
+        if res.opened_v2:
+            flags.append(_lz_flag("llz_v2_open", step_ctrl_rc_id))
+        if res.opened_v3:
+            flags.append(_lz_flag("llz_v3_open", step_ctrl_rc_id))
+        if res.opened_v4 and ds4:
+            for rc_id, active in ds4.items():
+                if active:
+                    flags.append(_lz_flag("llz_v4_open", rc_id))
+        if res.opened_v5 and ds5:
+            for rc_id, active in ds5.items():
+                if active:
+                    flags.append(_lz_flag("llz_v5_open", rc_id))
+        if res.opened_v6 and ds6:
+            for rc_id, active in ds6.items():
+                if active:
+                    flags.append(_lz_flag("llz_v6_open", rc_id))
+        if res.opened_v7:
+            flags.append(_lz_flag("llz_v7_open", step_ctrl_rc_id))
+        if res.opened_v8:
+            flags.append(_lz_flag("llz_v8_open", step_ctrl_rc_id))
+        if res.opened_v9:
+            flags.append(_lz_flag("llz_v9_open", step_ctrl_rc_id))
+        if res.opened_v10:
+            flags.append(_lz_flag("llz_v10_open", step_ctrl_rc_id))
+        if res.opened_v11:
+            flags.append(_lz_flag("llz_v11_open", step_ctrl_rc_id))
+        if res.opened_v12 and ds12:
+            for rc_id, active in ds12.items():
+                if active:
+                    flags.append(_lz_flag("llz_v12_open", rc_id))
+        if res.opened_v13:
+            flags.append(_lz_flag("llz_v13_open", step_ctrl_rc_id))
+
+        if res.opened_ls1:
+            flags.append(_ls_flag("lls_v1_open", step_ctrl_rc_id))
+        if res.opened_ls2:
+            flags.append(_ls_flag("lls_v2_open", step_ctrl_rc_id))
+        if res.opened_ls4:
+            flags.append(_ls_flag("lls_v4_open", step_ctrl_rc_id))
+        if res.opened_ls5:
+            flags.append(_ls_flag("lls_v5_open", step_ctrl_rc_id))
+        if res.opened_ls6 and detectors_state.ls_active_v6_by_rc:
+            for rc_id, active in detectors_state.ls_active_v6_by_rc.items():
+                if active:
+                    flags.append(_ls_flag("lls_v6_open", rc_id))
+        if res.opened_ls9 and detectors_state.ls_active_v9_by_rc:
+            for rc_id, active in detectors_state.ls_active_v9_by_rc.items():
+                if active:
+                    flags.append(_ls_flag("lls_v9_open", rc_id))
+
+        if res.closed_v1:
+            flags.append(_lz_flag("llz_v1_closed", step_ctrl_rc_id))
+        if res.closed_v2:
+            flags.append(_lz_flag("llz_v2_closed", step_ctrl_rc_id))
+        if res.closed_v3:
+            flags.append(_lz_flag("llz_v3_closed", step_ctrl_rc_id))
+        if res.closed_v4 and ds4:
+            for rc_id, active in ds4.items():
+                if active:
+                    flags.append(_lz_flag("llz_v4_closed", rc_id))
+        if res.closed_v5 and ds5:
+            for rc_id, active in ds5.items():
+                if active:
+                    flags.append(_lz_flag("llz_v5_closed", rc_id))
+        if res.closed_v6 and ds6:
+            for rc_id, active in ds6.items():
+                if active:
+                    flags.append(_lz_flag("llz_v6_closed", rc_id))
+        if res.closed_v7:
+            flags.append(_lz_flag("llz_v7_closed", step_ctrl_rc_id))
+        if res.closed_v8:
+            flags.append(_lz_flag("llz_v8_closed", step_ctrl_rc_id))
+        if res.closed_v9:
+            flags.append(_lz_flag("llz_v9_closed", step_ctrl_rc_id))
+        if res.closed_v10:
+            flags.append(_lz_flag("llz_v10_closed", step_ctrl_rc_id))
+        if res.closed_v11:
+            flags.append(_lz_flag("llz_v11_closed", step_ctrl_rc_id))
+        if res.closed_v12 and ds12:
+            for rc_id, active in ds12.items():
+                if active:
+                    flags.append(_lz_flag("llz_v12_closed", rc_id))
+        if res.closed_v13:
+            flags.append(_lz_flag("llz_v13_closed", step_ctrl_rc_id))
+
+        if res.closed_ls1:
+            flags.append(_ls_flag("lls_v1_closed", step_ctrl_rc_id))
+        if res.closed_ls2:
+            flags.append(_ls_flag("lls_v2_closed", step_ctrl_rc_id))
+        if res.closed_ls4:
+            flags.append(_ls_flag("lls_v4_closed", step_ctrl_rc_id))
+        if res.closed_ls5:
+            flags.append(_ls_flag("lls_v5_closed", step_ctrl_rc_id))
+        if res.closed_ls6 and detectors_state.ls_active_v6_by_rc:
+            for rc_id, active in detectors_state.ls_active_v6_by_rc.items():
+                if active:
+                    flags.append(_ls_flag("lls_v6_closed", rc_id))
+        if res.closed_ls9 and detectors_state.ls_active_v9_by_rc:
+            for rc_id, active in detectors_state.ls_active_v9_by_rc.items():
+                if active:
+                    flags.append(_ls_flag("lls_v9_closed", rc_id))
+
 
         v1_free_ok = detectors_state.ds_active_v1 and curr_free
 

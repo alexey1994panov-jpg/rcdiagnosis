@@ -2,6 +2,21 @@
 
 Проект для моделирования станции, расчета состояний РЦ/стрелок/сигналов и детектирования ДС (ЛЗ/ЛС) по сценариям.
 
+## Быстрый старт (5 минут)
+```powershell
+git clone https://github.com/alexey1994panov-jpg/rcdiagnosis.git
+cd rcdiagnosis
+python -m venv .venv
+.venv\Scripts\activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+powershell -ExecutionPolicy Bypass -File .\scripts\run_server.ps1
+```
+
+После запуска откройте:
+- локально: `http://127.0.0.1:8000/`
+- в сети: `http://<IP_СЕРВЕРА>:8000/`
+
 ## Цель MVP
 - воспроизводить сценарии по шагам времени;
 - рассчитывать флаги детекторов ЛЗ/ЛС;
@@ -91,14 +106,20 @@ python -m venv .venv
 4. Установить базовые зависимости:
 ```powershell
 python -m pip install --upgrade pip
-python -m pip install fastapi uvicorn pytest
+python -m pip install -r requirements.txt
 ```
 
 ## Запуск как сервер (доступ с другого ПК)
 1. На компьютере-сервере запустить:
 ```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\run_server.ps1
+```
+
+Или напрямую:
+```powershell
 python -m uvicorn api.app:app --host 0.0.0.0 --port 8000
 ```
+Для dev-режима со слежением: `powershell -ExecutionPolicy Bypass -File .\scripts\run_server.ps1 -Reload`.
 2. Разрешить входящее правило в брандмауэре Windows для порта `8000` (TCP).
 3. Узнать IP сервера:
 ```powershell

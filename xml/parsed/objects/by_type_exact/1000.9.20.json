@@ -1,0 +1,55 @@
+[
+  {
+    "name": "ДУ",
+    "description": "ДУ",
+    "type": "1000.9.20",
+    "id": "427",
+    "adk_type": "037.20.01",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ДУ",
+      "Description": "ДУ",
+      "Type": "1000.9.20",
+      "ADKType": "037.20.01",
+      "ID": "427",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "3",
+              "Condition": "ДиспУпр = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "AdkNumber": "2",
+              "Condition": "ДиспУпр = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "ДиспУпр",
+          "Description": "Контроль диспетчерского управления",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП44/C8",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,21 @@
+﻿{
+  "station": "Visochino",
+  "dt": 1,
+  "options": {},
+  "events": [
+    { "t": 1, "kind": "rc", "name": "НП", "state": 4 },
+    { "t": 1, "kind": "rc", "name": "1-7СП", "state": 4 },
+    { "t": 1, "kind": "switch", "name": "Sw1", "state": 4 },
+    { "t": 1, "kind": "switch", "name": "Sw5", "state": 4 },
+
+    { "t": 2, "kind": "rc", "name": "1-7СП", "state": 6 },
+    { "t": 2, "kind": "switch", "name": "Sw1", "state": 12 },
+
+    { "t": 3, "kind": "rc", "name": "3П", "state": 6 },
+    { "t": 3, "kind": "rc", "name": "НП", "state": 6 },
+
+    { "t": 4, "kind": "rc", "name": "1-7СП", "state": 3 },
+    { "t": 4, "kind": "switch", "name": "Sw1", "state": 9 },
+    { "t": 4, "kind": "switch", "name": "Sw5", "state": 3 }
+  ]
+}

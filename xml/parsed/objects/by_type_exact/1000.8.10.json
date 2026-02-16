@@ -1,0 +1,1058 @@
+[
+  {
+    "name": "ПРИМА1Резерв",
+    "description": "ПРИМА1Резерв",
+    "type": "1000.8.10",
+    "id": "909",
+    "adk_type": "008.10.106",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПРИМА1Резерв",
+      "Description": "ПРИМА1Резерв",
+      "Type": "1000.8.10",
+      "ADKType": "008.10.106",
+      "ID": "909",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "ФА = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "ФА = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "ФА",
+          "Description": "Контроль активности фидера",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП48/C14",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "ПРИМА2Резерв",
+    "description": "ПРИМА2Резерв",
+    "type": "1000.8.10",
+    "id": "910",
+    "adk_type": "008.10.106",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПРИМА2Резерв",
+      "Description": "ПРИМА2Резерв",
+      "Type": "1000.8.10",
+      "ADKType": "008.10.106",
+      "ID": "910",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "ФА = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "ФА = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "ФА",
+          "Description": "Контроль активности фидера",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП48/C15",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Фидер 1",
+    "description": "Фидер 1",
+    "type": "1000.8.10",
+    "id": "129",
+    "adk_type": "008.10.104",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Фидер 1",
+      "Description": "Фидер 1",
+      "Type": "1000.8.10",
+      "ADKType": "008.10.104",
+      "ID": "129",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "ФН = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "ФН = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "ФН",
+          "Description": "Контроль наличия фидера",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП48/C10",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "U1Ф",
+          "CLASS": "Tdm.Unification.UniObjData",
+          "CODE": "U1Ф",
+          "ParamID": "12900009",
+          "ParamType": "2",
+          "Ref": "/Station/IOSys/ДЦЮГизмерения/ДЦИзмерения/ТИ1-10"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "U2Ф",
+          "CLASS": "Tdm.Unification.UniObjData",
+          "CODE": "U2Ф",
+          "ParamID": "12900010",
+          "ParamType": "2",
+          "Ref": "/Station/IOSys/ДЦЮГизмерения/ДЦИзмерения/ТИ1-11"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "U3Ф",
+          "CLASS": "Tdm.Unification.UniObjData",
+          "CODE": "U3Ф",
+          "ParamID": "12900011",
+          "ParamType": "2",
+          "Ref": "/Station/IOSys/ДЦЮГизмерения/ДЦИзмерения/ТИ1-12"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "Activity",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/Фидер 1 Активность"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Критически повышенное напряжение на нерабочем фидере",
+          "Description": "Критически повышенное напряжение на нерабочем фидере",
+          "CLASS": "Tdm.Unification.SmartTasks.CondTechTask",
+          "Number": "41179",
+          "AdkNumber": "100327"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "ФН = 1 AND Activity/ФА = 0 AND (U1Ф > TaskName/Nкр_max OR ...U*Ф > TaskName/Nкр_max)",
+              "Delay": "TaskName/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "ФН = 0 OR (U1Ф <= TaskName/N_max AND ...U*Ф <= TaskName/N_max)",
+              "Delay": "TaskName/NT2_min"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Критически повышенное напряжение на рабочем фидере",
+          "Description": "Критически повышенное напряжение на рабочем фидере",
+          "CLASS": "Tdm.Unification.SmartTasks.CondTechTask",
+          "Number": "41182",
+          "AdkNumber": "100325"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "ФН = 1 AND Activity/ФА = 1 AND (U1Ф > TaskName/Nкр_max OR ...U*Ф > TaskName/Nкр_max)",
+              "Delay": "TaskName/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "ФН = 0 OR (U1Ф <= TaskName/Nкр_max AND ...U*Ф <= TaskName/Nкр_max)",
+              "Delay": "TaskName/NT2_min"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Критически пониженное напряжение на нерабочем фидере",
+          "Description": "Критически пониженное напряжение на нерабочем фидере",
+          "CLASS": "Tdm.Unification.SmartTasks.CondTechTask",
+          "Number": "41174",
+          "AdkNumber": "100326"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "ФН = 1 AND Activity/ФА = 0 AND (U1Ф < TaskName/Nкр_min OR ...U*Ф < TaskName/Nкр_min)",
+              "Delay": "TaskName/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "ФН = 0 OR (U1Ф >= TaskName/N_min AND ...U*Ф >= TaskName/N_min)",
+              "Delay": "TaskName/NT2_min"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Критически пониженное напряжение на рабочем фидере",
+          "Description": "Критически пониженное напряжение на рабочем фидере",
+          "CLASS": "Tdm.Unification.SmartTasks.CondTechTask",
+          "Number": "41175",
+          "AdkNumber": "100324"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "ФН = 1 AND Activity/ФА = 1 AND (U1Ф < TaskName/Nкр_min OR ...U*Ф < TaskName/Nкр_min)",
+              "Delay": "TaskName/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "ФН = 0 OR (U1Ф >= TaskName/N_min AND ...U*Ф >= TaskName/N_min)",
+              "Delay": "TaskName/NT2_min"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "FiderOffTechTask",
+          "Description": "Отсутствие фидера",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2109",
+          "NormDelay": "$TdmScbDelay",
+          "WriteProtocol": "true",
+          "AdkNumber": "1638"
+        },
+        "children": [
+          {
+            "tag": "Unstable",
+            "attrs": {
+              "Condition": "ФН = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Повышенное напряжение нерабочего фидера",
+          "Description": "Повышенное напряжение нерабочего фидера",
+          "CLASS": "Tdm.Unification.SmartTasks.CondTechTask",
+          "Number": "41193",
+          "AdkNumber": "100323"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "NOT(IsDS(41174)) AND ФН = 1 AND Activity/ФА = 0 AND (U1Ф > TaskName/N_max OR ...U*Ф > TaskName/N_max)",
+              "Delay": "TaskName/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "ФН = 0 OR (U1Ф <= TaskName/N_max AND ...U*Ф <= TaskName/N_max)",
+              "Delay": "TaskName/NT2_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "IsDS(41174)",
+              "Delay": "0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Повышенное напряжение рабочего фидера",
+          "Description": "Повышенное напряжение рабочего фидера",
+          "CLASS": "Tdm.Unification.SmartTasks.CondTechTask",
+          "Number": "41177",
+          "AdkNumber": "441"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "NOT(IsDS(41182)) AND ФН = 1 AND Activity/ФА = 1 AND (U1Ф > TaskName/N_max OR ...U*Ф > TaskName/N_max)",
+              "Delay": "TaskName/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "ФН = 0 OR (U1Ф <= TaskName/N_max AND ...U*Ф <= TaskName/N_max)",
+              "Delay": "TaskName/NT2_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "IsDS(41182)",
+              "Delay": "0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Пониженное напряжение нерабочего фидера",
+          "Description": "Пониженное напряжение нерабочего фидера",
+          "CLASS": "Tdm.Unification.SmartTasks.CondTechTask",
+          "Number": "41178",
+          "AdkNumber": "100322"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "NOT(IsDS(41174)) AND ФН = 1 AND Activity/ФА = 0 AND (U1Ф < TaskName/N_min OR ...U*Ф < TaskName/N_min)",
+              "Delay": "TaskName/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "ФН = 0 OR (U1Ф >= TaskName/N_min AND ...U*Ф >= TaskName/N_min)",
+              "Delay": "TaskName/NT2_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "IsDS(41174)",
+              "Delay": "0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Пониженное напряжение рабочего фидера",
+          "Description": "Пониженное напряжение рабочего фидера",
+          "CLASS": "Tdm.Unification.SmartTasks.CondTechTask",
+          "Number": "41176",
+          "AdkNumber": "458"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "NOT(IsDS(41175)) AND ФН = 1 AND Activity/ФА = 1 AND (U1Ф < TaskName/N_min OR ...U*Ф < TaskName/N_min)",
+              "Delay": "TaskName/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "ФН = 0 OR (U1Ф >= TaskName/N_min AND ...U*Ф >= TaskName/N_min)",
+              "Delay": "TaskName/NT2_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "IsDS(41175)",
+              "Delay": "0"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Фидер 1 Активность",
+    "description": "Фидер 1 Активность",
+    "type": "1000.8.10",
+    "id": "695",
+    "adk_type": "008.10.106",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Фидер 1 Активность",
+      "Description": "Фидер 1 Активность",
+      "Type": "1000.8.10",
+      "ADKType": "008.10.106",
+      "ID": "695",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "ФА = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "ФА = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "ФА",
+          "Description": "Контроль активности фидера",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП48/C1",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Фидер 1 Чередование",
+    "description": "Фидер 1 Чередование",
+    "type": "1000.8.10",
+    "id": "874",
+    "adk_type": "008.10.110",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Фидер 1 Чередование",
+      "Description": "Фидер 1 Чередование",
+      "Type": "1000.8.10",
+      "ADKType": "008.10.110",
+      "ID": "874",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "ФНарЧер = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "ФНарЧер = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "ФНарЧер",
+          "Description": "Контроль нарушения чередования фаз фидера",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП48/C12",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PRV",
+          "Description": "Нарушение чередования фаз",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "41154",
+          "AdkNumber": "1639"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "ФНарЧер = 1",
+              "Delay": "Нарушение чередования фаз/NТ_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "ФНарЧер = 0"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Фидер 2",
+    "description": "Фидер 2",
+    "type": "1000.8.10",
+    "id": "130",
+    "adk_type": "008.10.104",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Фидер 2",
+      "Description": "Фидер 2",
+      "Type": "1000.8.10",
+      "ADKType": "008.10.104",
+      "ID": "130",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "ФН = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "ФН = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "ФН",
+          "Description": "Контроль наличия фидера",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП48/C11",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "U1Ф",
+          "CLASS": "Tdm.Unification.UniObjData",
+          "CODE": "U1Ф",
+          "ParamID": "13000012",
+          "ParamType": "2",
+          "Ref": "/Station/IOSys/ДЦЮГизмерения/ДЦИзмерения/ТИ1-13"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "U2Ф",
+          "CLASS": "Tdm.Unification.UniObjData",
+          "CODE": "U2Ф",
+          "ParamID": "13000013",
+          "ParamType": "2",
+          "Ref": "/Station/IOSys/ДЦЮГизмерения/ДЦИзмерения/ТИ1-14"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "U3Ф",
+          "CLASS": "Tdm.Unification.UniObjData",
+          "CODE": "U3Ф",
+          "ParamID": "13000014",
+          "ParamType": "2",
+          "Ref": "/Station/IOSys/ДЦЮГизмерения/ДЦИзмерения/ТИ1-15"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "Activity",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/Фидер 2 Активность"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Критически повышенное напряжение на нерабочем фидере",
+          "Description": "Критически повышенное напряжение на нерабочем фидере",
+          "CLASS": "Tdm.Unification.SmartTasks.CondTechTask",
+          "Number": "41179",
+          "AdkNumber": "100327"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "ФН = 1 AND Activity/ФА = 0 AND (U1Ф > TaskName/Nкр_max OR ...U*Ф > TaskName/Nкр_max)",
+              "Delay": "TaskName/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "ФН = 0 OR (U1Ф <= TaskName/N_max AND ...U*Ф <= TaskName/N_max)",
+              "Delay": "TaskName/NT2_min"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Критически повышенное напряжение на рабочем фидере",
+          "Description": "Критически повышенное напряжение на рабочем фидере",
+          "CLASS": "Tdm.Unification.SmartTasks.CondTechTask",
+          "Number": "41182",
+          "AdkNumber": "100325"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "ФН = 1 AND Activity/ФА = 1 AND (U1Ф > TaskName/Nкр_max OR ...U*Ф > TaskName/Nкр_max)",
+              "Delay": "TaskName/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "ФН = 0 OR (U1Ф <= TaskName/Nкр_max AND ...U*Ф <= TaskName/Nкр_max)",
+              "Delay": "TaskName/NT2_min"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Критически пониженное напряжение на нерабочем фидере",
+          "Description": "Критически пониженное напряжение на нерабочем фидере",
+          "CLASS": "Tdm.Unification.SmartTasks.CondTechTask",
+          "Number": "41174",
+          "AdkNumber": "100326"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "ФН = 1 AND Activity/ФА = 0 AND (U1Ф < TaskName/Nкр_min OR ...U*Ф < TaskName/Nкр_min)",
+              "Delay": "TaskName/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "ФН = 0 OR (U1Ф >= TaskName/N_min AND ...U*Ф >= TaskName/N_min)",
+              "Delay": "TaskName/NT2_min"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Критически пониженное напряжение на рабочем фидере",
+          "Description": "Критически пониженное напряжение на рабочем фидере",
+          "CLASS": "Tdm.Unification.SmartTasks.CondTechTask",
+          "Number": "41175",
+          "AdkNumber": "100324"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "ФН = 1 AND Activity/ФА = 1 AND (U1Ф < TaskName/Nкр_min OR ...U*Ф < TaskName/Nкр_min)",
+              "Delay": "TaskName/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "ФН = 0 OR (U1Ф >= TaskName/N_min AND ...U*Ф >= TaskName/N_min)",
+              "Delay": "TaskName/NT2_min"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "FiderOffTechTask",
+          "Description": "Отсутствие фидера",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2109",
+          "NormDelay": "$TdmScbDelay",
+          "WriteProtocol": "true",
+          "AdkNumber": "1638"
+        },
+        "children": [
+          {
+            "tag": "Unstable",
+            "attrs": {
+              "Condition": "ФН = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Повышенное напряжение нерабочего фидера",
+          "Description": "Повышенное напряжение нерабочего фидера",
+          "CLASS": "Tdm.Unification.SmartTasks.CondTechTask",
+          "Number": "41193",
+          "AdkNumber": "100323"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "NOT(IsDS(41174)) AND ФН = 1 AND Activity/ФА = 0 AND (U1Ф > TaskName/N_max OR ...U*Ф > TaskName/N_max)",
+              "Delay": "TaskName/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "ФН = 0 OR (U1Ф <= TaskName/N_max AND ...U*Ф <= TaskName/N_max)",
+              "Delay": "TaskName/NT2_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "IsDS(41174)",
+              "Delay": "0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Повышенное напряжение рабочего фидера",
+          "Description": "Повышенное напряжение рабочего фидера",
+          "CLASS": "Tdm.Unification.SmartTasks.CondTechTask",
+          "Number": "41177",
+          "AdkNumber": "441"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "NOT(IsDS(41182)) AND ФН = 1 AND Activity/ФА = 1 AND (U1Ф > TaskName/N_max OR ...U*Ф > TaskName/N_max)",
+              "Delay": "TaskName/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "ФН = 0 OR (U1Ф <= TaskName/N_max AND ...U*Ф <= TaskName/N_max)",
+              "Delay": "TaskName/NT2_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "IsDS(41182)",
+              "Delay": "0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Пониженное напряжение нерабочего фидера",
+          "Description": "Пониженное напряжение нерабочего фидера",
+          "CLASS": "Tdm.Unification.SmartTasks.CondTechTask",
+          "Number": "41178",
+          "AdkNumber": "100322"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "NOT(IsDS(41174)) AND ФН = 1 AND Activity/ФА = 0 AND (U1Ф < TaskName/N_min OR ...U*Ф < TaskName/N_min)",
+              "Delay": "TaskName/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "ФН = 0 OR (U1Ф >= TaskName/N_min AND ...U*Ф >= TaskName/N_min)",
+              "Delay": "TaskName/NT2_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "IsDS(41174)",
+              "Delay": "0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Пониженное напряжение рабочего фидера",
+          "Description": "Пониженное напряжение рабочего фидера",
+          "CLASS": "Tdm.Unification.SmartTasks.CondTechTask",
+          "Number": "41176",
+          "AdkNumber": "458"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "NOT(IsDS(41175)) AND ФН = 1 AND Activity/ФА = 1 AND (U1Ф < TaskName/N_min OR ...U*Ф < TaskName/N_min)",
+              "Delay": "TaskName/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "ФН = 0 OR (U1Ф >= TaskName/N_min AND ...U*Ф >= TaskName/N_min)",
+              "Delay": "TaskName/NT2_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "IsDS(41175)",
+              "Delay": "0"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Фидер 2 Активность",
+    "description": "Фидер 2 Активность",
+    "type": "1000.8.10",
+    "id": "696",
+    "adk_type": "008.10.106",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Фидер 2 Активность",
+      "Description": "Фидер 2 Активность",
+      "Type": "1000.8.10",
+      "ADKType": "008.10.106",
+      "ID": "696",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "ФА = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "ФА = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "ФА",
+          "Description": "Контроль активности фидера",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП48/C2",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Фидер 2 Чередование",
+    "description": "Фидер 2 Чередование",
+    "type": "1000.8.10",
+    "id": "875",
+    "adk_type": "008.10.110",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Фидер 2 Чередование",
+      "Description": "Фидер 2 Чередование",
+      "Type": "1000.8.10",
+      "ADKType": "008.10.110",
+      "ID": "875",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "ФНарЧер = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "ФНарЧер = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "ФНарЧер",
+          "Description": "Контроль нарушения чередования фаз фидера",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП48/C13",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PRV",
+          "Description": "Нарушение чередования фаз",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "41154",
+          "AdkNumber": "1639"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "ФНарЧер = 1",
+              "Delay": "Нарушение чередования фаз/NТ_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "ФНарЧер = 0"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

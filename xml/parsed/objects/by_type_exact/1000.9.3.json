@@ -1,0 +1,626 @@
+[
+  {
+    "name": "1НКПН (К-ОК)",
+    "description": "1НКПН (К-ОК)",
+    "type": "1000.9.3",
+    "id": "880",
+    "adk_type": "004.03.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "1НКПН (К-ОК)",
+      "Description": "1НКПН (К-ОК)",
+      "Type": "1000.9.3",
+      "ADKType": "004.03.07",
+      "ID": "880",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "ИсправнСН = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "ИсправнСН = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "ИсправнСН",
+          "Description": "Контроль исправности проводов цепи смены направления",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП42/C7",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Неисправность схемы смены направления",
+          "Description": "Неисправность схемы смены направления",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2422",
+          "AdkNumber": "809"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "ИсправнСН = 0",
+              "Delay": "Неисправность схемы смены направления/NТ_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "ИсправнСН = 1",
+              "Delay": "Неисправность схемы смены направления/NT2_min"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "1НПН (Н-ОН)",
+    "description": "1НПН (Н-ОН)",
+    "type": "1000.9.3",
+    "id": "883",
+    "adk_type": "004.03.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "1НПН (Н-ОН)",
+      "Description": "1НПН (Н-ОН)",
+      "Type": "1000.9.3",
+      "ADKType": "004.03.07",
+      "ID": "883",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "ИсправнСН = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "ИсправнСН = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "ИсправнСН",
+          "Description": "Контроль исправности проводов цепи смены направления",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП42/C4",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Неисправность схемы смены направления",
+          "Description": "Неисправность схемы смены направления",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2422",
+          "AdkNumber": "809"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "ИсправнСН = 0",
+              "Delay": "Неисправность схемы смены направления/NТ_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "ИсправнСН = 1",
+              "Delay": "Неисправность схемы смены направления/NT2_min"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "1ЧКПН (К-ОК)",
+    "description": "1ЧКПН (К-ОК)",
+    "type": "1000.9.3",
+    "id": "877",
+    "adk_type": "004.03.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "1ЧКПН (К-ОК)",
+      "Description": "1ЧКПН (К-ОК)",
+      "Type": "1000.9.3",
+      "ADKType": "004.03.07",
+      "ID": "877",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "ИсправнСН = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "ИсправнСН = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "ИсправнСН",
+          "Description": "Контроль исправности проводов цепи смены направления",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП40/C7",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Неисправность схемы смены направления",
+          "Description": "Неисправность схемы смены направления",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2422",
+          "AdkNumber": "809"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "ИсправнСН = 0",
+              "Delay": "Неисправность схемы смены направления/NТ_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "ИсправнСН = 1",
+              "Delay": "Неисправность схемы смены направления/NT2_min"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "1ЧПН (Н-ОН)",
+    "description": "1ЧПН (Н-ОН)",
+    "type": "1000.9.3",
+    "id": "878",
+    "adk_type": "004.03.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "1ЧПН (Н-ОН)",
+      "Description": "1ЧПН (Н-ОН)",
+      "Type": "1000.9.3",
+      "ADKType": "004.03.07",
+      "ID": "878",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "ИсправнСН = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "ИсправнСН = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "ИсправнСН",
+          "Description": "Контроль исправности проводов цепи смены направления",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП40/C4",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Неисправность схемы смены направления",
+          "Description": "Неисправность схемы смены направления",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2422",
+          "AdkNumber": "809"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "ИсправнСН = 0",
+              "Delay": "Неисправность схемы смены направления/NТ_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "ИсправнСН = 1",
+              "Delay": "Неисправность схемы смены направления/NT2_min"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "2НКПН (К-ОК)",
+    "description": "2НКПН (К-ОК)",
+    "type": "1000.9.3",
+    "id": "881",
+    "adk_type": "004.03.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2НКПН (К-ОК)",
+      "Description": "2НКПН (К-ОК)",
+      "Type": "1000.9.3",
+      "ADKType": "004.03.07",
+      "ID": "881",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "ИсправнСН = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "ИсправнСН = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "ИсправнСН",
+          "Description": "Контроль исправности проводов цепи смены направления",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП43/C7",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Неисправность схемы смены направления",
+          "Description": "Неисправность схемы смены направления",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2422",
+          "AdkNumber": "809"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "ИсправнСН = 0",
+              "Delay": "Неисправность схемы смены направления/NТ_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "ИсправнСН = 1",
+              "Delay": "Неисправность схемы смены направления/NT2_min"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "2НПН (Н-ОН)",
+    "description": "2НПН (Н-ОН)",
+    "type": "1000.9.3",
+    "id": "884",
+    "adk_type": "004.03.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2НПН (Н-ОН)",
+      "Description": "2НПН (Н-ОН)",
+      "Type": "1000.9.3",
+      "ADKType": "004.03.07",
+      "ID": "884",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "ИсправнСН = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "ИсправнСН = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "ИсправнСН",
+          "Description": "Контроль исправности проводов цепи смены направления",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП43/C4",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Неисправность схемы смены направления",
+          "Description": "Неисправность схемы смены направления",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2422",
+          "AdkNumber": "809"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "ИсправнСН = 0",
+              "Delay": "Неисправность схемы смены направления/NТ_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "ИсправнСН = 1",
+              "Delay": "Неисправность схемы смены направления/NT2_min"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "2ЧКПН (К-ОК)",
+    "description": "2ЧКПН (К-ОК)",
+    "type": "1000.9.3",
+    "id": "879",
+    "adk_type": "004.03.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2ЧКПН (К-ОК)",
+      "Description": "2ЧКПН (К-ОК)",
+      "Type": "1000.9.3",
+      "ADKType": "004.03.07",
+      "ID": "879",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "ИсправнСН = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "ИсправнСН = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "ИсправнСН",
+          "Description": "Контроль исправности проводов цепи смены направления",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП41/C7",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Неисправность схемы смены направления",
+          "Description": "Неисправность схемы смены направления",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2422",
+          "AdkNumber": "809"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "ИсправнСН = 0",
+              "Delay": "Неисправность схемы смены направления/NТ_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "ИсправнСН = 1",
+              "Delay": "Неисправность схемы смены направления/NT2_min"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "2ЧПН (Н-ОН)",
+    "description": "2ЧПН (Н-ОН)",
+    "type": "1000.9.3",
+    "id": "882",
+    "adk_type": "004.03.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2ЧПН (Н-ОН)",
+      "Description": "2ЧПН (Н-ОН)",
+      "Type": "1000.9.3",
+      "ADKType": "004.03.07",
+      "ID": "882",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "ИсправнСН = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "ИсправнСН = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "ИсправнСН",
+          "Description": "Контроль исправности проводов цепи смены направления",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП41/C4",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Неисправность схемы смены направления",
+          "Description": "Неисправность схемы смены направления",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2422",
+          "AdkNumber": "809"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "ИсправнСН = 0",
+              "Delay": "Неисправность схемы смены направления/NТ_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "ИсправнСН = 1",
+              "Delay": "Неисправность схемы смены направления/NT2_min"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

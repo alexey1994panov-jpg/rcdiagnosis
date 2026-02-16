@@ -1,0 +1,10 @@
+﻿{
+  "station": "Visochino",
+  "dt": 1,
+  "options": {},
+  "events": [
+    { "t": 1, "kind": "rc", "name": "1-7СП", "state": 3 },
+    { "t": 1, "kind": "switch", "name": "Sw1", "state": 9 },
+    { "t": 1, "kind": "switch", "name": "Sw5", "state": 3 }
+  ]
+}

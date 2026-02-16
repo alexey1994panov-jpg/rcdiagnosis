@@ -1,0 +1,3170 @@
+[
+  {
+    "group_name": "1",
+    "group_obj": "/Station/Objects/1",
+    "go_name": "Отображение стрелочной РЦ_5346126",
+    "go_class": "DrawSwitch",
+    "x": "1724",
+    "y": "600",
+    "text": null
+  },
+  {
+    "group_name": "1",
+    "group_obj": "/Station/Objects/1",
+    "go_name": "Название стрелки_0",
+    "go_class": "DrawText",
+    "x": "1727",
+    "y": "605",
+    "text": "1"
+  },
+  {
+    "group_name": "1",
+    "group_obj": "/Station/Objects/1",
+    "go_name": "Плюсовое положение_0",
+    "go_class": "DrawRailChain",
+    "x": null,
+    "y": null,
+    "text": null
+  },
+  {
+    "group_name": "1&sol;3СА",
+    "group_obj": "/Station/Objects/1&sol;3СА",
+    "go_name": "Контроль вспомогательного перевода стрелок_5346174",
+    "go_class": "DrawTextBox",
+    "x": "1647",
+    "y": "154",
+    "text": "1/3СА"
+  },
+  {
+    "group_name": "10",
+    "group_obj": "/Station/Objects/10",
+    "go_name": "Отображение стрелочной РЦ_5346122",
+    "go_class": "DrawSwitch",
+    "x": "1027",
+    "y": "600",
+    "text": null
+  },
+  {
+    "group_name": "10",
+    "group_obj": "/Station/Objects/10",
+    "go_name": "Название стрелки_0",
+    "go_class": "DrawText",
+    "x": "1006",
+    "y": "584",
+    "text": "10"
+  },
+  {
+    "group_name": "10",
+    "group_obj": "/Station/Objects/10",
+    "go_name": "Плюсовое положение_0",
+    "go_class": "DrawRailChain",
+    "x": null,
+    "y": null,
+    "text": null
+  },
+  {
+    "group_name": "10-12СП",
+    "group_obj": "/Station/Objects/10-12СП",
+    "go_name": "Uг - Напряжение на выходе путевого генератора_5346360",
+    "go_class": "DrawText",
+    "x": "990",
+    "y": "530",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "10-12СП",
+    "group_obj": "/Station/Objects/10-12СП",
+    "go_name": "Uпп - Напряжение на входе путевого приемника ответвления А_5346361",
+    "go_class": "DrawText",
+    "x": "990",
+    "y": "540",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "10-12СП",
+    "group_obj": "/Station/Objects/10-12СП",
+    "go_name": "UппБ - Напряжение на входе путевого приемника ответвления Б_5346362",
+    "go_class": "DrawText",
+    "x": "990",
+    "y": "550",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "10СА",
+    "group_obj": "/Station/Objects/10СА",
+    "go_name": "Контроль вспомогательного перевода стрелок_5346170",
+    "go_class": "DrawTextBox",
+    "x": "505",
+    "y": "122",
+    "text": "10СА"
+  },
+  {
+    "group_name": "11НУКС",
+    "group_obj": "/Station/Objects/11НУКС",
+    "go_name": "Контроль срабатывания датчика УКСПС_5346180",
+    "go_class": "DrawTextBox",
+    "x": "2204",
+    "y": "523",
+    "text": "11НУКС"
+  },
+  {
+    "group_name": "12АВ",
+    "group_obj": "/Station/Objects/12АВ",
+    "go_name": "Контроль плюсового положения автовозврата стрелки_5346259",
+    "go_class": "DrawTextBox",
+    "x": "1066",
+    "y": "548",
+    "text": "ПК"
+  },
+  {
+    "group_name": "12НУКС",
+    "group_obj": "/Station/Objects/12НУКС",
+    "go_name": "Контроль срабатывания датчика УКСПС_5346179",
+    "go_class": "DrawTextBox",
+    "x": "2140",
+    "y": "523",
+    "text": "12НУКС"
+  },
+  {
+    "group_name": "12СА",
+    "group_obj": "/Station/Objects/12СА",
+    "go_name": "Контроль вспомогательного перевода стрелок_5346171",
+    "go_class": "DrawTextBox",
+    "x": "505",
+    "y": "90",
+    "text": "12СА"
+  },
+  {
+    "group_name": "12СБ",
+    "group_obj": "/Station/Objects/12СБ",
+    "go_name": "Имя объекта_5346301",
+    "go_class": "DrawText",
+    "x": "1075",
+    "y": "513",
+    "text": "12СБ"
+  },
+  {
+    "group_name": "12СБ",
+    "group_obj": "/Station/Objects/12СБ",
+    "go_name": "Контроль КСБ (вариант 2)_5346300",
+    "go_class": "DrawImgList",
+    "x": "1060",
+    "y": "519",
+    "text": null
+  },
+  {
+    "group_name": "14-16СП",
+    "group_obj": "/Station/Objects/14-16СП",
+    "go_name": "Uг - Напряжение на выходе путевого генератора_5346363",
+    "go_class": "DrawText",
+    "x": "1046",
+    "y": "620",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "14-16СП",
+    "group_obj": "/Station/Objects/14-16СП",
+    "go_name": "Uпп - Напряжение на входе путевого приемника ответвления А_5346364",
+    "go_class": "DrawText",
+    "x": "1046",
+    "y": "630",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "14-16СП",
+    "group_obj": "/Station/Objects/14-16СП",
+    "go_name": "UппБ - Напряжение на входе путевого приемника ответвления Б_5346365",
+    "go_class": "DrawText",
+    "x": "1046",
+    "y": "640",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "14АВ",
+    "group_obj": "/Station/Objects/14АВ",
+    "go_name": "Контроль плюсового положения автовозврата стрелки_5346260",
+    "go_class": "DrawTextBox",
+    "x": "1034",
+    "y": "705",
+    "text": "ПК"
+  },
+  {
+    "group_name": "14СА",
+    "group_obj": "/Station/Objects/14СА",
+    "go_name": "Контроль вспомогательного перевода стрелок_5346172",
+    "go_class": "DrawTextBox",
+    "x": "505",
+    "y": "186",
+    "text": "14СА"
+  },
+  {
+    "group_name": "14СБ",
+    "group_obj": "/Station/Objects/14СБ",
+    "go_name": "Имя объекта_5346303",
+    "go_class": "DrawText",
+    "x": "1004",
+    "y": "734",
+    "text": "14СБ"
+  },
+  {
+    "group_name": "14СБ",
+    "group_obj": "/Station/Objects/14СБ",
+    "go_name": "Контроль КСБ (вариант 2)_5346302",
+    "go_class": "DrawImgList",
+    "x": "1052",
+    "y": "741",
+    "text": null
+  },
+  {
+    "group_name": "16",
+    "group_obj": "/Station/Objects/16",
+    "go_name": "Отображение стрелочной РЦ_5346121",
+    "go_class": "DrawSwitch",
+    "x": "1085",
+    "y": "660",
+    "text": null
+  },
+  {
+    "group_name": "16",
+    "group_obj": "/Station/Objects/16",
+    "go_name": "Название стрелки_0",
+    "go_class": "DrawText",
+    "x": "1088",
+    "y": "665",
+    "text": "16"
+  },
+  {
+    "group_name": "16",
+    "group_obj": "/Station/Objects/16",
+    "go_name": "Плюсовое положение_0",
+    "go_class": "DrawRailChain",
+    "x": null,
+    "y": null,
+    "text": null
+  },
+  {
+    "group_name": "16СА",
+    "group_obj": "/Station/Objects/16СА",
+    "go_name": "Контроль вспомогательного перевода стрелок_5346173",
+    "go_class": "DrawTextBox",
+    "x": "505",
+    "y": "154",
+    "text": "16СА"
+  },
+  {
+    "group_name": "1-7СП",
+    "group_obj": "/Station/Objects/1-7СП",
+    "go_name": "Uг - Напряжение на выходе путевого генератора_5346378",
+    "go_class": "DrawText",
+    "x": "1630",
+    "y": "520",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "1-7СП",
+    "group_obj": "/Station/Objects/1-7СП",
+    "go_name": "Uпп - Напряжение на входе путевого приемника ответвления А_5346379",
+    "go_class": "DrawText",
+    "x": "1630",
+    "y": "530",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "1-7СП",
+    "group_obj": "/Station/Objects/1-7СП",
+    "go_name": "UппБ - Напряжение на входе путевого приемника ответвления Б_5346380",
+    "go_class": "DrawText",
+    "x": "1630",
+    "y": "540",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "1-7СП",
+    "group_obj": "/Station/Objects/1-7СП",
+    "go_name": "UппВ - Напряжение на входе путевого приемника ответвления В_5346381",
+    "go_class": "DrawText",
+    "x": "1630",
+    "y": "550",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "1АП",
+    "group_obj": "/Station/Objects/1АП",
+    "go_name": "Uг - Напряжение на выходе путевого генератора_5346348",
+    "go_class": "DrawText",
+    "x": "804",
+    "y": "550",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "1АП",
+    "group_obj": "/Station/Objects/1АП",
+    "go_name": "Uпп - Напряжение на входе путевого приемника ответвления А_5346349",
+    "go_class": "DrawText",
+    "x": "804",
+    "y": "560",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "1АП",
+    "group_obj": "/Station/Objects/1АП",
+    "go_name": "UппБ - Напряжение на входе путевого приемника ответвления Б_5346350",
+    "go_class": "DrawText",
+    "x": "804",
+    "y": "570",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "1АП",
+    "group_obj": "/Station/Objects/1АП",
+    "go_name": "UппВ - Напряжение на входе путевого приемника ответвления В_5346351",
+    "go_class": "DrawText",
+    "x": "804",
+    "y": "580",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "1АП",
+    "group_obj": "/Station/Objects/1АП",
+    "go_name": "Изображение РЦ_5346118",
+    "go_class": "DrawRailChain",
+    "x": null,
+    "y": null,
+    "text": null
+  },
+  {
+    "group_name": "1АП",
+    "group_obj": "/Station/Objects/1АП",
+    "go_name": "Имя РЦ_5346234",
+    "go_class": "DrawText",
+    "x": "872",
+    "y": "580",
+    "text": "1АП"
+  },
+  {
+    "group_name": "1НДСО",
+    "group_obj": "/Station/Objects/1НДСО",
+    "go_name": "Имя участка ДДЦ_5346214",
+    "go_class": "DrawText",
+    "x": "1936",
+    "y": "402",
+    "text": "1НДСО"
+  },
+  {
+    "group_name": "1НДСО",
+    "group_obj": "/Station/Objects/1НДСО",
+    "go_name": "Направление 1 стрелка (Станция слева) ДДЦ_5346213",
+    "go_class": "DrawImgList",
+    "x": "1977",
+    "y": "441",
+    "text": null
+  },
+  {
+    "group_name": "1НКП",
+    "group_obj": "/Station/Objects/1НКП",
+    "go_name": "Контроль перегона_5346215",
+    "go_class": "DrawTextBox",
+    "x": "1944",
+    "y": "501",
+    "text": ""
+  },
+  {
+    "group_name": "1НКП",
+    "group_obj": "/Station/Objects/1НКП",
+    "go_name": "Название перегона_5346216",
+    "go_class": "DrawText",
+    "x": "1942",
+    "y": "484",
+    "text": "1НКП"
+  },
+  {
+    "group_name": "1НКПН (К-ОК)",
+    "group_obj": "/Station/Objects/1НКПН (К-ОК)",
+    "go_name": "Индикатор состояния устройства ДДЦ_5348258",
+    "go_class": "DrawTextBox",
+    "x": "1921",
+    "y": "333",
+    "text": "К-ОК"
+  },
+  {
+    "group_name": "1НО&sol;1ЧП",
+    "group_obj": "/Station/Objects/1НО&sol;1ЧП",
+    "go_name": "Имя участка ДДЦ_5346202",
+    "go_class": "DrawText",
+    "x": "303",
+    "y": "450",
+    "text": "1НО/1ЧП"
+  },
+  {
+    "group_name": "1НО&sol;1ЧП",
+    "group_obj": "/Station/Objects/1НО&sol;1ЧП",
+    "go_name": "Направление 2 стрелки (Станция справа) ДДЦ_5346201",
+    "go_class": "DrawImgList",
+    "x": "290",
+    "y": "466",
+    "text": null
+  },
+  {
+    "group_name": "1НПН (Н-ОН)",
+    "group_obj": "/Station/Objects/1НПН (Н-ОН)",
+    "go_name": "Индикатор состояния устройства ДДЦ_5348259",
+    "go_class": "DrawTextBox",
+    "x": "1921",
+    "y": "364",
+    "text": "Н-ОН"
+  },
+  {
+    "group_name": "1П",
+    "group_obj": "/Station/Objects/1П",
+    "go_name": "Uг - Напряжение на выходе путевого генератора_5346370",
+    "go_class": "DrawText",
+    "x": "1235",
+    "y": "550",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "1П",
+    "group_obj": "/Station/Objects/1П",
+    "go_name": "Uпп - Напряжение на входе путевого приемника ответвления А_5346371",
+    "go_class": "DrawText",
+    "x": "1235",
+    "y": "560",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "1П",
+    "group_obj": "/Station/Objects/1П",
+    "go_name": "UппБ - Напряжение на входе путевого приемника ответвления Б_5346372",
+    "go_class": "DrawText",
+    "x": "1235",
+    "y": "570",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "1П",
+    "group_obj": "/Station/Objects/1П",
+    "go_name": "UппВ - Напряжение на входе путевого приемника ответвления В_5346373",
+    "go_class": "DrawText",
+    "x": "1235",
+    "y": "580",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "1П",
+    "group_obj": "/Station/Objects/1П",
+    "go_name": "Изображение РЦ_5346124",
+    "go_class": "DrawRailChain",
+    "x": null,
+    "y": null,
+    "text": null
+  },
+  {
+    "group_name": "1П",
+    "group_obj": "/Station/Objects/1П",
+    "go_name": "Имя РЦ_5346244",
+    "go_class": "DrawText",
+    "x": "1419",
+    "y": "580",
+    "text": "1П"
+  },
+  {
+    "group_name": "1ЧДСО",
+    "group_obj": "/Station/Objects/1ЧДСО",
+    "go_name": "Имя участка ДДЦ_5346204",
+    "go_class": "DrawText",
+    "x": "308",
+    "y": "409",
+    "text": "1ЧДСО"
+  },
+  {
+    "group_name": "1ЧДСО",
+    "group_obj": "/Station/Objects/1ЧДСО",
+    "go_name": "Направление 1 стрелка (Станция справа) ДДЦ_5348209",
+    "go_class": "DrawImgList",
+    "x": "349",
+    "y": "448",
+    "text": null
+  },
+  {
+    "group_name": "1ЧКП",
+    "group_obj": "/Station/Objects/1ЧКП",
+    "go_name": "Контроль перегона_5346205",
+    "go_class": "DrawTextBox",
+    "x": "316",
+    "y": "508",
+    "text": ""
+  },
+  {
+    "group_name": "1ЧКП",
+    "group_obj": "/Station/Objects/1ЧКП",
+    "go_name": "Название перегона_5346206",
+    "go_class": "DrawText",
+    "x": "313",
+    "y": "491",
+    "text": "1ЧКП"
+  },
+  {
+    "group_name": "1ЧКПН (К-ОК)",
+    "group_obj": "/Station/Objects/1ЧКПН (К-ОК)",
+    "go_name": "Индикатор состояния устройства ДДЦ_5348260",
+    "go_class": "DrawTextBox",
+    "x": "292",
+    "y": "342",
+    "text": "К-ОК"
+  },
+  {
+    "group_name": "1ЧО&sol;1НП",
+    "group_obj": "/Station/Objects/1ЧО&sol;1НП",
+    "go_name": "Имя участка ДДЦ_5346218",
+    "go_class": "DrawText",
+    "x": "1931",
+    "y": "443",
+    "text": "1ЧО/1НП"
+  },
+  {
+    "group_name": "1ЧО&sol;1НП",
+    "group_obj": "/Station/Objects/1ЧО&sol;1НП",
+    "go_name": "Направление 2 стрелки (Станция слева) ДДЦ_5346217",
+    "go_class": "DrawImgList",
+    "x": "1918",
+    "y": "459",
+    "text": null
+  },
+  {
+    "group_name": "1ЧПН (Н-ОН)",
+    "group_obj": "/Station/Objects/1ЧПН (Н-ОН)",
+    "go_name": "Индикатор состояния устройства ДДЦ_5348261",
+    "go_class": "DrawTextBox",
+    "x": "292",
+    "y": "373",
+    "text": "Н-ОН"
+  },
+  {
+    "group_name": "2",
+    "group_obj": "/Station/Objects/2",
+    "go_name": "Отображение стрелочной РЦ_5346115",
+    "go_class": "DrawSwitch",
+    "x": "560",
+    "y": "660",
+    "text": null
+  },
+  {
+    "group_name": "2",
+    "group_obj": "/Station/Objects/2",
+    "go_name": "Название стрелки_0",
+    "go_class": "DrawText",
+    "x": "546",
+    "y": "665",
+    "text": "2"
+  },
+  {
+    "group_name": "2",
+    "group_obj": "/Station/Objects/2",
+    "go_name": "Плюсовое положение_0",
+    "go_class": "DrawRailChain",
+    "x": null,
+    "y": null,
+    "text": null
+  },
+  {
+    "group_name": "21ЧУКС",
+    "group_obj": "/Station/Objects/21ЧУКС",
+    "go_name": "Контроль срабатывания датчика УКСПС_5346164",
+    "go_class": "DrawTextBox",
+    "x": "21",
+    "y": "699",
+    "text": "21ЧУКС"
+  },
+  {
+    "group_name": "22ЧУКС",
+    "group_obj": "/Station/Objects/22ЧУКС",
+    "go_name": "Контроль срабатывания датчика УКСПС_5346163",
+    "go_class": "DrawTextBox",
+    "x": "85",
+    "y": "699",
+    "text": "22ЧУКС"
+  },
+  {
+    "group_name": "2-8СП",
+    "group_obj": "/Station/Objects/2-8СП",
+    "go_name": "Uг - Напряжение на выходе путевого генератора_5346345",
+    "go_class": "DrawText",
+    "x": "525",
+    "y": "620",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "2-8СП",
+    "group_obj": "/Station/Objects/2-8СП",
+    "go_name": "Uпп - Напряжение на входе путевого приемника ответвления А_5346346",
+    "go_class": "DrawText",
+    "x": "525",
+    "y": "630",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "2-8СП",
+    "group_obj": "/Station/Objects/2-8СП",
+    "go_name": "UппБ - Напряжение на входе путевого приемника ответвления Б_5346347",
+    "go_class": "DrawText",
+    "x": "525",
+    "y": "640",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "2АП",
+    "group_obj": "/Station/Objects/2АП",
+    "go_name": "Uг - Напряжение на выходе путевого генератора_5346352",
+    "go_class": "DrawText",
+    "x": "805",
+    "y": "610",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "2АП",
+    "group_obj": "/Station/Objects/2АП",
+    "go_name": "Uпп - Напряжение на входе путевого приемника ответвления А_5346353",
+    "go_class": "DrawText",
+    "x": "805",
+    "y": "620",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "2АП",
+    "group_obj": "/Station/Objects/2АП",
+    "go_name": "UппБ - Напряжение на входе путевого приемника ответвления Б_5346354",
+    "go_class": "DrawText",
+    "x": "805",
+    "y": "630",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "2АП",
+    "group_obj": "/Station/Objects/2АП",
+    "go_name": "UппВ - Напряжение на входе путевого приемника ответвления В_5346355",
+    "go_class": "DrawText",
+    "x": "805",
+    "y": "640",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "2АП",
+    "group_obj": "/Station/Objects/2АП",
+    "go_name": "Изображение РЦ_5346119",
+    "go_class": "DrawRailChain",
+    "x": null,
+    "y": null,
+    "text": null
+  },
+  {
+    "group_name": "2АП",
+    "group_obj": "/Station/Objects/2АП",
+    "go_name": "Имя РЦ_5346235",
+    "go_class": "DrawText",
+    "x": "872",
+    "y": "640",
+    "text": "2АП"
+  },
+  {
+    "group_name": "2НДСО",
+    "group_obj": "/Station/Objects/2НДСО",
+    "go_name": "Имя участка ДДЦ_5346220",
+    "go_class": "DrawText",
+    "x": "1938",
+    "y": "817",
+    "text": "2НДСО"
+  },
+  {
+    "group_name": "2НДСО",
+    "group_obj": "/Station/Objects/2НДСО",
+    "go_name": "Направление 1 стрелка (Станция слева) ДДЦ_5346219",
+    "go_class": "DrawImgList",
+    "x": "1979",
+    "y": "856",
+    "text": null
+  },
+  {
+    "group_name": "2НКП",
+    "group_obj": "/Station/Objects/2НКП",
+    "go_name": "Контроль перегона_5346221",
+    "go_class": "DrawTextBox",
+    "x": "1946",
+    "y": "766",
+    "text": ""
+  },
+  {
+    "group_name": "2НКП",
+    "group_obj": "/Station/Objects/2НКП",
+    "go_name": "Название перегона_5346222",
+    "go_class": "DrawText",
+    "x": "1944",
+    "y": "749",
+    "text": "2НКП"
+  },
+  {
+    "group_name": "2НКПН (К-ОК)",
+    "group_obj": "/Station/Objects/2НКПН (К-ОК)",
+    "go_name": "Индикатор состояния устройства ДДЦ_5348265",
+    "go_class": "DrawTextBox",
+    "x": "1924",
+    "y": "898",
+    "text": "К-ОК"
+  },
+  {
+    "group_name": "2НО&sol;2ЧП",
+    "group_obj": "/Station/Objects/2НО&sol;2ЧП",
+    "go_name": "Имя участка ДДЦ_5346207",
+    "go_class": "DrawText",
+    "x": "303",
+    "y": "750",
+    "text": "2НО/2ЧП"
+  },
+  {
+    "group_name": "2НО&sol;2ЧП",
+    "group_obj": "/Station/Objects/2НО&sol;2ЧП",
+    "go_name": "Направление 2 стрелки (Станция справа) ДДЦ_5346208",
+    "go_class": "DrawImgList",
+    "x": "290",
+    "y": "766",
+    "text": null
+  },
+  {
+    "group_name": "2НПН (Н-ОН)",
+    "group_obj": "/Station/Objects/2НПН (Н-ОН)",
+    "go_name": "Индикатор состояния устройства ДДЦ_5348266",
+    "go_class": "DrawTextBox",
+    "x": "1924",
+    "y": "867",
+    "text": "Н-ОН"
+  },
+  {
+    "group_name": "2П",
+    "group_obj": "/Station/Objects/2П",
+    "go_name": "Uг - Напряжение на выходе путевого генератора_5346374",
+    "go_class": "DrawText",
+    "x": "1235",
+    "y": "610",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "2П",
+    "group_obj": "/Station/Objects/2П",
+    "go_name": "Uпп - Напряжение на входе путевого приемника ответвления А_5346375",
+    "go_class": "DrawText",
+    "x": "1235",
+    "y": "620",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "2П",
+    "group_obj": "/Station/Objects/2П",
+    "go_name": "UппБ - Напряжение на входе путевого приемника ответвления Б_5346376",
+    "go_class": "DrawText",
+    "x": "1235",
+    "y": "630",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "2П",
+    "group_obj": "/Station/Objects/2П",
+    "go_name": "UппВ - Напряжение на входе путевого приемника ответвления В_5346377",
+    "go_class": "DrawText",
+    "x": "1235",
+    "y": "640",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "2П",
+    "group_obj": "/Station/Objects/2П",
+    "go_name": "Изображение РЦ_5346125",
+    "go_class": "DrawRailChain",
+    "x": null,
+    "y": null,
+    "text": null
+  },
+  {
+    "group_name": "2П",
+    "group_obj": "/Station/Objects/2П",
+    "go_name": "Имя РЦ_5346245",
+    "go_class": "DrawText",
+    "x": "1419",
+    "y": "640",
+    "text": "2П"
+  },
+  {
+    "group_name": "2СА",
+    "group_obj": "/Station/Objects/2СА",
+    "go_name": "Контроль вспомогательного перевода стрелок_5346167",
+    "go_class": "DrawTextBox",
+    "x": "426",
+    "y": "122",
+    "text": "2СА"
+  },
+  {
+    "group_name": "2ЧДСО",
+    "group_obj": "/Station/Objects/2ЧДСО",
+    "go_name": "Имя участка ДДЦ_5346210",
+    "go_class": "DrawText",
+    "x": "308",
+    "y": "818",
+    "text": "2ЧДСО"
+  },
+  {
+    "group_name": "2ЧДСО",
+    "group_obj": "/Station/Objects/2ЧДСО",
+    "go_name": "Направление 1 стрелка (Станция справа) ДДЦ_5346209",
+    "go_class": "DrawImgList",
+    "x": "349",
+    "y": "857",
+    "text": null
+  },
+  {
+    "group_name": "2ЧКП",
+    "group_obj": "/Station/Objects/2ЧКП",
+    "go_name": "Контроль перегона_5346212",
+    "go_class": "DrawTextBox",
+    "x": "316",
+    "y": "808",
+    "text": ""
+  },
+  {
+    "group_name": "2ЧКП",
+    "group_obj": "/Station/Objects/2ЧКП",
+    "go_name": "Название перегона_5346211",
+    "go_class": "DrawText",
+    "x": "313",
+    "y": "791",
+    "text": "2ЧКП"
+  },
+  {
+    "group_name": "2ЧКПН (К-ОК)",
+    "group_obj": "/Station/Objects/2ЧКПН (К-ОК)",
+    "go_name": "Индикатор состояния устройства ДДЦ_5348267",
+    "go_class": "DrawTextBox",
+    "x": "293",
+    "y": "898",
+    "text": "К-ОК"
+  },
+  {
+    "group_name": "2ЧО&sol;2НП",
+    "group_obj": "/Station/Objects/2ЧО&sol;2НП",
+    "go_name": "Имя участка ДДЦ_5346224",
+    "go_class": "DrawText",
+    "x": "1933",
+    "y": "776",
+    "text": "2ЧО/2НП"
+  },
+  {
+    "group_name": "2ЧО&sol;2НП",
+    "group_obj": "/Station/Objects/2ЧО&sol;2НП",
+    "go_name": "Направление 2 стрелки (Станция слева) ДДЦ_5346223",
+    "go_class": "DrawImgList",
+    "x": "1920",
+    "y": "792",
+    "text": null
+  },
+  {
+    "group_name": "2ЧПН (Н-ОН)",
+    "group_obj": "/Station/Objects/2ЧПН (Н-ОН)",
+    "go_name": "Индикатор состояния устройства ДДЦ_5348268",
+    "go_class": "DrawTextBox",
+    "x": "293",
+    "y": "867",
+    "text": "Н-ОН"
+  },
+  {
+    "group_name": "3",
+    "group_obj": "/Station/Objects/3",
+    "go_name": "Отображение стрелочной РЦ_5346127",
+    "go_class": "DrawSwitch",
+    "x": "1689",
+    "y": "660",
+    "text": null
+  },
+  {
+    "group_name": "3",
+    "group_obj": "/Station/Objects/3",
+    "go_name": "Название стрелки_0",
+    "go_class": "DrawText",
+    "x": "1675",
+    "y": "644",
+    "text": "3"
+  },
+  {
+    "group_name": "3",
+    "group_obj": "/Station/Objects/3",
+    "go_name": "Плюсовое положение_0",
+    "go_class": "DrawRailChain",
+    "x": null,
+    "y": null,
+    "text": null
+  },
+  {
+    "group_name": "31НУКС",
+    "group_obj": "/Station/Objects/31НУКС",
+    "go_name": "Контроль срабатывания датчика УКСПС_5346178",
+    "go_class": "DrawTextBox",
+    "x": "2076",
+    "y": "523",
+    "text": "31НУКС"
+  },
+  {
+    "group_name": "32НУКС",
+    "group_obj": "/Station/Objects/32НУКС",
+    "go_name": "Контроль срабатывания датчика УКСПС_5346177",
+    "go_class": "DrawTextBox",
+    "x": "2012",
+    "y": "523",
+    "text": "32НУКС"
+  },
+  {
+    "group_name": "3П",
+    "group_obj": "/Station/Objects/3П",
+    "go_name": "Uг - Напряжение на выходе путевого генератора_5346366",
+    "go_class": "DrawText",
+    "x": "1235",
+    "y": "490",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "3П",
+    "group_obj": "/Station/Objects/3П",
+    "go_name": "Uпп - Напряжение на входе путевого приемника ответвления А_5346367",
+    "go_class": "DrawText",
+    "x": "1235",
+    "y": "500",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "3П",
+    "group_obj": "/Station/Objects/3П",
+    "go_name": "UппБ - Напряжение на входе путевого приемника ответвления Б_5346368",
+    "go_class": "DrawText",
+    "x": "1235",
+    "y": "510",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "3П",
+    "group_obj": "/Station/Objects/3П",
+    "go_name": "UппВ - Напряжение на входе путевого приемника ответвления В_5346369",
+    "go_class": "DrawText",
+    "x": "1235",
+    "y": "520",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "3П",
+    "group_obj": "/Station/Objects/3П",
+    "go_name": "Изображение РЦ_5346123",
+    "go_class": "DrawRailChain",
+    "x": null,
+    "y": null,
+    "text": null
+  },
+  {
+    "group_name": "3П",
+    "group_obj": "/Station/Objects/3П",
+    "go_name": "Имя РЦ_5346243",
+    "go_class": "DrawText",
+    "x": "1419",
+    "y": "520",
+    "text": "3П"
+  },
+  {
+    "group_name": "3СП",
+    "group_obj": "/Station/Objects/3СП",
+    "go_name": "Uг - Напряжение на выходе путевого генератора_5346382",
+    "go_class": "DrawText",
+    "x": "1717",
+    "y": "620",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "3СП",
+    "group_obj": "/Station/Objects/3СП",
+    "go_name": "Uпп - Напряжение на входе путевого приемника ответвления А_5346383",
+    "go_class": "DrawText",
+    "x": "1717",
+    "y": "630",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "3СП",
+    "group_obj": "/Station/Objects/3СП",
+    "go_name": "UппБ - Напряжение на входе путевого приемника ответвления Б_5346384",
+    "go_class": "DrawText",
+    "x": "1717",
+    "y": "640",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "4",
+    "group_obj": "/Station/Objects/4",
+    "go_name": "Отображение стрелочной РЦ_5346116",
+    "go_class": "DrawSwitch",
+    "x": "590",
+    "y": "600",
+    "text": null
+  },
+  {
+    "group_name": "4",
+    "group_obj": "/Station/Objects/4",
+    "go_name": "Название стрелки_0",
+    "go_class": "DrawText",
+    "x": "576",
+    "y": "605",
+    "text": "4"
+  },
+  {
+    "group_name": "4",
+    "group_obj": "/Station/Objects/4",
+    "go_name": "Плюсовое положение_0",
+    "go_class": "DrawRailChain",
+    "x": null,
+    "y": null,
+    "text": null
+  },
+  {
+    "group_name": "4&sol;6СА",
+    "group_obj": "/Station/Objects/4&sol;6СА",
+    "go_name": "Контроль вспомогательного перевода стрелок_5346168",
+    "go_class": "DrawTextBox",
+    "x": "426",
+    "y": "90",
+    "text": "4/6СА"
+  },
+  {
+    "group_name": "41ЧУКС",
+    "group_obj": "/Station/Objects/41ЧУКС",
+    "go_name": "Контроль срабатывания датчика УКСПС_5346162",
+    "go_class": "DrawTextBox",
+    "x": "149",
+    "y": "699",
+    "text": "41ЧУКС"
+  },
+  {
+    "group_name": "42ЧУКС",
+    "group_obj": "/Station/Objects/42ЧУКС",
+    "go_name": "Контроль срабатывания датчика УКСПС_5346161",
+    "go_class": "DrawTextBox",
+    "x": "213",
+    "y": "699",
+    "text": "42ЧУКС"
+  },
+  {
+    "group_name": "4П",
+    "group_obj": "/Station/Objects/4П",
+    "go_name": "Uг - Напряжение на выходе путевого генератора_5346356",
+    "go_class": "DrawText",
+    "x": "805",
+    "y": "670",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "4П",
+    "group_obj": "/Station/Objects/4П",
+    "go_name": "Uпп - Напряжение на входе путевого приемника ответвления А_5346357",
+    "go_class": "DrawText",
+    "x": "805",
+    "y": "680",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "4П",
+    "group_obj": "/Station/Objects/4П",
+    "go_name": "UппБ - Напряжение на входе путевого приемника ответвления Б_5346358",
+    "go_class": "DrawText",
+    "x": "805",
+    "y": "690",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "4П",
+    "group_obj": "/Station/Objects/4П",
+    "go_name": "UппВ - Напряжение на входе путевого приемника ответвления В_5346359",
+    "go_class": "DrawText",
+    "x": "805",
+    "y": "700",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "4П",
+    "group_obj": "/Station/Objects/4П",
+    "go_name": "Изображение РЦ_5346120",
+    "go_class": "DrawRailChain",
+    "x": null,
+    "y": null,
+    "text": null
+  },
+  {
+    "group_name": "4П",
+    "group_obj": "/Station/Objects/4П",
+    "go_name": "Имя РЦ_5346236",
+    "go_class": "DrawText",
+    "x": "880",
+    "y": "700",
+    "text": "4П"
+  },
+  {
+    "group_name": "4СП",
+    "group_obj": "/Station/Objects/4СП",
+    "go_name": "Uг - Напряжение на выходе путевого генератора_5346342",
+    "go_class": "DrawText",
+    "x": "524",
+    "y": "560",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "4СП",
+    "group_obj": "/Station/Objects/4СП",
+    "go_name": "Uпп - Напряжение на входе путевого приемника ответвления А_5346343",
+    "go_class": "DrawText",
+    "x": "524",
+    "y": "570",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "4СП",
+    "group_obj": "/Station/Objects/4СП",
+    "go_name": "UппБ - Напряжение на входе путевого приемника ответвления Б_5346344",
+    "go_class": "DrawText",
+    "x": "524",
+    "y": "580",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "5",
+    "group_obj": "/Station/Objects/5",
+    "go_name": "Отображение стрелочной РЦ_5346126",
+    "go_class": "DrawSwitch",
+    "x": "1644",
+    "y": "600",
+    "text": null
+  },
+  {
+    "group_name": "5",
+    "group_obj": "/Station/Objects/5",
+    "go_name": "Название стрелки_0",
+    "go_class": "DrawText",
+    "x": "1647",
+    "y": "584",
+    "text": "5"
+  },
+  {
+    "group_name": "5",
+    "group_obj": "/Station/Objects/5",
+    "go_name": "Плюсовое положение_0",
+    "go_class": "DrawRailChain",
+    "x": null,
+    "y": null,
+    "text": null
+  },
+  {
+    "group_name": "5СА",
+    "group_obj": "/Station/Objects/5СА",
+    "go_name": "Контроль вспомогательного перевода стрелок_5346175",
+    "go_class": "DrawTextBox",
+    "x": "1647",
+    "y": "122",
+    "text": "5СА"
+  },
+  {
+    "group_name": "6",
+    "group_obj": "/Station/Objects/6",
+    "go_name": "Отображение стрелочной РЦ_5346117",
+    "go_class": "DrawSwitch",
+    "x": "625",
+    "y": "660",
+    "text": null
+  },
+  {
+    "group_name": "6",
+    "group_obj": "/Station/Objects/6",
+    "go_name": "Название стрелки_0",
+    "go_class": "DrawText",
+    "x": "628",
+    "y": "644",
+    "text": "6"
+  },
+  {
+    "group_name": "6",
+    "group_obj": "/Station/Objects/6",
+    "go_name": "Плюсовое положение_0",
+    "go_class": "DrawRailChain",
+    "x": null,
+    "y": null,
+    "text": null
+  },
+  {
+    "group_name": "6СП",
+    "group_obj": "/Station/Objects/6СП",
+    "go_name": "Uг - Напряжение на выходе путевого генератора_5346389",
+    "go_class": "DrawText",
+    "x": "639",
+    "y": "620",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "6СП",
+    "group_obj": "/Station/Objects/6СП",
+    "go_name": "Uпп - Напряжение на входе путевого приемника ответвления А_5346390",
+    "go_class": "DrawText",
+    "x": "639",
+    "y": "630",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "6СП",
+    "group_obj": "/Station/Objects/6СП",
+    "go_name": "UппБ - Напряжение на входе путевого приемника ответвления Б_5346391",
+    "go_class": "DrawText",
+    "x": "639",
+    "y": "640",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "7АВ",
+    "group_obj": "/Station/Objects/7АВ",
+    "go_name": "Контроль плюсового положения автовозврата стрелки_5346257",
+    "go_class": "DrawTextBox",
+    "x": "1594",
+    "y": "549",
+    "text": "ПК"
+  },
+  {
+    "group_name": "7СА",
+    "group_obj": "/Station/Objects/7СА",
+    "go_name": "Контроль вспомогательного перевода стрелок_5346176",
+    "go_class": "DrawTextBox",
+    "x": "1647",
+    "y": "90",
+    "text": "7СА"
+  },
+  {
+    "group_name": "7СБ",
+    "group_obj": "/Station/Objects/7СБ",
+    "go_name": "Имя объекта_5346299",
+    "go_class": "DrawText",
+    "x": "1570",
+    "y": "513",
+    "text": "7СБ"
+  },
+  {
+    "group_name": "7СБ",
+    "group_obj": "/Station/Objects/7СБ",
+    "go_name": "Контроль КСБ (вариант 1)_5346298",
+    "go_class": "DrawImgList",
+    "x": "1565",
+    "y": "519",
+    "text": null
+  },
+  {
+    "group_name": "8АВ",
+    "group_obj": "/Station/Objects/8АВ",
+    "go_name": "Контроль плюсового положения автовозврата стрелки_5346258",
+    "go_class": "DrawTextBox",
+    "x": "600",
+    "y": "701",
+    "text": "ПК"
+  },
+  {
+    "group_name": "8СА",
+    "group_obj": "/Station/Objects/8СА",
+    "go_name": "Контроль вспомогательного перевода стрелок_5346169",
+    "go_class": "DrawTextBox",
+    "x": "426",
+    "y": "154",
+    "text": "8СА"
+  },
+  {
+    "group_name": "8СБ",
+    "group_obj": "/Station/Objects/8СБ",
+    "go_name": "Имя объекта_5346297",
+    "go_class": "DrawText",
+    "x": "605",
+    "y": "736",
+    "text": "8СБ"
+  },
+  {
+    "group_name": "8СБ",
+    "group_obj": "/Station/Objects/8СБ",
+    "go_name": "Контроль КСБ (вариант 1)_5346296",
+    "go_class": "DrawImgList",
+    "x": "640",
+    "y": "741",
+    "text": null
+  },
+  {
+    "group_name": "IIН1УП",
+    "group_obj": "/Station/Objects/IIН1УП",
+    "go_name": "Имя участка_5346277",
+    "go_class": "DrawText",
+    "x": "1999",
+    "y": "640",
+    "text": "IIН1УП"
+  },
+  {
+    "group_name": "IIН1УП",
+    "group_obj": "/Station/Objects/IIН1УП",
+    "go_name": "Участок приближения-удаления_5346276",
+    "go_class": "DrawTextBox",
+    "x": "2005",
+    "y": "656",
+    "text": ""
+  },
+  {
+    "group_name": "IIН2УП",
+    "group_obj": "/Station/Objects/IIН2УП",
+    "go_name": "Имя участка_5346279",
+    "go_class": "DrawText",
+    "x": "2059",
+    "y": "640",
+    "text": "IIН2УП"
+  },
+  {
+    "group_name": "IIН2УП",
+    "group_obj": "/Station/Objects/IIН2УП",
+    "go_name": "Участок приближения-удаления_5346278",
+    "go_class": "DrawTextBox",
+    "x": "2065",
+    "y": "656",
+    "text": ""
+  },
+  {
+    "group_name": "IIЧ1ПП",
+    "group_obj": "/Station/Objects/IIЧ1ПП",
+    "go_name": "Имя участка_5346269",
+    "go_class": "DrawText",
+    "x": "250",
+    "y": "640",
+    "text": "IIЧ1ПП"
+  },
+  {
+    "group_name": "IIЧ1ПП",
+    "group_obj": "/Station/Objects/IIЧ1ПП",
+    "go_name": "Участок приближения-удаления_5346268",
+    "go_class": "DrawTextBox",
+    "x": "256",
+    "y": "656",
+    "text": ""
+  },
+  {
+    "group_name": "IIЧ2ПП",
+    "group_obj": "/Station/Objects/IIЧ2ПП",
+    "go_name": "Имя участка_5346271",
+    "go_class": "DrawText",
+    "x": "190",
+    "y": "640",
+    "text": "IIЧ2ПП"
+  },
+  {
+    "group_name": "IIЧ2ПП",
+    "group_obj": "/Station/Objects/IIЧ2ПП",
+    "go_name": "Участок приближения-удаления_5346270",
+    "go_class": "DrawTextBox",
+    "x": "196",
+    "y": "656",
+    "text": ""
+  },
+  {
+    "group_name": "IIЧ3ПП",
+    "group_obj": "/Station/Objects/IIЧ3ПП",
+    "go_name": "Имя участка_5346315",
+    "go_class": "DrawText",
+    "x": "127",
+    "y": "640",
+    "text": "IIЧ3ПП"
+  },
+  {
+    "group_name": "IIЧ3ПП",
+    "group_obj": "/Station/Objects/IIЧ3ПП",
+    "go_name": "Участок приближения-удаления_5346314",
+    "go_class": "DrawTextBox",
+    "x": "135",
+    "y": "656",
+    "text": ""
+  },
+  {
+    "group_name": "IН1ПП",
+    "group_obj": "/Station/Objects/IН1ПП",
+    "go_name": "Имя участка_5346273",
+    "go_class": "DrawText",
+    "x": "2001",
+    "y": "580",
+    "text": "IН1ПП"
+  },
+  {
+    "group_name": "IН1ПП",
+    "group_obj": "/Station/Objects/IН1ПП",
+    "go_name": "Участок приближения-удаления_5346272",
+    "go_class": "DrawTextBox",
+    "x": "2005",
+    "y": "596",
+    "text": ""
+  },
+  {
+    "group_name": "IН2ПП",
+    "group_obj": "/Station/Objects/IН2ПП",
+    "go_name": "Имя участка_5346275",
+    "go_class": "DrawText",
+    "x": "2059",
+    "y": "580",
+    "text": "IН2ПП"
+  },
+  {
+    "group_name": "IН2ПП",
+    "group_obj": "/Station/Objects/IН2ПП",
+    "go_name": "Участок приближения-удаления_5346274",
+    "go_class": "DrawTextBox",
+    "x": "2065",
+    "y": "596",
+    "text": ""
+  },
+  {
+    "group_name": "IН3ПП",
+    "group_obj": "/Station/Objects/IН3ПП",
+    "go_name": "Имя участка_5346316",
+    "go_class": "DrawText",
+    "x": "2120",
+    "y": "580",
+    "text": "IН3ПП"
+  },
+  {
+    "group_name": "IН3ПП",
+    "group_obj": "/Station/Objects/IН3ПП",
+    "go_name": "Участок приближения-удаления_5346317",
+    "go_class": "DrawTextBox",
+    "x": "2125",
+    "y": "596",
+    "text": ""
+  },
+  {
+    "group_name": "IЧ1УП",
+    "group_obj": "/Station/Objects/IЧ1УП",
+    "go_name": "Имя участка_5346265",
+    "go_class": "DrawText",
+    "x": "251",
+    "y": "580",
+    "text": "IЧ1УП"
+  },
+  {
+    "group_name": "IЧ1УП",
+    "group_obj": "/Station/Objects/IЧ1УП",
+    "go_name": "Участок приближения-удаления_5346264",
+    "go_class": "DrawTextBox",
+    "x": "255",
+    "y": "596",
+    "text": ""
+  },
+  {
+    "group_name": "IЧ2УП",
+    "group_obj": "/Station/Objects/IЧ2УП",
+    "go_name": "Имя участка_5346267",
+    "go_class": "DrawText",
+    "x": "191",
+    "y": "580",
+    "text": "IЧ2УП"
+  },
+  {
+    "group_name": "IЧ2УП",
+    "group_obj": "/Station/Objects/IЧ2УП",
+    "go_name": "Участок приближения-удаления_5346266",
+    "go_class": "DrawTextBox",
+    "x": "197",
+    "y": "596",
+    "text": ""
+  },
+  {
+    "group_name": "Авария ПП1 (ПП1А)",
+    "group_obj": "/Station/Objects/Авария ПП1 (ПП1А)",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346151",
+    "go_class": "DrawTextBox",
+    "x": "1323",
+    "y": "485",
+    "text": "А"
+  },
+  {
+    "group_name": "Авария ПП3 (ПП3А)",
+    "group_obj": "/Station/Objects/Авария ПП3 (ПП3А)",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346157",
+    "go_class": "DrawTextBox",
+    "x": "1326",
+    "y": "772",
+    "text": "А"
+  },
+  {
+    "group_name": "АДГА",
+    "group_obj": "/Station/Objects/АДГА",
+    "go_name": "Контроль аварии ДГА_5346186",
+    "go_class": "DrawTextBox",
+    "x": "888",
+    "y": "154",
+    "text": "Авария"
+  },
+  {
+    "group_name": "Активность ДГА",
+    "group_obj": "/Station/Objects/Активность ДГА",
+    "go_name": "Контроль активности_5346185",
+    "go_class": "DrawTextBox",
+    "x": "888",
+    "y": "122",
+    "text": "Активность"
+  },
+  {
+    "group_name": "АОТУ",
+    "group_obj": "/Station/Objects/АОТУ",
+    "go_name": "Индикатор состояния устройства ДДЦ_5346195",
+    "go_class": "DrawTextBox",
+    "x": "1167",
+    "y": "264",
+    "text": "АОТУ"
+  },
+  {
+    "group_name": "ВВ ПП1, ПП3",
+    "group_obj": "/Station/Objects/ВВ ПП1, ПП3",
+    "go_name": "Индикатор состояния устройства ДДЦ_5346145",
+    "go_class": "DrawTextBox",
+    "x": "1008",
+    "y": "71",
+    "text": "ВВ ПП1,ПП3"
+  },
+  {
+    "group_name": "ВВД ОТУ",
+    "group_obj": "/Station/Objects/ВВД ОТУ",
+    "go_name": "Индикатор состояния устройства ДДЦ_5346194",
+    "go_class": "DrawTextBox",
+    "x": "1088",
+    "y": "296",
+    "text": "ВВД ОТУ"
+  },
+  {
+    "group_name": "Включение ДГА",
+    "group_obj": "/Station/Objects/Включение ДГА",
+    "go_name": "Контроль включения ДГА_5346184",
+    "go_class": "DrawTextBox",
+    "x": "888",
+    "y": "90",
+    "text": "Включение"
+  },
+  {
+    "group_name": "ВС",
+    "group_obj": "/Station/Objects/ВС",
+    "go_name": "Индикатор состояния устройства ДДЦ_5346187",
+    "go_class": "DrawTextBox",
+    "x": "1256",
+    "y": "154",
+    "text": "ОХРАНА"
+  },
+  {
+    "group_name": "ДЕНЬ",
+    "group_obj": "/Station/Objects/ДЕНЬ",
+    "go_name": "Устройство электропитания ДДЦ_5346138",
+    "go_class": "DrawTextBox",
+    "x": "1087",
+    "y": "71",
+    "text": "День"
+  },
+  {
+    "group_name": "ДУ",
+    "group_obj": "/Station/Objects/ДУ",
+    "go_name": "Индикатор состояния устройства ДДЦ_5346142",
+    "go_class": "DrawTextBox",
+    "x": "1166",
+    "y": "135",
+    "text": "ДУ"
+  },
+  {
+    "group_name": "ИВ",
+    "group_obj": "/Station/Objects/ИВ",
+    "go_name": "Контроль включения блока выдержки времени (искусств)_5346130",
+    "go_class": "DrawTextBox",
+    "x": "1425",
+    "y": "110",
+    "text": "РАЗДЕЛКА"
+  },
+  {
+    "group_name": "Извещение ПП1 (ПП1И)",
+    "group_obj": "/Station/Objects/Извещение ПП1 (ПП1И)",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346154",
+    "go_class": "DrawTextBox",
+    "x": "1306",
+    "y": "466",
+    "text": "И"
+  },
+  {
+    "group_name": "Извещение ПП3 (ППЗИ)",
+    "group_obj": "/Station/Objects/Извещение ПП3 (ППЗИ)",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346160",
+    "go_class": "DrawTextBox",
+    "x": "1309",
+    "y": "753",
+    "text": "И"
+  },
+  {
+    "group_name": "Изостыки",
+    "group_obj": "",
+    "go_name": "Изостык_5347242",
+    "go_class": "DrawImgList",
+    "x": "328",
+    "y": "594",
+    "text": null
+  },
+  {
+    "group_name": "Изостыки",
+    "group_obj": "",
+    "go_name": "Изостык_5347243",
+    "go_class": "DrawImgList",
+    "x": "497",
+    "y": "594",
+    "text": null
+  },
+  {
+    "group_name": "Изостыки",
+    "group_obj": "",
+    "go_name": "Изостык_5347244",
+    "go_class": "DrawImgList",
+    "x": "497",
+    "y": "654",
+    "text": null
+  },
+  {
+    "group_name": "Изостыки",
+    "group_obj": "",
+    "go_name": "Изостык_5347245",
+    "go_class": "DrawImgList",
+    "x": "328",
+    "y": "654",
+    "text": null
+  },
+  {
+    "group_name": "Изостыки",
+    "group_obj": "",
+    "go_name": "Изостык_5347246",
+    "go_class": "DrawImgList",
+    "x": "612",
+    "y": "626",
+    "text": null
+  },
+  {
+    "group_name": "Изостыки",
+    "group_obj": "",
+    "go_name": "Изостык_5347248",
+    "go_class": "DrawImgList",
+    "x": "701",
+    "y": "594",
+    "text": null
+  },
+  {
+    "group_name": "Изостыки",
+    "group_obj": "",
+    "go_name": "Изостык_5347249",
+    "go_class": "DrawImgList",
+    "x": "743",
+    "y": "654",
+    "text": null
+  },
+  {
+    "group_name": "Изостыки",
+    "group_obj": "",
+    "go_name": "Изостык_5347250",
+    "go_class": "DrawImgList",
+    "x": "743",
+    "y": "714",
+    "text": null
+  },
+  {
+    "group_name": "Изостыки",
+    "group_obj": "",
+    "go_name": "Изостык_5347251",
+    "go_class": "DrawImgList",
+    "x": "926",
+    "y": "714",
+    "text": null
+  },
+  {
+    "group_name": "Изостыки",
+    "group_obj": "",
+    "go_name": "Изостык_5347252",
+    "go_class": "DrawImgList",
+    "x": "1012",
+    "y": "654",
+    "text": null
+  },
+  {
+    "group_name": "Изостыки",
+    "group_obj": "",
+    "go_name": "Изостык_5347253",
+    "go_class": "DrawImgList",
+    "x": "984",
+    "y": "594",
+    "text": null
+  },
+  {
+    "group_name": "Изостыки",
+    "group_obj": "",
+    "go_name": "Изостык_5347254",
+    "go_class": "DrawImgList",
+    "x": "1172",
+    "y": "534",
+    "text": null
+  },
+  {
+    "group_name": "Изостыки",
+    "group_obj": "",
+    "go_name": "Изостык_5347255",
+    "go_class": "DrawImgList",
+    "x": "1113",
+    "y": "594",
+    "text": null
+  },
+  {
+    "group_name": "Изостыки",
+    "group_obj": "",
+    "go_name": "Изостык_5347256",
+    "go_class": "DrawImgList",
+    "x": "1154",
+    "y": "654",
+    "text": null
+  },
+  {
+    "group_name": "Изостыки",
+    "group_obj": "",
+    "go_name": "Изостык_5347257",
+    "go_class": "DrawImgList",
+    "x": "1519",
+    "y": "534",
+    "text": null
+  },
+  {
+    "group_name": "Изостыки",
+    "group_obj": "",
+    "go_name": "Изостык_5347258",
+    "go_class": "DrawImgList",
+    "x": "1550",
+    "y": "594",
+    "text": null
+  },
+  {
+    "group_name": "Изостыки",
+    "group_obj": "",
+    "go_name": "Изостык_5347259",
+    "go_class": "DrawImgList",
+    "x": "1604",
+    "y": "654",
+    "text": null
+  },
+  {
+    "group_name": "Изостыки",
+    "group_obj": "",
+    "go_name": "Изостык_5347260",
+    "go_class": "DrawImgList",
+    "x": "1700",
+    "y": "630",
+    "text": null
+  },
+  {
+    "group_name": "Изостыки",
+    "group_obj": "",
+    "go_name": "Изостык_5347261",
+    "go_class": "DrawImgList",
+    "x": "1769",
+    "y": "594",
+    "text": null
+  },
+  {
+    "group_name": "Изостыки",
+    "group_obj": "",
+    "go_name": "Изостык_5347262",
+    "go_class": "DrawImgList",
+    "x": "1793",
+    "y": "654",
+    "text": null
+  },
+  {
+    "group_name": "Изостыки",
+    "group_obj": "",
+    "go_name": "Изостык_5347263",
+    "go_class": "DrawImgList",
+    "x": "1957",
+    "y": "594",
+    "text": null
+  },
+  {
+    "group_name": "Изостыки",
+    "group_obj": "",
+    "go_name": "Изостык_5347264",
+    "go_class": "DrawImgList",
+    "x": "1957",
+    "y": "654",
+    "text": null
+  },
+  {
+    "group_name": "Изостыки",
+    "group_obj": "",
+    "go_name": "Негабаритный изостык_5347247",
+    "go_class": "DrawImgList",
+    "x": "588",
+    "y": "653",
+    "text": null
+  },
+  {
+    "group_name": "Имя станции",
+    "group_obj": "",
+    "go_name": "Имя станции_5347240",
+    "go_class": "DrawText",
+    "x": "1040",
+    "y": "18",
+    "text": "Высочино"
+  },
+  {
+    "group_name": "КМГ",
+    "group_obj": "/Station/Objects/КМГ",
+    "go_name": "Контроль комплекта мигания_5346139",
+    "go_class": "DrawTextBox",
+    "x": "1008",
+    "y": "135",
+    "text": "Мигание"
+  },
+  {
+    "group_name": "КПА",
+    "group_obj": "/Station/Objects/КПА",
+    "go_name": "Контроль аварии питания схемы перегорания предохранителей_5346140",
+    "go_class": "DrawTextBox",
+    "x": "1087",
+    "y": "167",
+    "text": "КПА"
+  },
+  {
+    "group_name": "КПП",
+    "group_obj": "/Station/Objects/КПП",
+    "go_name": "Контроль перегорания предохранителя_5346141",
+    "go_class": "DrawTextBox",
+    "x": "1008",
+    "y": "167",
+    "text": "КПП"
+  },
+  {
+    "group_name": "М1",
+    "group_obj": "/Station/Objects/М1",
+    "go_name": "Маневровый светофор_5346249",
+    "go_class": "DrawSignal",
+    "x": "1772",
+    "y": "584",
+    "text": null
+  },
+  {
+    "group_name": "М1К",
+    "group_obj": "/Station/Objects/М1К",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346334",
+    "go_class": "DrawTextBox",
+    "x": "1776",
+    "y": "576",
+    "text": "М1"
+  },
+  {
+    "group_name": "М2",
+    "group_obj": "/Station/Objects/М2",
+    "go_name": "Маневровый светофор_5346229",
+    "go_class": "DrawSignal",
+    "x": "501",
+    "y": "676",
+    "text": null
+  },
+  {
+    "group_name": "М2К",
+    "group_obj": "/Station/Objects/М2К",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346321",
+    "go_class": "DrawTextBox",
+    "x": "467",
+    "y": "669",
+    "text": "М2"
+  },
+  {
+    "group_name": "М3",
+    "group_obj": "/Station/Objects/М3",
+    "go_name": "Маневровый светофор_5346250",
+    "go_class": "DrawSignal",
+    "x": "1796",
+    "y": "644",
+    "text": null
+  },
+  {
+    "group_name": "М3К",
+    "group_obj": "/Station/Objects/М3К",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346335",
+    "go_class": "DrawTextBox",
+    "x": "1800",
+    "y": "636",
+    "text": "М3"
+  },
+  {
+    "group_name": "М4",
+    "group_obj": "/Station/Objects/М4",
+    "go_name": "Маневровый светофор_5346230",
+    "go_class": "DrawSignal",
+    "x": "500",
+    "y": "616",
+    "text": null
+  },
+  {
+    "group_name": "М4К",
+    "group_obj": "/Station/Objects/М4К",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346320",
+    "go_class": "DrawTextBox",
+    "x": "466",
+    "y": "609",
+    "text": "М4"
+  },
+  {
+    "group_name": "МАКЕТ",
+    "group_obj": "/Station/Objects/МАКЕТ",
+    "go_name": "Индикатор состояния устройства ДДЦ_5348168",
+    "go_class": "DrawTextBox",
+    "x": "1090",
+    "y": "761",
+    "text": "Макет"
+  },
+  {
+    "group_name": "МАКЕТ(-)",
+    "group_obj": "/Station/Objects/МАКЕТ(-)",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5347999",
+    "go_class": "DrawTextBox",
+    "x": "1090",
+    "y": "790",
+    "text": "МК"
+  },
+  {
+    "group_name": "МАКЕТ(+)",
+    "group_obj": "/Station/Objects/МАКЕТ(+)",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5348000",
+    "go_class": "DrawTextBox",
+    "x": "1128",
+    "y": "790",
+    "text": "ПК"
+  },
+  {
+    "group_name": "МВ",
+    "group_obj": "/Station/Objects/МВ",
+    "go_name": "Контроль включения блока выдержки времени (маневровый)_5346131",
+    "go_class": "DrawTextBox",
+    "x": "1504",
+    "y": "142",
+    "text": "МАНЕВР"
+  },
+  {
+    "group_name": "Н",
+    "group_obj": "/Station/Objects/Н",
+    "go_name": "Поездной светофор_5346253",
+    "go_class": "DrawSignal",
+    "x": "1960",
+    "y": "584",
+    "text": null
+  },
+  {
+    "group_name": "Н1",
+    "group_obj": "/Station/Objects/Н1",
+    "go_name": "Поездной светофор_5346231",
+    "go_class": "DrawSignal",
+    "x": "704",
+    "y": "584",
+    "text": null
+  },
+  {
+    "group_name": "Н1АС",
+    "group_obj": "/Station/Objects/Н1АС",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346307",
+    "go_class": "DrawTextBox",
+    "x": "675",
+    "y": "558",
+    "text": "АВ"
+  },
+  {
+    "group_name": "Н1К",
+    "group_obj": "/Station/Objects/Н1К",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346322",
+    "go_class": "DrawTextBox",
+    "x": "708",
+    "y": "576",
+    "text": "Н1"
+  },
+  {
+    "group_name": "Н1СО",
+    "group_obj": "/Station/Objects/Н1СО",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346282",
+    "go_class": "DrawTextBox",
+    "x": "708",
+    "y": "558",
+    "text": "СО"
+  },
+  {
+    "group_name": "Н2",
+    "group_obj": "/Station/Objects/Н2",
+    "go_name": "Поездной светофор_5346232",
+    "go_class": "DrawSignal",
+    "x": "746",
+    "y": "644",
+    "text": null
+  },
+  {
+    "group_name": "Н2К",
+    "group_obj": "/Station/Objects/Н2К",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346323",
+    "go_class": "DrawTextBox",
+    "x": "750",
+    "y": "636",
+    "text": "Н2"
+  },
+  {
+    "group_name": "Н2СО",
+    "group_obj": "/Station/Objects/Н2СО",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346283",
+    "go_class": "DrawTextBox",
+    "x": "750",
+    "y": "618",
+    "text": "СО"
+  },
+  {
+    "group_name": "Н4",
+    "group_obj": "/Station/Objects/Н4",
+    "go_name": "Поездной светофор_5346233",
+    "go_class": "DrawSignal",
+    "x": "746",
+    "y": "704",
+    "text": null
+  },
+  {
+    "group_name": "Н4К",
+    "group_obj": "/Station/Objects/Н4К",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346324",
+    "go_class": "DrawTextBox",
+    "x": "750",
+    "y": "696",
+    "text": "Н4"
+  },
+  {
+    "group_name": "Н4СО",
+    "group_obj": "/Station/Objects/Н4СО",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346284",
+    "go_class": "DrawTextBox",
+    "x": "750",
+    "y": "678",
+    "text": "СО"
+  },
+  {
+    "group_name": "НАС",
+    "group_obj": "/Station/Objects/НАС",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346308",
+    "go_class": "DrawTextBox",
+    "x": "1931",
+    "y": "558",
+    "text": "АВ"
+  },
+  {
+    "group_name": "НД",
+    "group_obj": "/Station/Objects/НД",
+    "go_name": "Поездной светофор_5346254",
+    "go_class": "DrawSignal",
+    "x": "1961",
+    "y": "676",
+    "text": null
+  },
+  {
+    "group_name": "НДК",
+    "group_obj": "/Station/Objects/НДК",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346337",
+    "go_class": "DrawTextBox",
+    "x": "1964",
+    "y": "669",
+    "text": "НД"
+  },
+  {
+    "group_name": "НДП",
+    "group_obj": "/Station/Objects/НДП",
+    "go_name": "Uг - Напряжение на выходе путевого генератора_5346387",
+    "go_class": "DrawText",
+    "x": "1845",
+    "y": "630",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "НДП",
+    "group_obj": "/Station/Objects/НДП",
+    "go_name": "Uпп - Напряжение на входе путевого приемника ответвления А_5346388",
+    "go_class": "DrawText",
+    "x": "1845",
+    "y": "640",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "НДП",
+    "group_obj": "/Station/Objects/НДП",
+    "go_name": "Изображение РЦ_5346129",
+    "go_class": "DrawRailChain",
+    "x": null,
+    "y": null,
+    "text": null
+  },
+  {
+    "group_name": "НДП",
+    "group_obj": "/Station/Objects/НДП",
+    "go_name": "Имя РЦ_5346252",
+    "go_class": "DrawText",
+    "x": "1910",
+    "y": "640",
+    "text": "НДП"
+  },
+  {
+    "group_name": "НДСО",
+    "group_obj": "/Station/Objects/НДСО",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346295",
+    "go_class": "DrawTextBox",
+    "x": "1964",
+    "y": "687",
+    "text": "СО"
+  },
+  {
+    "group_name": "Неисправность ПП1 (ПП1НП)",
+    "group_obj": "/Station/Objects/Неисправность ПП1 (ПП1НП)",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346152",
+    "go_class": "DrawTextBox",
+    "x": "1357",
+    "y": "485",
+    "text": "НП"
+  },
+  {
+    "group_name": "Неисправность ПП3 (ПП3НП)",
+    "group_obj": "/Station/Objects/Неисправность ПП3 (ПП3НП)",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346158",
+    "go_class": "DrawTextBox",
+    "x": "1360",
+    "y": "772",
+    "text": "НП"
+  },
+  {
+    "group_name": "НИКС",
+    "group_obj": "/Station/Objects/НИКС",
+    "go_name": "Контроль работы устройств УКСПС_5346181",
+    "go_class": "DrawTextBox",
+    "x": "2140",
+    "y": "547",
+    "text": "НИКС"
+  },
+  {
+    "group_name": "НКЖ",
+    "group_obj": "/Station/Objects/НКЖ",
+    "go_name": "Контроль ключа-жезла_5346262",
+    "go_class": "DrawTextBox",
+    "x": "287",
+    "y": "69",
+    "text": "НКЖ"
+  },
+  {
+    "group_name": "НКК",
+    "group_obj": "/Station/Objects/НКК",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346336",
+    "go_class": "DrawTextBox",
+    "x": "1964",
+    "y": "576",
+    "text": "Н"
+  },
+  {
+    "group_name": "НМ1",
+    "group_obj": "/Station/Objects/НМ1",
+    "go_name": "Поездной светофор_5346241",
+    "go_class": "DrawSignal",
+    "x": "1116",
+    "y": "584",
+    "text": null
+  },
+  {
+    "group_name": "НМ1АС",
+    "group_obj": "/Station/Objects/НМ1АС",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346309",
+    "go_class": "DrawTextBox",
+    "x": "1087",
+    "y": "558",
+    "text": "АВ"
+  },
+  {
+    "group_name": "НМ1К",
+    "group_obj": "/Station/Objects/НМ1К",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346329",
+    "go_class": "DrawTextBox",
+    "x": "1120",
+    "y": "576",
+    "text": "НМ1"
+  },
+  {
+    "group_name": "НМ1СО",
+    "group_obj": "/Station/Objects/НМ1СО",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346289",
+    "go_class": "DrawTextBox",
+    "x": "1120",
+    "y": "558",
+    "text": "СО"
+  },
+  {
+    "group_name": "НМ2",
+    "group_obj": "/Station/Objects/НМ2",
+    "go_name": "Поездной светофор_5346242",
+    "go_class": "DrawSignal",
+    "x": "1157",
+    "y": "644",
+    "text": null
+  },
+  {
+    "group_name": "НМ2К",
+    "group_obj": "/Station/Objects/НМ2К",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346330",
+    "go_class": "DrawTextBox",
+    "x": "1161",
+    "y": "636",
+    "text": "НМ2"
+  },
+  {
+    "group_name": "НМ2СО",
+    "group_obj": "/Station/Objects/НМ2СО",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346290",
+    "go_class": "DrawTextBox",
+    "x": "1161",
+    "y": "618",
+    "text": "СО"
+  },
+  {
+    "group_name": "НМ3",
+    "group_obj": "/Station/Objects/НМ3",
+    "go_name": "Поездной светофор_5346240",
+    "go_class": "DrawSignal",
+    "x": "1175",
+    "y": "524",
+    "text": null
+  },
+  {
+    "group_name": "НМ3К",
+    "group_obj": "/Station/Objects/НМ3К",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346328",
+    "go_class": "DrawTextBox",
+    "x": "1179",
+    "y": "516",
+    "text": "НМ3"
+  },
+  {
+    "group_name": "НМ3СО",
+    "group_obj": "/Station/Objects/НМ3СО",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346288",
+    "go_class": "DrawTextBox",
+    "x": "1179",
+    "y": "498",
+    "text": "СО"
+  },
+  {
+    "group_name": "НП",
+    "group_obj": "/Station/Objects/НП",
+    "go_name": "Uг - Напряжение на выходе путевого генератора_5346385",
+    "go_class": "DrawText",
+    "x": "1845",
+    "y": "570",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "НП",
+    "group_obj": "/Station/Objects/НП",
+    "go_name": "Uпп - Напряжение на входе путевого приемника ответвления А_5346386",
+    "go_class": "DrawText",
+    "x": "1845",
+    "y": "580",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "НП",
+    "group_obj": "/Station/Objects/НП",
+    "go_name": "Изображение РЦ_5346128",
+    "go_class": "DrawRailChain",
+    "x": null,
+    "y": null,
+    "text": null
+  },
+  {
+    "group_name": "НП",
+    "group_obj": "/Station/Objects/НП",
+    "go_name": "Имя РЦ_5346251",
+    "go_class": "DrawText",
+    "x": "1815",
+    "y": "580",
+    "text": "НП"
+  },
+  {
+    "group_name": "НПТ",
+    "group_obj": "/Station/Objects/НПТ",
+    "go_name": "Индикатор состояния устройства ДДЦ_5346188",
+    "go_class": "DrawTextBox",
+    "x": "1256",
+    "y": "122",
+    "text": "НПТ"
+  },
+  {
+    "group_name": "НСО",
+    "group_obj": "/Station/Objects/НСО",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346294",
+    "go_class": "DrawTextBox",
+    "x": "1964",
+    "y": "558",
+    "text": "СО"
+  },
+  {
+    "group_name": "НТревога1",
+    "group_obj": "/Station/Objects/НТревога1",
+    "go_name": "Контроль работы КТСМ \"Тревога 1\"_5346190",
+    "go_class": "DrawTextBox",
+    "x": "2012",
+    "y": "449",
+    "text": "Тревога 1"
+  },
+  {
+    "group_name": "НТревога2",
+    "group_obj": "/Station/Objects/НТревога2",
+    "go_name": "Контроль работы КТСМ \"Тревога 2\"_5346191",
+    "go_class": "DrawTextBox",
+    "x": "2012",
+    "y": "481",
+    "text": "Тревога 2"
+  },
+  {
+    "group_name": "НУКСзК",
+    "group_obj": "/Station/Objects/НУКСзК",
+    "go_name": "Контроль работы устройств УКСПС_5346182",
+    "go_class": "DrawTextBox",
+    "x": "2076",
+    "y": "547",
+    "text": "НУКСзК"
+  },
+  {
+    "group_name": "ОВ",
+    "group_obj": "/Station/Objects/ОВ",
+    "go_name": "Контроль включения блока выдержки времени (со свободного)_5346132",
+    "go_class": "DrawTextBox",
+    "x": "1425",
+    "y": "142",
+    "text": "СВОБОДН"
+  },
+  {
+    "group_name": "ПА1НСН",
+    "group_obj": "/Station/Objects/ПА1НСН",
+    "go_name": "Индикатор состояния устройства ДДЦ_5346312",
+    "go_class": "DrawTextBox",
+    "x": "1922",
+    "y": "521",
+    "text": "ПА1НСН"
+  },
+  {
+    "group_name": "ПА1ЧСН",
+    "group_obj": "/Station/Objects/ПА1ЧСН",
+    "go_name": "Индикатор состояния устройства ДДЦ_5346310",
+    "go_class": "DrawTextBox",
+    "x": "294",
+    "y": "525",
+    "text": "ПА1ЧСН"
+  },
+  {
+    "group_name": "ПА2НСН",
+    "group_obj": "/Station/Objects/ПА2НСН",
+    "go_name": "Индикатор состояния устройства ДДЦ_5346313",
+    "go_class": "DrawTextBox",
+    "x": "1923",
+    "y": "711",
+    "text": "ПА2НСН"
+  },
+  {
+    "group_name": "ПА2ЧСН",
+    "group_obj": "/Station/Objects/ПА2ЧСН",
+    "go_name": "Индикатор состояния устройства ДДЦ_5346311",
+    "go_class": "DrawTextBox",
+    "x": "293",
+    "y": "711",
+    "text": "ПА2ЧСН"
+  },
+  {
+    "group_name": "ПАКС",
+    "group_obj": "/Station/Objects/ПАКС",
+    "go_name": "Индикатор состояния устройства ДДЦ_5346196",
+    "go_class": "DrawTextBox",
+    "x": "1009",
+    "y": "232",
+    "text": "ПАКС"
+  },
+  {
+    "group_name": "ПАПС",
+    "group_obj": "/Station/Objects/ПАПС",
+    "go_name": "Индикатор состояния устройства ДДЦ_5346197",
+    "go_class": "DrawTextBox",
+    "x": "1088",
+    "y": "232",
+    "text": "ПАПС"
+  },
+  {
+    "group_name": "ПАРз",
+    "group_obj": "/Station/Objects/ПАРз",
+    "go_name": "Индикатор состояния устройства ДДЦ_5346198",
+    "go_class": "DrawTextBox",
+    "x": "1167",
+    "y": "232",
+    "text": "ПАРз"
+  },
+  {
+    "group_name": "ПАРИ",
+    "group_obj": "/Station/Objects/ПАРИ",
+    "go_name": "Контроль групповой искусственной разделки_5346133",
+    "go_class": "DrawTextBox",
+    "x": "1425",
+    "y": "174",
+    "text": "ПАРИ"
+  },
+  {
+    "group_name": "ПАСА",
+    "group_obj": "/Station/Objects/ПАСА",
+    "go_name": "Индикатор состояния устройства ДДЦ_5346199",
+    "go_class": "DrawTextBox",
+    "x": "1009",
+    "y": "264",
+    "text": "ПАСА"
+  },
+  {
+    "group_name": "ПВ",
+    "group_obj": "/Station/Objects/ПВ",
+    "go_name": "Контроль включения блока выдержки времени (поездной)_5346134",
+    "go_class": "DrawTextBox",
+    "x": "1346",
+    "y": "142",
+    "text": "ПОЕЗДН"
+  },
+  {
+    "group_name": "ПешПер1",
+    "group_obj": "/Station/Objects/ПешПер1",
+    "go_name": "Пешеходный переход_5346255",
+    "go_class": "DrawImgList",
+    "x": "1338",
+    "y": "520",
+    "text": null
+  },
+  {
+    "group_name": "ПешПер3",
+    "group_obj": "/Station/Objects/ПешПер3",
+    "go_name": "Пешеходный переход_5346256",
+    "go_class": "DrawImgList",
+    "x": "1338",
+    "y": "620",
+    "text": null
+  },
+  {
+    "group_name": "Пикеты",
+    "group_obj": "",
+    "go_name": "Пикет_5347267",
+    "go_class": "DrawText",
+    "x": "1348",
+    "y": "429",
+    "text": "ПК13712+97"
+  },
+  {
+    "group_name": "Полюс БВВ",
+    "group_obj": "/Station/Objects/Полюс БВВ",
+    "go_name": "Индикатор состояния устройства ДДЦ_5346146",
+    "go_class": "DrawTextBox",
+    "x": "1008",
+    "y": "103",
+    "text": "Полюс БВВ"
+  },
+  {
+    "group_name": "ПРВ",
+    "group_obj": "/Station/Objects/ПРВ",
+    "go_name": "Индикатор состояния устройства ДДЦ_5346200",
+    "go_class": "DrawTextBox",
+    "x": "1088",
+    "y": "264",
+    "text": "ПРВ"
+  },
+  {
+    "group_name": "Предварительное извещение ПП1 (ПП1ПИ)",
+    "group_obj": "/Station/Objects/Предварительное извещение ПП1 (ПП1ПИ)",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346155",
+    "go_class": "DrawTextBox",
+    "x": "1340",
+    "y": "466",
+    "text": "ПИ"
+  },
+  {
+    "group_name": "Предварительное извещение ПП3 (ПП3ПИ)",
+    "group_obj": "/Station/Objects/Предварительное извещение ПП3 (ПП3ПИ)",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346159",
+    "go_class": "DrawTextBox",
+    "x": "1343",
+    "y": "753",
+    "text": "ПИ"
+  },
+  {
+    "group_name": "ПТ",
+    "group_obj": "/Station/Objects/ПТ",
+    "go_name": "Индикатор состояния устройства ДДЦ_5346189",
+    "go_class": "DrawTextBox",
+    "x": "1256",
+    "y": "90",
+    "text": "ПОЖАР"
+  },
+  {
+    "group_name": "Размыкание стрелок Рз",
+    "group_obj": "/Station/Objects/Размыкание стрелок Рз",
+    "go_name": "Индикатор состояния устройства ДДЦ_5346143",
+    "go_class": "DrawTextBox",
+    "x": "1166",
+    "y": "167",
+    "text": "Рз"
+  },
+  {
+    "group_name": "Рамки",
+    "group_obj": "",
+    "go_name": "Сетка (прозрачная)_5347183",
+    "go_class": "DrawTextBox",
+    "x": "1006",
+    "y": "69",
+    "text": ""
+  },
+  {
+    "group_name": "Рамки",
+    "group_obj": "",
+    "go_name": "Сетка (прозрачная)_5347188",
+    "go_class": "DrawTextBox",
+    "x": "19",
+    "y": "673",
+    "text": ""
+  },
+  {
+    "group_name": "Рамки",
+    "group_obj": "",
+    "go_name": "Сетка (прозрачная)_5347189",
+    "go_class": "DrawTextBox",
+    "x": "424",
+    "y": "69",
+    "text": "Стрелки"
+  },
+  {
+    "group_name": "Рамки",
+    "group_obj": "",
+    "go_name": "Сетка (прозрачная)_5347190",
+    "go_class": "DrawTextBox",
+    "x": "1645",
+    "y": "69",
+    "text": "Стрелки"
+  },
+  {
+    "group_name": "Рамки",
+    "group_obj": "",
+    "go_name": "Сетка (прозрачная)_5347191",
+    "go_class": "DrawTextBox",
+    "x": "2010",
+    "y": "521",
+    "text": ""
+  },
+  {
+    "group_name": "Рамки",
+    "group_obj": "",
+    "go_name": "Сетка (прозрачная)_5347197",
+    "go_class": "DrawTextBox",
+    "x": "289",
+    "y": "408",
+    "text": ""
+  },
+  {
+    "group_name": "Рамки",
+    "group_obj": "",
+    "go_name": "Сетка (прозрачная)_5347198",
+    "go_class": "DrawTextBox",
+    "x": "289",
+    "y": "749",
+    "text": ""
+  },
+  {
+    "group_name": "Рамки",
+    "group_obj": "",
+    "go_name": "Сетка (прозрачная)_5347199",
+    "go_class": "DrawTextBox",
+    "x": "1917",
+    "y": "401",
+    "text": ""
+  },
+  {
+    "group_name": "Рамки",
+    "group_obj": "",
+    "go_name": "Сетка (прозрачная)_5347200",
+    "go_class": "DrawTextBox",
+    "x": "1919",
+    "y": "748",
+    "text": ""
+  },
+  {
+    "group_name": "Рамки",
+    "group_obj": "",
+    "go_name": "Сетка (сплошная)_5347182",
+    "go_class": "DrawTextBox",
+    "x": "1344",
+    "y": "69",
+    "text": "Установка и разделка маршрута"
+  },
+  {
+    "group_name": "Рамки",
+    "group_obj": "",
+    "go_name": "Сетка (сплошная)_5347184",
+    "go_class": "DrawTextBox",
+    "x": "647",
+    "y": "69",
+    "text": "Фидер 1"
+  },
+  {
+    "group_name": "Рамки",
+    "group_obj": "",
+    "go_name": "Сетка (сплошная)_5347185",
+    "go_class": "DrawTextBox",
+    "x": "767",
+    "y": "69",
+    "text": "Фидер 2"
+  },
+  {
+    "group_name": "Рамки",
+    "group_obj": "",
+    "go_name": "Сетка (сплошная)_5347186",
+    "go_class": "DrawTextBox",
+    "x": "1304",
+    "y": "445",
+    "text": "ПП 1"
+  },
+  {
+    "group_name": "Рамки",
+    "group_obj": "",
+    "go_name": "Сетка (сплошная)_5347187",
+    "go_class": "DrawTextBox",
+    "x": "1307",
+    "y": "732",
+    "text": "ПП 3"
+  },
+  {
+    "group_name": "Рамки",
+    "group_obj": "",
+    "go_name": "Сетка (сплошная)_5347192",
+    "go_class": "DrawTextBox",
+    "x": "886",
+    "y": "69",
+    "text": "Фидер ДГА"
+  },
+  {
+    "group_name": "Рамки",
+    "group_obj": "",
+    "go_name": "Сетка (сплошная)_5347193",
+    "go_class": "DrawTextBox",
+    "x": "1254",
+    "y": "69",
+    "text": "ОПС"
+  },
+  {
+    "group_name": "Рамки",
+    "group_obj": "",
+    "go_name": "Сетка (сплошная)_5347194",
+    "go_class": "DrawTextBox",
+    "x": "2010",
+    "y": "428",
+    "text": "КТСМ"
+  },
+  {
+    "group_name": "Рамки",
+    "group_obj": "",
+    "go_name": "Сетка (сплошная)_5347195",
+    "go_class": "DrawTextBox",
+    "x": "196",
+    "y": "731",
+    "text": "КТСМ"
+  },
+  {
+    "group_name": "Рамки",
+    "group_obj": "",
+    "go_name": "Сетка (сплошная)_5348292",
+    "go_class": "DrawTextBox",
+    "x": "1007",
+    "y": "211",
+    "text": "Ответственные команды"
+  },
+  {
+    "group_name": "РУ",
+    "group_obj": "/Station/Objects/РУ",
+    "go_name": "Контроль сезонного управления_5346135",
+    "go_class": "DrawTextBox",
+    "x": "1166",
+    "y": "71",
+    "text": "РУ"
+  },
+  {
+    "group_name": "Ручное закрытие ПП1 (ПП1зП)",
+    "group_obj": "/Station/Objects/Ручное закрытие ПП1 (ПП1зП)",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346153",
+    "go_class": "DrawTextBox",
+    "x": "1374",
+    "y": "466",
+    "text": "РЗП"
+  },
+  {
+    "group_name": "Ручное закрытие ПП3 (ПП3зП)",
+    "group_obj": "/Station/Objects/Ручное закрытие ПП3 (ПП3зП)",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346156",
+    "go_class": "DrawTextBox",
+    "x": "1377",
+    "y": "753",
+    "text": "РЗП"
+  },
+  {
+    "group_name": "САУТ",
+    "group_obj": "/Station/Objects/САУТ",
+    "go_name": "Отображение  САУТ_5346144",
+    "go_class": "DrawTextBox",
+    "x": "1087",
+    "y": "135",
+    "text": "САУТ"
+  },
+  {
+    "group_name": "СЗ",
+    "group_obj": "/Station/Objects/СЗ",
+    "go_name": "Индикатор состояния устройства ДДЦ_5346137",
+    "go_class": "DrawTextBox",
+    "x": "1087",
+    "y": "103",
+    "text": "Земля"
+  },
+  {
+    "group_name": "СУ",
+    "group_obj": "/Station/Objects/СУ",
+    "go_name": "Контроль сезонного управления_5346136",
+    "go_class": "DrawTextBox",
+    "x": "1166",
+    "y": "103",
+    "text": "СУ"
+  },
+  {
+    "group_name": "ТДГА",
+    "group_obj": "/Station/Objects/ТДГА",
+    "go_name": "Контроль уровня топлива_5346183",
+    "go_class": "DrawTextBox",
+    "x": "888",
+    "y": "186",
+    "text": "Топливо"
+  },
+  {
+    "group_name": "Указатели",
+    "group_obj": "",
+    "go_name": "Указатель_5347265",
+    "go_class": "DrawText",
+    "x": "210",
+    "y": "25",
+    "text": "<< Васильево-Петровская"
+  },
+  {
+    "group_name": "Указатели",
+    "group_obj": "",
+    "go_name": "Указатель_5347266",
+    "go_class": "DrawText",
+    "x": "1740",
+    "y": "25",
+    "text": "Блок-Пост 7км >>"
+  },
+  {
+    "group_name": "Фидер 1",
+    "group_obj": "/Station/Objects/Фидер 1",
+    "go_name": "Фидер питания_5346148",
+    "go_class": "DrawTextBox",
+    "x": "649",
+    "y": "90",
+    "text": "Наличие"
+  },
+  {
+    "group_name": "Фидер 1 Активность",
+    "group_obj": "/Station/Objects/Фидер 1 Активность",
+    "go_name": "Контроль активности_5346147",
+    "go_class": "DrawTextBox",
+    "x": "649",
+    "y": "122",
+    "text": "Активность"
+  },
+  {
+    "group_name": "Фидер 2",
+    "group_obj": "/Station/Objects/Фидер 2",
+    "go_name": "Фидер питания_5346149",
+    "go_class": "DrawTextBox",
+    "x": "769",
+    "y": "90",
+    "text": "Наличие"
+  },
+  {
+    "group_name": "Фидер 2 Активность",
+    "group_obj": "/Station/Objects/Фидер 2 Активность",
+    "go_name": "Контроль активности_5346150",
+    "go_class": "DrawTextBox",
+    "x": "769",
+    "y": "122",
+    "text": "Активность"
+  },
+  {
+    "group_name": "Ч",
+    "group_obj": "/Station/Objects/Ч",
+    "go_name": "Поездной светофор_5346228",
+    "go_class": "DrawSignal",
+    "x": "331",
+    "y": "676",
+    "text": null
+  },
+  {
+    "group_name": "Ч1",
+    "group_obj": "/Station/Objects/Ч1",
+    "go_name": "Поездной светофор_5346247",
+    "go_class": "DrawSignal",
+    "x": "1553",
+    "y": "616",
+    "text": null
+  },
+  {
+    "group_name": "Ч1К",
+    "group_obj": "/Station/Objects/Ч1К",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346332",
+    "go_class": "DrawTextBox",
+    "x": "1519",
+    "y": "609",
+    "text": "Ч1"
+  },
+  {
+    "group_name": "Ч1СО",
+    "group_obj": "/Station/Objects/Ч1СО",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346292",
+    "go_class": "DrawTextBox",
+    "x": "1519",
+    "y": "627",
+    "text": "СО"
+  },
+  {
+    "group_name": "Ч2",
+    "group_obj": "/Station/Objects/Ч2",
+    "go_name": "Поездной светофор_5346248",
+    "go_class": "DrawSignal",
+    "x": "1607",
+    "y": "676",
+    "text": null
+  },
+  {
+    "group_name": "Ч2АС",
+    "group_obj": "/Station/Objects/Ч2АС",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346305",
+    "go_class": "DrawTextBox",
+    "x": "1606",
+    "y": "687",
+    "text": "АВ"
+  },
+  {
+    "group_name": "Ч2К",
+    "group_obj": "/Station/Objects/Ч2К",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346333",
+    "go_class": "DrawTextBox",
+    "x": "1573",
+    "y": "669",
+    "text": "Ч2"
+  },
+  {
+    "group_name": "Ч2СО",
+    "group_obj": "/Station/Objects/Ч2СО",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346293",
+    "go_class": "DrawTextBox",
+    "x": "1573",
+    "y": "687",
+    "text": "СО"
+  },
+  {
+    "group_name": "Ч3",
+    "group_obj": "/Station/Objects/Ч3",
+    "go_name": "Поездной светофор_5346246",
+    "go_class": "DrawSignal",
+    "x": "1522",
+    "y": "556",
+    "text": null
+  },
+  {
+    "group_name": "Ч3К",
+    "group_obj": "/Station/Objects/Ч3К",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346331",
+    "go_class": "DrawTextBox",
+    "x": "1488",
+    "y": "549",
+    "text": "Ч3"
+  },
+  {
+    "group_name": "Ч3СО",
+    "group_obj": "/Station/Objects/Ч3СО",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346291",
+    "go_class": "DrawTextBox",
+    "x": "1488",
+    "y": "567",
+    "text": "СО"
+  },
+  {
+    "group_name": "ЧАС",
+    "group_obj": "/Station/Objects/ЧАС",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346304",
+    "go_class": "DrawTextBox",
+    "x": "330",
+    "y": "687",
+    "text": "АВ"
+  },
+  {
+    "group_name": "ЧД",
+    "group_obj": "/Station/Objects/ЧД",
+    "go_name": "Поездной светофор_5346227",
+    "go_class": "DrawSignal",
+    "x": "331",
+    "y": "584",
+    "text": null
+  },
+  {
+    "group_name": "ЧДК",
+    "group_obj": "/Station/Objects/ЧДК",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346318",
+    "go_class": "DrawTextBox",
+    "x": "297",
+    "y": "576",
+    "text": "ЧД"
+  },
+  {
+    "group_name": "ЧДП",
+    "group_obj": "/Station/Objects/ЧДП",
+    "go_name": "Uг - Напряжение на выходе путевого генератора_5346338",
+    "go_class": "DrawText",
+    "x": "440",
+    "y": "570",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "ЧДП",
+    "group_obj": "/Station/Objects/ЧДП",
+    "go_name": "Uпп - Напряжение на входе путевого приемника ответвления А_5346339",
+    "go_class": "DrawText",
+    "x": "440",
+    "y": "580",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "ЧДП",
+    "group_obj": "/Station/Objects/ЧДП",
+    "go_name": "Изображение РЦ_5346113",
+    "go_class": "DrawRailChain",
+    "x": null,
+    "y": null,
+    "text": null
+  },
+  {
+    "group_name": "ЧДП",
+    "group_obj": "/Station/Objects/ЧДП",
+    "go_name": "Имя РЦ_5346225",
+    "go_class": "DrawText",
+    "x": "397",
+    "y": "580",
+    "text": "ЧДП"
+  },
+  {
+    "group_name": "ЧДСО",
+    "group_obj": "/Station/Objects/ЧДСО",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5348169",
+    "go_class": "DrawTextBox",
+    "x": "297",
+    "y": "558",
+    "text": "СО"
+  },
+  {
+    "group_name": "ЧИКС",
+    "group_obj": "/Station/Objects/ЧИКС",
+    "go_name": "Контроль работы устройств УКСПС_5346165",
+    "go_class": "DrawTextBox",
+    "x": "149",
+    "y": "675",
+    "text": "ЧИКС"
+  },
+  {
+    "group_name": "ЧК",
+    "group_obj": "/Station/Objects/ЧК",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346319",
+    "go_class": "DrawTextBox",
+    "x": "297",
+    "y": "669",
+    "text": "Ч"
+  },
+  {
+    "group_name": "ЧКЖ",
+    "group_obj": "/Station/Objects/ЧКЖ",
+    "go_name": "Контроль ключа-жезла_5346263",
+    "go_class": "DrawTextBox",
+    "x": "1778",
+    "y": "71",
+    "text": "ЧКЖ"
+  },
+  {
+    "group_name": "ЧМ1",
+    "group_obj": "/Station/Objects/ЧМ1",
+    "go_name": "Поездной светофор_5346239",
+    "go_class": "DrawSignal",
+    "x": "987",
+    "y": "616",
+    "text": null
+  },
+  {
+    "group_name": "ЧМ1К",
+    "group_obj": "/Station/Objects/ЧМ1К",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346325",
+    "go_class": "DrawTextBox",
+    "x": "953",
+    "y": "609",
+    "text": "ЧМ1"
+  },
+  {
+    "group_name": "ЧМ1СО",
+    "group_obj": "/Station/Objects/ЧМ1СО",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346287",
+    "go_class": "DrawTextBox",
+    "x": "953",
+    "y": "627",
+    "text": "СО"
+  },
+  {
+    "group_name": "ЧМ2",
+    "group_obj": "/Station/Objects/ЧМ2",
+    "go_name": "Поездной светофор_5346238",
+    "go_class": "DrawSignal",
+    "x": "1015",
+    "y": "676",
+    "text": null
+  },
+  {
+    "group_name": "ЧМ2АС",
+    "group_obj": "/Station/Objects/ЧМ2АС",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346306",
+    "go_class": "DrawTextBox",
+    "x": "1014",
+    "y": "687",
+    "text": "АВ"
+  },
+  {
+    "group_name": "ЧМ2К",
+    "group_obj": "/Station/Objects/ЧМ2К",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346326",
+    "go_class": "DrawTextBox",
+    "x": "981",
+    "y": "669",
+    "text": "ЧМ2"
+  },
+  {
+    "group_name": "ЧМ2СО",
+    "group_obj": "/Station/Objects/ЧМ2СО",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346286",
+    "go_class": "DrawTextBox",
+    "x": "981",
+    "y": "687",
+    "text": "СО"
+  },
+  {
+    "group_name": "ЧМ4",
+    "group_obj": "/Station/Objects/ЧМ4",
+    "go_name": "Поездной светофор_5346237",
+    "go_class": "DrawSignal",
+    "x": "929",
+    "y": "736",
+    "text": null
+  },
+  {
+    "group_name": "ЧМ4К",
+    "group_obj": "/Station/Objects/ЧМ4К",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346327",
+    "go_class": "DrawTextBox",
+    "x": "895",
+    "y": "729",
+    "text": "ЧМ4"
+  },
+  {
+    "group_name": "ЧМ4СО",
+    "group_obj": "/Station/Objects/ЧМ4СО",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346285",
+    "go_class": "DrawTextBox",
+    "x": "895",
+    "y": "747",
+    "text": "СО"
+  },
+  {
+    "group_name": "ЧП",
+    "group_obj": "/Station/Objects/ЧП",
+    "go_name": "Uг - Напряжение на выходе путевого генератора_5346340",
+    "go_class": "DrawText",
+    "x": "350",
+    "y": "630",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "ЧП",
+    "group_obj": "/Station/Objects/ЧП",
+    "go_name": "Uпп - Напряжение на входе путевого приемника ответвления А_5346341",
+    "go_class": "DrawText",
+    "x": "350",
+    "y": "640",
+    "text": "0,0000 В"
+  },
+  {
+    "group_name": "ЧП",
+    "group_obj": "/Station/Objects/ЧП",
+    "go_name": "Изображение РЦ_5346114",
+    "go_class": "DrawRailChain",
+    "x": null,
+    "y": null,
+    "text": null
+  },
+  {
+    "group_name": "ЧП",
+    "group_obj": "/Station/Objects/ЧП",
+    "go_name": "Имя РЦ_5346226",
+    "go_class": "DrawText",
+    "x": "413",
+    "y": "640",
+    "text": "ЧП"
+  },
+  {
+    "group_name": "ЧСО",
+    "group_obj": "/Station/Objects/ЧСО",
+    "go_name": "Индикатор для РЦ, стрелок, светофоров ДДЦ_5346281",
+    "go_class": "DrawTextBox",
+    "x": "297",
+    "y": "687",
+    "text": "СО"
+  },
+  {
+    "group_name": "ЧТревога1",
+    "group_obj": "/Station/Objects/ЧТревога1",
+    "go_name": "Контроль работы КТСМ \"Тревога 1\"_5346192",
+    "go_class": "DrawTextBox",
+    "x": "198",
+    "y": "752",
+    "text": "Тревога 1"
+  },
+  {
+    "group_name": "ЧТревога2",
+    "group_obj": "/Station/Objects/ЧТревога2",
+    "go_name": "Контроль работы КТСМ \"Тревога 2\"_5346193",
+    "go_class": "DrawTextBox",
+    "x": "198",
+    "y": "784",
+    "text": "Тревога 2"
+  },
+  {
+    "group_name": "ЧУКСзК",
+    "group_obj": "/Station/Objects/ЧУКСзК",
+    "go_name": "Контроль работы устройств УКСПС_5346166",
+    "go_class": "DrawTextBox",
+    "x": "85",
+    "y": "675",
+    "text": "ЧУКСзК"
+  }
+]

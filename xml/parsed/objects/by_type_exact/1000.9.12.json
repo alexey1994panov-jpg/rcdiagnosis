@@ -1,0 +1,780 @@
+[
+  {
+    "name": "IIН1УП",
+    "description": "IIН1УП",
+    "type": "1000.9.12",
+    "id": "147",
+    "adk_type": "004.12.01",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "IIН1УП",
+      "Description": "IIН1УП",
+      "Type": "1000.9.12",
+      "ADKType": "004.12.01",
+      "ID": "147",
+      "SiteID": "51000776",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "П = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "П = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "П",
+          "Description": "Контроль занятости РЦ",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП43/C11",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "PrevSec",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/НДП"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "NextSec",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/IIН2УП"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "LZ",
+          "Description": "Логическая ложная занятость РЦ",
+          "CLASS": "Tdm.Unification.SmartTasks.LZTechTask",
+          "Number": "41529",
+          "AdkNumber": "1"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "LS",
+          "Description": "Логическая ложная свободность РЦ",
+          "CLASS": "Tdm.Unification.SmartTasks.LSTechTask",
+          "Number": "41528",
+          "AdkNumber": "0"
+        }
+      }
+    ]
+  },
+  {
+    "name": "IIН2УП",
+    "description": "IIН2УП",
+    "type": "1000.9.12",
+    "id": "148",
+    "adk_type": "004.12.01",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "IIН2УП",
+      "Description": "IIН2УП",
+      "Type": "1000.9.12",
+      "ADKType": "004.12.01",
+      "ID": "148",
+      "SiteID": "51000776",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "П = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "П = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "П",
+          "Description": "Контроль занятости РЦ",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП43/C12",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "PrevSec",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/IIН1УП"
+        }
+      }
+    ]
+  },
+  {
+    "name": "IIЧ1ПП",
+    "description": "IIЧ1ПП",
+    "type": "1000.9.12",
+    "id": "138",
+    "adk_type": "004.12.01",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "IIЧ1ПП",
+      "Description": "IIЧ1ПП",
+      "Type": "1000.9.12",
+      "ADKType": "004.12.01",
+      "ID": "138",
+      "SiteID": "51000085",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "П = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "П = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "П",
+          "Description": "Контроль занятости РЦ",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП41/C9",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "NextSec",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/ЧП"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "PrevSec",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/IIЧ2ПП"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "LZ",
+          "Description": "Логическая ложная занятость РЦ",
+          "CLASS": "Tdm.Unification.SmartTasks.LZTechTask",
+          "Number": "41529",
+          "AdkNumber": "1"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "LS",
+          "Description": "Логическая ложная свободность РЦ",
+          "CLASS": "Tdm.Unification.SmartTasks.LSTechTask",
+          "Number": "41528",
+          "AdkNumber": "0"
+        }
+      }
+    ]
+  },
+  {
+    "name": "IIЧ2ПП",
+    "description": "IIЧ2ПП",
+    "type": "1000.9.12",
+    "id": "139",
+    "adk_type": "004.12.01",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "IIЧ2ПП",
+      "Description": "IIЧ2ПП",
+      "Type": "1000.9.12",
+      "ADKType": "004.12.01",
+      "ID": "139",
+      "SiteID": "51000085",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "П = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "П = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "П",
+          "Description": "Контроль занятости РЦ",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП41/C10",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "NextSec",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/IIЧ1ПП"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "PrevSec",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/IIЧ3ПП"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "LZ",
+          "Description": "Логическая ложная занятость РЦ",
+          "CLASS": "Tdm.Unification.SmartTasks.LZTechTask",
+          "Number": "41529",
+          "AdkNumber": "1"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "LS",
+          "Description": "Логическая ложная свободность РЦ",
+          "CLASS": "Tdm.Unification.SmartTasks.LSTechTask",
+          "Number": "41528",
+          "AdkNumber": "0"
+        }
+      }
+    ]
+  },
+  {
+    "name": "IIЧ3ПП",
+    "description": "IIЧ3ПП",
+    "type": "1000.9.12",
+    "id": "705",
+    "adk_type": "004.12.01",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "IIЧ3ПП",
+      "Description": "IIЧ3ПП",
+      "Type": "1000.9.12",
+      "ADKType": "004.12.01",
+      "ID": "705",
+      "SiteID": "51000085",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "П = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "П = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "П",
+          "Description": "Контроль занятости РЦ",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП41/C8",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "NextSec",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/IIЧ2ПП"
+        }
+      }
+    ]
+  },
+  {
+    "name": "IН1ПП",
+    "description": "IН1ПП",
+    "type": "1000.9.12",
+    "id": "142",
+    "adk_type": "004.12.01",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "IН1ПП",
+      "Description": "IН1ПП",
+      "Type": "1000.9.12",
+      "ADKType": "004.12.01",
+      "ID": "142",
+      "SiteID": "51000776",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "П = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "П = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "П",
+          "Description": "Контроль занятости РЦ",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП42/C9",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "PrevSec",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/НП"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "NextSec",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/IН2ПП"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "LZ",
+          "Description": "Логическая ложная занятость РЦ",
+          "CLASS": "Tdm.Unification.SmartTasks.LZTechTask",
+          "Number": "41529",
+          "AdkNumber": "1"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "LS",
+          "Description": "Логическая ложная свободность РЦ",
+          "CLASS": "Tdm.Unification.SmartTasks.LSTechTask",
+          "Number": "41528",
+          "AdkNumber": "0"
+        }
+      }
+    ]
+  },
+  {
+    "name": "IН2ПП",
+    "description": "IН2ПП",
+    "type": "1000.9.12",
+    "id": "143",
+    "adk_type": "004.12.01",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "IН2ПП",
+      "Description": "IН2ПП",
+      "Type": "1000.9.12",
+      "ADKType": "004.12.01",
+      "ID": "143",
+      "SiteID": "51000776",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "П = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "П = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "П",
+          "Description": "Контроль занятости РЦ",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП42/C10",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "PrevSec",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/IН1ПП"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "NextSec",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/IН3ПП"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "LZ",
+          "Description": "Логическая ложная занятость РЦ",
+          "CLASS": "Tdm.Unification.SmartTasks.LZTechTask",
+          "Number": "41529",
+          "AdkNumber": "1"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "LS",
+          "Description": "Логическая ложная свободность РЦ",
+          "CLASS": "Tdm.Unification.SmartTasks.LSTechTask",
+          "Number": "41528",
+          "AdkNumber": "0"
+        }
+      }
+    ]
+  },
+  {
+    "name": "IН3ПП",
+    "description": "IН3ПП",
+    "type": "1000.9.12",
+    "id": "706",
+    "adk_type": "004.12.01",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "IН3ПП",
+      "Description": "IН3ПП",
+      "Type": "1000.9.12",
+      "ADKType": "004.12.01",
+      "ID": "706",
+      "SiteID": "51000776",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "П = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "П = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "П",
+          "Description": "Контроль занятости РЦ",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП42/C8",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "PrevSec",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/IН2ПП"
+        }
+      }
+    ]
+  },
+  {
+    "name": "IЧ1УП",
+    "description": "IЧ1УП",
+    "type": "1000.9.12",
+    "id": "134",
+    "adk_type": "004.12.01",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "IЧ1УП",
+      "Description": "IЧ1УП",
+      "Type": "1000.9.12",
+      "ADKType": "004.12.01",
+      "ID": "134",
+      "SiteID": "51000085",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "П = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "П = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "П",
+          "Description": "Контроль занятости РЦ",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП40/C11",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "NextSec",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/ЧДП"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "PrevSec",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/IЧ2УП"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "LZ",
+          "Description": "Логическая ложная занятость РЦ",
+          "CLASS": "Tdm.Unification.SmartTasks.LZTechTask",
+          "Number": "41529",
+          "AdkNumber": "1"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "LS",
+          "Description": "Логическая ложная свободность РЦ",
+          "CLASS": "Tdm.Unification.SmartTasks.LSTechTask",
+          "Number": "41528",
+          "AdkNumber": "0"
+        }
+      }
+    ]
+  },
+  {
+    "name": "IЧ2УП",
+    "description": "IЧ2УП",
+    "type": "1000.9.12",
+    "id": "135",
+    "adk_type": "004.12.01",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "IЧ2УП",
+      "Description": "IЧ2УП",
+      "Type": "1000.9.12",
+      "ADKType": "004.12.01",
+      "ID": "135",
+      "SiteID": "51000085",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "П = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "П = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "П",
+          "Description": "Контроль занятости РЦ",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП40/C12",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "NextSec",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/IЧ1УП"
+        }
+      }
+    ]
+  }
+]

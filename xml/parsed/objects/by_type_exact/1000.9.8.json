@@ -1,0 +1,389 @@
+[
+  {
+    "name": "ВС",
+    "description": "ВС",
+    "type": "1000.9.8",
+    "id": "421",
+    "adk_type": "007.08.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ВС",
+      "Description": "ВС",
+      "Type": "1000.9.8",
+      "ADKType": "007.08.100",
+      "ID": "421",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "2",
+              "Condition": "Пожар(0) = 1 AND Охрана(0) = 0 AND НОПС(0) = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "3",
+              "Condition": "Пожар(0) = 1 AND Охрана(0) = 1 AND НОПС(0) = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "4",
+              "Condition": "Пожар(0) = 0 AND Охрана(0) = 1 AND НОПС(0) = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "AdkNumber": "5",
+              "Condition": "Пожар(0) = 1 AND Охрана(0) = 0 AND НОПС(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "6",
+              "Condition": "Пожар(0) = 0 AND Охрана(0) = 1 AND НОПС(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "7",
+              "Condition": "Пожар(0) = 0 AND Охрана(0) = 0 AND НОПС(0) = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "8",
+              "Condition": "Пожар(0) = 1 AND Охрана(0) = 1 AND НОПС(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "AdkNumber": "9",
+              "Condition": "Пожар(0) = 0 AND Охрана(0) = 0 AND НОПС(0) = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "Охрана",
+          "Description": "Контроль срабатывания охранной сигнализации",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП43/C18",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "ParTrevoga",
+          "Description": "Срабатывание охранной сигнализации",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2417",
+          "WriteProtocol": "true",
+          "AdkNumber": "462"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "Охрана = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "Охрана = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "НПТ",
+    "description": "НПТ",
+    "type": "1000.9.8",
+    "id": "419",
+    "adk_type": "007.08.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "НПТ",
+      "Description": "НПТ",
+      "Type": "1000.9.8",
+      "ADKType": "007.08.100",
+      "ID": "419",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "2",
+              "Condition": "Пожар(0) = 1 AND Охрана(0) = 0 AND НОПС(0) = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "3",
+              "Condition": "Пожар(0) = 1 AND Охрана(0) = 1 AND НОПС(0) = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "4",
+              "Condition": "Пожар(0) = 0 AND Охрана(0) = 1 AND НОПС(0) = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "AdkNumber": "5",
+              "Condition": "Пожар(0) = 1 AND Охрана(0) = 0 AND НОПС(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "6",
+              "Condition": "Пожар(0) = 0 AND Охрана(0) = 1 AND НОПС(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "7",
+              "Condition": "Пожар(0) = 0 AND Охрана(0) = 0 AND НОПС(0) = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "8",
+              "Condition": "Пожар(0) = 1 AND Охрана(0) = 1 AND НОПС(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "AdkNumber": "9",
+              "Condition": "Пожар(0) = 0 AND Охрана(0) = 0 AND НОПС(0) = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НОПС",
+          "Description": "Контроль неисправности устройств охранно-пожарной сигнализации",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП43/C16",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprPozgarTrevoga",
+          "Description": "Неисправность охранно-пожарной сигнализации",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2416",
+          "WriteProtocol": "true",
+          "AdkNumber": "463"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НОПС = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НОПС = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПТ",
+    "description": "ПТ",
+    "type": "1000.9.8",
+    "id": "420",
+    "adk_type": "007.08.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПТ",
+      "Description": "ПТ",
+      "Type": "1000.9.8",
+      "ADKType": "007.08.100",
+      "ID": "420",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "2",
+              "Condition": "Пожар(0) = 1 AND Охрана(0) = 0 AND НОПС(0) = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "3",
+              "Condition": "Пожар(0) = 1 AND Охрана(0) = 1 AND НОПС(0) = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "4",
+              "Condition": "Пожар(0) = 0 AND Охрана(0) = 1 AND НОПС(0) = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "AdkNumber": "5",
+              "Condition": "Пожар(0) = 1 AND Охрана(0) = 0 AND НОПС(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "6",
+              "Condition": "Пожар(0) = 0 AND Охрана(0) = 1 AND НОПС(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "7",
+              "Condition": "Пожар(0) = 0 AND Охрана(0) = 0 AND НОПС(0) = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "8",
+              "Condition": "Пожар(0) = 1 AND Охрана(0) = 1 AND НОПС(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "AdkNumber": "9",
+              "Condition": "Пожар(0) = 0 AND Охрана(0) = 0 AND НОПС(0) = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "Пожар",
+          "Description": "Контроль срабатывания пожарной сигнализации",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП43/C17",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PozgarTrevoga",
+          "Description": "Срабатывание пожарной сигнализации",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2415",
+          "WriteProtocol": "true",
+          "AdkNumber": "10598"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "Пожар = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "Пожар = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

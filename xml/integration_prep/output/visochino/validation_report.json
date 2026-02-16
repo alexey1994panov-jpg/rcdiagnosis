@@ -1,0 +1,22 @@
+{
+  "status": "ok",
+  "errors_count": 0,
+  "warnings_count": 0,
+  "errors": [],
+  "warnings": [],
+  "metrics": {
+    "broken_refs_count": 0,
+    "sections_topology_count": 17,
+    "sections_compat_count": 17,
+    "section_prevnext_mismatch_count": 0,
+    "switch_nodes_count": 8,
+    "switch_unknown_rc_refs_count": 0,
+    "signals_count": 20,
+    "signals_dangling_count": 0,
+    "signals_bad_rc_refs_count": 0,
+    "group_rc_count": 17,
+    "group_switch_count": 8,
+    "group_train_signal_count": 16,
+    "group_shunt_signal_count": 4
+  }
+}

@@ -1,0 +1,214 @@
+[
+  {
+    "name": "1НДСО",
+    "description": "1НДСО",
+    "type": "1000.9.10",
+    "id": "417",
+    "adk_type": "004.10.01",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "1НДСО",
+      "Description": "1НДСО",
+      "Type": "1000.9.10",
+      "ADKType": "004.10.01",
+      "ID": "417",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "ДСоглОтпр = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "AdkNumber": "3",
+              "Condition": "ДСоглОтпр = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "ДСоглОтпр",
+          "Description": "Контроль дачи согласия на отправление",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП42/C11",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "1ЧДСО",
+    "description": "1ЧДСО",
+    "type": "1000.9.10",
+    "id": "413",
+    "adk_type": "004.10.01",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "1ЧДСО",
+      "Description": "1ЧДСО",
+      "Type": "1000.9.10",
+      "ADKType": "004.10.01",
+      "ID": "413",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "ДСоглОтпр = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "AdkNumber": "3",
+              "Condition": "ДСоглОтпр = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "ДСоглОтпр",
+          "Description": "Контроль дачи согласия на отправление",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП40/C13",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "2НДСО",
+    "description": "2НДСО",
+    "type": "1000.9.10",
+    "id": "418",
+    "adk_type": "004.10.01",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2НДСО",
+      "Description": "2НДСО",
+      "Type": "1000.9.10",
+      "ADKType": "004.10.01",
+      "ID": "418",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "ДСоглОтпр = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "AdkNumber": "3",
+              "Condition": "ДСоглОтпр = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "ДСоглОтпр",
+          "Description": "Контроль дачи согласия на отправление",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП43/C13",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "2ЧДСО",
+    "description": "2ЧДСО",
+    "type": "1000.9.10",
+    "id": "416",
+    "adk_type": "004.10.01",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2ЧДСО",
+      "Description": "2ЧДСО",
+      "Type": "1000.9.10",
+      "ADKType": "004.10.01",
+      "ID": "416",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "ДСоглОтпр = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "AdkNumber": "3",
+              "Condition": "ДСоглОтпр = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "ДСоглОтпр",
+          "Description": "Контроль дачи согласия на отправление",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП41/C11",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  }
+]

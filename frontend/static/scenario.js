@@ -1,7 +1,113 @@
-// static/scenario.js
-// Работа с таблицей сценария: добавление, удаление, применение к JSON
+﻿// static/scenario.js
+// Dynamic scenario table: RC/SW/SIG columns come from scenario data and station layout.
 
-// --- Вспомогательные функции для создания элементов ---
+const DEFAULT_RC_IDS = ["10-12SP", "1P", "1-7SP"];
+const DEFAULT_SW_IDS = ["Sw10", "Sw1", "Sw5"];
+const DEFAULT_SIG_IDS = ["Ч1", "НМ1", "ЧМ1", "М1"];
+const DEFAULT_SCENARIO_VIEW = { showRc: true, showSw: true, showSig: true };
+
+function getScenarioViewState() {
+  const cur = window.scenarioViewState || {};
+  const merged = { ...DEFAULT_SCENARIO_VIEW, ...cur };
+  window.scenarioViewState = merged;
+  return merged;
+}
+
+function setScenarioViewState(next) {
+  window.scenarioViewState = { ...getScenarioViewState(), ...next };
+}
+
+function uniq(items) {
+  return Array.from(new Set((items || []).filter(Boolean)));
+}
+
+function getLayoutData() {
+  return window.stationLayoutData || null;
+}
+
+async function ensureScenarioLayoutLoaded() {
+  const layout = getLayoutData();
+  if (layout && Array.isArray(layout.rc_catalog) && Array.isArray(layout.switch_catalog) && Array.isArray(layout.signal_catalog)) {
+    return layout;
+  }
+  const station = (window.scenario && window.scenario.station) ? window.scenario.station : "Visochino";
+  const resp = await fetch(`/station-layout?station=${encodeURIComponent(station)}&_ts=${Date.now()}`, {
+    cache: "no-store",
+  });
+  if (!resp.ok) throw new Error(`station-layout HTTP ${resp.status}`);
+  const data = await resp.json();
+  window.stationLayoutData = data;
+  return data;
+}
+
+function asSwitchStateKey(swName) {
+  const s = String(swName || "");
+  return /^Sw/i.test(s) ? s : `Sw${s}`;
+}
+
+function getSwitchStateValue(step, swId) {
+  const src = step?.switch_states || {};
+  if (Object.prototype.hasOwnProperty.call(src, swId)) return src[swId];
+  const raw = String(swId || "");
+  if (/^Sw/i.test(raw)) {
+    const alt = raw.slice(2);
+    if (Object.prototype.hasOwnProperty.call(src, alt)) return src[alt];
+  } else {
+    const alt = asSwitchStateKey(raw);
+    if (Object.prototype.hasOwnProperty.call(src, alt)) return src[alt];
+  }
+  return undefined;
+}
+
+function isManeuverSignal(sigId) {
+  const s = String(sigId || "").toUpperCase();
+  return s.startsWith("М");
+}
+
+function getDefaultSignalState(sigId) {
+  return isManeuverSignal(sigId) ? 3 : 15;
+}
+
+function escCss(value) {
+  const s = String(value || "");
+  if (typeof CSS !== "undefined" && typeof CSS.escape === "function") return CSS.escape(s);
+  return s.replace(/\\/g, "\\\\").replace(/"/g, '\\"');
+}
+
+function pickColumnsFromScenario(scn) {
+  const rc = [];
+  const sw = [];
+  const sig = [];
+  (scn?.steps || []).forEach((step) => {
+    Object.keys(step?.rc_states || {}).forEach((k) => rc.push(k));
+    Object.keys(step?.switch_states || {}).forEach((k) => sw.push(asSwitchStateKey(k)));
+    Object.keys(step?.signal_states || {}).forEach((k) => sig.push(k));
+  });
+  return { rc: uniq(rc), sw: uniq(sw), sig: uniq(sig) };
+}
+
+function pickColumnsFromLayout() {
+  const layout = getLayoutData();
+  if (!layout) return { rc: [], sw: [], sig: [] };
+  const rc = uniq(layout.rc_catalog || []);
+  const sw = uniq((layout.switch_catalog || []).map((x) => asSwitchStateKey(x)));
+  const sig = uniq(layout.signal_catalog || []);
+  return { rc, sw, sig };
+}
+
+function getScenarioColumns() {
+  const fromScenario = pickColumnsFromScenario(window.scenario || scenario);
+  const fromLayout = pickColumnsFromLayout();
+  const baseRc = uniq([...(fromLayout.rc || []), ...(fromScenario.rc || [])]);
+  const baseSw = uniq([...(fromLayout.sw || []), ...(fromScenario.sw || [])]);
+  const baseSig = uniq([...(fromLayout.sig || []), ...(fromScenario.sig || [])]);
+
+  return {
+    rc: baseRc.length ? baseRc : DEFAULT_RC_IDS,
+    sw: baseSw.length ? baseSw : DEFAULT_SW_IDS,
+    sig: baseSig.length ? baseSig : DEFAULT_SIG_IDS,
+  };
+}
 
 function makeRcInput(value) {
   const td = document.createElement("td");
@@ -10,309 +116,169 @@ function makeRcInput(value) {
   input.step = "1";
   input.min = "0";
   input.max = "8";
-  input.value = value !== undefined && value !== null ? String(value) : "0";
-
-  function applyColor() {
-    const v = Number(input.value || "0");
-    td.classList.remove(
-      "rc-state-free",
-      "rc-state-occupied",
-      "rc-state-nocontrol",
-    );
-    applyRcStateClass(td, v);
-  }
-
+  input.value = value !== undefined && value !== null ? String(value) : "3";
   input.addEventListener("change", () => {
-    let v = Number(input.value || "0");
-    if (Number.isNaN(v)) v = 0;
+    let v = Number(input.value || "3");
+    if (Number.isNaN(v)) v = 3;
     if (v < 0) v = 0;
     if (v > 8) v = 8;
     input.value = String(v);
-    applyColor();
+    if (window.applyRcStateClass) window.applyRcStateClass(td, v);
   });
-
   td.appendChild(input);
-  applyColor();
+  if (window.applyRcStateClass) window.applyRcStateClass(td, Number(input.value || "3"));
   return { td, input };
 }
 
-// Стрелочный select с полным набором SW_VALID_STATES из app.js
 function makeSwitchSelect(value) {
   const td = document.createElement("td");
   const sel = document.createElement("select");
-
-  const states = Array.isArray(window.SW_VALID_STATES)
-    ? window.SW_VALID_STATES
-    : [0, 1, 2, 3, 4, 5, 6, 7, 8];
-
+  const states = Array.isArray(window.SW_VALID_STATES) ? window.SW_VALID_STATES : [0, 1, 2, 3, 4, 5, 6, 7, 8];
   states.forEach((code) => {
     const opt = document.createElement("option");
     opt.value = String(code);
     opt.textContent = String(code);
     sel.appendChild(opt);
   });
-
-  sel.value = value !== undefined && value !== null ? String(value) : "0";
-
-  function applyColor() {
-    const v = Number(sel.value || "0");
-    td.classList.remove(
-      "sw-state-plus",
-      "sw-state-minus",
-      "sw-state-nocontrol",
-    );
-    if (window.swClassForValue) {
-      td.classList.add(window.swClassForValue(v));
-    }
-  }
-
+  sel.value = value !== undefined && value !== null ? String(value) : "3";
   sel.addEventListener("change", () => {
-    applyColor();
+    td.classList.remove("sw-state-plus", "sw-state-minus", "sw-state-nocontrol");
+    if (window.swClassForValue) td.classList.add(window.swClassForValue(Number(sel.value || "3")));
   });
-
   td.appendChild(sel);
-  applyColor();
+  if (window.swClassForValue) td.classList.add(window.swClassForValue(Number(sel.value || "3")));
   return { td, sel };
 }
 
-// Сигнальный select для поездных (Ч1, НМ1) с общим набором состояний
-function makeMainSignalSelect(value) {
+function makeSignalSelect(value, signalId) {
   const td = document.createElement("td");
   const sel = document.createElement("select");
-
-  const states = Array.isArray(window.SIGNAL_VALID_STATES)
-    ? window.SIGNAL_VALID_STATES
-    : [
-        0, 1, 2,
-        3, 4, 5, 6, 7,
-        11, 12, 13, 14,
-        15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 27,
-      ];
-
+  const states = isManeuverSignal(signalId)
+    ? [0, 1, 2, 3, 4, 5, 6, 7]
+    : (Array.isArray(window.SIGNAL_VALID_STATES)
+      ? window.SIGNAL_VALID_STATES
+      : [0, 1, 2, 3, 4, 5, 6, 7, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 27]);
   states.forEach((code) => {
     const opt = document.createElement("option");
     opt.value = String(code);
     opt.textContent = String(code);
     sel.appendChild(opt);
   });
-
-  sel.value = value !== undefined && value !== null ? String(value) : "0";
-
-  function applySignalColor() {
-    const v = Number(sel.value || "0");
+  const defaultValue = getDefaultSignalState(signalId);
+  sel.value = value !== undefined && value !== null ? String(value) : String(defaultValue);
+  sel.addEventListener("change", () => {
     td.classList.remove(
-      "signal-free",
-      "signal-stop",
-      "signal-nocontrol",
-      "signal-maneuver-forbidden",
-      "signal-maneuver-allowed",
-      "signal-maneuver-failure",
-      "signal-open",
-      "signal-closed",
-      "signal-warning"
+      "signal-free", "signal-stop", "signal-nocontrol", "signal-maneuver-forbidden",
+      "signal-maneuver-allowed", "signal-maneuver-failure", "signal-open", "signal-closed", "signal-warning",
     );
-
-    // 0,1,2 — нет контроля (бирюзовый)
-    if (v === 0 || v === 1 || v === 2) {
-      td.classList.add("signal-nocontrol");
-      return;
+    if (window.applySignalClass) {
+      const signalCode = isManeuverSignal(signalId) ? 3 : 4;
+      const probe = document.createElement("div");
+      window.applySignalClass(probe, Number(sel.value || String(defaultValue)), signalCode);
+      probe.classList.forEach((x) => td.classList.add(x));
     }
-
-    // 15 — закрыт красным
-    if (v === 15) {
-      td.classList.add("signal-stop");
-      return;
-    }
-
-    // 19 (отказ), 21 (погашен) — белым
-    if (v === 19 || v === 21) {
-      td.classList.add("signal-maneuver-allowed"); // белый
-      return;
-    }
-
-    // Всё остальное >2 и не 15/19/21 — горит зелёным
-    td.classList.add("signal-free");
-  }
-
-  sel.addEventListener("change", applySignalColor);
-
-  td.appendChild(sel);
-  applySignalColor();
-  return { td, sel };
-}
-
-// Сигнальный select для маневровых (ЧМ1, М1) с допустимыми кодами 3–7
-function makeManeuverSignalSelect(value) {
-  const td = document.createElement("td");
-  const sel = document.createElement("select");
-
-  const states = [0, 1, 2, 3, 4, 5, 6, 7]; // NC + валидные маневровые
-
-  states.forEach((code) => {
-    const opt = document.createElement("option");
-    opt.value = String(code);
-    opt.textContent = String(code);
-    sel.appendChild(opt);
   });
-
-  sel.value = value !== undefined && value !== null ? String(value) : "0";
-
-  function applySignalColor() {
-    const v = Number(sel.value || "0");
-    td.classList.remove(
-      "signal-free",
-      "signal-stop",
-      "signal-nocontrol",
-      "signal-maneuver-forbidden",
-      "signal-maneuver-allowed",
-      "signal-maneuver-failure",
-      "signal-open",
-      "signal-closed",
-      "signal-warning"
-    );
-
-    // 0,1,2 — нет контроля (бирюзовый)
-    if (v === 0 || v === 1 || v === 2) {
-      td.classList.add("signal-nocontrol");
-      return;
-    }
-
-    // 3 — запрет маневров (синий)
-    if (v === 3) {
-      td.classList.add("signal-maneuver-forbidden");
-      return;
-    }
-
-    // 4,5 — маневровое/ускоренные маневры (белый)
-    if (v === 4 || v === 5) {
-      td.classList.add("signal-maneuver-allowed");
-      return;
-    }
-
-    // 6 — отказ
-    if (v === 6) {
-      td.classList.add("signal-maneuver-failure");
-      return;
-    }
-
-    // 7 — запрещающее поездное показание (красный)
-    if (v === 7) {
-      td.classList.add("signal-stop");
-      return;
-    }
-
-    // fallback
-    td.classList.add("signal-nocontrol");
-  }
-
-  sel.addEventListener("change", applySignalColor);
-
   td.appendChild(sel);
-  applySignalColor();
+  sel.dispatchEvent(new Event("change"));
   return { td, sel };
 }
 
-function makeEnumSelect(options, value) {
-  const td = document.createElement("td");
-  const sel = document.createElement("select");
-  options.forEach((v) => {
-    const opt = document.createElement("option");
-    opt.value = String(v);
-    opt.textContent = String(v);
-    sel.appendChild(opt);
-  });
-  sel.value = value !== undefined && value !== null ? String(value) : String(options[0]);
-  td.appendChild(sel);
-  return { td, sel };
+function rebuildScenarioHeader(columns) {
+  const table = document.getElementById("scenariotable");
+  if (!table) return;
+  const thead = table.querySelector("thead");
+  if (!thead) return;
+
+  const tr = document.createElement("tr");
+  const push = (txt, cls = "") => {
+    const th = document.createElement("th");
+    th.textContent = txt;
+    if (cls) th.classList.add(cls);
+    tr.appendChild(th);
+  };
+
+  push("dt, s");
+  columns.rc.forEach((rcId) => push(rcId, "col-rc"));
+  columns.sw.forEach((swId) => push(swId, "col-sw"));
+  columns.sig.forEach((sigId) => push(sigId, "col-sig"));
+  push("Actions");
+
+  thead.innerHTML = "";
+  thead.appendChild(tr);
 }
 
-// --- Добавление строки в таблицу (общая функция) ---
+function applyScenarioColumnVisibility() {
+  const table = document.getElementById("scenariotable");
+  if (!table) return;
+  const view = getScenarioViewState();
+  table.querySelectorAll(".col-rc").forEach((el) => el.classList.toggle("col-hidden", !view.showRc));
+  table.querySelectorAll(".col-sw").forEach((el) => el.classList.toggle("col-hidden", !view.showSw));
+  table.querySelectorAll(".col-sig").forEach((el) => el.classList.toggle("col-hidden", !view.showSig));
+}
 
-function addScenarioRow(tbody, step) {
+function ensureScenarioControls() {
+  const root = document.getElementById("scenario-column-controls");
+  if (!root) return;
+  const view = getScenarioViewState();
+  root.innerHTML = "";
+  root.className = "controls controls-compact";
+
+  const mkCheck = (label, checked, onChange) => {
+    const lbl = document.createElement("label");
+    const cb = document.createElement("input");
+    cb.type = "checkbox";
+    cb.checked = checked;
+    cb.addEventListener("change", () => onChange(cb.checked));
+    lbl.appendChild(cb);
+    lbl.appendChild(document.createTextNode(label));
+    root.appendChild(lbl);
+  };
+
+  mkCheck("RC", view.showRc, (v) => { setScenarioViewState({ showRc: v }); applyScenarioColumnVisibility(); });
+  mkCheck("Стрелки", view.showSw, (v) => { setScenarioViewState({ showSw: v }); applyScenarioColumnVisibility(); });
+  mkCheck("Сигналы", view.showSig, (v) => { setScenarioViewState({ showSig: v }); applyScenarioColumnVisibility(); });
+}
+
+function addScenarioRow(tbody, step, columns) {
   const tr = document.createElement("tr");
 
-  // Δt
   const tdDt = document.createElement("td");
   const inpDt = document.createElement("input");
   inpDt.type = "number";
   inpDt.min = "0.1";
   inpDt.step = "0.1";
   inpDt.value = step?.t ?? 1;
+  inpDt.dataset.kind = "dt";
   tdDt.appendChild(inpDt);
   tr.appendChild(tdDt);
 
-  // РЦ: 10-12SP, 1P, 1-7SP
-  const rcPrev = step?.rc_states?.["10-12SP"] ?? 0;
-  const rcCtrl = step?.rc_states?.["1P"] ?? 0;
-  const rcNext = step?.rc_states?.["1-7SP"] ?? 0;
+  columns.rc.forEach((rcId) => {
+    const { td, input } = makeRcInput(step?.rc_states?.[rcId] ?? 3);
+    td.classList.add("col-rc");
+    input.dataset.kind = "rc";
+    input.dataset.key = rcId;
+    tr.appendChild(td);
+  });
 
-  const { td: tdPrev } = makeRcInput(rcPrev);
-  const { td: tdCtrl } = makeRcInput(rcCtrl);
-  const { td: tdNext } = makeRcInput(rcNext);
+  columns.sw.forEach((swId) => {
+    const { td, sel } = makeSwitchSelect(getSwitchStateValue(step, swId) ?? 3);
+    td.classList.add("col-sw");
+    sel.dataset.kind = "sw";
+    sel.dataset.key = swId;
+    tr.appendChild(td);
+  });
 
-  tr.appendChild(tdPrev);
-  tr.appendChild(tdCtrl);
-  tr.appendChild(tdNext);
+  columns.sig.forEach((sigId) => {
+    const { td, sel } = makeSignalSelect(
+      step?.signal_states?.[sigId] ?? getDefaultSignalState(sigId),
+      sigId
+    );
+    td.classList.add("col-sig");
+    sel.dataset.kind = "sig";
+    sel.dataset.key = sigId;
+    tr.appendChild(td);
+  });
 
-  // Стрелки: Sw10, Sw1, Sw5
-  const sw10 = step?.switch_states?.["Sw10"] ?? 0;
-  const sw1  = step?.switch_states?.["Sw1"]  ?? 0;
-  const sw5  = step?.switch_states?.["Sw5"]  ?? 0;
-
-  const { td: tdSw10 } = makeSwitchSelect(sw10);
-  const { td: tdSw1 }  = makeSwitchSelect(sw1);
-  const { td: tdSw5 }  = makeSwitchSelect(sw5);
-
-  tr.appendChild(tdSw10);
-  tr.appendChild(tdSw1);
-  tr.appendChild(tdSw5);
-
-  // Сигналы: Ч1, НМ1, ЧМ1, М1
-  const sigStates = step?.signal_states || {};
-
-  const sigCh1  = sigStates["Ч1"]  ?? 0;  // поездной
-  const sigNm1  = sigStates["НМ1"] ?? 0;  // поездной
-  const sigChm1 = sigStates["ЧМ1"] ?? 0;  // поездной
-  const sigM1   = sigStates["М1"]  ?? 0;  // маневровый
-
-  const { td: tdSigCh1 }  = makeMainSignalSelect(sigCh1);
-  const { td: tdSigNm1 }  = makeMainSignalSelect(sigNm1);
-  const { td: tdSigChm1 } = makeMainSignalSelect(sigChm1);
-  const { td: tdSigM1 }   = makeManeuverSignalSelect(sigM1);
-
-
-  tr.appendChild(tdSigCh1);
-  tr.appendChild(tdSigNm1);
-  tr.appendChild(tdSigChm1);
-  tr.appendChild(tdSigM1);
-
-  // МУ по РЦ
-  const muPrev = step?.mu?.["10-12SP"] ?? 3;
-  const muCurr = step?.mu?.["1P"]      ?? 3;
-  const muNext = step?.mu?.["1-7SP"]   ?? 3;
-
-  const { td: tdMuPrev } = makeEnumSelect([1, 2, 3, 4], muPrev);
-  const { td: tdMuCurr } = makeEnumSelect([1, 2, 3, 4], muCurr);
-  const { td: tdMuNext } = makeEnumSelect([1, 2, 3, 4], muNext);
-
-  tr.appendChild(tdMuPrev);
-  tr.appendChild(tdMuCurr);
-  tr.appendChild(tdMuNext);
-
-  // ДСП, НАС, ЧАС
-  const dspVal  = step?.dispatcher_control_state ?? 4;
-  const nasVal  = step?.auto_actions?.NAS ?? 4;
-  const chasVal = step?.auto_actions?.CHAS ?? 4;
-
-  const { td: tdDsp }  = makeEnumSelect([0, 1, 2, 3, 4], dspVal);
-  const { td: tdNas }  = makeEnumSelect([0, 3, 4], nasVal);
-  const { td: tdChas } = makeEnumSelect([0, 3, 4], chasVal);
-
-  tr.appendChild(tdDsp);
-  tr.appendChild(tdNas);
-  tr.appendChild(tdChas);
-
-  // Кнопка удаления строки
   const tdAction = document.createElement("td");
   const btnDel = document.createElement("button");
   btnDel.type = "button";
@@ -328,220 +294,109 @@ function addScenarioRow(tbody, step) {
   scenarioTableRows.push(tr);
 }
 
-// --- Инициализация таблицы сценария ---
+function extractStepFromRow(tr, columns) {
+  const dtInput = tr.querySelector('input[data-kind="dt"]');
+  const t = parseFloat(dtInput?.value || "0");
+  if (!t || t <= 0) return null;
 
-function initScenarioTable() {
+  const rc_states = {};
+  const switch_states = {};
+  const signal_states = {};
+
+  columns.rc.forEach((rcId) => {
+    const el = tr.querySelector(`input[data-kind="rc"][data-key="${escCss(rcId)}"]`);
+    const v = parseInt(el?.value || "3", 10);
+    rc_states[rcId] = Number.isNaN(v) ? 3 : v;
+  });
+  columns.sw.forEach((swId) => {
+    const el = tr.querySelector(`select[data-kind="sw"][data-key="${escCss(swId)}"]`);
+    const v = parseInt(el?.value || "3", 10);
+    switch_states[swId] = Number.isNaN(v) ? 3 : v;
+  });
+  columns.sig.forEach((sigId) => {
+    const el = tr.querySelector(`select[data-kind="sig"][data-key="${escCss(sigId)}"]`);
+    const fallback = getDefaultSignalState(sigId);
+    const v = parseInt(el?.value || String(fallback), 10);
+    signal_states[sigId] = Number.isNaN(v) ? fallback : v;
+  });
+  return {
+    t,
+    rc_states,
+    switch_states,
+    modes: {},
+    signal_states,
+  };
+}
+
+function deleteRow(tr) {
+  const idx = scenarioTableRows.indexOf(tr);
+  if (idx === -1) return;
+  tr.remove();
+  scenarioTableRows.splice(idx, 1);
+  applyScenarioTableToJson();
+}
+
+async function initScenarioTable() {
   const tbody = document.querySelector("#scenariotable tbody");
   if (!tbody) return;
 
+  if (window.scenario) scenario = window.scenario;
+  try {
+    await ensureScenarioLayoutLoaded();
+  } catch (e) {
+    console.error("Failed to load station-layout for scenario table", e);
+  }
+  const columns = getScenarioColumns();
+  window.scenarioColumns = columns;
+  ensureScenarioControls();
+  rebuildScenarioHeader(columns);
+
   scenarioTableRows = [];
   tbody.innerHTML = "";
-
-  // Заполнение таблицы из scenario.steps
   if (Array.isArray(scenario.steps) && scenario.steps.length > 0) {
-    scenario.steps.forEach((s) => addScenarioRow(tbody, s));
+    scenario.steps.forEach((s) => addScenarioRow(tbody, s, columns));
   } else {
-    addScenarioRow(tbody, null);
+    addScenarioRow(tbody, null, columns);
   }
+  applyScenarioColumnVisibility();
 
-  // Привязка кнопок управления
   const addBtn = document.getElementById("addsteprow");
-  if (addBtn) {
-    addBtn.onclick = () => addScenarioRow(tbody, null);
-  }
+  if (addBtn) addBtn.onclick = () => addScenarioRow(tbody, null, columns);
 
   const repeatBtn = document.getElementById("repeatprevrow");
   if (repeatBtn) {
     repeatBtn.onclick = () => {
       if (!scenarioTableRows.length) return;
       const lastTr = scenarioTableRows[scenarioTableRows.length - 1];
-      const inputs = Array.from(lastTr.querySelectorAll("input,select"));
-      const step = extractStepFromRow(inputs);
-      if (step) addScenarioRow(tbody, step);
+      const step = extractStepFromRow(lastTr, columns);
+      if (step) addScenarioRow(tbody, step, columns);
+      applyScenarioColumnVisibility();
     };
   }
 
   const applyBtn = document.getElementById("applyscenariotable");
-  if (applyBtn) {
-    applyBtn.onclick = () => {
-      console.log("applyscenariotable clicked");
-      applyScenarioTableToJson();
-    };
-  }
+  if (applyBtn) applyBtn.onclick = () => applyScenarioTableToJson();
+}
+
+async function rebuildScenarioTableFromScenario() {
+  await initScenarioTable();
+  if (typeof renderScenarioTextarea === "function") renderScenarioTextarea();
+}
+
+function applyScenarioTableToJson(silent = false) {
+  const tbody = document.querySelector("#scenariotable tbody");
+  if (!tbody) return;
+  if (window.scenario) scenario = window.scenario;
+
+  const columns = window.scenarioColumns || getScenarioColumns();
+  const rows = Array.from(tbody.querySelectorAll("tr"));
+  scenario.steps = rows.map((tr) => extractStepFromRow(tr, columns)).filter(Boolean);
+  window.scenario = scenario;
+
+  if (typeof renderScenarioTextarea === "function") renderScenarioTextarea();
+  if (!silent) alert(`Таблица сценария применена: ${scenario.steps.length} шаг(ов).`);
 }
 
 window.initScenarioTable = initScenarioTable;
-
-// --- Извлечение данных из строки таблицы ---
-
-function extractStepFromRow(inputs) {
-  // Порядок:
-  // Δt,
-  // 10-12SP, 1P, 1-7SP,
-  // Sw10, Sw1, Sw5,
-  // Ч1, НМ1, ЧМ1, М1,
-  // MU×3, DSP, NAS, CHAS
-  const [
-    inpDt,
-    inpPrev,
-    inpCtrl,
-    inpNext,
-    selSw10,
-    selSw1,
-    selSw5,
-    selSigCh1,
-    selSigNm1,
-    selSigChm1,
-    selSigM1,
-    selMuPrev,
-    selMuCurr,
-    selMuNext,
-    selDsp,
-    selNas,
-    selChas,
-  ] = inputs;
-
-  const t = parseFloat(inpDt.value || "0");
-  if (!t || t <= 0) return null;
-
-  const rc_states = {};
-  const switch_states = {};
-  const mu = {};
-  const auto_actions = {};
-  const signal_states = {};
-
-  const vPrev = parseInt(inpPrev.value || "0", 10);
-  const vCtrl = parseInt(inpCtrl.value || "0", 10);
-  const vNext = parseInt(inpNext.value || "0", 10);
-
-  const vSw10 = parseInt(selSw10.value || "0", 10);
-  const vSw1  = parseInt(selSw1.value  || "0", 10);
-  const vSw5  = parseInt(selSw5.value  || "0", 10);
-
-  if (vPrev || vPrev === 0) rc_states["10-12SP"] = vPrev;
-  if (vCtrl || vCtrl === 0) rc_states["1P"]      = vCtrl;
-  if (vNext || vNext === 0) rc_states["1-7SP"]   = vNext;
-
-  if (vSw10 || vSw10 === 0) switch_states["Sw10"] = vSw10;
-  if (vSw1  || vSw1  === 0) switch_states["Sw1"]  = vSw1;
-  if (vSw5  || vSw5  === 0) switch_states["Sw5"]  = vSw5;
-
-  const vMuPrev = parseInt(selMuPrev.value || "3", 10);
-  const vMuCurr = parseInt(selMuCurr.value || "3", 10);
-  const vMuNext = parseInt(selMuNext.value || "3", 10);
-
-  mu["10-12SP"] = vMuPrev;
-  mu["1P"]      = vMuCurr;
-  mu["1-7SP"]   = vMuNext;
-
-  const vDsp  = parseInt(selDsp.value || "4", 10);
-  const vNas  = parseInt(selNas.value || "4", 10);
-  const vChas = parseInt(selChas.value || "4", 10);
-
-  auto_actions.NAS  = vNas;
-  auto_actions.CHAS = vChas;
-
-  const vCh1  = parseInt(selSigCh1.value  || "0", 10);
-  const vNm1  = parseInt(selSigNm1.value  || "0", 10);
-  const vChm1 = parseInt(selSigChm1.value || "0", 10);
-  const vM1   = parseInt(selSigM1.value   || "0", 10);
-
-  signal_states["Ч1"]  = vCh1;
-  signal_states["НМ1"] = vNm1;
-  signal_states["ЧМ1"] = vChm1;
-  signal_states["М1"]  = vM1;
-
-  return {
-    t,
-    rc_states,
-    switch_states,
-    modes: {},
-    mu,
-    dispatcher_control_state: vDsp,
-    auto_actions,
-    signal_states,
-  };
-}
-
-// --- Удаление строки ---
-
-function deleteRow(tr) {
-  const idx = scenarioTableRows.indexOf(tr);
-  if (idx === -1) return;
-
-  tr.remove();
-  scenarioTableRows.splice(idx, 1);
-  applyScenarioTableToJson();
-}
-
-// --- Перестроение таблицы из scenario.steps (при загрузке теста) ---
-
-function rebuildScenarioTableFromScenario() {
-  const tbody = document.querySelector("#scenariotable tbody");
-  if (!tbody) return;
-
-  if (window.scenario) {
-    // синхронизуемся с глобалом, как делает tests.js
-    scenario = window.scenario;
-  }
-
-  tbody.innerHTML = "";
-  scenarioTableRows = [];
-
-  if (Array.isArray(scenario.steps) && scenario.steps.length > 0) {
-    scenario.steps.forEach((s) => addScenarioRow(tbody, s));
-  } else {
-    addScenarioRow(tbody, null);
-  }
-
-  if (typeof renderScenarioTextarea === "function") {
-    renderScenarioTextarea();
-  }
-
-  console.log("Таблица сценария перестроена из", scenario.steps.length, "шагов");
-}
-
 window.rebuildScenarioTableFromScenario = rebuildScenarioTableFromScenario;
-
-// --- Применение таблицы к JSON ---
-
-function applyScenarioTableToJson() {
-  const tbody = document.querySelector("#scenariotable tbody");
-  if (!tbody) return;
-
-  const rows = Array.from(tbody.querySelectorAll("tr"));
-
-  const steps = rows
-    .map((tr, idx) => {
-      const inputs = Array.from(tr.querySelectorAll("input,select"));
-      const step = extractStepFromRow(inputs);
-      console.log(
-        "applyScenarioTableToJson: row", idx,
-        "inputs =", inputs.length,
-        "step =", step,
-      );
-      return step;
-    })
-    .filter(Boolean);
-
-  if (window.scenario) {
-    scenario = window.scenario;
-  }
-
-  scenario.steps = steps;
-  window.scenario = scenario;
-
-  if (typeof renderScenarioTextarea === "function") {
-    renderScenarioTextarea();
-  }
-
-  console.log(
-    "applyScenarioTableToJson: processed rows =", rows.length,
-    "steps.length =", steps.length,
-    "first step =", steps[0] || null,
-  );
-
-  alert("Таблица сценария применена: " + steps.length + " шаг(ов).");
-}
-
 window.applyScenarioTableToJson = applyScenarioTableToJson;

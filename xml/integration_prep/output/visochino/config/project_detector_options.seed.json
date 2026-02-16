@@ -1,0 +1,69 @@
+{
+  "station": "from_xml",
+  "mapping_status": "needs_manual_mapping",
+  "notes": [
+    "Values extracted from DiagParams.xml.",
+    "Direct mapping from NT* to project option keys is not always 1:1 and must be confirmed.",
+    "Objects.xml remains source-of-truth for links and topology."
+  ],
+  "detector_options_seed": {
+    "global": {
+      "t_pk": null,
+      "t_mu": null,
+      "t_recent_ls": null,
+      "t_min_maneuver_v8": null,
+      "t_ls_mu": null,
+      "t_ls_after_lz": null,
+      "t_ls_dsp": null,
+      "enable_lz_exc_mu": null,
+      "enable_lz_exc_recent_ls": null,
+      "enable_lz_exc_dsp": null,
+      "enable_ls_exc_mu": null,
+      "enable_ls_exc_after_lz": null,
+      "enable_ls_exc_dsp": null
+    },
+    "lz_sample_from_diagparams": {
+      "NT0_min": 10,
+      "NT1_min": 15,
+      "NT2_min": 13,
+      "NT3_min": 3,
+      "NT4_min": 11,
+      "NTI_min": 30,
+      "NТ_min": 10
+    },
+    "ls_sample_from_diagparams": {
+      "NT0_min": 20,
+      "NT1_min": 15,
+      "NT2_min": 15,
+      "NT3_min": 3,
+      "NT4_min": 15,
+      "NТ_min": 10
+    },
+    "per_variant_enable_default": {
+      "enable_lz1": null,
+      "enable_lz2": null,
+      "enable_lz3": null,
+      "enable_lz4": null,
+      "enable_lz5": null,
+      "enable_lz6": null,
+      "enable_lz7": null,
+      "enable_lz8": null,
+      "enable_lz9": null,
+      "enable_lz10": null,
+      "enable_lz11": null,
+      "enable_lz12": null,
+      "enable_lz13": null,
+      "enable_ls1": null,
+      "enable_ls2": null,
+      "enable_ls4": null,
+      "enable_ls5": null,
+      "enable_ls6": null,
+      "enable_ls9": null
+    }
+  },
+  "topology_summary": {
+    "rc_count": 17,
+    "switch_count": 8,
+    "signal_count": 20
+  }
+}

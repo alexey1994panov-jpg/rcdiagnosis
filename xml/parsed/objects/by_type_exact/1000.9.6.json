@@ -1,0 +1,214 @@
+[
+  {
+    "name": "1НКП",
+    "description": "1НКП",
+    "type": "1000.9.6",
+    "id": "141",
+    "adk_type": "004.06.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "1НКП",
+      "Description": "1НКП",
+      "Type": "1000.9.6",
+      "ADKType": "004.06.100",
+      "ID": "141",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "Ппер = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "3",
+              "Condition": "Ппер = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "Ппер",
+          "Description": "Контроль занятости перегона",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП42/C6",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "1ЧКП",
+    "description": "1ЧКП",
+    "type": "1000.9.6",
+    "id": "132",
+    "adk_type": "004.06.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "1ЧКП",
+      "Description": "1ЧКП",
+      "Type": "1000.9.6",
+      "ADKType": "004.06.100",
+      "ID": "132",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "Ппер = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "3",
+              "Condition": "Ппер = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "Ппер",
+          "Description": "Контроль занятости перегона",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП40/C6",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "2НКП",
+    "description": "2НКП",
+    "type": "1000.9.6",
+    "id": "145",
+    "adk_type": "004.06.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2НКП",
+      "Description": "2НКП",
+      "Type": "1000.9.6",
+      "ADKType": "004.06.100",
+      "ID": "145",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "Ппер = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "3",
+              "Condition": "Ппер = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "Ппер",
+          "Description": "Контроль занятости перегона",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП43/C6",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "2ЧКП",
+    "description": "2ЧКП",
+    "type": "1000.9.6",
+    "id": "137",
+    "adk_type": "004.06.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2ЧКП",
+      "Description": "2ЧКП",
+      "Type": "1000.9.6",
+      "ADKType": "004.06.100",
+      "ID": "137",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "Ппер = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "3",
+              "Condition": "Ппер = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "Ппер",
+          "Description": "Контроль занятости перегона",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП41/C6",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  }
+]

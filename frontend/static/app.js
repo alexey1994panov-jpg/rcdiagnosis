@@ -5,7 +5,6 @@
 // Глобальные переменные (доступны всем модулам)
 let scenario = {
   station: "Visochino",
-  target_rc: "1P",
   dt: 1,
   options: {},
   steps: [],
@@ -65,7 +64,7 @@ window.addEventListener("load", async () => {
   }
 
   if (typeof initScenarioTable === "function") {
-    initScenarioTable();
+    await initScenarioTable();
   }
 
   if (typeof renderTestsList === "function") {
@@ -166,6 +165,10 @@ function renderScenarioTextarea() {
   if (window.scenario) {
     scenario = window.scenario;
   }
+  if (typeof window.normalizeOptionsForJson === "function") {
+    scenario.options = window.normalizeOptionsForJson(scenario.options || {});
+    window.scenario = scenario;
+  }
 
   const area = document.getElementById("scenariotext");
   if (area) {
@@ -188,12 +191,21 @@ async function runSimulation() {
       if (text) {
         scenario = JSON.parse(text);
         window.scenario = scenario;
+        if (typeof rebuildScenarioTableFromScenario === "function") {
+          await rebuildScenarioTableFromScenario();
+        }
       }
     }
 
     // Пользователь что-то поменял в формах – забираем актуальные значения
     if (typeof updateOptionsFromForm === "function") {
       updateOptionsFromForm();
+    }
+    if (typeof applyScenarioTableToJson === "function") {
+      applyScenarioTableToJson(true);
+    }
+    if (typeof renderScenarioTextarea === "function") {
+      renderScenarioTextarea();
     }
 
     const resp = await fetch("/simulate", {

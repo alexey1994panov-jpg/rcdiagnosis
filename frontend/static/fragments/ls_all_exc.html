@@ -1,244 +1,62 @@
-<table class="logic-table">
-  <tr>
-    <td class="logic-col">
-      <table class="logic-variant logic-variant-ls1">
-        <thead>
-          <tr><th colspan="2">ЛС v1</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>TC01.01 LS, с</td>
-            <td><input id="tc0101ls" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TLS01, с</td>
-            <td><input id="tls01" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TKON LS1, с</td>
-            <td><input id="tkonls1" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>Пауза после ЛС</td>
-            <td><input id="tpausels1" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>Включить LS v1</td>
-            <td><input id="enablels1" type="checkbox"></td>
-          </tr>
-        </tbody>
-      </table>
-    </td>
+﻿<div class="logic-grid">
+  <table class="logic-variant logic-variant-exc"><thead><tr><th colspan="2">Исключения ЛС</th></tr></thead><tbody>
+    <tr><td>TLS_MU, с</td><td><input id="tlsmu" type="number" step="0.1"></td></tr>
+    <tr><td>TLS_AFTER_LZ, с</td><td><input id="tlsafterlz" type="number" step="0.1"></td></tr>
+    <tr><td>TLS_DSP, с</td><td><input id="tlsdsp" type="number" step="0.1"></td></tr>
+    <tr><td>MU-исключение</td><td><input id="enablelsexcmu" type="checkbox"></td></tr>
+    <tr><td>Исключение после ЛЗ</td><td><input id="enablelsexcafterlz" type="checkbox"></td></tr>
+    <tr><td>Исключение по ДСП</td><td><input id="enablelsexcdsp" type="checkbox"></td></tr>
+  </tbody></table>
 
-    <td class="logic-col">
-      <table class="logic-variant logic-variant-ls2">
-        <thead>
-          <tr><th colspan="2">ЛС v2</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>TS01.02 LS, с</td>
-            <td><input id="ts0102ls" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TS02.02 LS, с</td>
-            <td><input id="ts0202ls" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TLS01.02, с</td>
-            <td><input id="tls0102" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TLS02.02, с</td>
-            <td><input id="tls0202" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TKON LS2, с</td>
-            <td><input id="tkonls2" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>Пауза после ЛС</td>
-            <td><input id="tpausels2" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>Включить LS v2</td>
-            <td><input id="enablels2" type="checkbox"></td>
-          </tr>
-        </tbody>
-      </table>
-    </td>
+  <table class="logic-variant logic-variant-ls1"><thead><tr><th colspan="2">ЛС v1</th></tr></thead><tbody>
+    <tr><td>TS01_LS1, с</td><td><input id="tc0101ls" type="number" step="0.1"></td></tr>
+    <tr><td>TLZ_LS1, с</td><td><input id="tls01" type="number" step="0.1"></td></tr>
+    <tr><td>TKON_LS1, с</td><td><input id="tkonls1" type="number" step="0.1"></td></tr>
+    <tr><td>Пауза после ЛС</td><td><input id="tpausels1" type="number" step="0.1"></td></tr>
+    <tr><td>Включить LS v1</td><td><input id="enablels1" type="checkbox"></td></tr>
+  </tbody></table>
 
-    <td class="logic-col">
-      <table class="logic-variant logic-variant-ls4">
-        <thead>
-          <tr><th colspan="2">ЛС v4</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>TS01.04 LS, с</td>
-            <td><input id="ts0104ls" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TS02.04 LS, с</td>
-            <td><input id="ts0204ls" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TLS01.04, с</td>
-            <td><input id="tls0104" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TLS02.04, с</td>
-            <td><input id="tls0204" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TKON LS4, с</td>
-            <td><input id="tkonls4" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>Пауза после ЛС</td>
-            <td><input id="tpausels4" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>Включить LS v4</td>
-            <td><input id="enablels4" type="checkbox"></td>
-          </tr>
-        </tbody>
-      </table>
-    </td>
-  </tr>
+  <table class="logic-variant logic-variant-ls2"><thead><tr><th colspan="2">ЛС v2</th></tr></thead><tbody>
+    <tr><td>TS01_LS2, с</td><td><input id="ts0102ls" type="number" step="0.1"></td></tr>
+    <tr><td>TS02_LS2, с</td><td><input id="ts0202ls" type="number" step="0.1"></td></tr>
+    <tr><td>TLZ_LS2, с</td><td><input id="tls0102" type="number" step="0.1"></td></tr>
+    <tr><td>TKON_LS2, с</td><td><input id="tkonls2" type="number" step="0.1"></td></tr>
+    <tr><td>Пауза после ЛС</td><td><input id="tpausels2" type="number" step="0.1"></td></tr>
+    <tr><td>Включить LS v2</td><td><input id="enablels2" type="checkbox"></td></tr>
+  </tbody></table>
 
-  <tr>
-    <td class="logic-col">
-      <table class="logic-variant logic-variant-ls5">
-        <thead>
-          <tr><th colspan="2">ЛС v5</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>TS01.05 LS, с</td>
-            <td><input id="ts0105ls" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TLS05, с</td>
-            <td><input id="tls05" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TKON LS5, с</td>
-            <td><input id="tkonls5" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>Пауза после ЛС</td>
-            <td><input id="tpausels5" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>Включить LS v5</td>
-            <td><input id="enablels5" type="checkbox"></td>
-          </tr>
-        </tbody>
-      </table>
-    </td>
+  <table class="logic-variant logic-variant-ls4"><thead><tr><th colspan="2">ЛС v4</th></tr></thead><tbody>
+    <tr><td>TS01_LS4, с</td><td><input id="ts0104ls" type="number" step="0.1"></td></tr>
+    <tr><td>TS02_LS4, с</td><td><input id="ts0204ls" type="number" step="0.1"></td></tr>
+    <tr><td>TLZ01_LS4, с</td><td><input id="tls0104" type="number" step="0.1"></td></tr>
+    <tr><td>TLZ02_LS4, с</td><td><input id="tls0204" type="number" step="0.1"></td></tr>
+    <tr><td>TKON_LS4, с</td><td><input id="tkonls4" type="number" step="0.1"></td></tr>
+    <tr><td>Пауза после ЛС</td><td><input id="tpausels4" type="number" step="0.1"></td></tr>
+    <tr><td>Включить LS v4</td><td><input id="enablels4" type="checkbox"></td></tr>
+  </tbody></table>
 
-    <td class="logic-col">
-      <table class="logic-variant logic-variant-ls6">
-        <thead>
-          <tr><th colspan="2">ЛС v6</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>TS01.06 LS, с</td>
-            <td><input id="ts0106ls" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TLS06, с</td>
-            <td><input id="tls06" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TKON LS6, с</td>
-            <td><input id="tkonls6" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>Пауза после ЛС</td>
-            <td><input id="tpausels6" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>Включить LS v6</td>
-            <td><input id="enablels6" type="checkbox"></td>
-          </tr>
-        </tbody>
-      </table>
-    </td>
-    <td class="logic-col">
-      <table class="logic-variant">
-        <thead>
-          <tr><th colspan="2">ЛС v9</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>TS01.09 LS, с</td>
-            <td><input id="ts0109ls" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TS02.09 LS, с</td>
-            <td><input id="ts0209ls" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TLS01.09, с</td>
-            <td><input id="tls0109" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TLS02.09, с</td>
-            <td><input id="tls0209" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TKON LS9, с</td>
-            <td><input id="tkonls9" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>Пауза после ЛС</td>
-            <td><input id="tpausels9" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>Включить LS v9</td>
-            <td><input id="enablels9" type="checkbox"></td>
-          </tr>
-        </tbody>
-      </table>
-    </td>
-  </tr>
-    <td class="logic-col">
-      <table class="logic-variant">
-        <thead>
-          <tr><th colspan="2">Исключения ЛС</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>TLS_MU, с</td>
-            <td><input id="tlsmu" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TLS_AFTER_LZ, с</td>
-            <td><input id="tlsafterlz" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TLS_DSP, с</td>
-            <td><input id="tlsdsp" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>Разрешить MU-исключения ЛС</td>
-            <td><input id="enablelsexcmu" type="checkbox"></td>
-          </tr>
-          <tr>
-            <td>Разрешить исключения ЛС после ЛЗ</td>
-            <td><input id="enablelsexcafterlz" type="checkbox"></td>
-          </tr>
-          <tr>
-            <td>Разрешить исключения ЛС по ДСП auto-action</td>
-            <td><input id="enablelsexcdsp" type="checkbox"></td>
-          </tr>
-        </tbody>
-      </table>
-    </td>
-  <tr>
-    
-  </tr>
-</table>
+  <table class="logic-variant logic-variant-ls5"><thead><tr><th colspan="2">ЛС v5</th></tr></thead><tbody>
+    <tr><td>TS01_LS5, с</td><td><input id="ts0105ls" type="number" step="0.1"></td></tr>
+    <tr><td>TLZ_LS5, с</td><td><input id="tls05" type="number" step="0.1"></td></tr>
+    <tr><td>TKON_LS5, с</td><td><input id="tkonls5" type="number" step="0.1"></td></tr>
+    <tr><td>Пауза после ЛС</td><td><input id="tpausels5" type="number" step="0.1"></td></tr>
+    <tr><td>Включить LS v5</td><td><input id="enablels5" type="checkbox"></td></tr>
+  </tbody></table>
+
+  <table class="logic-variant logic-variant-ls6"><thead><tr><th colspan="2">ЛС v6</th></tr></thead><tbody>
+    <tr><td>TS01_LS6, с</td><td><input id="ts0106ls" type="number" step="0.1"></td></tr>
+    <tr><td>TLZ_LS6, с</td><td><input id="tls06" type="number" step="0.1"></td></tr>
+    <tr><td>TKON_LS6, с</td><td><input id="tkonls6" type="number" step="0.1"></td></tr>
+    <tr><td>Пауза после ЛС</td><td><input id="tpausels6" type="number" step="0.1"></td></tr>
+    <tr><td>Включить LS v6</td><td><input id="enablels6" type="checkbox"></td></tr>
+  </tbody></table>
+
+  <table class="logic-variant"><thead><tr><th colspan="2">ЛС v9</th></tr></thead><tbody>
+    <tr><td>TS01_LS9, с</td><td><input id="ts0109ls" type="number" step="0.1"></td></tr>
+    <tr><td>TS02_LS9, с</td><td><input id="ts0209ls" type="number" step="0.1"></td></tr>
+    <tr><td>TLZ_LS9, с</td><td><input id="tls0109" type="number" step="0.1"></td></tr>
+    <tr><td>TKON_LS9, с</td><td><input id="tkonls9" type="number" step="0.1"></td></tr>
+    <tr><td>Пауза после ЛС</td><td><input id="tpausels9" type="number" step="0.1"></td></tr>
+    <tr><td>Включить LS v9</td><td><input id="enablels9" type="checkbox"></td></tr>
+  </tbody></table>
+</div>

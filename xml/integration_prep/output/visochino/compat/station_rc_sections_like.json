@@ -1,0 +1,158 @@
+{
+  "10-12СП": {
+    "PrevSec": "1АП",
+    "NextSec": null,
+    "Switches": [
+      {
+        "name": "10",
+        "NextMi": "3П",
+        "NextPl": "1П",
+        "NextSwPl": null,
+        "NextSwMi": null,
+        "PrevSw": null
+      }
+    ]
+  },
+  "14-16СП": {
+    "PrevSec": null,
+    "NextSec": "2П",
+    "Switches": [
+      {
+        "name": "16",
+        "NextMi": "4П",
+        "NextPl": "2АП",
+        "NextSwPl": null,
+        "NextSwMi": null,
+        "PrevSw": null
+      }
+    ]
+  },
+  "1-7СП": {
+    "PrevSec": null,
+    "NextSec": "НП",
+    "Switches": [
+      {
+        "name": "1",
+        "NextMi": "3СП",
+        "NextPl": null,
+        "NextSwPl": "5",
+        "NextSwMi": null,
+        "PrevSw": null
+      },
+      {
+        "name": "5",
+        "NextMi": "3П",
+        "NextPl": "1П",
+        "NextSwPl": null,
+        "NextSwMi": null,
+        "PrevSw": "1"
+      }
+    ]
+  },
+  "1АП": {
+    "PrevSec": "4СП",
+    "NextSec": "10-12СП",
+    "Switches": []
+  },
+  "1П": {
+    "PrevSec": "10-12СП",
+    "NextSec": "1-7СП",
+    "Switches": []
+  },
+  "2-8СП": {
+    "PrevSec": "ЧП",
+    "NextSec": null,
+    "Switches": [
+      {
+        "name": "2",
+        "NextMi": "4П",
+        "NextPl": "6СП",
+        "NextSwPl": null,
+        "NextSwMi": null,
+        "PrevSw": null
+      }
+    ]
+  },
+  "2АП": {
+    "PrevSec": "6СП",
+    "NextSec": "14-16СП",
+    "Switches": []
+  },
+  "2П": {
+    "PrevSec": "14-16СП",
+    "NextSec": "3СП",
+    "Switches": []
+  },
+  "3П": {
+    "PrevSec": "10-12СП",
+    "NextSec": "1-7СП",
+    "Switches": []
+  },
+  "3СП": {
+    "PrevSec": "2П",
+    "NextSec": null,
+    "Switches": [
+      {
+        "name": "3",
+        "NextMi": "1-7СП",
+        "NextPl": "НДП",
+        "NextSwPl": null,
+        "NextSwMi": null,
+        "PrevSw": null
+      }
+    ]
+  },
+  "4П": {
+    "PrevSec": "2-8СП",
+    "NextSec": "14-16СП",
+    "Switches": []
+  },
+  "4СП": {
+    "PrevSec": "ЧДП",
+    "NextSec": null,
+    "Switches": [
+      {
+        "name": "4",
+        "NextMi": "6СП",
+        "NextPl": "1АП",
+        "NextSwPl": null,
+        "NextSwMi": null,
+        "PrevSw": null
+      }
+    ]
+  },
+  "6СП": {
+    "PrevSec": null,
+    "NextSec": "2АП",
+    "Switches": [
+      {
+        "name": "6",
+        "NextMi": "4СП",
+        "NextPl": "2-8СП",
+        "NextSwPl": null,
+        "NextSwMi": null,
+        "PrevSw": null
+      }
+    ]
+  },
+  "НДП": {
+    "PrevSec": "3СП",
+    "NextSec": null,
+    "Switches": []
+  },
+  "НП": {
+    "PrevSec": "1-7СП",
+    "NextSec": null,
+    "Switches": []
+  },
+  "ЧДП": {
+    "PrevSec": null,
+    "NextSec": "4СП",
+    "Switches": []
+  },
+  "ЧП": {
+    "PrevSec": null,
+    "NextSec": "2-8СП",
+    "Switches": []
+  }
+}

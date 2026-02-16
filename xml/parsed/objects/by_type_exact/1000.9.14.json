@@ -1,0 +1,6377 @@
+[
+  {
+    "name": "1РБ1",
+    "description": "1РБ1",
+    "type": "1000.9.14",
+    "id": "899",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "1РБ1",
+      "Description": "1РБ1",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "899",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП4/C19",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "1РБ2",
+    "description": "1РБ2",
+    "type": "1000.9.14",
+    "id": "900",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "1РБ2",
+      "Description": "1РБ2",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "900",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП5/C19",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "2МУР-2",
+    "description": "2МУР-2",
+    "type": "1000.9.14",
+    "id": "610",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2МУР-2",
+      "Description": "2МУР-2",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "610",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП53/C8",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "2РБ1",
+    "description": "2РБ1",
+    "type": "1000.9.14",
+    "id": "901",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2РБ1",
+      "Description": "2РБ1",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "901",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП4/C20",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "2РБ2",
+    "description": "2РБ2",
+    "type": "1000.9.14",
+    "id": "902",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2РБ2",
+      "Description": "2РБ2",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "902",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП5/C20",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "3МОР-2",
+    "description": "3МОР-2",
+    "type": "1000.9.14",
+    "id": "478",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3МОР-2",
+      "Description": "3МОР-2",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "478",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП60/C7",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "АОТУ",
+    "description": "АОТУ",
+    "type": "1000.9.14",
+    "id": "158",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "АОТУ",
+      "Description": "АОТУ",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "158",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "КСР = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "КСР = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КСР",
+          "Description": "Контроль состояния реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП1/C2",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "ВФ1",
+    "description": "ВФ1",
+    "type": "1000.9.14",
+    "id": "918",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ВФ1",
+      "Description": "ВФ1",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "918",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП48/C6",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "ВФ2",
+    "description": "ВФ2",
+    "type": "1000.9.14",
+    "id": "919",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ВФ2",
+      "Description": "ВФ2",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "919",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП48/C7",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "ВФР1",
+    "description": "ВФР1",
+    "type": "1000.9.14",
+    "id": "920",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ВФР1",
+      "Description": "ВФР1",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "920",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП48/C8",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "ВФР2",
+    "description": "ВФР2",
+    "type": "1000.9.14",
+    "id": "921",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ВФР2",
+      "Description": "ВФР2",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "921",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП48/C9",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-10-12СП1",
+    "description": "Д-10-12СП1",
+    "type": "1000.9.14",
+    "id": "627",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-10-12СП1",
+      "Description": "Д-10-12СП1",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "627",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП52/C19",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-10-12СП2",
+    "description": "Д-10-12СП2",
+    "type": "1000.9.14",
+    "id": "615",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-10-12СП2",
+      "Description": "Д-10-12СП2",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "615",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП53/C13",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-14-16СП1",
+    "description": "Д-14-16СП1",
+    "type": "1000.9.14",
+    "id": "508",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-14-16СП1",
+      "Description": "Д-14-16СП1",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "508",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП58/C1",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-14-16СП2",
+    "description": "Д-14-16СП2",
+    "type": "1000.9.14",
+    "id": "521",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-14-16СП2",
+      "Description": "Д-14-16СП2",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "521",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП58/C15",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-1-7СП1",
+    "description": "Д-1-7СП1",
+    "type": "1000.9.14",
+    "id": "605",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-1-7СП1",
+      "Description": "Д-1-7СП1",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "605",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП53/C3",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-1-7СП2",
+    "description": "Д-1-7СП2",
+    "type": "1000.9.14",
+    "id": "619",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-1-7СП2",
+      "Description": "Д-1-7СП2",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "619",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП53/C17",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-2-8СП1",
+    "description": "Д-2-8СП1",
+    "type": "1000.9.14",
+    "id": "528",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-2-8СП1",
+      "Description": "Д-2-8СП1",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "528",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП57/C17",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-2-8СП2",
+    "description": "Д-2-8СП2",
+    "type": "1000.9.14",
+    "id": "517",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-2-8СП2",
+      "Description": "Д-2-8СП2",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "517",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП58/C11",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-3СП1",
+    "description": "Д-3СП1",
+    "type": "1000.9.14",
+    "id": "510",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-3СП1",
+      "Description": "Д-3СП1",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "510",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП58/C4",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-3СП2",
+    "description": "Д-3СП2",
+    "type": "1000.9.14",
+    "id": "524",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-3СП2",
+      "Description": "Д-3СП2",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "524",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП58/C18",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-4СП1",
+    "description": "Д-4СП1",
+    "type": "1000.9.14",
+    "id": "624",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-4СП1",
+      "Description": "Д-4СП1",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "624",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП52/C16",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-4СП2",
+    "description": "Д-4СП2",
+    "type": "1000.9.14",
+    "id": "612",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-4СП2",
+      "Description": "Д-4СП2",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "612",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП53/C10",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-6СП1",
+    "description": "Д-6СП1",
+    "type": "1000.9.14",
+    "id": "529",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-6СП1",
+      "Description": "Д-6СП1",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "529",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП57/C18",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-6СП2",
+    "description": "Д-6СП2",
+    "type": "1000.9.14",
+    "id": "518",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-6СП2",
+      "Description": "Д-6СП2",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "518",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП58/C12",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-А1АП1",
+    "description": "Д-А1АП1",
+    "type": "1000.9.14",
+    "id": "625",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-А1АП1",
+      "Description": "Д-А1АП1",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "625",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП52/C17",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-А1АП2",
+    "description": "Д-А1АП2",
+    "type": "1000.9.14",
+    "id": "613",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-А1АП2",
+      "Description": "Д-А1АП2",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "613",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП53/C11",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-А1П1",
+    "description": "Д-А1П1",
+    "type": "1000.9.14",
+    "id": "628",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-А1П1",
+      "Description": "Д-А1П1",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "628",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП52/C20",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-А1П2",
+    "description": "Д-А1П2",
+    "type": "1000.9.14",
+    "id": "616",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-А1П2",
+      "Description": "Д-А1П2",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "616",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП53/C14",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-А2АП1",
+    "description": "Д-А2АП1",
+    "type": "1000.9.14",
+    "id": "530",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-А2АП1",
+      "Description": "Д-А2АП1",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "530",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП57/C19",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-А2АП2",
+    "description": "Д-А2АП2",
+    "type": "1000.9.14",
+    "id": "519",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-А2АП2",
+      "Description": "Д-А2АП2",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "519",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП58/C13",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-А2П1",
+    "description": "Д-А2П1",
+    "type": "1000.9.14",
+    "id": "433",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-А2П1",
+      "Description": "Д-А2П1",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "433",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП58/C2",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-А2П2",
+    "description": "Д-А2П2",
+    "type": "1000.9.14",
+    "id": "522",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-А2П2",
+      "Description": "Д-А2П2",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "522",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП58/C16",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-А3П1",
+    "description": "Д-А3П1",
+    "type": "1000.9.14",
+    "id": "607",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-А3П1",
+      "Description": "Д-А3П1",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "607",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП53/C5",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-А3П2",
+    "description": "Д-А3П2",
+    "type": "1000.9.14",
+    "id": "621",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-А3П2",
+      "Description": "Д-А3П2",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "621",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП53/C19",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-А4П1",
+    "description": "Д-А4П1",
+    "type": "1000.9.14",
+    "id": "512",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-А4П1",
+      "Description": "Д-А4П1",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "512",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП58/C6",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-А4П2",
+    "description": "Д-А4П2",
+    "type": "1000.9.14",
+    "id": "526",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-А4П2",
+      "Description": "Д-А4П2",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "526",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП58/C20",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-Б1АП1",
+    "description": "Д-Б1АП1",
+    "type": "1000.9.14",
+    "id": "626",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-Б1АП1",
+      "Description": "Д-Б1АП1",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "626",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП52/C18",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-Б1АП2",
+    "description": "Д-Б1АП2",
+    "type": "1000.9.14",
+    "id": "614",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-Б1АП2",
+      "Description": "Д-Б1АП2",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "614",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП53/C12",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-Б1П1",
+    "description": "Д-Б1П1",
+    "type": "1000.9.14",
+    "id": "603",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-Б1П1",
+      "Description": "Д-Б1П1",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "603",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП53/C1",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-Б1П2",
+    "description": "Д-Б1П2",
+    "type": "1000.9.14",
+    "id": "617",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-Б1П2",
+      "Description": "Д-Б1П2",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "617",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП53/C15",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-Б2АП1",
+    "description": "Д-Б2АП1",
+    "type": "1000.9.14",
+    "id": "531",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-Б2АП1",
+      "Description": "Д-Б2АП1",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "531",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП57/C20",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-Б2АП2",
+    "description": "Д-Б2АП2",
+    "type": "1000.9.14",
+    "id": "520",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-Б2АП2",
+      "Description": "Д-Б2АП2",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "520",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП58/C14",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-Б2П1",
+    "description": "Д-Б2П1",
+    "type": "1000.9.14",
+    "id": "509",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-Б2П1",
+      "Description": "Д-Б2П1",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "509",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП58/C3",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-Б2П2",
+    "description": "Д-Б2П2",
+    "type": "1000.9.14",
+    "id": "523",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-Б2П2",
+      "Description": "Д-Б2П2",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "523",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП58/C17",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-Б3П1",
+    "description": "Д-Б3П1",
+    "type": "1000.9.14",
+    "id": "608",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-Б3П1",
+      "Description": "Д-Б3П1",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "608",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП53/C6",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-Б3П2",
+    "description": "Д-Б3П2",
+    "type": "1000.9.14",
+    "id": "622",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-Б3П2",
+      "Description": "Д-Б3П2",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "622",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП53/C20",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-Б4П1",
+    "description": "Д-Б4П1",
+    "type": "1000.9.14",
+    "id": "513",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-Б4П1",
+      "Description": "Д-Б4П1",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "513",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП58/C7",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-Б4П2",
+    "description": "Д-Б4П2",
+    "type": "1000.9.14",
+    "id": "448",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-Б4П2",
+      "Description": "Д-Б4П2",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "448",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП59/C1",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-В1П1",
+    "description": "Д-В1П1",
+    "type": "1000.9.14",
+    "id": "604",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-В1П1",
+      "Description": "Д-В1П1",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "604",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП53/C2",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-В1П2",
+    "description": "Д-В1П2",
+    "type": "1000.9.14",
+    "id": "618",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-В1П2",
+      "Description": "Д-В1П2",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "618",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП53/C16",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-В2П1",
+    "description": "Д-В2П1",
+    "type": "1000.9.14",
+    "id": "514",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-В2П1",
+      "Description": "Д-В2П1",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "514",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП58/C8",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-В2П2",
+    "description": "Д-В2П2",
+    "type": "1000.9.14",
+    "id": "507",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-В2П2",
+      "Description": "Д-В2П2",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "507",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП59/C2",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-В3П1",
+    "description": "Д-В3П1",
+    "type": "1000.9.14",
+    "id": "609",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-В3П1",
+      "Description": "Д-В3П1",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "609",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП53/C7",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-В3П2",
+    "description": "Д-В3П2",
+    "type": "1000.9.14",
+    "id": "583",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-В3П2",
+      "Description": "Д-В3П2",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "583",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП54/C1",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-НДП1",
+    "description": "Д-НДП1",
+    "type": "1000.9.14",
+    "id": "511",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-НДП1",
+      "Description": "Д-НДП1",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "511",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП58/C5",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-НДП2",
+    "description": "Д-НДП2",
+    "type": "1000.9.14",
+    "id": "525",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-НДП2",
+      "Description": "Д-НДП2",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "525",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП58/C19",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-НП1",
+    "description": "Д-НП1",
+    "type": "1000.9.14",
+    "id": "606",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-НП1",
+      "Description": "Д-НП1",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "606",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП53/C4",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-НП2",
+    "description": "Д-НП2",
+    "type": "1000.9.14",
+    "id": "620",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-НП2",
+      "Description": "Д-НП2",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "620",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП53/C18",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-ЧДП1",
+    "description": "Д-ЧДП1",
+    "type": "1000.9.14",
+    "id": "623",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-ЧДП1",
+      "Description": "Д-ЧДП1",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "623",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП52/C15",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-ЧДП2",
+    "description": "Д-ЧДП2",
+    "type": "1000.9.14",
+    "id": "611",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-ЧДП2",
+      "Description": "Д-ЧДП2",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "611",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП53/C9",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-ЧП1",
+    "description": "Д-ЧП1",
+    "type": "1000.9.14",
+    "id": "527",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-ЧП1",
+      "Description": "Д-ЧП1",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "527",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП57/C16",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Д-ЧП2",
+    "description": "Д-ЧП2",
+    "type": "1000.9.14",
+    "id": "516",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Д-ЧП2",
+      "Description": "Д-ЧП2",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "516",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабУпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабУпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабУпрРел",
+          "Description": "Контроль срабатывания управляемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП58/C10",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "кМОР-1НЖ1",
+    "description": "кМОР-1НЖ1",
+    "type": "1000.9.14",
+    "id": "568",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "кМОР-1НЖ1",
+      "Description": "кМОР-1НЖ1",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "568",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП55/C5",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "кМОР-1Нз1",
+    "description": "кМОР-1Нз1",
+    "type": "1000.9.14",
+    "id": "569",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "кМОР-1Нз1",
+      "Description": "кМОР-1Нз1",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "569",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП55/C6",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "кМОР-Н1зС",
+    "description": "кМОР-Н1зС",
+    "type": "1000.9.14",
+    "id": "566",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "кМОР-Н1зС",
+      "Description": "кМОР-Н1зС",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "566",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП55/C4",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "кМОР-Н1С2",
+    "description": "кМОР-Н1С2",
+    "type": "1000.9.14",
+    "id": "567",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "кМОР-Н1С2",
+      "Description": "кМОР-Н1С2",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "567",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП55/C3",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "кМОР-НзС",
+    "description": "кМОР-НзС",
+    "type": "1000.9.14",
+    "id": "570",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "кМОР-НзС",
+      "Description": "кМОР-НзС",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "570",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП55/C8",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "кМОР-НМ3зС",
+    "description": "кМОР-НМ3зС",
+    "type": "1000.9.14",
+    "id": "576",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "кМОР-НМ3зС",
+      "Description": "кМОР-НМ3зС",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "576",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП55/C14",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "кМОР-НМ3С2",
+    "description": "кМОР-НМ3С2",
+    "type": "1000.9.14",
+    "id": "577",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "кМОР-НМ3С2",
+      "Description": "кМОР-НМ3С2",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "577",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП55/C15",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "кМОР-НС3",
+    "description": "кМОР-НС3",
+    "type": "1000.9.14",
+    "id": "571",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "кМОР-НС3",
+      "Description": "кМОР-НС3",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "571",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП55/C9",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "кМОР-Ч1зС",
+    "description": "кМОР-Ч1зС",
+    "type": "1000.9.14",
+    "id": "565",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "кМОР-Ч1зС",
+      "Description": "кМОР-Ч1зС",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "565",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП55/C2",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "кМОР-Ч1С3",
+    "description": "кМОР-Ч1С3",
+    "type": "1000.9.14",
+    "id": "451",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "кМОР-Ч1С3",
+      "Description": "кМОР-Ч1С3",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "451",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП55/C1",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "кМОР-Ч3зС",
+    "description": "кМОР-Ч3зС",
+    "type": "1000.9.14",
+    "id": "574",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "кМОР-Ч3зС",
+      "Description": "кМОР-Ч3зС",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "574",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП55/C12",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "кМОР-Ч3С3",
+    "description": "кМОР-Ч3С3",
+    "type": "1000.9.14",
+    "id": "575",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "кМОР-Ч3С3",
+      "Description": "кМОР-Ч3С3",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "575",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП55/C13",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "кМОР-ЧДзС",
+    "description": "кМОР-ЧДзС",
+    "type": "1000.9.14",
+    "id": "572",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "кМОР-ЧДзС",
+      "Description": "кМОР-ЧДзС",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "572",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП55/C10",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "кМОР-ЧДС3",
+    "description": "кМОР-ЧДС3",
+    "type": "1000.9.14",
+    "id": "573",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "кМОР-ЧДС3",
+      "Description": "кМОР-ЧДС3",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "573",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП55/C11",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МОР-1Н3ИП1",
+    "description": "МОР-1Н3ИП1",
+    "type": "1000.9.14",
+    "id": "593",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МОР-1Н3ИП1",
+      "Description": "МОР-1Н3ИП1",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "593",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП54/C11",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МОР-1Н4ИП",
+    "description": "МОР-1Н4ИП",
+    "type": "1000.9.14",
+    "id": "594",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МОР-1Н4ИП",
+      "Description": "МОР-1Н4ИП",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "594",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП54/C12",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МОР-1РБ1",
+    "description": "МОР-1РБ1",
+    "type": "1000.9.14",
+    "id": "584",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МОР-1РБ1",
+      "Description": "МОР-1РБ1",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "584",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП54/C3",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МОР-1РБ2",
+    "description": "МОР-1РБ2",
+    "type": "1000.9.14",
+    "id": "491",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МОР-1РБ2",
+      "Description": "МОР-1РБ2",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "491",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП59/C4",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МОР-1ЧПН1",
+    "description": "МОР-1ЧПН1",
+    "type": "1000.9.14",
+    "id": "599",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МОР-1ЧПН1",
+      "Description": "МОР-1ЧПН1",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "599",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП54/C17",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МОР-2НПН1",
+    "description": "МОР-2НПН1",
+    "type": "1000.9.14",
+    "id": "475",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МОР-2НПН1",
+      "Description": "МОР-2НПН1",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "475",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП60/C4",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МОР-2РБ1",
+    "description": "МОР-2РБ1",
+    "type": "1000.9.14",
+    "id": "585",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МОР-2РБ1",
+      "Description": "МОР-2РБ1",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "585",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП54/C4",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МОР-2РБ2",
+    "description": "МОР-2РБ2",
+    "type": "1000.9.14",
+    "id": "492",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МОР-2РБ2",
+      "Description": "МОР-2РБ2",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "492",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП59/C5",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МОР-2Ч1ИП2",
+    "description": "МОР-2Ч1ИП2",
+    "type": "1000.9.14",
+    "id": "504",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МОР-2Ч1ИП2",
+      "Description": "МОР-2Ч1ИП2",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "504",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП59/C18",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МОР-2Ч2ИП",
+    "description": "МОР-2Ч2ИП",
+    "type": "1000.9.14",
+    "id": "505",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МОР-2Ч2ИП",
+      "Description": "МОР-2Ч2ИП",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "505",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП59/C19",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МОР-2ЧЖ1",
+    "description": "МОР-2ЧЖ1",
+    "type": "1000.9.14",
+    "id": "496",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МОР-2ЧЖ1",
+      "Description": "МОР-2ЧЖ1",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "496",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП59/C9",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МОР-2Чз1",
+    "description": "МОР-2Чз1",
+    "type": "1000.9.14",
+    "id": "495",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МОР-2Чз1",
+      "Description": "МОР-2Чз1",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "495",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП59/C8",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МОР-Н2зС",
+    "description": "МОР-Н2зС",
+    "type": "1000.9.14",
+    "id": "503",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МОР-Н2зС",
+      "Description": "МОР-Н2зС",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "503",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП59/C17",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МОР-Н2С2",
+    "description": "МОР-Н2С2",
+    "type": "1000.9.14",
+    "id": "502",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МОР-Н2С2",
+      "Description": "МОР-Н2С2",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "502",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП59/C16",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МОР-Н4зС",
+    "description": "МОР-Н4зС",
+    "type": "1000.9.14",
+    "id": "483",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МОР-Н4зС",
+      "Description": "МОР-Н4зС",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "483",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП60/C12",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МОР-Н4С1",
+    "description": "МОР-Н4С1",
+    "type": "1000.9.14",
+    "id": "484",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МОР-Н4С1",
+      "Description": "МОР-Н4С1",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "484",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП60/C13",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МОР-НВОКВ",
+    "description": "МОР-НВОКВ",
+    "type": "1000.9.14",
+    "id": "598",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МОР-НВОКВ",
+      "Description": "МОР-НВОКВ",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "598",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП54/C16",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МОР-НВОКВН",
+    "description": "МОР-НВОКВН",
+    "type": "1000.9.14",
+    "id": "501",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МОР-НВОКВН",
+      "Description": "МОР-НВОКВН",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "501",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП59/C15",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МОР-НДзС",
+    "description": "МОР-НДзС",
+    "type": "1000.9.14",
+    "id": "481",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МОР-НДзС",
+      "Description": "МОР-НДзС",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "481",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП60/C10",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МОР-НДКВ",
+    "description": "МОР-НДКВ",
+    "type": "1000.9.14",
+    "id": "498",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МОР-НДКВ",
+      "Description": "МОР-НДКВ",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "498",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП59/C12",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МОР-НДС4",
+    "description": "МОР-НДС4",
+    "type": "1000.9.14",
+    "id": "482",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МОР-НДС4",
+      "Description": "МОР-НДС4",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "482",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП60/C11",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МОР-НКВ",
+    "description": "МОР-НКВ",
+    "type": "1000.9.14",
+    "id": "591",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МОР-НКВ",
+      "Description": "МОР-НКВ",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "591",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП54/C9",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МОР-НМ1-з",
+    "description": "МОР-НМ1-з",
+    "type": "1000.9.14",
+    "id": "596",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МОР-НМ1-з",
+      "Description": "МОР-НМ1-з",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "596",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП54/C14",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МОР-НМ1КВ",
+    "description": "МОР-НМ1КВ",
+    "type": "1000.9.14",
+    "id": "592",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МОР-НМ1КВ",
+      "Description": "МОР-НМ1КВ",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "592",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП54/C10",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МОР-НМ1С2",
+    "description": "МОР-НМ1С2",
+    "type": "1000.9.14",
+    "id": "595",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МОР-НМ1С2",
+      "Description": "МОР-НМ1С2",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "595",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП54/C13",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МОР-НМ2КВ",
+    "description": "МОР-НМ2КВ",
+    "type": "1000.9.14",
+    "id": "499",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МОР-НМ2КВ",
+      "Description": "МОР-НМ2КВ",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "499",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП59/C13",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МОР-НМ2С2",
+    "description": "МОР-НМ2С2",
+    "type": "1000.9.14",
+    "id": "497",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МОР-НМ2С2",
+      "Description": "МОР-НМ2С2",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "497",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП59/C10",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МОР-НОКВ",
+    "description": "МОР-НОКВ",
+    "type": "1000.9.14",
+    "id": "597",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МОР-НОКВ",
+      "Description": "МОР-НОКВ",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "597",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП54/C15",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МОР-НОКВН",
+    "description": "МОР-НОКВН",
+    "type": "1000.9.14",
+    "id": "500",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МОР-НОКВН",
+      "Description": "МОР-НОКВН",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "500",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП59/C14",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МОР-СУ11з",
+    "description": "МОР-СУ11з",
+    "type": "1000.9.14",
+    "id": "600",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МОР-СУ11з",
+      "Description": "МОР-СУ11з",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "600",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП54/C18",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МОР-СУ28з",
+    "description": "МОР-СУ28з",
+    "type": "1000.9.14",
+    "id": "432",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МОР-СУ28з",
+      "Description": "МОР-СУ28з",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "432",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП59/C11",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МОР-Ч2зС",
+    "description": "МОР-Ч2зС",
+    "type": "1000.9.14",
+    "id": "494",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МОР-Ч2зС",
+      "Description": "МОР-Ч2зС",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "494",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП59/C7",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МОР-Ч2С2",
+    "description": "МОР-Ч2С2",
+    "type": "1000.9.14",
+    "id": "493",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МОР-Ч2С2",
+      "Description": "МОР-Ч2С2",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "493",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП59/C6",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МОР-ЧВОКВН",
+    "description": "МОР-ЧВОКВН",
+    "type": "1000.9.14",
+    "id": "590",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МОР-ЧВОКВН",
+      "Description": "МОР-ЧВОКВН",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "590",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП54/C8",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МОР-ЧДКВ",
+    "description": "МОР-ЧДКВ",
+    "type": "1000.9.14",
+    "id": "586",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МОР-ЧДКВ",
+      "Description": "МОР-ЧДКВ",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "586",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП54/C5",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МОР-ЧзС",
+    "description": "МОР-ЧзС",
+    "type": "1000.9.14",
+    "id": "479",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МОР-ЧзС",
+      "Description": "МОР-ЧзС",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "479",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП60/C8",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МОР-ЧКВ",
+    "description": "МОР-ЧКВ",
+    "type": "1000.9.14",
+    "id": "506",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МОР-ЧКВ",
+      "Description": "МОР-ЧКВ",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "506",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП59/C20",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МОР-ЧМ1з",
+    "description": "МОР-ЧМ1з",
+    "type": "1000.9.14",
+    "id": "602",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МОР-ЧМ1з",
+      "Description": "МОР-ЧМ1з",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "602",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП54/C20",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МОР-ЧМ1КВ",
+    "description": "МОР-ЧМ1КВ",
+    "type": "1000.9.14",
+    "id": "587",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МОР-ЧМ1КВ",
+      "Description": "МОР-ЧМ1КВ",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "587",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП54/C6",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МОР-ЧМ1С2",
+    "description": "МОР-ЧМ1С2",
+    "type": "1000.9.14",
+    "id": "601",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МОР-ЧМ1С2",
+      "Description": "МОР-ЧМ1С2",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "601",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП54/C19",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МОР-ЧМ2-з",
+    "description": "МОР-ЧМ2-з",
+    "type": "1000.9.14",
+    "id": "477",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МОР-ЧМ2-з",
+      "Description": "МОР-ЧМ2-з",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "477",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП60/C6",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МОР-ЧМ2КВ",
+    "description": "МОР-ЧМ2КВ",
+    "type": "1000.9.14",
+    "id": "446",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МОР-ЧМ2КВ",
+      "Description": "МОР-ЧМ2КВ",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "446",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП60/C1",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МОР-ЧМ2С2",
+    "description": "МОР-ЧМ2С2",
+    "type": "1000.9.14",
+    "id": "476",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МОР-ЧМ2С2",
+      "Description": "МОР-ЧМ2С2",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "476",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП60/C5",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МОР-ЧМ4зС",
+    "description": "МОР-ЧМ4зС",
+    "type": "1000.9.14",
+    "id": "485",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МОР-ЧМ4зС",
+      "Description": "МОР-ЧМ4зС",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "485",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП60/C14",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МОР-ЧМ4С1",
+    "description": "МОР-ЧМ4С1",
+    "type": "1000.9.14",
+    "id": "486",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МОР-ЧМ4С1",
+      "Description": "МОР-ЧМ4С1",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "486",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП60/C15",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МОР-ЧОКВ",
+    "description": "МОР-ЧОКВ",
+    "type": "1000.9.14",
+    "id": "474",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МОР-ЧОКВ",
+      "Description": "МОР-ЧОКВ",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "474",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП60/C2",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МОР-ЧОКВН",
+    "description": "МОР-ЧОКВН",
+    "type": "1000.9.14",
+    "id": "589",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МОР-ЧОКВН",
+      "Description": "МОР-ЧОКВН",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "589",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП54/C7",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МОР-ЧС3",
+    "description": "МОР-ЧС3",
+    "type": "1000.9.14",
+    "id": "480",
+    "adk_type": "037.14.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МОР-ЧС3",
+      "Description": "МОР-ЧС3",
+      "Type": "1000.9.14",
+      "ADKType": "037.14.02",
+      "ID": "480",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "СрабОпрРел = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "СрабОпрРел = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СрабОпрРел",
+          "Description": "Контроль срабатывания опрашиваемого реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП60/C9",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  }
+]

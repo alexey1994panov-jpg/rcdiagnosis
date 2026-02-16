@@ -1,0 +1,16 @@
+{
+  "include": [
+    "api",
+    "tools",
+    "frontend"
+  ],
+  "executionEnvironments": [
+    {
+      "root": ".",
+      "extraPaths": [
+        "tools"
+      ]
+    }
+  ],
+  "reportMissingImports": true
+}

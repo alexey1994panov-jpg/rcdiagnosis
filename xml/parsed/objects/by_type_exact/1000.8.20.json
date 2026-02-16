@@ -1,0 +1,56 @@
+[
+  {
+    "name": "ДЕНЬ",
+    "description": "ДЕНЬ",
+    "type": "1000.8.20",
+    "id": "121",
+    "adk_type": "008.20.01",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ДЕНЬ",
+      "Description": "ДЕНЬ",
+      "Type": "1000.8.20",
+      "ADKType": "008.20.01",
+      "ID": "121",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "AdkNumber": "2",
+              "Condition": "РСД = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "3",
+              "Condition": "РСД = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "РСД",
+          "Description": "Контроль дневного режима питания светофоров",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП45/C3",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  }
+]

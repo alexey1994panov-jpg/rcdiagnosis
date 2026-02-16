@@ -1,0 +1,134 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RC Sandbox Scenario Editor</title>
+  <link rel="stylesheet" href="./sandbox.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Sandbox: Scenario Editor (MVP)</h1>
+    <div class="topbar-actions">
+      <button id="btn-load">Загрузить схему</button>
+      <button id="btn-clear">Очистить события</button>
+      <button id="btn-export">Экспорт JSON</button>
+      <button id="btn-import">Импорт JSON</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="canvas-wrap">
+      <div class="canvas-tools">
+        <button id="btn-pan-mode" title="Переключить режим">Курсор</button>
+        <button id="btn-zoom-out" title="Уменьшить">-</button>
+        <button id="btn-zoom-reset" title="Сброс масштаба">100%</button>
+        <span id="zoom-value" class="zoom-value">100%</span>
+        <button id="btn-zoom-in" title="Увеличить">+</button>
+      </div>
+      <div id="schema-viewport" class="schema-viewport">
+        <div id="schema-stage" class="schema-stage">
+          <svg id="schema-svg" viewBox="0 0 2400 1100" xmlns="http://www.w3.org/2000/svg"></svg>
+        </div>
+      </div>
+      <div id="status" class="status">Готово</div>
+    </section>
+
+    <aside class="sidebar">
+      <section class="card">
+        <h2>Выбор объекта</h2>
+        <div class="row row-duo">
+          <label>Тип</label><input id="obj-kind" readonly />
+          <label>Имя</label><input id="obj-name" readonly />
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Проигрывание</h2>
+        <div class="row"><label>Шаги</label><input id="steps-total" readonly value="0" /></div>
+        <div class="row"><label>Текущее t</label><input id="play-time" type="number" min="0" step="1" value="0" readonly /></div>
+        <div class="row actions">
+          <button id="btn-prev-event">◀ Назад</button>
+          <button id="btn-next-event">Вперед ▶</button>
+        </div>
+        <div class="row actions">
+          <button id="btn-reset">⏮ В начало</button>
+          <span style="align-self:center;color:#93a0b8;font-size:12px;">переход по шагам сценария</span>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Добавить событие</h2>
+        <div class="row actions">
+          <button id="btn-next-step">Новый шаг (+1с)</button>
+          <button id="btn-dup-prev-step">Дублировать прошлый шаг</button>
+        </div>
+        <div class="row actions">
+          <span style="align-self:center;color:#93a0b8;font-size:12px;">создать пустой шаг</span>
+          <span style="align-self:center;color:#93a0b8;font-size:12px;">скопировать прошлый шаг</span>
+        </div>
+        <div class="row"><label>Время t, c</label><input id="event-time" type="number" min="1" step="1" value="1" /></div>
+        <div class="row"><label>Состояние</label><select id="event-state"></select></div>
+        <div id="state-help" style="color:#93a0b8;font-size:12px;margin:-4px 0 8px 108px;"></div>
+        <div class="row actions">
+          <button id="btn-stage">В шаг</button>
+          <span style="align-self:center;color:#93a0b8;font-size:12px;">добавить выбранное состояние в черновик шага</span>
+        </div>
+        <div class="row actions">
+          <button id="btn-apply-batch">Применить шаг</button>
+          <span style="align-self:center;color:#93a0b8;font-size:12px;">после проверки черновика примените шаг в сценарий</span>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Добавляемый шаг</h2>
+        <div class="row"><label>Шаг t</label><input id="draft-step-time" readonly /></div>
+        <table id="draft-events-table" class="mini-table">
+          <thead>
+            <tr><th>Тип</th><th>Имя</th><th>State</th><th></th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+
+      <section class="card">
+        <h2>Текущий шаг</h2>
+        <div class="row"><label>Шаг t</label><input id="step-view-time" readonly /></div>
+        <table id="step-events-table" class="mini-table">
+          <thead>
+            <tr><th>Тип</th><th>Имя</th><th>State</th><th></th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+
+      <section class="card">
+        <h2>Сценарий JSON</h2>
+        <div class="row">
+          <label>Preset</label>
+          <select id="preset-select"></select>
+        </div>
+        <div class="row actions">
+          <button id="btn-load-preset">Загрузить preset</button>
+          <button id="btn-copy-preset-json">В JSON</button>
+        </div>
+        <textarea id="scenario-json" spellcheck="false"></textarea>
+      </section>
+    </aside>
+  </main>
+
+  <section class="events-wrap">
+    <h2>События</h2>
+    <table id="events-table">
+      <thead>
+        <tr>
+          <th>t</th><th>Тип</th><th>Имя</th><th>State</th><th>Действия</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <script src="./scenario-editor.js"></script>
+</body>
+</html>

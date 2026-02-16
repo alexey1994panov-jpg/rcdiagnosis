@@ -1,0 +1,4422 @@
+[
+  {
+    "name": "2МГКС-10",
+    "description": "2МГКС-10",
+    "type": "1000.9.19",
+    "id": "550",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2МГКС-10",
+      "Description": "2МГКС-10",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "550",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП56/C6",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "2МГКС-11",
+    "description": "2МГКС-11",
+    "type": "1000.9.19",
+    "id": "551",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2МГКС-11",
+      "Description": "2МГКС-11",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "551",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП56/C7",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "2МГКС-12",
+    "description": "2МГКС-12",
+    "type": "1000.9.19",
+    "id": "552",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2МГКС-12",
+      "Description": "2МГКС-12",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "552",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП56/C8",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "2МГКС-13",
+    "description": "2МГКС-13",
+    "type": "1000.9.19",
+    "id": "553",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2МГКС-13",
+      "Description": "2МГКС-13",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "553",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП56/C9",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "2МГКС-14",
+    "description": "2МГКС-14",
+    "type": "1000.9.19",
+    "id": "554",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2МГКС-14",
+      "Description": "2МГКС-14",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "554",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП56/C10",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "2МГКС-15",
+    "description": "2МГКС-15",
+    "type": "1000.9.19",
+    "id": "555",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2МГКС-15",
+      "Description": "2МГКС-15",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "555",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП56/C11",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "2МГКС-16",
+    "description": "2МГКС-16",
+    "type": "1000.9.19",
+    "id": "556",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2МГКС-16",
+      "Description": "2МГКС-16",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "556",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП56/C12",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "2МГКС-17",
+    "description": "2МГКС-17",
+    "type": "1000.9.19",
+    "id": "557",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2МГКС-17",
+      "Description": "2МГКС-17",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "557",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП56/C13",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "2МГКС-18",
+    "description": "2МГКС-18",
+    "type": "1000.9.19",
+    "id": "558",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2МГКС-18",
+      "Description": "2МГКС-18",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "558",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП56/C14",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "2МГКС-19",
+    "description": "2МГКС-19",
+    "type": "1000.9.19",
+    "id": "559",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2МГКС-19",
+      "Description": "2МГКС-19",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "559",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП56/C15",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "2МГКС-20",
+    "description": "2МГКС-20",
+    "type": "1000.9.19",
+    "id": "560",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2МГКС-20",
+      "Description": "2МГКС-20",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "560",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП56/C16",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "2МГКС-5",
+    "description": "2МГКС-5",
+    "type": "1000.9.19",
+    "id": "450",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2МГКС-5",
+      "Description": "2МГКС-5",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "450",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП56/C1",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "2МГКС-6",
+    "description": "2МГКС-6",
+    "type": "1000.9.19",
+    "id": "546",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2МГКС-6",
+      "Description": "2МГКС-6",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "546",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП56/C2",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "2МГКС-7",
+    "description": "2МГКС-7",
+    "type": "1000.9.19",
+    "id": "547",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2МГКС-7",
+      "Description": "2МГКС-7",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "547",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП56/C3",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "2МГКС-8",
+    "description": "2МГКС-8",
+    "type": "1000.9.19",
+    "id": "548",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2МГКС-8",
+      "Description": "2МГКС-8",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "548",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП56/C4",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "2МГКС-9",
+    "description": "2МГКС-9",
+    "type": "1000.9.19",
+    "id": "549",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2МГКС-9",
+      "Description": "2МГКС-9",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "549",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП56/C5",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "2МКРЦ-1",
+    "description": "2МКРЦ-1",
+    "type": "1000.9.19",
+    "id": "561",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2МКРЦ-1",
+      "Description": "2МКРЦ-1",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "561",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП56/C17",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "2МКРЦ-10",
+    "description": "2МКРЦ-10",
+    "type": "1000.9.19",
+    "id": "536",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2МКРЦ-10",
+      "Description": "2МКРЦ-10",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "536",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП57/C6",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "2МКРЦ-11",
+    "description": "2МКРЦ-11",
+    "type": "1000.9.19",
+    "id": "537",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2МКРЦ-11",
+      "Description": "2МКРЦ-11",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "537",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП57/C7",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "2МКРЦ-12",
+    "description": "2МКРЦ-12",
+    "type": "1000.9.19",
+    "id": "538",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2МКРЦ-12",
+      "Description": "2МКРЦ-12",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "538",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП57/C8",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "2МКРЦ-13",
+    "description": "2МКРЦ-13",
+    "type": "1000.9.19",
+    "id": "539",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2МКРЦ-13",
+      "Description": "2МКРЦ-13",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "539",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП57/C9",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "2МКРЦ-14",
+    "description": "2МКРЦ-14",
+    "type": "1000.9.19",
+    "id": "540",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2МКРЦ-14",
+      "Description": "2МКРЦ-14",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "540",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП57/C10",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "2МКРЦ-2",
+    "description": "2МКРЦ-2",
+    "type": "1000.9.19",
+    "id": "562",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2МКРЦ-2",
+      "Description": "2МКРЦ-2",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "562",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП56/C18",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "2МКРЦ-3",
+    "description": "2МКРЦ-3",
+    "type": "1000.9.19",
+    "id": "563",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2МКРЦ-3",
+      "Description": "2МКРЦ-3",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "563",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП56/C19",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "2МКРЦ-4",
+    "description": "2МКРЦ-4",
+    "type": "1000.9.19",
+    "id": "564",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2МКРЦ-4",
+      "Description": "2МКРЦ-4",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "564",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП56/C20",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "2МКРЦ-5",
+    "description": "2МКРЦ-5",
+    "type": "1000.9.19",
+    "id": "449",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2МКРЦ-5",
+      "Description": "2МКРЦ-5",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "449",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП57/C1",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "2МКРЦ-6",
+    "description": "2МКРЦ-6",
+    "type": "1000.9.19",
+    "id": "532",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2МКРЦ-6",
+      "Description": "2МКРЦ-6",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "532",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП57/C2",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "2МКРЦ-7",
+    "description": "2МКРЦ-7",
+    "type": "1000.9.19",
+    "id": "533",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2МКРЦ-7",
+      "Description": "2МКРЦ-7",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "533",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП57/C3",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "2МКРЦ-8",
+    "description": "2МКРЦ-8",
+    "type": "1000.9.19",
+    "id": "534",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2МКРЦ-8",
+      "Description": "2МКРЦ-8",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "534",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП57/C4",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "2МКРЦ-9",
+    "description": "2МКРЦ-9",
+    "type": "1000.9.19",
+    "id": "535",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2МКРЦ-9",
+      "Description": "2МКРЦ-9",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "535",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП57/C5",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "2МОР-1",
+    "description": "2МОР-1",
+    "type": "1000.9.19",
+    "id": "588",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2МОР-1",
+      "Description": "2МОР-1",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "588",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП54/C2",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "2МУ1",
+    "description": "2МУ1",
+    "type": "1000.9.19",
+    "id": "629",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2МУ1",
+      "Description": "2МУ1",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "629",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП52/C10",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "2МУ2",
+    "description": "2МУ2",
+    "type": "1000.9.19",
+    "id": "630",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2МУ2",
+      "Description": "2МУ2",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "630",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП52/C11",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "2МУР-1",
+    "description": "2МУР-1",
+    "type": "1000.9.19",
+    "id": "633",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2МУР-1",
+      "Description": "2МУР-1",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "633",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП52/C14",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "2МЦИ422-1",
+    "description": "2МЦИ422-1",
+    "type": "1000.9.19",
+    "id": "631",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2МЦИ422-1",
+      "Description": "2МЦИ422-1",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "631",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП52/C12",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "2МЦИ422-2",
+    "description": "2МЦИ422-2",
+    "type": "1000.9.19",
+    "id": "632",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2МЦИ422-2",
+      "Description": "2МЦИ422-2",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "632",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП52/C13",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "3МГКС-1",
+    "description": "3МГКС-1",
+    "type": "1000.9.19",
+    "id": "487",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3МГКС-1",
+      "Description": "3МГКС-1",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "487",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП60/C17",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "3МГКС-10",
+    "description": "3МГКС-10",
+    "type": "1000.9.19",
+    "id": "459",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3МГКС-10",
+      "Description": "3МГКС-10",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "459",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП61/C6",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "3МГКС-11",
+    "description": "3МГКС-11",
+    "type": "1000.9.19",
+    "id": "460",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3МГКС-11",
+      "Description": "3МГКС-11",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "460",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП61/C7",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "3МГКС-12",
+    "description": "3МГКС-12",
+    "type": "1000.9.19",
+    "id": "461",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3МГКС-12",
+      "Description": "3МГКС-12",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "461",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП61/C8",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "3МГКС-13",
+    "description": "3МГКС-13",
+    "type": "1000.9.19",
+    "id": "462",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3МГКС-13",
+      "Description": "3МГКС-13",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "462",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП61/C9",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "3МГКС-14",
+    "description": "3МГКС-14",
+    "type": "1000.9.19",
+    "id": "463",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3МГКС-14",
+      "Description": "3МГКС-14",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "463",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП61/C10",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "3МГКС-15",
+    "description": "3МГКС-15",
+    "type": "1000.9.19",
+    "id": "464",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3МГКС-15",
+      "Description": "3МГКС-15",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "464",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП61/C11",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "3МГКС-16",
+    "description": "3МГКС-16",
+    "type": "1000.9.19",
+    "id": "465",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3МГКС-16",
+      "Description": "3МГКС-16",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "465",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП61/C12",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "3МГКС-17",
+    "description": "3МГКС-17",
+    "type": "1000.9.19",
+    "id": "466",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3МГКС-17",
+      "Description": "3МГКС-17",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "466",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП61/C13",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "3МГКС-18",
+    "description": "3МГКС-18",
+    "type": "1000.9.19",
+    "id": "467",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3МГКС-18",
+      "Description": "3МГКС-18",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "467",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП61/C14",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "3МГКС-19",
+    "description": "3МГКС-19",
+    "type": "1000.9.19",
+    "id": "468",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3МГКС-19",
+      "Description": "3МГКС-19",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "468",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП61/C15",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "3МГКС-2",
+    "description": "3МГКС-2",
+    "type": "1000.9.19",
+    "id": "488",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3МГКС-2",
+      "Description": "3МГКС-2",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "488",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП60/C18",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "3МГКС-20",
+    "description": "3МГКС-20",
+    "type": "1000.9.19",
+    "id": "469",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3МГКС-20",
+      "Description": "3МГКС-20",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "469",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП61/C16",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "3МГКС-21",
+    "description": "3МГКС-21",
+    "type": "1000.9.19",
+    "id": "470",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3МГКС-21",
+      "Description": "3МГКС-21",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "470",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП61/C17",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "3МГКС-3",
+    "description": "3МГКС-3",
+    "type": "1000.9.19",
+    "id": "489",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3МГКС-3",
+      "Description": "3МГКС-3",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "489",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП60/C19",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "3МГКС-4",
+    "description": "3МГКС-4",
+    "type": "1000.9.19",
+    "id": "490",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3МГКС-4",
+      "Description": "3МГКС-4",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "490",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП60/C20",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "3МГКС-5",
+    "description": "3МГКС-5",
+    "type": "1000.9.19",
+    "id": "431",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3МГКС-5",
+      "Description": "3МГКС-5",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "431",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП61/C1",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "3МГКС-6",
+    "description": "3МГКС-6",
+    "type": "1000.9.19",
+    "id": "455",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3МГКС-6",
+      "Description": "3МГКС-6",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "455",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП61/C2",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "3МГКС-7",
+    "description": "3МГКС-7",
+    "type": "1000.9.19",
+    "id": "456",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3МГКС-7",
+      "Description": "3МГКС-7",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "456",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП61/C3",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "3МГКС-8",
+    "description": "3МГКС-8",
+    "type": "1000.9.19",
+    "id": "457",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3МГКС-8",
+      "Description": "3МГКС-8",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "457",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП61/C4",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "3МГКС-9",
+    "description": "3МГКС-9",
+    "type": "1000.9.19",
+    "id": "458",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3МГКС-9",
+      "Description": "3МГКС-9",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "458",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП61/C5",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "3МКРЦ-1",
+    "description": "3МКРЦ-1",
+    "type": "1000.9.19",
+    "id": "471",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3МКРЦ-1",
+      "Description": "3МКРЦ-1",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "471",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП61/C18",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "3МКРЦ-10",
+    "description": "3МКРЦ-10",
+    "type": "1000.9.19",
+    "id": "440",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3МКРЦ-10",
+      "Description": "3МКРЦ-10",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "440",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП62/C7",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "3МКРЦ-11",
+    "description": "3МКРЦ-11",
+    "type": "1000.9.19",
+    "id": "441",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3МКРЦ-11",
+      "Description": "3МКРЦ-11",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "441",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП62/C8",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "3МКРЦ-12",
+    "description": "3МКРЦ-12",
+    "type": "1000.9.19",
+    "id": "442",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3МКРЦ-12",
+      "Description": "3МКРЦ-12",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "442",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП62/C9",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "3МКРЦ-13",
+    "description": "3МКРЦ-13",
+    "type": "1000.9.19",
+    "id": "443",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3МКРЦ-13",
+      "Description": "3МКРЦ-13",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "443",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП62/C10",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "3МКРЦ-14",
+    "description": "3МКРЦ-14",
+    "type": "1000.9.19",
+    "id": "444",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3МКРЦ-14",
+      "Description": "3МКРЦ-14",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "444",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП62/C11",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "3МКРЦ-2",
+    "description": "3МКРЦ-2",
+    "type": "1000.9.19",
+    "id": "472",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3МКРЦ-2",
+      "Description": "3МКРЦ-2",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "472",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП61/C19",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "3МКРЦ-3",
+    "description": "3МКРЦ-3",
+    "type": "1000.9.19",
+    "id": "473",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3МКРЦ-3",
+      "Description": "3МКРЦ-3",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "473",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП61/C20",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "3МКРЦ-4",
+    "description": "3МКРЦ-4",
+    "type": "1000.9.19",
+    "id": "434",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3МКРЦ-4",
+      "Description": "3МКРЦ-4",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "434",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП62/C1",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "3МКРЦ-5",
+    "description": "3МКРЦ-5",
+    "type": "1000.9.19",
+    "id": "435",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3МКРЦ-5",
+      "Description": "3МКРЦ-5",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "435",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП62/C2",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "3МКРЦ-6",
+    "description": "3МКРЦ-6",
+    "type": "1000.9.19",
+    "id": "436",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3МКРЦ-6",
+      "Description": "3МКРЦ-6",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "436",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП62/C3",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "3МКРЦ-7",
+    "description": "3МКРЦ-7",
+    "type": "1000.9.19",
+    "id": "437",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3МКРЦ-7",
+      "Description": "3МКРЦ-7",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "437",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП62/C4",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "3МКРЦ-8",
+    "description": "3МКРЦ-8",
+    "type": "1000.9.19",
+    "id": "438",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3МКРЦ-8",
+      "Description": "3МКРЦ-8",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "438",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП62/C5",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "3МКРЦ-9",
+    "description": "3МКРЦ-9",
+    "type": "1000.9.19",
+    "id": "439",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3МКРЦ-9",
+      "Description": "3МКРЦ-9",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "439",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП62/C6",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "3МОР-1",
+    "description": "3МОР-1",
+    "type": "1000.9.19",
+    "id": "447",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3МОР-1",
+      "Description": "3МОР-1",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "447",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП59/C3",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "3МУ1",
+    "description": "3МУ1",
+    "type": "1000.9.19",
+    "id": "541",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3МУ1",
+      "Description": "3МУ1",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "541",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП57/C11",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "3МУ2",
+    "description": "3МУ2",
+    "type": "1000.9.19",
+    "id": "542",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3МУ2",
+      "Description": "3МУ2",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "542",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП57/C12",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "3МУР-1",
+    "description": "3МУР-1",
+    "type": "1000.9.19",
+    "id": "545",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3МУР-1",
+      "Description": "3МУР-1",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "545",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП57/C15",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "3МУР-2",
+    "description": "3МУР-2",
+    "type": "1000.9.19",
+    "id": "515",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3МУР-2",
+      "Description": "3МУР-2",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "515",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП58/C9",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "3МЦИ422-1",
+    "description": "3МЦИ422-1",
+    "type": "1000.9.19",
+    "id": "543",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3МЦИ422-1",
+      "Description": "3МЦИ422-1",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "543",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП57/C13",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "3МЦИ422-2",
+    "description": "3МЦИ422-2",
+    "type": "1000.9.19",
+    "id": "544",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3МЦИ422-2",
+      "Description": "3МЦИ422-2",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "544",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП57/C14",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "3СТ-1",
+    "description": "3СТ-1",
+    "type": "1000.9.19",
+    "id": "445",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3СТ-1",
+      "Description": "3СТ-1",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "445",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП60/C16",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "к2МГКС-1",
+    "description": "к2МГКС-1",
+    "type": "1000.9.19",
+    "id": "579",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "к2МГКС-1",
+      "Description": "к2МГКС-1",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "579",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП55/C17",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "к2МГКС-2",
+    "description": "к2МГКС-2",
+    "type": "1000.9.19",
+    "id": "580",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "к2МГКС-2",
+      "Description": "к2МГКС-2",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "580",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП55/C18",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "к2МГКС-3",
+    "description": "к2МГКС-3",
+    "type": "1000.9.19",
+    "id": "581",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "к2МГКС-3",
+      "Description": "к2МГКС-3",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "581",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП55/C19",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "к2МГКС-4",
+    "description": "к2МГКС-4",
+    "type": "1000.9.19",
+    "id": "582",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "к2МГКС-4",
+      "Description": "к2МГКС-4",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "582",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП55/C20",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "к2МОР-2",
+    "description": "к2МОР-2",
+    "type": "1000.9.19",
+    "id": "452",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "к2МОР-2",
+      "Description": "к2МОР-2",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "452",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП55/C7",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "к2СТ-1",
+    "description": "к2СТ-1",
+    "type": "1000.9.19",
+    "id": "578",
+    "adk_type": "040.19.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "к2СТ-1",
+      "Description": "к2СТ-1",
+      "Type": "1000.9.19",
+      "ADKType": "040.19.07",
+      "ID": "578",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КНМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "КНМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль неисправности модуля",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП55/C16",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  }
+]

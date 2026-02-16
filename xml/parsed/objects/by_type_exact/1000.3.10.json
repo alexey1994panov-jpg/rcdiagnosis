@@ -1,0 +1,446 @@
+[
+  {
+    "name": "М1",
+    "description": "М1",
+    "type": "1000.3.10",
+    "id": "82",
+    "adk_type": "002.10.101",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "М1",
+      "Description": "М1",
+      "Type": "1000.3.10",
+      "ADKType": "002.10.101",
+      "ID": "82",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "6",
+              "Condition": "МС(0) = 2 OR (С(0) = 1 AND О(1) = 0) OR O(1) = 2"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "МС(1) = 0 OR С(1) = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "МС(0) = 1 OR С(0) = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "О",
+          "Description": "Контроль целостности цепи светофора (огневое реле, запрещающее показание)",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП27/C7",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "С",
+          "Description": "Контроль открытия светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП27/C3",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "PrevSec",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/НП"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "NextSec",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/1-7СП"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PLZO",
+          "Description": "НеиспрЦепЗапрОгн",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "609",
+          "WriteProtocol": "true",
+          "AdkNumber": "674"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "(С = 0) AND (О = 0)",
+              "Delay": "НеиспрЦепЗапрОгн/NТ_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "(С = 0) AND (О = 1)",
+              "Delay": "НеиспрЦепЗапрОгн/NТ_min"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "М2",
+    "description": "М2",
+    "type": "1000.3.10",
+    "id": "38",
+    "adk_type": "002.10.101",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "М2",
+      "Description": "М2",
+      "Type": "1000.3.10",
+      "ADKType": "002.10.101",
+      "ID": "38",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "6",
+              "Condition": "МС(0) = 2 OR (С(0) = 1 AND О(1) = 0) OR O(1) = 2"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "МС(1) = 0 OR С(1) = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "МС(0) = 1 OR С(0) = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "О",
+          "Description": "Контроль целостности цепи светофора (огневое реле, запрещающее показание)",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП11/C7",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "С",
+          "Description": "Контроль открытия светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП11/C3",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "NextSec",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/2-8СП"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "PrevSec",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/ЧП"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PLZO",
+          "Description": "НеиспрЦепЗапрОгн",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "609",
+          "WriteProtocol": "true",
+          "AdkNumber": "674"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "(С = 0) AND (О = 0)",
+              "Delay": "НеиспрЦепЗапрОгн/NТ_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "(С = 0) AND (О = 1)",
+              "Delay": "НеиспрЦепЗапрОгн/NТ_min"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "М3",
+    "description": "М3",
+    "type": "1000.3.10",
+    "id": "95",
+    "adk_type": "002.10.101",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "М3",
+      "Description": "М3",
+      "Type": "1000.3.10",
+      "ADKType": "002.10.101",
+      "ID": "95",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "6",
+              "Condition": "МС(0) = 2 OR (С(0) = 1 AND О(1) = 0) OR O(1) = 2"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "МС(1) = 0 OR С(1) = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "МС(0) = 1 OR С(0) = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "О",
+          "Description": "Контроль целостности цепи светофора (огневое реле, запрещающее показание)",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП31/C12",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "С",
+          "Description": "Контроль открытия светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП31/C8",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "NextSec",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/3СП"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "PrevSec",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/НДП"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PLZO",
+          "Description": "НеиспрЦепЗапрОгн",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "609",
+          "WriteProtocol": "true",
+          "AdkNumber": "674"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "(С = 0) AND (О = 0)",
+              "Delay": "НеиспрЦепЗапрОгн/NТ_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "(С = 0) AND (О = 1)",
+              "Delay": "НеиспрЦепЗапрОгн/NТ_min"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "М4",
+    "description": "М4",
+    "type": "1000.3.10",
+    "id": "55",
+    "adk_type": "002.10.101",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "М4",
+      "Description": "М4",
+      "Type": "1000.3.10",
+      "ADKType": "002.10.101",
+      "ID": "55",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "6",
+              "Condition": "МС(0) = 2 OR (С(0) = 1 AND О(1) = 0) OR O(1) = 2"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "МС(1) = 0 OR С(1) = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "МС(0) = 1 OR С(0) = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "О",
+          "Description": "Контроль целостности цепи светофора (огневое реле, запрещающее показание)",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП16/C6",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "С",
+          "Description": "Контроль открытия светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП16/C3",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "PrevSec",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/ЧДП"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "NextSec",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/4СП"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PLZO",
+          "Description": "НеиспрЦепЗапрОгн",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "609",
+          "WriteProtocol": "true",
+          "AdkNumber": "674"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "(С = 0) AND (О = 0)",
+              "Delay": "НеиспрЦепЗапрОгн/NТ_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "(С = 0) AND (О = 1)",
+              "Delay": "НеиспрЦепЗапрОгн/NТ_min"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

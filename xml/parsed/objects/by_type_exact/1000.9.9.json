@@ -1,0 +1,161 @@
+[
+  {
+    "name": "ЗвонокСЗИЦ-Д",
+    "description": "ЗвонокСЗИЦ-Д",
+    "type": "1000.9.9",
+    "id": "876",
+    "adk_type": "017.09.115",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ЗвонокСЗИЦ-Д",
+      "Description": "ЗвонокСЗИЦ-Д",
+      "Type": "1000.9.9",
+      "ADKType": "017.09.115",
+      "ID": "876",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "ОЗ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "ОЗ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "ОЗ",
+          "Description": "Контроль отключения звонка СЗИЦ-Д",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП49/C4",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "OtclZvSZICD",
+          "Description": "Отключение звонка СЗИЦ-Д",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "35091",
+          "WriteProtocol": "true",
+          "AdkNumber": "15662"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "ОЗ = 1 ",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "ОЗ = 0"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "СЗ",
+    "description": "СЗ",
+    "type": "1000.9.9",
+    "id": "122",
+    "adk_type": "017.09.105",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "СЗ",
+      "Description": "СЗ",
+      "Type": "1000.9.9",
+      "ADKType": "017.09.105",
+      "ID": "122",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "СЗ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "AdkNumber": "3",
+              "Condition": "СЗ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СЗ",
+          "Description": "Контроль срабатывания сигнализатора заземления",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП45/C4",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "SnizgSoprotIzol",
+          "Description": "Срабатывание сигнализатора заземления",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "41157",
+          "WriteProtocol": "true",
+          "AdkNumber": "11012"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "СЗ = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "СЗ = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

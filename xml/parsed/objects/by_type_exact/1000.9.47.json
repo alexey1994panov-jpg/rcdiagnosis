@@ -1,0 +1,308 @@
+[
+  {
+    "name": "ПАКС",
+    "description": "ПАКС",
+    "type": "1000.9.47",
+    "id": "165",
+    "adk_type": "037.47.01",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПАКС",
+      "Description": "ПАКС",
+      "Type": "1000.9.47",
+      "ADKType": "037.47.01",
+      "ID": "165",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "ПредвКом = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "ПредвКом = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "ПредвКом",
+          "Description": "Контроль посылки предварительного приказа (команды)",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП1/C11",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "ПАПС",
+    "description": "ПАПС",
+    "type": "1000.9.47",
+    "id": "166",
+    "adk_type": "037.47.01",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПАПС",
+      "Description": "ПАПС",
+      "Type": "1000.9.47",
+      "ADKType": "037.47.01",
+      "ID": "166",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "ПредвКом = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "ПредвКом = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "ПредвКом",
+          "Description": "Контроль посылки предварительного приказа (команды)",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП1/C12",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "ПАРз",
+    "description": "ПАРз",
+    "type": "1000.9.47",
+    "id": "160",
+    "adk_type": "037.47.01",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПАРз",
+      "Description": "ПАРз",
+      "Type": "1000.9.47",
+      "ADKType": "037.47.01",
+      "ID": "160",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "ПредвКом = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "ПредвКом = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "ПредвКом",
+          "Description": "Контроль посылки предварительного приказа (команды)",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП1/C5",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "ПАСА",
+    "description": "ПАСА",
+    "type": "1000.9.47",
+    "id": "159",
+    "adk_type": "037.47.01",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПАСА",
+      "Description": "ПАСА",
+      "Type": "1000.9.47",
+      "ADKType": "037.47.01",
+      "ID": "159",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "ПредвКом = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "ПредвКом = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "ПредвКом",
+          "Description": "Контроль посылки предварительного приказа (команды)",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП1/C3",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "ПРВ",
+    "description": "ПРВ",
+    "type": "1000.9.47",
+    "id": "167",
+    "adk_type": "037.47.01",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПРВ",
+      "Description": "ПРВ",
+      "Type": "1000.9.47",
+      "ADKType": "037.47.01",
+      "ID": "167",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "ПредвКом = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "ПредвКом = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "ПредвКом",
+          "Description": "Контроль посылки предварительного приказа (команды)",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП1/C13",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "РИКС",
+    "description": "РИКС",
+    "type": "1000.9.47",
+    "id": "911",
+    "adk_type": "037.47.01",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "РИКС",
+      "Description": "РИКС",
+      "Type": "1000.9.47",
+      "ADKType": "037.47.01",
+      "ID": "911",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "ПредвКом = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "ПредвКом = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "ПредвКом",
+          "Description": "Контроль посылки предварительного приказа (команды)",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП3/C14",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "status": "ok",
+  "output_dir": "C:\\Users\\PanovAA\\rcdiagnosis\\xml\\integration_prep\\output\\visochino",
+  "files": [
+    "canonical/station_bundle.json",
+    "derived/topology_rc_sections.json",
+    "compat/station_config_like.json",
+    "compat/station_rc_sections_like.json",
+    "compat/station_route_sections_like.json",
+    "config/diagparams_by_object_task.json",
+    "config/project_detector_options.seed.json",
+    "config/indicators_auto.json",
+    "manual/indicators_manual.json"
+  ],
+  "counts": {
+    "objects_total": 811,
+    "rc": 17,
+    "switches": 8,
+    "signals_shunt": 4,
+    "signals_train": 16,
+    "indicators": 540,
+    "indicator_sections": 10,
+    "route_sections_total": 27
+  }
+}

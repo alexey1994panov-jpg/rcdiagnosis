@@ -1,0 +1,920 @@
+{
+  "name": "IOSys",
+  "class": "Tdm.Unification.DCRkpIOSys",
+  "attrs": {
+    "NAME": "IOSys",
+    "CLASS": "Tdm.Unification.DCRkpIOSys"
+  },
+  "modules": [
+    {
+      "name": "ДЦРКП",
+      "number": "0",
+      "address": null,
+      "from": "/DPSMODULETYPES/VBALine",
+      "path": "IOSys/ДЦРКП",
+      "attrs": {
+        "NAME": "ДЦРКП",
+        "NUMBER": "0",
+        "FROM": "/DPSMODULETYPES/VBALine"
+      },
+      "children": [
+        {
+          "name": "ДЦРКП1",
+          "number": "0",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП1",
+          "attrs": {
+            "NAME": "ДЦРКП1",
+            "NUMBER": "0",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП2",
+          "number": "1",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП2",
+          "attrs": {
+            "NAME": "ДЦРКП2",
+            "NUMBER": "1",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП3",
+          "number": "2",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП3",
+          "attrs": {
+            "NAME": "ДЦРКП3",
+            "NUMBER": "2",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП4",
+          "number": "3",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП4",
+          "attrs": {
+            "NAME": "ДЦРКП4",
+            "NUMBER": "3",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП5",
+          "number": "4",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП5",
+          "attrs": {
+            "NAME": "ДЦРКП5",
+            "NUMBER": "4",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП6",
+          "number": "5",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП6",
+          "attrs": {
+            "NAME": "ДЦРКП6",
+            "NUMBER": "5",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП7",
+          "number": "6",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП7",
+          "attrs": {
+            "NAME": "ДЦРКП7",
+            "NUMBER": "6",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП8",
+          "number": "7",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП8",
+          "attrs": {
+            "NAME": "ДЦРКП8",
+            "NUMBER": "7",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП9",
+          "number": "8",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП9",
+          "attrs": {
+            "NAME": "ДЦРКП9",
+            "NUMBER": "8",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП10",
+          "number": "9",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП10",
+          "attrs": {
+            "NAME": "ДЦРКП10",
+            "NUMBER": "9",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП11",
+          "number": "10",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП11",
+          "attrs": {
+            "NAME": "ДЦРКП11",
+            "NUMBER": "10",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП12",
+          "number": "11",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП12",
+          "attrs": {
+            "NAME": "ДЦРКП12",
+            "NUMBER": "11",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП13",
+          "number": "12",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП13",
+          "attrs": {
+            "NAME": "ДЦРКП13",
+            "NUMBER": "12",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП14",
+          "number": "13",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП14",
+          "attrs": {
+            "NAME": "ДЦРКП14",
+            "NUMBER": "13",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП15",
+          "number": "14",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП15",
+          "attrs": {
+            "NAME": "ДЦРКП15",
+            "NUMBER": "14",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП16",
+          "number": "15",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП16",
+          "attrs": {
+            "NAME": "ДЦРКП16",
+            "NUMBER": "15",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП17",
+          "number": "16",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП17",
+          "attrs": {
+            "NAME": "ДЦРКП17",
+            "NUMBER": "16",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП18",
+          "number": "17",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП18",
+          "attrs": {
+            "NAME": "ДЦРКП18",
+            "NUMBER": "17",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП19",
+          "number": "18",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП19",
+          "attrs": {
+            "NAME": "ДЦРКП19",
+            "NUMBER": "18",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП20",
+          "number": "19",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП20",
+          "attrs": {
+            "NAME": "ДЦРКП20",
+            "NUMBER": "19",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП21",
+          "number": "20",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП21",
+          "attrs": {
+            "NAME": "ДЦРКП21",
+            "NUMBER": "20",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП22",
+          "number": "21",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП22",
+          "attrs": {
+            "NAME": "ДЦРКП22",
+            "NUMBER": "21",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП23",
+          "number": "22",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП23",
+          "attrs": {
+            "NAME": "ДЦРКП23",
+            "NUMBER": "22",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП24",
+          "number": "23",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП24",
+          "attrs": {
+            "NAME": "ДЦРКП24",
+            "NUMBER": "23",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП25",
+          "number": "24",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП25",
+          "attrs": {
+            "NAME": "ДЦРКП25",
+            "NUMBER": "24",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП26",
+          "number": "25",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП26",
+          "attrs": {
+            "NAME": "ДЦРКП26",
+            "NUMBER": "25",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП27",
+          "number": "26",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП27",
+          "attrs": {
+            "NAME": "ДЦРКП27",
+            "NUMBER": "26",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП28",
+          "number": "27",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП28",
+          "attrs": {
+            "NAME": "ДЦРКП28",
+            "NUMBER": "27",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП29",
+          "number": "28",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП29",
+          "attrs": {
+            "NAME": "ДЦРКП29",
+            "NUMBER": "28",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП30",
+          "number": "29",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП30",
+          "attrs": {
+            "NAME": "ДЦРКП30",
+            "NUMBER": "29",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП31",
+          "number": "30",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП31",
+          "attrs": {
+            "NAME": "ДЦРКП31",
+            "NUMBER": "30",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП32",
+          "number": "31",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП32",
+          "attrs": {
+            "NAME": "ДЦРКП32",
+            "NUMBER": "31",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП33",
+          "number": "32",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП33",
+          "attrs": {
+            "NAME": "ДЦРКП33",
+            "NUMBER": "32",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП34",
+          "number": "33",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП34",
+          "attrs": {
+            "NAME": "ДЦРКП34",
+            "NUMBER": "33",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП35",
+          "number": "34",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП35",
+          "attrs": {
+            "NAME": "ДЦРКП35",
+            "NUMBER": "34",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП36",
+          "number": "35",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП36",
+          "attrs": {
+            "NAME": "ДЦРКП36",
+            "NUMBER": "35",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП37",
+          "number": "36",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП37",
+          "attrs": {
+            "NAME": "ДЦРКП37",
+            "NUMBER": "36",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП38",
+          "number": "37",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП38",
+          "attrs": {
+            "NAME": "ДЦРКП38",
+            "NUMBER": "37",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП39",
+          "number": "38",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП39",
+          "attrs": {
+            "NAME": "ДЦРКП39",
+            "NUMBER": "38",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП40",
+          "number": "39",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП40",
+          "attrs": {
+            "NAME": "ДЦРКП40",
+            "NUMBER": "39",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП41",
+          "number": "40",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП41",
+          "attrs": {
+            "NAME": "ДЦРКП41",
+            "NUMBER": "40",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП42",
+          "number": "41",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП42",
+          "attrs": {
+            "NAME": "ДЦРКП42",
+            "NUMBER": "41",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП43",
+          "number": "42",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП43",
+          "attrs": {
+            "NAME": "ДЦРКП43",
+            "NUMBER": "42",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП44",
+          "number": "43",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП44",
+          "attrs": {
+            "NAME": "ДЦРКП44",
+            "NUMBER": "43",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП45",
+          "number": "44",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП45",
+          "attrs": {
+            "NAME": "ДЦРКП45",
+            "NUMBER": "44",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП46",
+          "number": "45",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП46",
+          "attrs": {
+            "NAME": "ДЦРКП46",
+            "NUMBER": "45",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП47",
+          "number": "46",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП47",
+          "attrs": {
+            "NAME": "ДЦРКП47",
+            "NUMBER": "46",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП48",
+          "number": "47",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП48",
+          "attrs": {
+            "NAME": "ДЦРКП48",
+            "NUMBER": "47",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП49",
+          "number": "48",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП49",
+          "attrs": {
+            "NAME": "ДЦРКП49",
+            "NUMBER": "48",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП50",
+          "number": "49",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП50",
+          "attrs": {
+            "NAME": "ДЦРКП50",
+            "NUMBER": "49",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП51",
+          "number": "50",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП51",
+          "attrs": {
+            "NAME": "ДЦРКП51",
+            "NUMBER": "50",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП52",
+          "number": "51",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП52",
+          "attrs": {
+            "NAME": "ДЦРКП52",
+            "NUMBER": "51",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП53",
+          "number": "52",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП53",
+          "attrs": {
+            "NAME": "ДЦРКП53",
+            "NUMBER": "52",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП54",
+          "number": "53",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП54",
+          "attrs": {
+            "NAME": "ДЦРКП54",
+            "NUMBER": "53",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП55",
+          "number": "54",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП55",
+          "attrs": {
+            "NAME": "ДЦРКП55",
+            "NUMBER": "54",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП56",
+          "number": "55",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП56",
+          "attrs": {
+            "NAME": "ДЦРКП56",
+            "NUMBER": "55",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП57",
+          "number": "56",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП57",
+          "attrs": {
+            "NAME": "ДЦРКП57",
+            "NUMBER": "56",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП58",
+          "number": "57",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП58",
+          "attrs": {
+            "NAME": "ДЦРКП58",
+            "NUMBER": "57",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП59",
+          "number": "58",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП59",
+          "attrs": {
+            "NAME": "ДЦРКП59",
+            "NUMBER": "58",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП60",
+          "number": "59",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП60",
+          "attrs": {
+            "NAME": "ДЦРКП60",
+            "NUMBER": "59",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП61",
+          "number": "60",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП61",
+          "attrs": {
+            "NAME": "ДЦРКП61",
+            "NUMBER": "60",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        },
+        {
+          "name": "ДЦРКП62",
+          "number": "61",
+          "address": "",
+          "from": "/DPSMODULETYPES/DCRKP",
+          "path": "IOSys/ДЦРКП/ДЦРКП62",
+          "attrs": {
+            "NAME": "ДЦРКП62",
+            "NUMBER": "61",
+            "ADDRESS": "",
+            "FROM": "/DPSMODULETYPES/DCRKP"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "ДЦЮГизмерения",
+      "number": "1",
+      "address": null,
+      "from": "/DPSMODULETYPES/VBALine",
+      "path": "IOSys/ДЦЮГизмерения",
+      "attrs": {
+        "NAME": "ДЦЮГизмерения",
+        "NUMBER": "1",
+        "FROM": "/DPSMODULETYPES/VBALine"
+      },
+      "children": [
+        {
+          "name": "ДЦИзмерения",
+          "number": "0",
+          "address": "",
+          "from": "/cfg/ModuleTypes/ДЦИзмерения",
+          "path": "IOSys/ДЦЮГизмерения/ДЦИзмерения",
+          "attrs": {
+            "NAME": "ДЦИзмерения",
+            "NUMBER": "0",
+            "ADDRESS": "",
+            "FROM": "/cfg/ModuleTypes/ДЦИзмерения"
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

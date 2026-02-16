@@ -1,708 +1,185 @@
- Внесу корректировки в README для варианта 6 и добавлю разделы про времена Т и состояния.
+﻿# РРЅСЃС‚СЂСѓРјРµРЅС‚С‹ RC Diagnosis
 
-```markdown
-# Детекторы Ложной Занятости (ЛЗ) — Архитектура Проекта
+РћР±РЅРѕРІР»РµРЅРѕ: 2026-02-11
 
-## Общее назначение
+Р­С‚Р° РїР°РїРєР° СЃРѕРґРµСЂР¶РёС‚ С‚РµРєСѓС‰РёР№ РґРІРёР¶РѕРє РґРµС‚РµРєС‚РѕСЂРѕРІ (РІР°СЂРёР°РЅС‚С‹ Р›Р—/Р›РЎ), РєР°РЅРѕРЅРёС‡РµСЃРєРёР№ СЂРµРµСЃС‚СЂ РјР°СЃРѕРє, СЂР°РЅС‚Р°Р№Рј СЃРёРјСѓР»СЏС†РёРё Рё С‚РµСЃС‚С‹. РќР° 2026-02-11 РєРѕРґ СЂР°Р·РґРµР»РµРЅ РЅР° РїРѕРґРїР°РєРµС‚С‹, Р° РІ `tools/*.py` РѕСЃС‚Р°РІР»РµРЅС‹ СЃРѕРІРјРµСЃС‚РёРјС‹Рµ С€РёРјРё.
 
-Система детекторов ложной занятости (ЛЗ) для железнодорожной станции. Каждый детектор анализирует состояние рельсовых цепей (РЦ) и определяет, является ли занятость секции "ложной" (технологическая ошибка) или реальной.
+## РћР±Р»Р°СЃС‚СЊ РѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕСЃС‚Рё
+- РСЃС‚РѕС‡РЅРёРє РїСЂР°РІРґС‹ РґР»СЏ СЂР°РЅС‚Р°Р№РјР° Рё С‚РµСЃС‚РѕРІ вЂ” `tools/`.
+- `legasy/` РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ С‚РѕР»СЊРєРѕ РєР°Рє СЃРїСЂР°РІРѕС‡РЅС‹Р№ Р°СЂС…РёРІ Рё РёСЃРєР»СЋС‡РµРЅ РёР· СЃС‚Р°РЅРґР°СЂС‚РЅРѕРіРѕ `pytest`-РїРѕРёСЃРєР°.
+- Р’ `pytest.ini` РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ:
+  - `testpaths = tools`
 
-**Ключевые понятия:**
-- **РЦ** — рельсовая цепь (секция пути)
-- **ЛЗ** — ложная занятость (детектируемое состояние)
-- **Вариант** — алгоритм детекции (v1, v2, v3, v5, v6, v7, v8...)
-- **Маска** — битовое/логическое условие состояний соседних РЦ (000, 010, 101 и т.д.)
-- **Фаза** — этап формирования ЛЗ с таймером
-- **Топология** — динамическое определение соседей через стрелки
-
----
-
-## Структура проекта
+## Р‘С‹СЃС‚СЂС‹Р№ СЃС‚Р°СЂС‚
+- Р—Р°РїСѓСЃС‚РёС‚СЊ РІСЃРµ С‚РµСЃС‚С‹ РґРµС‚РµРєС‚РѕСЂРѕРІ:
+```powershell
+python -m pytest -q
 ```
-├── base_detector.py          # Базовый класс детектора (конечный автомат)
-├── base_wrapper.py           # Обертка для многоветочных детекторов
-├── variants_common.py        # Маски состояний РЦ (все варианты)
-├── variant1_lz_factory.py    # Фабрика варианта 1 (классическая ЛЗ)
-├── variant2_lz_factory.py    # Фабрика варианта 2 (один сосед занят)
-├── variant3_lz_factory.py    # Фабрика варианта 3 (шунтовое движение)
-├── variant5_lz_factory.py    # Фабрика варианта 5 (без соседей, по замыканию)
-├── variant6_lz_factory.py    # Фабрика варианта 6 (длительная занятость, без соседей)
-├── variant7_lz_factory.py    # Фабрика варианта 7 (бесстрелочные секции)
-├── variant8_lz_factory.py    # Фабрика варианта 8 (сложные условия)
-├── variant_configs.py        # Конфигурации фаз для всех вариантов
-├── detectors_engine.py       # Движок: инициализация и обновление детекторов
-├── flags_engine.py           # Сборка флагов результатов
-├── sim_core.py               # Ядро симуляции
-├── topology_manager.py       # Динамическая топология соседей
-├── station_model.py          # Модель станции
-└── uni_states.py             # Утилиты для интерпретации состояний
+- РџСЂРѕРІРµСЂРёС‚СЊ РєРѕРјРїРёР»СЏС†РёСЋ РєР»СЋС‡РµРІС‹С… РјРѕРґСѓР»РµР№:
+```powershell
+python -m py_compile tools/core/variants_common.py tools/core/detectors_engine.py
 ```
 
----
-
-## Базовая архитектура
-
-### 1. BaseDetector (`base_detector.py`)
-
-**Назначение:** Универсальный конечный автомат для одного варианта ЛЗ.
-
-**Ключевые классы:**
-
-```python
-@dataclass
-class PhaseConfig:
-    phase_id: int           # ID фазы (0, 1, 2...)
-    duration: float         # Требуемая длительность фазы
-    next_phase_id: int      # Следующая фаза (-1 = финал → открытие ДС)
-    timer_mode: str         # "continuous" (сброс при нарушении) или "cumulative"
-    reset_on_exit: bool     # Сброс таймера при выходе из фазы
-    mask_id: int            # ID маски для отладки
-    mask_fn: callable       # Функция проверки условия фазы
-    requires_neighbors: NeighborRequirement  # Требования к соседям
-
-@dataclass
-class DetectorConfig:
-    initial_phase_id: int
-    phases: List[PhaseConfig]
-    t_kon: float                    # Время на завершение после открытия
-    completion_mode: CompletionMode # FREE_TIME или OCCUPIED_TIME
-    variant_name: str
-
-class BaseDetector:
-    def __init__(self, config: DetectorConfig, 
-                 prev_rc_name, ctrl_rc_name, next_rc_name)
-    def update(step, dt) -> (opened, closed)  # Основной метод
-```
-
-**Режимы работы:**
-- **Формирование (до открытия):** проверка масок → накопление времени → переход фаз
-- **Завершение (после открытия):** отсчет t_kon → закрытие при условии свободности
-
-**Требования к соседям (NeighborRequirement):**
-- `BOTH` — оба соседа должны быть достоверны (v1, v2, v3, v8)
-- `NONE` — соседи не важны (v7)
-- `ONLY_CTRL` — только контролируемая РЦ (v5, v6)
-
----
-
-### 2. Маски состояний (`variants_common.py`)
-
-**Обозначения в масках:**
-- `0` — РЦ свободна
-- `1` — РЦ занята
-- `X` или `x` — любое состояние (игнорируется, не важно)
-- `|` — логическое ИЛИ для альтернативных состояний
-
-**ТАБЛИЦА МАСОК:**
-
-| Маска | Код | Условие | Требует соседей |
-|-------|-----|---------|-----------------|
-| `mask_000` | 0 | Все свободны | **ДА** — оба соседа должны существовать и быть свободны |
-| `mask_010` | 1 | Центр занят, края свободны | **ДА** — оба соседа должны существовать и быть свободны |
-| `mask_101` | 2 | Края заняты, центр свободен | **ДА** — оба соседа должны существовать |
-| `mask_111` | 3 | Все заняты | **ДА** — оба соседа должны существовать |
-| `mask_100` | 4 | Prev занят, ctrl и next свободны | **ДА** — prev должен существовать |
-| `mask_110` | 5 | Prev и ctrl заняты, next свободен | **ДА** — prev должен существовать |
-| `mask_001` | 6 | Next занят, prev и ctrl свободны | **ДА** — next должен существовать |
-| `mask_011` | 7 | Ctrl и next заняты, prev свободен | **ДА** — next должен существовать |
-| `mask_100_or_000` | 104 | 100 ИЛИ 000 | Как у 100 |
-| `mask_001_or_000` | 106 | 001 ИЛИ 000 | Как у 001 |
-
-**Маски для v7 (бесстрелочные, X = игнорируется):**
-
-| Маска | Код | Условие | Когда используется |
-|-------|-----|---------|-------------------|
-| `mask_x0x` | 200 | Центр свободен (соседи **любые/не важны**) | no_adjacent (нет соседей вообще) |
-| `mask_x0x_occ` | 201 | Центр занят (соседи **любые/не важны**) | no_adjacent, фаза 2 |
-| `mask_00x` | 202 | prev и ctrl свободны, next **не важен** | no_prev (нет предыдущей) |
-| `mask_00x_occ` | 203 | prev свободен, ctrl занят, next **не важен** | no_prev, фаза 2 |
-| `mask_x00` | 204 | ctrl и next свободны, prev **не важен** | no_next (нет следующей) |
-| `mask_x00_occ` | 205 | next свободен, ctrl занят, prev **не важен** | no_next, фаза 2 |
-
-> **Важно:** X означает "любое состояние" — сосед может быть занят, свободен, отсутствовать или быть недостоверным. Это НЕ то же самое, что отсутствие соседа!
-
-**Маски для v8 (составные):**
-
-| Маска | Код | Условие |
-|-------|-----|---------|
-| `mask_110_or_111` | 208 | (prev занят И ctrl занят) И (next любой) |
-| `mask_011_or_111` | 209 | (ctrl занят И next занят) И (prev любой) |
-| `mask_01x_or_x10` | 210 | ctrl занят И (prev свободен ИЛИ next свободен) |
-
-**Маски для v5 (замыкание):**
-
-| Маска | Код | Условие |
-|-------|-----|---------|
-| `mask_0_not_locked` | 500 | ctrl свободна И НЕ замкнута И can_lock=True |
-| `mask_1_not_locked` | 501 | ctrl занята И НЕ замкнута И can_lock=True |
-
-**Маски для v6 (длительная занятость, без соседей):**
-
-| Маска | Код | Условие | Примечание |
-|-------|-----|---------|------------|
-| `mask_ctrl_free` | 600 | ctrl свободна | Не проверяет соседей, только состояние ctrl |
-| `mask_ctrl_occupied` | 601 | ctrl занята | Не проверяет соседей, только состояние ctrl |
-
-> **Особенность v6:** Работает на **любой** РЦ, независимо от `can_lock`. Не требует соседей (`NeighborRequirement.ONLY_CTRL`).
-
----
-
-### 3. Фабрики вариантов
-
-**Общая структура каждой фабрики**
-
-Каждая фабрика (`variant{N}_lz_factory.py`) содержит:
-- Константы масок — числовые ID для отладки
-- `make_lz{N}_detector()` — основная фабричная функция
-- Вспомогательные `_make_*_detector()` — для многоветочных вариантов
-- `V{N}_SCHEMA` — JSON-схема для документации/валидации
-
-**Возвращаемые типы:**
-- **Одноветочные** (v1, v3, v5, v6): возвращают `BaseDetector`
-- **Многоветочные** (v2, v7, v8): возвращают `BaseVariantWrapper([det1, det2, ...])`
-
-**Сравнение фабрик:**
-
-| Вариант | Тип | Ветки | Требует соседей | Особенности |
-|---------|-----|-------|-----------------|-------------|
-| **v1** | Одноветочный | 1 | `BOTH` | Классика: 000→010 |
-| **v2** | Многоветочный | 2 (prev/next) | `BOTH` | Один сосед занят: 100→110→(100\|000) ИЛИ 001→011→(001\|000) |
-| **v3** | Одноветочный | 1 | `BOTH` | Шунтовое: 101→111→101 |
-| **v5** | Одноветочный | 1 | `ONLY_CTRL` | Без соседей, по замыканию: свободна→занята. Требует `can_lock=True` |
-| **v6** | Одноветочный | 1 | `ONLY_CTRL` | Без соседей, длительная занятость: свободна→занята. **Не требует `can_lock`** |
-| **v7** | Многоветочный | 3 (no_adj/no_prev/no_next) | `NONE` | Бесстрелочные: X0X→X0X_OCC и т.д. |
-| **v8** | Многоветочный | 3 (prev/next/mid) | `BOTH` | Сложные условия: 110\|111→011\|111→010 |
-
-**Подробное описание каждой фабрики**
-
-**variant1_lz_factory.py**
-```python
-def make_lz1_detector(prev_rc_name, ctrl_rc_name, next_rc_name,
-                      ts01_lz1, tlz_lz1, tkon_lz1) -> BaseDetector
-```
-- Фазы: 0 (idle, mask_000, ts01) → 1 (active, mask_010, tlz) → открытие
-- Логика: Все свободны → Центр занят при свободных краях
-- Схема: Простая цепочка из 2 фаз
-
-**variant2_lz_factory.py**
-```python
-def make_lz2_detector(...) -> BaseVariantWrapper
-```
-- Ветки:
-  - det_prev: 100→110→100_or_000 (prev занят)
-  - det_next: 001→011→001_or_000 (next занят)
-- Особенность: Две независимые цепочки, любая может активироваться
-- Возврат: `BaseVariantWrapper([det_prev, det_next])`
-
-**variant3_lz_factory.py**
-```python
-def make_lz3_detector(...) -> BaseDetector
-```
-- Фазы: 0 (101, ts01) → 1 (111, tlz) → 2 (101, ts02) → открытие
-- Логика: Шунтовое движение через секцию (въезд→проезд→выезд)
-
-**variant5_lz_factory.py**
-```python
-def make_lz5_detector(ctrl_rc_name, ts01_lz5, tlz_lz5, tkon_lz5) -> BaseDetector
-```
-- Особенность: Не использует соседей! prev_rc_name=None, next_rc_name=None
-- Условие: `can_lock=True` для РЦ (из rc_capabilities)
-- Фазы: 0 (свободна, не замкнута) → 1 (занята, не замкнута) → открытие
-
-**variant6_lz_factory.py**
-```python
-def make_lz6_detector(ctrl_rc_name, ts01_lz6, tlz_lz6, tkon_lz6) -> BaseDetector
-```
-- Особенность: Не использует соседей! prev_rc_name=None, next_rc_name=None
-- Условие: **Нет проверки can_lock** — работает на любой РЦ
-- Фазы: 0 (свободна, ts01) → 1 (занята, tlz) → открытие
-- Логика: Длительная занятость после предварительной свободности
-
-> **Разница v5 vs v6:** v5 проверяет `can_lock` и состояние замыкания; v6 только состояние свободна/занята. v5 для РЦ с возможностью замыкания, v6 для любых РЦ.
-
-**variant7_lz_factory.py**
-```python
-def make_lz7_detector(...) -> BaseVariantWrapper
-```
-- Ветки:
-  - det_no_adjacent: X0X→X0X_OCC (нет соседей вообще)
-  - det_no_prev: 00X→00X_OCC (нет prev)
-  - det_no_next: X00→X00_OCC (нет next)
-- Особенность: requires_neighbors=NeighborRequirement.NONE
-- Логика выбора ветки: Определяется топологией (какие соседи отсутствуют)
-
-**variant8_lz_factory.py**
-```python
-def make_lz8_detector(...) -> BaseVariantWrapper
-```
-- Ветки:
-  - det_prev: 110_or_111→011_or_111→010 (prev занят)
-  - det_next: 011_or_111→01x_or_x10→010 (next занят)
-  - det_mid: 010→011→010 (средний вариант)
-- Особенность: Самые сложные маски с "любыми" состояниями
-
----
-
-### 4. BaseVariantWrapper (`base_wrapper.py`)
-
-**Назначение:** Управление несколькими детекторами как одним.
-
-```python
-class BaseVariantWrapper:
-    def __init__(self, detectors: List[BaseDetector])
-    def update(step, dt) -> (opened, closed)
-```
-
-**Логика:**
-- `opened=True` — если хотя бы один детектор открылся (был неактивен, стал активен)
-- `closed=True` — если был активен и любой детектор закрылся ИЛИ все неактивны
-- `self.active = any(det.active for det in self.detectors)`
-
----
-
-### 5. Движок детекторов (`detectors_engine.py`)
-
-**Ключевые структуры:**
-
-```python
-@dataclass
-class DetectorsConfig:
-    ctrl_rc_id: str           # ID контролируемой РЦ
-    prev_rc_name: Optional[str]
-    ctrl_rc_name: str
-    next_rc_name: Optional[str]
-    # Тайминги и enable-флаги для каждого варианта
-    ts01_lz1, tlz_lz1, tkon_lz1, enable_lz1: ...
-    ts01_lz2, ts02_lz2, tlz_lz2, tkon_lz2, enable_lz2: ...
-    # ... и т.д. для всех вариантов
-
-@dataclass
-class DetectorsState:
-    v1: Optional[BaseDetector]
-    v2: Optional[BaseVariantWrapper]  # или BaseDetector для одноветочных
-    v3: Optional[BaseDetector]
-    v5: Optional[BaseDetector]
-    v6: Optional[BaseDetector]        # ← НОВОЕ: v6 детектор
-    v7: Optional[BaseVariantWrapper]
-    v8: Optional[BaseVariantWrapper]
-```
-
-**Основные функции:**
-
-```python
-def init_detectors_engine(cfg: DetectorsConfig, rc_ids: List[str]) -> DetectorsState:
-    # Создает детекторы по конфигурации, вызывает соответствующие make_lz{N}_detector()
-
-def update_detectors(det_state, t, dt, rc_states, switch_states, 
-                     signal_states, topology_info, cfg, modes) -> (DetectorsState, DetectorsResult):
-    # Обновляет все детекторы, конвертирует rc_states в ID, проверяет смену топологии
-```
-
-**Динамическая топология:**
-- `effective_prev_rc`, `effective_next_rc` — определяются topology_manager
-- При смене соседей — сброс фаз формирования (неактивных детекторов)
-- rc_states конвертируется из имен в ID через `_ensure_rc_states_by_id()`
-
----
-
-### 6. Топология (`topology_manager.py`)
-
-**UniversalTopologyManager:**
-- Определяет физических соседей с учетом положения стрелок
-- Реализует "latch" — удержание соседа при временной потере контроля (T_PK)
-- Возвращает `prev_control_ok`, `next_control_ok` — флаги достоверности
-
-**StationModel (`station_model.py`):**
-- RcNode — узел с prev_links/next_links в формате `(target_id, switch_id, required_state)`
-- `required_state`: 1=плюс, 0=минус, -1=безусловно
-
----
-
-## Как добавить новый вариант (vN)
-
-### Шаг 1: Создать `variantN_lz_factory.py`
-
-**Шаблон для одноветочного варианта:**
-```python
-# variantN_lz_factory.py
-from base_detector import BaseDetector, PhaseConfig, DetectorConfig, CompletionMode, NeighborRequirement
-from variants_common import mask_XXX  # импорт нужных масок
-
-MASK_XXX = N00  # уникальный ID маски
-
-def make_lzN_detector(
-    prev_rc_name: Optional[str],
-    ctrl_rc_name: str,
-    next_rc_name: Optional[str],
-    ts01_lzN: float,
-    tlz_lzN: float,
-    tkon_lzN: float,
-) -> BaseDetector:
-    
-    phases = [
-        PhaseConfig(
-            phase_id=0,
-            duration=float(ts01_lzN),
-            next_phase_id=1,
-            timer_mode="continuous",
-            reset_on_exit=True,
-            mask_id=MASK_XXX,
-            mask_fn=mask_XXX,  # из variants_common
-            requires_neighbors=NeighborRequirement.BOTH,  # или NONE/ONLY_CTRL
-        ),
-        PhaseConfig(
-            phase_id=1,
-            duration=float(tlz_lzN),
-            next_phase_id=-1,  # -1 = финал, открытие
-            timer_mode="continuous",
-            reset_on_exit=True,
-            mask_id=MASK_YYY,
-            mask_fn=mask_YYY,
-            requires_neighbors=NeighborRequirement.BOTH,
-        ),
-    ]
-    
-    config = DetectorConfig(
-        initial_phase_id=0,
-        phases=phases,
-        t_kon=float(tkon_lzN),
-        completion_mode=CompletionMode.FREE_TIME,
-        variant_name=f"v{N}",
-    )
-    
-    return BaseDetector(
-        config=config,
-        prev_rc_name=prev_rc_name,
-        ctrl_rc_name=ctrl_rc_name,
-        next_rc_name=next_rc_name,
-    )
-
-VN_SCHEMA = {
-    "variant_id": N,
-    "variant_name": f"lz{N}",
-    "description": "Описание варианта",
-    "phases": [...],
-    "parameters": ["ts01_lzN", "tlz_lzN", "tkon_lzN"],
-    "topology": "dynamic",
-}
-```
-
-**Шаблон для многоветочного варианта:**
-```python
-from base_wrapper import BaseVariantWrapper
-
-def _make_branch_detector(...) -> BaseDetector:
-    # Создает детектор одной ветки
-    ...
-
-def make_lzN_detector(...) -> BaseVariantWrapper:
-    det_branch1 = _make_branch_detector(...)
-    det_branch2 = _make_branch_detector(...)
-    return BaseVariantWrapper([det_branch1, det_branch2])
-```
-
----
-
-### Шаг 2: Добавить маски в `variants_common.py`
-
-```python
-def mask_XXX(step, prev, ctrl, next) -> bool:
-    """Описание условия"""
-    if not ctrl:
-        return False
-    # ... логика проверки состояний
-    return result
-
-# Добавить в get_mask_by_id():
-mask_map = {
-    ...
-    N00: mask_XXX,
-}
-
-# Добавить в mask_to_string():
-names = {
-    ...
-    N00: "XXX",
-}
-```
-
----
-
-### Шаг 3: Обновить `detectors_engine.py`
-
-**В `DetectorsConfig`:**
-```python
-@dataclass
-class DetectorsConfig:
-    # ... существующие поля ...
-    
-    # vN
-    ts01_lzN: float = 0.0
-    tlz_lzN: float = 0.0
-    tkon_lzN: float = 0.0
-    enable_lzN: bool = False
-```
-
-**В `DetectorsState`:**
-```python
-@dataclass
-class DetectorsState:
-    # ... существующие поля ...
-    vN: Optional[BaseDetector] = None  # или BaseVariantWrapper
-```
-
-**В `init_detectors_engine()`:**
-```python
-if cfg.enable_lzN:
-    from variantN_lz_factory import make_lzN_detector
-    state.vN = make_lzN_detector(
-        prev_rc_name=cfg.prev_rc_name,
-        ctrl_rc_name=cfg.ctrl_rc_name,
-        next_rc_name=cfg.next_rc_name,
-        ts01_lzN=cfg.ts01_lzN,
-        tlz_lzN=cfg.tlz_lzN,
-        tkon_lzN=cfg.tkon_lzN,
-    )
-```
-
-**В `update_detectors()`:**
-```python
-# vN
-if det_state.vN:
-    opened, closed = det_state.vN.update(step_adapter, dt)
-    if opened:
-        result.opened = True
-        result.flags.append("llz_vN_open")
-    if closed:
-        result.closed = True
-        result.flags.append("llz_vN_closed")
-    if det_state.vN.active:
-        variants_active.append(N)
-```
-
----
-
-### Шаг 4: Обновить `flags_engine.py`
-
-```python
-# В build_flags_simple():
-vN_active = det_state.vN.active if det_state.vN else False
-
-# В определении variant (приоритет):
-if vN_active:
-    variant = N  # или max существующего + 1
-
-# Добавить флаг:
-if vN_active and "llz_vN" not in flags:
-    flags.append("llz_vN")
-```
-
----
-
-### Шаг 5: Обновить конфигурацию
-
-**В `station_detectors_config.py`** — добавить тайминги:
-```python
-@dataclass
-class GlobalTimings:
-    # ... существующие ...
-    ts01_lzN: float = 3.0
-    tlz_lzN: float = 3.0
-    tkon_lzN: float = 3.0
-```
-
-**В `RcVariantConfig`:**
-```python
-enable_lzN: bool = False
-```
-
-**В `station_detectors_factory.py`** — добавить маппинг:
-```python
-# В build_detectors_config_for_rc():
-ts01_lzN = gt.ts01_lzN
-tlz_lzN = gt.tlz_lzN
-tkon_lzN = gt.tkon_lzN
-enable_lzN = rc_cfg.enable_lzN
-
-return LocalDetectorsConfig(
-    # ... существующие ...
-    ts01_lzN=ts01_lzN,
-    tlz_lzN=tlz_lzN,
-    tkon_lzN=tkon_lzN,
-    enable_lzN=enable_lzN,
-)
-```
-
----
-
-### Шаг 6: Создать тест `test_detectors_engine_vN.py`
-
-```python
-from sim_core import SimulationConfig, SimulationContext, ScenarioStep
-from detectors_engine import DetectorsConfig
-
-def test_vN_full_cycle():
-    det_cfg = DetectorsConfig(
-        ctrl_rc_id="108",
-        prev_rc_name="59",
-        ctrl_rc_name="108", 
-        next_rc_name="83",
-        # Отключаем другие варианты...
-        enable_lzN=True,
-        ts01_lzN=2.0,
-        tlz_lzN=2.0,
-        tkon_lzN=3.0,
-    )
-    
-    sim_cfg = SimulationConfig(t_pk=30.0, detectors_config=det_cfg)
-    
-    scenario = [
-        # Шаги сценария...
-    ]
-    
-    ctx = SimulationContext(config=sim_cfg, scenario=scenario, ctrl_rc_id="108")
-    timeline = ctx.run()
-    
-    assert any("llz_vN_open" in s.flags for s in timeline)
-    assert any("llz_vN" in s.flags and s.lz_variant == N for s in timeline)
-    assert any("llz_vN_closed" in s.flags for s in timeline)
-```
-
----
-
-## Правила именования
-
-| Элемент | Формат | Пример |
-|---------|--------|--------|
-| Файл фабрики | `variant{N}_lz_factory.py` | `variant9_lz_factory.py` |
-| Функция | `make_lz{N}_detector` | `make_lz9_detector` |
-| Константа маски | `MASK_XXX` | `MASK_010` |
-| ID маски | `N00` (N=вариант) | `900`, `901`... |
-| Параметр времени | `t{suffix}_lz{N}` | `ts01_lz9`, `tlz_lz9` |
-| Флаг открытия | `llz_v{N}_open` | `llz_v9_open` |
-| Флаг активности | `llz_v{N}` | `llz_v9` |
-| Флаг закрытия | `llz_v{N}_closed` | `llz_v9_closed` |
-
----
-
-## Назначение временных параметров (Т)
-
-Чтобы не ошибаться при настройке времени, следуйте принципу:
-
-| Параметр | Когда отсчитывается | Что означает | Пример |
-|----------|---------------------|--------------|--------|
-| **ts01** (или ts0) | От начала выполнения условия фазы 0 | Сколько секунд должно длиться состояние "ДАНО" до перехода к фазе 1 | РЦ свободна ≥ ts01 секунд |
-| **ts02** (или ts1) | От начала выполнения условия фазы 1 | Дополнительное время накопления (если есть промежуточная фаза) | РЦ в промежуточном состоянии ≥ ts02 секунд |
-| **tlz** | От начала выполнения условия финальной фазы | Сколько секунд длится формирование ЛЗ перед открытием | РЦ занята ≥ tlz секунд |
-| **tkon** | От момента открытия ЛЗ | Сколько секунд РЦ должна быть свободна для закрытия ЛЗ | РЦ свободна ≥ tkon секунд → закрытие |
-
-**Правила расчета общего времени:**
-
-```
-Общее время формирования ЛЗ = ts01 + tlz        (для 2-фазных: v1, v5, v6)
-Общее время формирования ЛЗ = ts01 + ts02 + tlz (для 3-фазных: v3)
-```
-
-**Важно:**
-- Времена **не суммируются автоматически** — каждое отсчитывается от своего условия
-- Если условие прерывается → таймер сбрасывается (при `timer_mode="continuous"`)
-- `t_kon` отсчитывается только **после открытия** ЛЗ, не во время формирования
-
-**Пример для v6:**
-```python
-ts01_lz6 = 2.0  # РЦ свободна ≥ 2 сек → переход к фазе 1
-tlz_lz6 = 2.0   # РЦ занята ≥ 2 сек → открытие ЛЗ
-tkon_lz6 = 3.0  # После открытия: РЦ свободна ≥ 3 сек → закрытие
-
-# Итого: ЛЗ откроется через 4 секунды после начала (2+2)
-# И закроется через 3 секунды после освобождения РЦ
-```
-
----
-
-## Состояния РЦ и их интерпретация
-
-В системе используется единая нумерация состояний (UniStateID):
-
-| UniStateID | Состояние | Интерпретация для ЛЗ |
-|------------|-----------|----------------------|
-| **0** | Нет контроля / неопределено | Не свободна и не занята (прерывает таймеры) |
-| **1** | Замыкание | Специальное состояние (для v5) |
-| **2** | Зарезервировано | — |
-| **3** | Свободна, нет замыкания | **Свободна** (rc_is_free=True) |
-| **4** | Свободна, замыкание | **Свободна** (rc_is_free=True) + locked |
-| **5** | Свободна, неисправность | **Свободна** (rc_is_free=True) |
-| **6** | Занята, нет замыкания | **Занята** (rc_is_occupied=True) |
-| **7** | Занята, замыкание | **Занята** (rc_is_occupied=True) + locked |
-| **8** | Занята, неисправность | **Занята** (rc_is_occupied=True) |
-
-**Функции проверки (из `uni_states.py`):**
-```python
-def rc_is_free(state: int) -> bool:
-    """Состояния 3, 4, 5 считаются свободными."""
-    return state in (3, 4, 5)
-
-def rc_is_occupied(state: int) -> bool:
-    """Состояния 6, 7, 8 считаются занятыми."""
-    return state in (6, 7, 8)
-
-def rc_is_locked(state: int) -> bool:
-    """Состояния 4, 7 имеют признак замыкания."""
-    return state in (4, 7)
-```
-
-**Важные моменты для масок:**
-
-1. **Маска проверяет `rc_is_free()` / `rc_is_occupied()`**, а не конкретные ID
-2. **Состояние 0 (нет контроля)** — не свободно и не занято! Оно прерывает таймеры формирования.
-3. **Состояния 4 и 7 (замыкание)** — учитываются в v5 через `rc_is_locked()`, для остальных вариантов игнорируются.
-
-**Пример в маске:**
-```python
-def mask_010(step, prev, ctrl, next) -> bool:
-    # Центр должен быть "занят" (6, 7, или 8)
-    s_ctrl = step.rc_states.get(ctrl, 0)
-    return rc_is_occupied(s_ctrl)  # True для 6,7,8; False для 0,1,2,3,4,5
-```
-
----
-
-## Особенности реализации
-
-### Обработка None в масках
-
-В масках `mask_000`, `mask_010` и др.:
-- `if prev is None: prev_ok = True` — отсутствие соседа считается "свободным"
-- Но `requires_neighbors=NeighborRequirement.BOTH` требует, чтобы сосед существовал (не None) и был достоверен
-
-**Это различие критично:**
-- **Маска** определяет логическое условие (свободен/занят)
-- **NeighborRequirement** определяет требование к достоверности соседа для работы детектора
-
-### Динамическая топология vs Fallback
-
-```python
-# В BaseDetector._get_effective_neighbors():
-prev = getattr(step, "effective_prev_rc", None)  # Из topology_manager
-if prev is None:
-    prev = self._config_prev_rc  # Fallback из конфига
-```
-Топология имеет приоритет, но fallback имена используются при отсутствии динамической информации.
-
-### Конвертация имен в ID
-
-```python
-# В update_detectors():
-rc_states_by_id = _ensure_rc_states_by_id(rc_states)
-# Если ключи уже ID (есть в NODES) — возвращает как есть
-# Иначе конвертирует имена в ID через name_to_id маппинг
-```
-Это позволяет тестам использовать удобные имена ("108", "1П"), а движок работает с ID.
-```
-
-Основные изменения:
-1. **Добавлен v6** в структуру проекта и таблицы сравнения
-2. **Добавлены маски v6** (600, 601) с описанием
-3. **Добавлено описание фабрики v6** с различиями от v5
-4. **Новый раздел "Назначение временных параметров (Т)"** — подробно объясняю каждый параметр и как не ошибаться
-5. **Новый раздел "Состояния РЦ и их интерпретация"** — таблица UniStateID, функции проверки, важные моменты для масок
+## РђСЂС…РёС‚РµРєС‚СѓСЂР°
+- `detectors_engine.py`: Р¶РёР·РЅРµРЅРЅС‹Р№ С†РёРєР» РґРµС‚РµРєС‚РѕСЂРѕРІ, dataclass-РєРѕРЅС„РёРіРё/СЃРѕСЃС‚РѕСЏРЅРёСЏ/СЂРµР·СѓР»СЊС‚Р°С‚С‹, С†РёРєР» РѕР±РЅРѕРІР»РµРЅРёСЏ.
+- `variants_common.py`: РєР°РЅРѕРЅРёС‡РµСЃРєРёРµ РјР°СЃРєРё, РїСЂРµРґРёРєР°С‚С‹, `get_mask_by_id`, `mask_to_string`.
+- `variant*_lz_factory.py`, `variant*_ls_factory.py`: С„Р°Р·РѕРІР°СЏ Р»РѕРіРёРєР° РїРѕ РІР°СЂРёР°РЅС‚Р°Рј.
+- `flags_engine.py`: СЂР°СЃС‡РµС‚ active/open/closed С„Р»Р°РіРѕРІ Рё РёС‚РѕРіРѕРІРѕРіРѕ РІР°СЂРёР°РЅС‚Р°.
+- `sim_core.py`: РёСЃРїРѕР»РЅРµРЅРёРµ СЃС†РµРЅР°СЂРёСЏ Рё С„РѕСЂРјРёСЂРѕРІР°РЅРёРµ С‚Р°Р№РјР»Р°Р№РЅР°.
+- `exceptions_engine.py`: РїРѕСЃС‚РѕР±СЂР°Р±РѕС‚РєР° С„Р»Р°РіРѕРІ Р›Р—/Р›РЎ РїРѕ РёСЃРєР»СЋС‡РµРЅРёСЏРј (MU, РЅРµРґР°РІРЅСЏСЏ РїСЂРѕС‚РёРІРѕРїРѕР»РѕР¶РЅР°СЏ Р”РЎ, DSP timeout).
+- `generate_station_from_objects.py`: РіРµРЅРµСЂР°С†РёСЏ `station_config.py`/`station_rc_sections.py` РёР· `xml/Objects.xml` (РІРєР»СЋС‡Р°СЏ РіСЂСѓРїРїСѓ РёРЅРґРёРєР°С‚РѕСЂРѕРІ `1000.9.*`).
+  - РўР°РєР¶Рµ С„РѕСЂРјРёСЂСѓРµС‚ `INDICATORS` Рё `INDICATOR_SUBTYPES` РІ `station_config.py`.
+
+## Р РµРµСЃС‚СЂ РІР°СЂРёР°РЅС‚РѕРІ (С‚РµРєСѓС‰РёР№ РєРѕРґ)
+
+### Р’Р°СЂРёР°РЅС‚С‹ Р›Р—
+| Р’Р°СЂРёР°РЅС‚ | Р¤Р°Р№Р» | Р¤Р°Р·С‹ | NeighborRequirement | РћСЃРЅРѕРІРЅС‹Рµ РїР°СЂР°РјРµС‚СЂС‹ |
+|---|---|---:|---|---|
+| LZ1 | `tools/variant1_lz_factory.py` | 2 | `BOTH` | `ts01_lz1`, `tlz_lz1`, `tkon_lz1` |
+| LZ2 | `tools/variant2_lz_factory.py` | 3 | `BOTH` | `ts01_lz2`, `ts02_lz2`, `tlz_lz2`, `tkon_lz2` |
+| LZ3 | `tools/variant3_lz_factory.py` | 3 | `BOTH` | `ts01_lz3`, `ts02_lz3`, `tlz_lz3`, `tkon_lz3` |
+| LZ4 | `tools/variant4_lz_factory.py` | 2 (РїРѕ РІРµС‚РєРµ) | `ONE_NC` | `ts01_lz4`, `tlz_lz4`, `tkon_lz4`, `sig_lz4_prev_to_ctrl`, `sig_lz4_ctrl_to_next` |
+| LZ5 | `tools/variant5_lz_factory.py` | 2 | `ONLY_CTRL` | `ts01_lz5`, `tlz_lz5`, `tkon_lz5` |
+| LZ6 | `tools/variant6_lz_factory.py` | 2 | `ONLY_CTRL` | `ts01_lz6`, `tlz_lz6`, `tkon_lz6` |
+| LZ7 | `tools/variant7_lz_factory.py` | 2 (РїРѕ РІРµС‚РєРµ) | `NONE` | `ts01_lz7`, `tlz_lz7`, `tkon_lz7` |
+| LZ8 | `tools/variant8_lz_factory.py` | 3 (РїРѕ РІРµС‚РєРµ) | `BOTH` | `ts01_lz8`, `ts02_lz8`, `tlz_lz8`, `tkon_lz8` |
+| LZ9 | `tools/variant_lz9_lz_factory.py` | С‚Р°Р№РјРёРЅРіРѕРІР°СЏ РјР°С€РёРЅР° СЃРѕСЃС‚РѕСЏРЅРёР№ | РєР°СЃС‚РѕРјРЅС‹Р№ РґРµС‚РµРєС‚РѕСЂ | `ts01_lz9`, `tlz_lz9`, `tkon_lz9` |
+| LZ10 | `tools/variant_lz10_lz_factory.py` | 4 | `ONLY_CTRL` | `ts01_lz10`, `ts02_lz10`, `ts03_lz10`, `tlz_lz10`, `tkon_lz10`, `sig_lz10_to_next`, `sig_lz10_to_prev` |
+| LZ11 | `tools/variant_lz11_lz_factory.py` | 2 | `ONLY_CTRL` | `ts01_lz11`, `tlz_lz11`, `tkon_lz11`, `sig_lz11_a`, `sig_lz11_b` |
+| LZ12 | `tools/variant_lz12_lz_factory.py` | 3 (РїРѕ РІРµС‚РєРµ) | `ONE_NC` | `ts01_lz12`, `ts02_lz12`, `tlz_lz12`, `tkon_lz12` |
+| LZ13 | `tools/variant_lz13_lz_factory.py` | 3 | `ONE_ADJ` | `ts01_lz13`, `ts02_lz13`, `tlz_lz13`, `tkon_lz13`, `sig_lz13_prev`, `sig_lz13_next` |
+
+### Р’Р°СЂРёР°РЅС‚С‹ Р›РЎ
+| Р’Р°СЂРёР°РЅС‚ | Р¤Р°Р№Р» | Р¤Р°Р·С‹ | NeighborRequirement | РћСЃРЅРѕРІРЅС‹Рµ РїР°СЂР°РјРµС‚СЂС‹ |
+|---|---|---:|---|---|
+| LS1 | `tools/variant_ls1_lz_factory.py` | 2 | `BOTH` | `ts01_ls1`, `tlz_ls1`, `tkon_ls1` |
+| LS2 | `tools/variant_ls2_lz_factory.py` | 3 (РїРѕ РІРµС‚РєРµ) | `BOTH` | `ts01_ls2`, `ts02_ls2`, `tlz_ls2`, `tkon_ls2` |
+| LS4 | `tools/variant_ls4_lz_factory.py` | 3 | `BOTH` | `ts01_ls4`, `tlz01_ls4`, `tlz02_ls4`, `tkon_ls4` |
+| LS5 | `tools/variant_ls5_lz_factory.py` | 2 (РїРѕ РІРµС‚РєРµ) | `BOTH` | `ts01_ls5`, `tlz_ls5`, `tkon_ls5` |
+| LS6 | `tools/variant_ls6_lz_factory.py` | 2 | `ONE_NC` | `ts01_ls6`, `tlz_ls6`, `tkon_ls6`, `sig_ls6_prev` |
+| LS9 | `tools/variant_ls9_lz_factory.py` | 3 | `ONLY_CTRL` | `ts01_ls9`, `tlz_ls9`, `tkon_ls9` |
+
+## РљР°РЅРѕРЅРёС‡РµСЃРєР°СЏ СЃРёСЃС‚РµРјР° РјР°СЃРѕРє
+
+РљР°РЅРѕРЅРёС‡РµСЃРєРёРµ ID РёСЃРїРѕР»СЊР·СѓСЋС‚СЃСЏ РІ `variants_common.py` (`get_mask_by_id`, `mask_to_string`).
+
+### Р”РёР°РїР°Р·РѕРЅС‹ ID
+- РџСЂРѕСЃС‚С‹Рµ RC-РјР°СЃРєРё: `1..`
+- РљРѕРјРїРѕР·РёС‚РЅС‹Рµ OR-РјР°СЃРєРё: `100..`
+- X/ctrl/lock/nc/signal/timing РјР°СЃРєРё: РІС‹РґРµР»РµРЅРЅС‹Рµ РґРёР°РїР°Р·РѕРЅС‹, СѓР¶Рµ РёСЃРїРѕР»СЊР·СѓРµРјС‹Рµ РІ РєРѕРґРµ.
+- РЎРѕС…СЂР°РЅРµРЅ alias РґР»СЏ СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚Рё: `106 -> 101`.
+
+### РљР°РЅРѕРЅРёС‡РµСЃРєРёРµ РёРјРµРЅР° РІ РєРѕРґРµ
+РџСЂРёРјРµСЂС‹:
+- `RC_0_0_0`, `RC_0_1_0`, `RC_1_0_1`, `RC_1_1_1`
+- `RC_0NL`, `RC_1NL`
+- `RC_N_1_0L`, `RC_N_1_1L`, `RC_L0_1_N`, `RC_L1_1_N`
+- `RC_CTRL_1__ADJ_FREE_OR_NC`, `RC_CTRL_0__ADJ_OCC`
+- `SIG_0_RC_0_SIG_0`, `RC_0_1_0_SIG_1`, `RC_0_1_1_SIG_1`
+
+РџРѕР»РЅС‹Р№ С‡РµСЂРЅРѕРІРёРє Рё РѕР±РѕСЃРЅРѕРІР°РЅРёРµ: `tools/docs/MASK_REGISTRY_DRAFT.md`.
+
+## РљРѕРЅС‚СЂР°РєС‚ С„Р»Р°РіРѕРІ
+Р¤Р»Р°РіРё С„РѕСЂРјРёСЂСѓСЋС‚СЃСЏ С‡РµСЂРµР· `detectors_engine.py` + `flags_engine.py`.
+
+### Р›Р—
+- Active: `llz_v{N}`
+- Open: `llz_v{N}_open`
+- Closed: `llz_v{N}_closed`
+
+### Р›РЎ
+- Active: `lls_{N}`
+- Open: `lls_{N}_open`
+- Closed: `lls_{N}_closed`
+
+РџСЂРёРѕСЂРёС‚РµС‚ РІР°СЂРёР°РЅС‚Р° РІ `flags_engine.py` СѓС‡РёС‚С‹РІР°РµС‚ Р°РєС‚РёРІРЅРѕРµ СЃРѕСЃС‚РѕСЏРЅРёРµ РґРµС‚РµРєС‚РѕСЂР° (РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРѕ LS `100+` РїСЂРёРѕСЂРёС‚РµС‚РЅРµРµ LZ).
+
+## РСЃРєР»СЋС‡РµРЅРёСЏ (Р›Р—/Р›РЎ)
+
+РСЃРєР»СЋС‡РµРЅРёСЏ РєРѕРЅС„РёРіСѓСЂРёСЂСѓСЋС‚СЃСЏ РІ `DetectorsConfig` Рё РїСЂРёРјРµРЅСЏСЋС‚СЃСЏ РІ `sim_core.run()` РєР°Рє РїРѕСЃС‚РѕР±СЂР°Р±РѕС‚РєР°.
+
+- РџРѕРґР°РІР»РµРЅРёСЏ Р›Р—:
+  - `enable_lz_exc_mu`, `t_mu`
+  - `enable_lz_exc_recent_ls`, `t_recent_ls`
+  - `enable_lz_exc_dsp`, `t_min_maneuver_v8`
+- РџРѕРґР°РІР»РµРЅРёСЏ Р›РЎ:
+  - `enable_ls_exc_mu`, `t_ls_mu`
+  - `enable_ls_exc_after_lz`, `t_ls_after_lz`
+  - `enable_ls_exc_dsp`, `t_ls_dsp`
+
+Р’СЃРµ С„Р»Р°РіРё РёСЃРєР»СЋС‡РµРЅРёР№ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ РІС‹РєР»СЋС‡РµРЅС‹.
+
+### РРЅС‚РµРіСЂР°С†РёСЏ РЅР° СѓСЂРѕРІРЅРµ С„Р°Р· (Р»СЋР±РѕР№ РґРµС‚РµРєС‚РѕСЂ/С„Р°Р·Р°)
+
+`PhaseConfig` РїРѕРґРґРµСЂР¶РёРІР°РµС‚ Р°РІР°СЂРёР№РЅС‹Р№ СЃР±СЂРѕСЃ С„Р°Р·С‹ РїРѕ РєР»СЋС‡Р°Рј РёСЃРєР»СЋС‡РµРЅРёР№:
+
+- `abort_exception_keys: Tuple[str, ...]`
+- `reset_on_exception: bool` (РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ `True`)
+
+РљР»СЋС‡Рё РїСЂРѕР±СЂР°СЃС‹РІР°СЋС‚СЃСЏ РІ `step.modes` РёР· РёСЃС‚РѕСЂРёРё СЂР°РЅС‚Р°Р№РјР° РІ `sim_core`:
+- `exc_lz_mu_active`
+- `exc_lz_recent_ls`
+- `exc_lz_dsp_timeout`
+- `exc_lz_dsp_timeout`
+- `exc_ls_mu_active`
+- `exc_ls_after_lz`
+- `exc_ls_dsp_timeout`
+
+РўРµРєСѓС‰РµРµ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ:
+- Р¤Р°Р·С‹ `LZ8` Р·Р°С‰РёС‰РµРЅС‹ `exc_lz_dsp_timeout` Рё РїСЂРµСЂС‹РІР°СЋС‚СЃСЏ РґРѕ РѕС‚РєСЂС‹С‚РёСЏ.
+
+### РћР±СЉРµРєС‚РЅС‹Рµ РІС…РѕРґС‹ (`MU/NAS/CHAS/DSP`)
+
+РћР±СЉРµРєС‚С‹-РёСЃС‚РѕС‡РЅРёРєРё РёСЃРєР»СЋС‡РµРЅРёР№ РјРѕР¶РЅРѕ Р·Р°РґР°РІР°С‚СЊ РІ:
+- `tools/exceptions_objects.json`
+
+РЎС…РµРјР°:
+- `id`: СѓРЅРёРєР°Р»СЊРЅС‹Р№ ID РѕР±СЉРµРєС‚Р° (СЃС‚СЂРѕРєР°)
+- `kind`: `MU | NAS | CHAS | DSP`
+- `target_rc_ids`: СЃРїРёСЃРѕРє RC ID (`DSP` С‚СЂР°РєС‚СѓРµС‚СЃСЏ РєР°Рє РіР»РѕР±Р°Р»СЊРЅС‹Р№)
+- `active_states`: СЃРїРёСЃРѕРє Р°РєС‚РёРІРЅС‹С… state ID
+
+Р Р°РЅС‚Р°Р№Рј:
+- РўРµРєСѓС‰РёРµ СЃРѕСЃС‚РѕСЏРЅРёСЏ РѕР±СЉРµРєС‚РѕРІ РїРµСЂРµРґР°СЋС‚СЃСЏ РІ `ScenarioStep.indicator_states` РєР°Рє `{object_id: state}`.
+- `sim_core` РјР°РїРїРёС‚ Р°РєС‚РёРІРЅС‹Рµ РѕР±СЉРµРєС‚С‹ РІРѕ РІС…РѕРґС‹ РґРµС‚РµРєС‚РѕСЂРѕРІ:
+  - `MU` -> `step.mu[ctrl_rc_id] = 1`
+  - `NAS/CHAS` -> `step.auto_actions["nas"/"chas"] = 0`
+  - `DSP` -> `step.dispatcher_control_state = 4` (РµСЃР»Рё СЏРІРЅРѕ РЅРµ Р·Р°РґР°РЅРѕ)
+
+РљРѕРЅРІРµРЅС†РёСЏ СЃРѕСЃС‚РѕСЏРЅРёСЏ РёРЅРґРёРєР°С‚РѕСЂРѕРІ РґР»СЏ РѕР±СЉРµРєС‚РѕРІ РёСЃРєР»СЋС‡РµРЅРёР№:
+- `3` = РІС‹РєР»СЋС‡РµРЅ (РЅРµР°РєС‚РёРІРµРЅ)
+- `6` = РІРєР»СЋС‡РµРЅ (Р°РєС‚РёРІРµРЅ, Р±РµР»С‹Р№)
+- РµСЃР»Рё `active_states` РЅРµ СѓРєР°Р·Р°РЅРѕ РІ JSON, РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ `[6]`.
+
+### DSP policy (detector-global)
+
+`exceptions_objects.json` РјРѕР¶РµС‚ СЃРѕРґРµСЂР¶Р°С‚СЊ `dsp_policy`:
+
+- `default`
+  - `enabled`: bool
+  - `mode`: СЃРµР№С‡Р°СЃ `detector_global`
+  - `count_scope`: `ctrl_occupied` РёР»Рё `always`
+  - `variants`: СЃРїРёСЃРѕРє РЅРѕРјРµСЂРѕРІ РІР°СЂРёР°РЅС‚РѕРІ Р›Р— (РЅР°РїСЂРёРјРµСЂ, `[8]`)
+  - `t_maneuver`: РїРѕСЂРѕРі РІ СЃРµРєСѓРЅРґР°С…
+- `rc_overrides`: РїРµСЂРµРѕРїСЂРµРґРµР»РµРЅРёСЏ РїРѕ RC ID
+
+РџРѕРІРµРґРµРЅРёРµ:
+- РїРѕРєР° DSP Р°РєС‚РёРІРµРЅ Рё Р°РІС‚Рѕ-РґРµР№СЃС‚РІРёСЏ РІС‹РєР»СЋС‡РµРЅС‹ (`0`/`3`), С‚Р°Р№РјРµСЂ РєРѕРїРёС‚СЃСЏ РїРѕ scope policy;
+- РїСЂРё РґРѕСЃС‚РёР¶РµРЅРёРё `t_maneuver` РІС‹Р±СЂР°РЅРЅС‹Рµ РІР°СЂРёР°РЅС‚С‹ РґРµС‚РµРєС‚РѕСЂРѕРІ СЃР±СЂР°СЃС‹РІР°СЋС‚СЃСЏ;
+- СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰РёРµ С„Р»Р°РіРё `llz_v{N}*` РїРѕРґР°РІР»СЏСЋС‚СЃСЏ Рё РґРѕР±Р°РІР»СЏРµС‚СЃСЏ `lz_suppressed:dsp_detector_gate`.
+
+## РџРµСЂРµРґР°С‡Р° РІРѕ С„СЂРѕРЅС‚РµРЅРґ (СЃС‚Р°СЂС‚)
+Р”РѕР±Р°РІР»РµРЅ РґРѕРєСѓРјРµРЅС‚ РїРµСЂРµРґР°С‡Рё РґР»СЏ С„СЂРѕРЅС‚РµРЅРґР°:
+- `tools/docs/FRONTEND_HANDOFF.md`
+
+Р’ РЅРµРј РѕРїРёСЃР°РЅС‹:
+- С„РѕСЂРјР° payload С‚Р°Р№РјР»Р°Р№РЅР° РёР· `sim_core.TimelineStep`
+- РѕР±СЏР·Р°С‚РµР»СЊРЅС‹Рµ РїРѕР»СЏ РґР»СЏ РіСЂР°С„РёРєРѕРІ/СЃС‚Р°С‚СѓСЃРѕРІ
+- РјР°РїРїРёРЅРі РІР°СЂРёР°РЅС‚Р° Рё С„Р»Р°РіРѕРІ
+- РїРѕСЌС‚Р°РїРЅС‹Р№ РїР»Р°РЅ РёРЅС‚РµРіСЂР°С†РёРё
+- DTO layout СЃС‚Р°РЅС†РёРё РґР»СЏ SVG-СЂРµРЅРґРµСЂР° РІРѕ С„СЂРѕРЅС‚РµРЅРґРµ (`GET /station-layout`)
+
+## РџСЂРёРјРµС‡Р°РЅРёСЏ
+- `tools/variants_common.py` СЃРѕРґРµСЂР¶РёС‚ alias РґР»СЏ РѕР±СЂР°С‚РЅРѕР№ СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚Рё СЃС‚Р°СЂС‹С… РёРјРµРЅ РјР°СЃРѕРє, РїСЂРё СЌС‚РѕРј РєР°РЅРѕРЅРёС‡РµСЃРєРёРµ РёРјРµРЅР° РѕСЃС‚Р°СЋС‚СЃСЏ РѕСЃРЅРѕРІРЅС‹РјРё.
+- `legasy/` РЅРµ РІС…РѕРґРёС‚ РІ Р°РєС‚РёРІРЅСѓСЋ РѕР±Р»Р°СЃС‚СЊ С‚РµСЃС‚РѕРІ.
+

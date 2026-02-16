@@ -1,0 +1,1359 @@
+[
+  {
+    "name": "1НО&sol;1ЧП",
+    "description": "1НО/1ЧП",
+    "type": "1000.9.2",
+    "id": "131",
+    "adk_type": "004.02.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "1НО&sol;1ЧП",
+      "Description": "1НО/1ЧП",
+      "Type": "1000.9.2",
+      "ADKType": "004.02.100",
+      "ID": "131",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "8",
+              "Condition": "Прием = 0 AND Отпр = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "AdkNumber": "9",
+              "Condition": "Прием = 1 AND Отпр = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "AdkNumber": "10",
+              "Condition": "Прием = 0 AND Отпр = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "Отпр",
+          "Description": "Контроль установленного направления движения (направление отправление)",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП40/C1",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "Прием",
+          "Description": "Контроль установленного направления движения (направление приём)",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП40/C3",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СменаНапр",
+          "Description": "Контроль смены направления",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП40/C15",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "1ЧО&sol;1НП",
+    "description": "1ЧО/1НП",
+    "type": "1000.9.2",
+    "id": "140",
+    "adk_type": "004.02.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "1ЧО&sol;1НП",
+      "Description": "1ЧО/1НП",
+      "Type": "1000.9.2",
+      "ADKType": "004.02.100",
+      "ID": "140",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "8",
+              "Condition": "Прием = 0 AND Отпр = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "AdkNumber": "9",
+              "Condition": "Прием = 1 AND Отпр = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "AdkNumber": "10",
+              "Condition": "Прием = 0 AND Отпр = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "Отпр",
+          "Description": "Контроль установленного направления движения (направление отправление)",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП42/C1",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "Прием",
+          "Description": "Контроль установленного направления движения (направление приём)",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП42/C3",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СменаНапр",
+          "Description": "Контроль смены направления",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП42/C15",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "2НО&sol;2ЧП",
+    "description": "2НО/2ЧП",
+    "type": "1000.9.2",
+    "id": "136",
+    "adk_type": "004.02.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2НО&sol;2ЧП",
+      "Description": "2НО/2ЧП",
+      "Type": "1000.9.2",
+      "ADKType": "004.02.100",
+      "ID": "136",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "8",
+              "Condition": "Прием = 0 AND Отпр = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "AdkNumber": "9",
+              "Condition": "Прием = 1 AND Отпр = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "AdkNumber": "10",
+              "Condition": "Прием = 0 AND Отпр = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "Отпр",
+          "Description": "Контроль установленного направления движения (направление отправление)",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП41/C1",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "Прием",
+          "Description": "Контроль установленного направления движения (направление приём)",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП41/C3",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СменаНапр",
+          "Description": "Контроль смены направления",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП41/C15",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "2ЧО&sol;2НП",
+    "description": "2ЧО/2НП",
+    "type": "1000.9.2",
+    "id": "144",
+    "adk_type": "004.02.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2ЧО&sol;2НП",
+      "Description": "2ЧО/2НП",
+      "Type": "1000.9.2",
+      "ADKType": "004.02.100",
+      "ID": "144",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "8",
+              "Condition": "Прием = 0 AND Отпр = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "AdkNumber": "9",
+              "Condition": "Прием = 1 AND Отпр = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "AdkNumber": "10",
+              "Condition": "Прием = 0 AND Отпр = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "Отпр",
+          "Description": "Контроль установленного направления движения (направление отправление)",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП43/C1",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "Прием",
+          "Description": "Контроль установленного направления движения (направление приём)",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП43/C3",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СменаНапр",
+          "Description": "Контроль смены направления",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП43/C15",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Авария ПП1 (ПП1А)",
+    "description": "Авария ПП1 (ПП1А)",
+    "type": "1000.9.2",
+    "id": "700",
+    "adk_type": "042.02.05",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Авария ПП1 (ПП1А)",
+      "Description": "Авария ПП1 (ПП1А)",
+      "Type": "1000.9.2",
+      "ADKType": "042.02.05",
+      "ID": "700",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "О = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "О = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "О",
+          "Description": "Контроль аварийного отказа",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП47/C7",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "AvarPeshPer",
+          "Description": "Авария пешеходного перехода",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "41527",
+          "WriteProtocol": "true",
+          "AdkNumber": "131073"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "О = 1",
+              "Delay": "Авария пешеходного перехода/NТ_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "О = 0",
+              "Delay": "Авария пешеходного перехода/NТ_min"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Авария ПП3 (ПП3А)",
+    "description": "Авария ПП3 (ПП3А)",
+    "type": "1000.9.2",
+    "id": "704",
+    "adk_type": "042.02.05",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Авария ПП3 (ПП3А)",
+      "Description": "Авария ПП3 (ПП3А)",
+      "Type": "1000.9.2",
+      "ADKType": "042.02.05",
+      "ID": "704",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "О = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "О = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "О",
+          "Description": "Контроль аварийного отказа",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП47/C17",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "AvarPeshPer",
+          "Description": "Авария пешеходного перехода",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "41527",
+          "WriteProtocol": "true",
+          "AdkNumber": "131073"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "О = 1",
+              "Delay": "Авария пешеходного перехода/NТ_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "О = 0",
+              "Delay": "Авария пешеходного перехода/NТ_min"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Н1АС",
+    "description": "Н1АС",
+    "type": "1000.9.2",
+    "id": "284",
+    "adk_type": "012.02.01",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Н1АС",
+      "Description": "Н1АС",
+      "Type": "1000.9.2",
+      "ADKType": "012.02.01",
+      "ID": "284",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "AdkNumber": "2",
+              "Condition": "АС = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "3",
+              "Condition": "АС = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "АС",
+          "Description": "Контроль автодействия светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП17/C2",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "НАС",
+    "description": "НАС",
+    "type": "1000.9.2",
+    "id": "80",
+    "adk_type": "012.02.01",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "НАС",
+      "Description": "НАС",
+      "Type": "1000.9.2",
+      "ADKType": "012.02.01",
+      "ID": "80",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "AdkNumber": "2",
+              "Condition": "АС = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "3",
+              "Condition": "АС = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "АС",
+          "Description": "Контроль автодействия светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП26/C1",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Неисправность ПП1 (ПП1НП)",
+    "description": "Неисправность ПП1 (ПП1НП)",
+    "type": "1000.9.2",
+    "id": "699",
+    "adk_type": "042.02.04",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Неисправность ПП1 (ПП1НП)",
+      "Description": "Неисправность ПП1 (ПП1НП)",
+      "Type": "1000.9.2",
+      "ADKType": "042.02.04",
+      "ID": "699",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "Перех.неиспр = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "Перех.неиспр = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "Перех.неиспр",
+          "Description": "Контроль неисправности пешеходного перехода",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП47/C6",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeispPeshPer",
+          "Description": "Неисправность пешеходного перехода",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "41524",
+          "WriteProtocol": "true",
+          "AdkNumber": "13027"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "Перех.неиспр = 1",
+              "Delay": "Неисправность пешеходного перехода/NТ_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "Перех.неиспр = 0",
+              "Delay": "Неисправность пешеходного перехода/NТ_min"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Неисправность ПП3 (ПП3НП)",
+    "description": "Неисправность ПП3 (ПП3НП)",
+    "type": "1000.9.2",
+    "id": "703",
+    "adk_type": "042.02.04",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Неисправность ПП3 (ПП3НП)",
+      "Description": "Неисправность ПП3 (ПП3НП)",
+      "Type": "1000.9.2",
+      "ADKType": "042.02.04",
+      "ID": "703",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "Перех.неиспр = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "Перех.неиспр = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "Перех.неиспр",
+          "Description": "Контроль неисправности пешеходного перехода",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП47/C16",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeispPeshPer",
+          "Description": "Неисправность пешеходного перехода",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "41524",
+          "WriteProtocol": "true",
+          "AdkNumber": "13027"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "Перех.неиспр = 1",
+              "Delay": "Неисправность пешеходного перехода/NТ_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "Перех.неиспр = 0",
+              "Delay": "Неисправность пешеходного перехода/NТ_min"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "НМ1АС",
+    "description": "НМ1АС",
+    "type": "1000.9.2",
+    "id": "397",
+    "adk_type": "012.02.01",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "НМ1АС",
+      "Description": "НМ1АС",
+      "Type": "1000.9.2",
+      "ADKType": "012.02.01",
+      "ID": "397",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "AdkNumber": "2",
+              "Condition": "АС = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "3",
+              "Condition": "АС = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "АС",
+          "Description": "Контроль автодействия светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП37/C2",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "ПА1НСН",
+    "description": "ПА1НСН",
+    "type": "1000.9.2",
+    "id": "161",
+    "adk_type": "004.02.101",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПА1НСН",
+      "Description": "ПА1НСН",
+      "Type": "1000.9.2",
+      "ADKType": "004.02.101",
+      "ID": "161",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "2",
+              "Condition": "АварСменаНапр = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "3",
+              "Condition": "АварСменаНапр = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "АварСменаНапр",
+          "Description": "Контроль аварийной смены направления",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП1/C6",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "ПА1ЧСН",
+    "description": "ПА1ЧСН",
+    "type": "1000.9.2",
+    "id": "163",
+    "adk_type": "004.02.101",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПА1ЧСН",
+      "Description": "ПА1ЧСН",
+      "Type": "1000.9.2",
+      "ADKType": "004.02.101",
+      "ID": "163",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "2",
+              "Condition": "АварСменаНапр = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "3",
+              "Condition": "АварСменаНапр = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "АварСменаНапр",
+          "Description": "Контроль аварийной смены направления",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП1/C8",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "ПА2НСН",
+    "description": "ПА2НСН",
+    "type": "1000.9.2",
+    "id": "162",
+    "adk_type": "004.02.101",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПА2НСН",
+      "Description": "ПА2НСН",
+      "Type": "1000.9.2",
+      "ADKType": "004.02.101",
+      "ID": "162",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "2",
+              "Condition": "АварСменаНапр = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "3",
+              "Condition": "АварСменаНапр = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "АварСменаНапр",
+          "Description": "Контроль аварийной смены направления",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП1/C7",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "ПА2ЧСН",
+    "description": "ПА2ЧСН",
+    "type": "1000.9.2",
+    "id": "164",
+    "adk_type": "004.02.101",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПА2ЧСН",
+      "Description": "ПА2ЧСН",
+      "Type": "1000.9.2",
+      "ADKType": "004.02.101",
+      "ID": "164",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "2",
+              "Condition": "АварСменаНапр = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "3",
+              "Condition": "АварСменаНапр = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "АварСменаНапр",
+          "Description": "Контроль аварийной смены направления",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП1/C9",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Ручное закрытие ПП1 (ПП1зП)",
+    "description": "Ручное закрытие ПП1 (ПП1зП)",
+    "type": "1000.9.2",
+    "id": "698",
+    "adk_type": "042.02.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Ручное закрытие ПП1 (ПП1зП)",
+      "Description": "Ручное закрытие ПП1 (ПП1зП)",
+      "Type": "1000.9.2",
+      "ADKType": "042.02.02",
+      "ID": "698",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "ЗПДСП = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "6",
+              "AdkNumber": "3",
+              "Condition": "ЗПДСП = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "ЗПДСП",
+          "Description": "Контроль закрытия переезда ДСП",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП47/C3",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Ручное закрытие ПП3 (ПП3зП)",
+    "description": "Ручное закрытие ПП3 (ПП3зП)",
+    "type": "1000.9.2",
+    "id": "702",
+    "adk_type": "042.02.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Ручное закрытие ПП3 (ПП3зП)",
+      "Description": "Ручное закрытие ПП3 (ПП3зП)",
+      "Type": "1000.9.2",
+      "ADKType": "042.02.02",
+      "ID": "702",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "ЗПДСП = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "6",
+              "AdkNumber": "3",
+              "Condition": "ЗПДСП = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "ЗПДСП",
+          "Description": "Контроль закрытия переезда ДСП",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП47/C13",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "САУТ",
+    "description": "САУТ",
+    "type": "1000.9.2",
+    "id": "324",
+    "adk_type": "007.02.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "САУТ",
+      "Description": "САУТ",
+      "Type": "1000.9.2",
+      "ADKType": "007.02.100",
+      "ID": "324",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "САУТ = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "3",
+              "Condition": "САУТ = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "САУТ",
+          "Description": "Контроль нормальной работы устройств САУТ",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП23/C8",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "MalfunctionSAUT",
+          "Description": "Неисправность САУТ",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2406",
+          "AdkNumber": "13201"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "САУТ = 0",
+              "Delay": "Неисправность САУТ/NТ_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "САУТ = 1",
+              "Delay": "Неисправность САУТ/NТ_min"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Ч2АС",
+    "description": "Ч2АС",
+    "type": "1000.9.2",
+    "id": "377",
+    "adk_type": "012.02.01",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Ч2АС",
+      "Description": "Ч2АС",
+      "Type": "1000.9.2",
+      "ADKType": "012.02.01",
+      "ID": "377",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "AdkNumber": "2",
+              "Condition": "АС = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "3",
+              "Condition": "АС = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "АС",
+          "Description": "Контроль автодействия светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП32/C2",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "ЧАС",
+    "description": "ЧАС",
+    "type": "1000.9.2",
+    "id": "43",
+    "adk_type": "012.02.01",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ЧАС",
+      "Description": "ЧАС",
+      "Type": "1000.9.2",
+      "ADKType": "012.02.01",
+      "ID": "43",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "AdkNumber": "2",
+              "Condition": "АС = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "3",
+              "Condition": "АС = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "АС",
+          "Description": "Контроль автодействия светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП9/C13",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "ЧМ2АС",
+    "description": "ЧМ2АС",
+    "type": "1000.9.2",
+    "id": "310",
+    "adk_type": "012.02.01",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ЧМ2АС",
+      "Description": "ЧМ2АС",
+      "Type": "1000.9.2",
+      "ADKType": "012.02.01",
+      "ID": "310",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "AdkNumber": "2",
+              "Condition": "АС = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "3",
+              "Condition": "АС = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "АС",
+          "Description": "Контроль автодействия светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП21/C2",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  }
+]

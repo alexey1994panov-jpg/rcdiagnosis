@@ -1,0 +1,2266 @@
+[
+  {
+    "name": "1",
+    "description": "1",
+    "type": "1000.2.1",
+    "id": "87",
+    "adk_type": "011.01.105",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "1",
+      "Description": "1",
+      "Type": "1000.2.1",
+      "ADKType": "011.01.105",
+      "ID": "87",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND (SwSection = 3 OR SwExclRules(0) = 1)"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND SwSection = 4"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND SwSection = 5"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "6",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND SwSection = 6"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "7",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND SwSection = 7"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND SwSection = 8"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "9",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND (SwSection = 3 OR SwExclRules(0) = 1)"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND SwSection = 4"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "11",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND SwSection = 5"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "12",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND SwSection = 6"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "13",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND SwSection = 7"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "14",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND SwSection = 8"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "15",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND (SwSection = 3 OR SwExclRules(0) = 1)"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "16",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND SwSection = 4"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "17",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND SwSection = 6"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "18",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND SwSection = 7"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "19",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND SwSection = 5"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "20",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND SwSection = 8"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "SwExclRules",
+          "CLASS": "SwExcludeRules_ObjData",
+          "FROM": "./SwitchRules.xml?/1"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "МК",
+          "Description": "Минусовой контроль",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП28/C7",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "ПК",
+          "Description": "Плюсовой контроль",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП28/C6",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "AddlShifting",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/1&sol;3СА"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "PrevSec",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/НП"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "SwSection",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/1-7СП"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "NextMi",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/3СП"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "NextSwPl",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/5"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "SwitchTimeGreaterThenNorm",
+          "Description": "Завышение времени перевода",
+          "CLASS": "Tdm.Unification.SmartTasks.SwitchTimeGreaterThenNormTask",
+          "Number": "305",
+          "LostControlDSNumbers": "301, 302, 304, 311",
+          "AdkNumber": "660"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Невозможность перевода стрелки на свободной стрелочной секции",
+          "Description": "Невозможность перевода стрелки на свободной стрелочной секции",
+          "CLASS": "Tdm.Unification.SmartTasks.Switch.FreeRCSectionSwitchInabilityTask",
+          "Number": "330",
+          "LostControlDSNumbers": "301, 302, 304, 311",
+          "AdkNumber": "15274"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Switch",
+          "Description": "Перевод",
+          "CLASS": "Tdm.Unification.SmartTasks.SwitchTask",
+          "Number": "327",
+          "AdkNumber": "13030"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "SwitchLostControl",
+          "Description": "ПотеряКонтр",
+          "CLASS": "Tdm.Unification.SmartTasks.SwitchMuLostControlTechTask",
+          "Number": "41151",
+          "AdkNumber": "417"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "SwitchBusyLostControlTechTask",
+          "Description": "Потеря контроля при занятой или замкнутой стрелке",
+          "CLASS": "Tdm.Unification.SmartTasks.SwitchBusyLostControlTechTask",
+          "Number": "302",
+          "AdkNumber": "657"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "SwitchTime",
+          "Description": "Расчет времени перевода",
+          "CLASS": "Tdm.Unification.SmartTasks.SwitchTimeTechTask",
+          "SigOut": "../РасчВремПеревода",
+          "Number": "1"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "РасчВремПеревода",
+          "CODE": "РасчВремПеревода",
+          "Description": "Расчет времени перевода",
+          "CLASS": "Tdm.Unification.SmartTasks.VirtualUniObjData",
+          "ParamID": "87001",
+          "ParamType": "73"
+        }
+      }
+    ]
+  },
+  {
+    "name": "10",
+    "description": "10",
+    "type": "1000.2.1",
+    "id": "110",
+    "adk_type": "011.01.105",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "10",
+      "Description": "10",
+      "Type": "1000.2.1",
+      "ADKType": "011.01.105",
+      "ID": "110",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND (SwSection = 3 OR SwExclRules(0) = 1)"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND SwSection = 4"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND SwSection = 5"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "6",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND SwSection = 6"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "7",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND SwSection = 7"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND SwSection = 8"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "9",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND (SwSection = 3 OR SwExclRules(0) = 1)"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND SwSection = 4"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "11",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND SwSection = 5"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "12",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND SwSection = 6"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "13",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND SwSection = 7"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "14",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND SwSection = 8"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "15",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND (SwSection = 3 OR SwExclRules(0) = 1)"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "16",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND SwSection = 4"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "17",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND SwSection = 6"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "18",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND SwSection = 7"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "19",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND SwSection = 5"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "20",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND SwSection = 8"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "SwExclRules",
+          "CLASS": "SwExcludeRules_ObjData",
+          "FROM": "./SwitchRules.xml?/10"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "МК",
+          "Description": "Минусовой контроль",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП37/C12",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "ПК",
+          "Description": "Плюсовой контроль",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП37/C11",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "AddlShifting",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/10СА"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "PrevSec",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/1АП"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "SwSection",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/10-12СП"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "NextMi",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/3П"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "NextPl",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/1П"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "SwitchTimeGreaterThenNorm",
+          "Description": "Завышение времени перевода",
+          "CLASS": "Tdm.Unification.SmartTasks.SwitchTimeGreaterThenNormTask",
+          "Number": "305",
+          "LostControlDSNumbers": "301, 302, 304, 311",
+          "AdkNumber": "660"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Невозможность перевода стрелки на свободной стрелочной секции",
+          "Description": "Невозможность перевода стрелки на свободной стрелочной секции",
+          "CLASS": "Tdm.Unification.SmartTasks.Switch.FreeRCSectionSwitchInabilityTask",
+          "Number": "330",
+          "LostControlDSNumbers": "301, 302, 304, 311",
+          "AdkNumber": "15274"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Switch",
+          "Description": "Перевод",
+          "CLASS": "Tdm.Unification.SmartTasks.SwitchTask",
+          "Number": "327",
+          "AdkNumber": "13030"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "SwitchLostControl",
+          "Description": "ПотеряКонтр",
+          "CLASS": "Tdm.Unification.SmartTasks.SwitchMuLostControlTechTask",
+          "Number": "41151",
+          "AdkNumber": "417"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "SwitchBusyLostControlTechTask",
+          "Description": "Потеря контроля при занятой или замкнутой стрелке",
+          "CLASS": "Tdm.Unification.SmartTasks.SwitchBusyLostControlTechTask",
+          "Number": "302",
+          "AdkNumber": "657"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "SwitchTime",
+          "Description": "Расчет времени перевода",
+          "CLASS": "Tdm.Unification.SmartTasks.SwitchTimeTechTask",
+          "SigOut": "../РасчВремПеревода",
+          "Number": "1"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "РасчВремПеревода",
+          "CODE": "РасчВремПеревода",
+          "Description": "Расчет времени перевода",
+          "CLASS": "Tdm.Unification.SmartTasks.VirtualUniObjData",
+          "ParamID": "110001",
+          "ParamType": "73"
+        }
+      }
+    ]
+  },
+  {
+    "name": "16",
+    "description": "16",
+    "type": "1000.2.1",
+    "id": "73",
+    "adk_type": "011.01.105",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "16",
+      "Description": "16",
+      "Type": "1000.2.1",
+      "ADKType": "011.01.105",
+      "ID": "73",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND (SwSection = 3 OR SwExclRules(0) = 1)"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND SwSection = 4"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND SwSection = 5"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "6",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND SwSection = 6"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "7",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND SwSection = 7"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND SwSection = 8"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "9",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND (SwSection = 3 OR SwExclRules(0) = 1)"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND SwSection = 4"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "11",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND SwSection = 5"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "12",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND SwSection = 6"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "13",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND SwSection = 7"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "14",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND SwSection = 8"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "15",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND (SwSection = 3 OR SwExclRules(0) = 1)"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "16",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND SwSection = 4"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "17",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND SwSection = 6"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "18",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND SwSection = 7"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "19",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND SwSection = 5"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "20",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND SwSection = 8"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "SwExclRules",
+          "CLASS": "SwExcludeRules_ObjData",
+          "FROM": "./SwitchRules.xml?/16"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "МК",
+          "Description": "Минусовой контроль",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП21/C17",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "ПК",
+          "Description": "Плюсовой контроль",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП21/C16",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "AddlShifting",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/16СА"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "NextPl",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/2АП"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "NextMi",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/4П"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "PrevSec",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/2П"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "SwSection",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/14-16СП"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "SwitchTimeGreaterThenNorm",
+          "Description": "Завышение времени перевода",
+          "CLASS": "Tdm.Unification.SmartTasks.SwitchTimeGreaterThenNormTask",
+          "Number": "305",
+          "LostControlDSNumbers": "301, 302, 304, 311",
+          "AdkNumber": "660"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Невозможность перевода стрелки на свободной стрелочной секции",
+          "Description": "Невозможность перевода стрелки на свободной стрелочной секции",
+          "CLASS": "Tdm.Unification.SmartTasks.Switch.FreeRCSectionSwitchInabilityTask",
+          "Number": "330",
+          "LostControlDSNumbers": "301, 302, 304, 311",
+          "AdkNumber": "15274"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Switch",
+          "Description": "Перевод",
+          "CLASS": "Tdm.Unification.SmartTasks.SwitchTask",
+          "Number": "327",
+          "AdkNumber": "13030"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "SwitchLostControl",
+          "Description": "ПотеряКонтр",
+          "CLASS": "Tdm.Unification.SmartTasks.SwitchMuLostControlTechTask",
+          "Number": "41151",
+          "AdkNumber": "417"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "SwitchBusyLostControlTechTask",
+          "Description": "Потеря контроля при занятой или замкнутой стрелке",
+          "CLASS": "Tdm.Unification.SmartTasks.SwitchBusyLostControlTechTask",
+          "Number": "302",
+          "AdkNumber": "657"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "SwitchTime",
+          "Description": "Расчет времени перевода",
+          "CLASS": "Tdm.Unification.SmartTasks.SwitchTimeTechTask",
+          "SigOut": "../РасчВремПеревода",
+          "Number": "1"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "РасчВремПеревода",
+          "CODE": "РасчВремПеревода",
+          "Description": "Расчет времени перевода",
+          "CLASS": "Tdm.Unification.SmartTasks.VirtualUniObjData",
+          "ParamID": "73001",
+          "ParamType": "73"
+        }
+      }
+    ]
+  },
+  {
+    "name": "2",
+    "description": "2",
+    "type": "1000.2.1",
+    "id": "32",
+    "adk_type": "011.01.105",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2",
+      "Description": "2",
+      "Type": "1000.2.1",
+      "ADKType": "011.01.105",
+      "ID": "32",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND (SwSection = 3 OR SwExclRules(0) = 1)"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND SwSection = 4"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND SwSection = 5"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "6",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND SwSection = 6"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "7",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND SwSection = 7"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND SwSection = 8"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "9",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND (SwSection = 3 OR SwExclRules(0) = 1)"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND SwSection = 4"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "11",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND SwSection = 5"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "12",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND SwSection = 6"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "13",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND SwSection = 7"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "14",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND SwSection = 8"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "15",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND (SwSection = 3 OR SwExclRules(0) = 1)"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "16",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND SwSection = 4"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "17",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND SwSection = 6"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "18",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND SwSection = 7"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "19",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND SwSection = 5"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "20",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND SwSection = 8"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "SwExclRules",
+          "CLASS": "SwExcludeRules_ObjData",
+          "FROM": "./SwitchRules.xml?/2"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "МК",
+          "Description": "Минусовой контроль",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП10/C2",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "ПК",
+          "Description": "Плюсовой контроль",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП10/C1",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "AddlShifting",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/2СА"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "SwSection",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/2-8СП"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "NextPl",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/6СП"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "PrevSec",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/ЧП"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "NextMi",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/4П"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "SwitchTimeGreaterThenNorm",
+          "Description": "Завышение времени перевода",
+          "CLASS": "Tdm.Unification.SmartTasks.SwitchTimeGreaterThenNormTask",
+          "Number": "305",
+          "LostControlDSNumbers": "301, 302, 304, 311",
+          "AdkNumber": "660"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Невозможность перевода стрелки на свободной стрелочной секции",
+          "Description": "Невозможность перевода стрелки на свободной стрелочной секции",
+          "CLASS": "Tdm.Unification.SmartTasks.Switch.FreeRCSectionSwitchInabilityTask",
+          "Number": "330",
+          "LostControlDSNumbers": "301, 302, 304, 311",
+          "AdkNumber": "15274"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Switch",
+          "Description": "Перевод",
+          "CLASS": "Tdm.Unification.SmartTasks.SwitchTask",
+          "Number": "327",
+          "AdkNumber": "13030"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "SwitchLostControl",
+          "Description": "ПотеряКонтр",
+          "CLASS": "Tdm.Unification.SmartTasks.SwitchMuLostControlTechTask",
+          "Number": "41151",
+          "AdkNumber": "417"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "SwitchBusyLostControlTechTask",
+          "Description": "Потеря контроля при занятой или замкнутой стрелке",
+          "CLASS": "Tdm.Unification.SmartTasks.SwitchBusyLostControlTechTask",
+          "Number": "302",
+          "AdkNumber": "657"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "SwitchTime",
+          "Description": "Расчет времени перевода",
+          "CLASS": "Tdm.Unification.SmartTasks.SwitchTimeTechTask",
+          "SigOut": "../РасчВремПеревода",
+          "Number": "1"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "РасчВремПеревода",
+          "CODE": "РасчВремПеревода",
+          "Description": "Расчет времени перевода",
+          "CLASS": "Tdm.Unification.SmartTasks.VirtualUniObjData",
+          "ParamID": "32001",
+          "ParamType": "73"
+        }
+      }
+    ]
+  },
+  {
+    "name": "3",
+    "description": "3",
+    "type": "1000.2.1",
+    "id": "150",
+    "adk_type": "011.01.103",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3",
+      "Description": "3",
+      "Type": "1000.2.1",
+      "ADKType": "011.01.103",
+      "ID": "150",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND (SwSection = 3 OR SwExclRules(0) = 1)"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND SwSection = 4"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND SwSection = 5"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "6",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND SwSection = 6"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "7",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND SwSection = 7"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND SwSection = 8"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "9",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND (SwSection = 3 OR SwExclRules(0) = 1)"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND SwSection = 4"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "11",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND SwSection = 5"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "12",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND SwSection = 6"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "13",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND SwSection = 7"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "14",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND SwSection = 8"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "15",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND (SwSection = 3 OR SwExclRules(0) = 1)"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "16",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND SwSection = 4"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "17",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND SwSection = 6"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "18",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND SwSection = 7"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "19",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND SwSection = 5"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "20",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND SwSection = 8"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "SwExclRules",
+          "CLASS": "SwExcludeRules_ObjData",
+          "FROM": "./SwitchRules.xml?/3"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "МК",
+          "Description": "Минусовой контроль",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП28/C7",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "ПК",
+          "Description": "Плюсовой контроль",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП28/C6",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "AddlShifting",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/1&sol;3СА"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "NextMi",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/1-7СП"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "SwSection",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/3СП"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "Main",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/1"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "PrevSec",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/2П"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "NextPl",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/НДП"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Невозможность перевода стрелки на свободной стрелочной секции",
+          "Description": "Невозможность перевода стрелки на свободной стрелочной секции",
+          "CLASS": "Tdm.Unification.SmartTasks.Switch.FreeRCSectionSwitchInabilityTask",
+          "Number": "330",
+          "LostControlDSNumbers": "301, 302, 304, 311",
+          "AdkNumber": "15274"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "SwitchBusyLostControlTechTask",
+          "Description": "Потеря контроля при занятой или замкнутой стрелке",
+          "CLASS": "Tdm.Unification.SmartTasks.SwitchBusyLostControlTechTask",
+          "Number": "302",
+          "AdkNumber": "657"
+        }
+      }
+    ]
+  },
+  {
+    "name": "4",
+    "description": "4",
+    "type": "1000.2.1",
+    "id": "33",
+    "adk_type": "011.01.105",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "4",
+      "Description": "4",
+      "Type": "1000.2.1",
+      "ADKType": "011.01.105",
+      "ID": "33",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND (SwSection = 3 OR SwExclRules(0) = 1)"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND SwSection = 4"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND SwSection = 5"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "6",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND SwSection = 6"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "7",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND SwSection = 7"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND SwSection = 8"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "9",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND (SwSection = 3 OR SwExclRules(0) = 1)"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND SwSection = 4"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "11",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND SwSection = 5"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "12",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND SwSection = 6"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "13",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND SwSection = 7"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "14",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND SwSection = 8"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "15",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND (SwSection = 3 OR SwExclRules(0) = 1)"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "16",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND SwSection = 4"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "17",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND SwSection = 6"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "18",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND SwSection = 7"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "19",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND SwSection = 5"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "20",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND SwSection = 8"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "SwExclRules",
+          "CLASS": "SwExcludeRules_ObjData",
+          "FROM": "./SwitchRules.xml?/4"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "МК",
+          "Description": "Минусовой контроль",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП10/C4",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "ПК",
+          "Description": "Плюсовой контроль",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП10/C3",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "AddlShifting",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/4&sol;6СА"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "NextMi",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/6СП"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "NextPl",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/1АП"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "PrevSec",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/ЧДП"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "SwSection",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/4СП"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "SwitchTimeGreaterThenNorm",
+          "Description": "Завышение времени перевода",
+          "CLASS": "Tdm.Unification.SmartTasks.SwitchTimeGreaterThenNormTask",
+          "Number": "305",
+          "LostControlDSNumbers": "301, 302, 304, 311",
+          "AdkNumber": "660"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Невозможность перевода стрелки на свободной стрелочной секции",
+          "Description": "Невозможность перевода стрелки на свободной стрелочной секции",
+          "CLASS": "Tdm.Unification.SmartTasks.Switch.FreeRCSectionSwitchInabilityTask",
+          "Number": "330",
+          "LostControlDSNumbers": "301, 302, 304, 311",
+          "AdkNumber": "15274"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Switch",
+          "Description": "Перевод",
+          "CLASS": "Tdm.Unification.SmartTasks.SwitchTask",
+          "Number": "327",
+          "AdkNumber": "13030"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "SwitchLostControl",
+          "Description": "ПотеряКонтр",
+          "CLASS": "Tdm.Unification.SmartTasks.SwitchMuLostControlTechTask",
+          "Number": "41151",
+          "AdkNumber": "417"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "SwitchBusyLostControlTechTask",
+          "Description": "Потеря контроля при занятой или замкнутой стрелке",
+          "CLASS": "Tdm.Unification.SmartTasks.SwitchBusyLostControlTechTask",
+          "Number": "302",
+          "AdkNumber": "657"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "SwitchTime",
+          "Description": "Расчет времени перевода",
+          "CLASS": "Tdm.Unification.SmartTasks.SwitchTimeTechTask",
+          "SigOut": "../РасчВремПеревода",
+          "Number": "1"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "РасчВремПеревода",
+          "CODE": "РасчВремПеревода",
+          "Description": "Расчет времени перевода",
+          "CLASS": "Tdm.Unification.SmartTasks.VirtualUniObjData",
+          "ParamID": "33001",
+          "ParamType": "73"
+        }
+      }
+    ]
+  },
+  {
+    "name": "5",
+    "description": "5",
+    "type": "1000.2.1",
+    "id": "88",
+    "adk_type": "011.01.105",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "5",
+      "Description": "5",
+      "Type": "1000.2.1",
+      "ADKType": "011.01.105",
+      "ID": "88",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND (SwSection = 3 OR SwExclRules(0) = 1)"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND SwSection = 4"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND SwSection = 5"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "6",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND SwSection = 6"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "7",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND SwSection = 7"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND SwSection = 8"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "9",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND (SwSection = 3 OR SwExclRules(0) = 1)"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND SwSection = 4"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "11",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND SwSection = 5"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "12",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND SwSection = 6"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "13",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND SwSection = 7"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "14",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND SwSection = 8"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "15",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND (SwSection = 3 OR SwExclRules(0) = 1)"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "16",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND SwSection = 4"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "17",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND SwSection = 6"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "18",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND SwSection = 7"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "19",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND SwSection = 5"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "20",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND SwSection = 8"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "SwExclRules",
+          "CLASS": "SwExcludeRules_ObjData",
+          "FROM": "./SwitchRules.xml?/5"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "МК",
+          "Description": "Минусовой контроль",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП28/C9",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "ПК",
+          "Description": "Плюсовой контроль",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП28/C8",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "AddlShifting",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/5СА"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "SwSection",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/1-7СП"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "PrevSw",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/1"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "NextMi",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/3П"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "NextPl",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/1П"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "SwitchTimeGreaterThenNorm",
+          "Description": "Завышение времени перевода",
+          "CLASS": "Tdm.Unification.SmartTasks.SwitchTimeGreaterThenNormTask",
+          "Number": "305",
+          "LostControlDSNumbers": "301, 302, 304, 311",
+          "AdkNumber": "660"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Невозможность перевода стрелки на свободной стрелочной секции",
+          "Description": "Невозможность перевода стрелки на свободной стрелочной секции",
+          "CLASS": "Tdm.Unification.SmartTasks.Switch.FreeRCSectionSwitchInabilityTask",
+          "Number": "330",
+          "LostControlDSNumbers": "301, 302, 304, 311",
+          "AdkNumber": "15274"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Switch",
+          "Description": "Перевод",
+          "CLASS": "Tdm.Unification.SmartTasks.SwitchTask",
+          "Number": "327",
+          "AdkNumber": "13030"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "SwitchLostControl",
+          "Description": "ПотеряКонтр",
+          "CLASS": "Tdm.Unification.SmartTasks.SwitchMuLostControlTechTask",
+          "Number": "41151",
+          "AdkNumber": "417"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "SwitchBusyLostControlTechTask",
+          "Description": "Потеря контроля при занятой или замкнутой стрелке",
+          "CLASS": "Tdm.Unification.SmartTasks.SwitchBusyLostControlTechTask",
+          "Number": "302",
+          "AdkNumber": "657"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "SwitchTime",
+          "Description": "Расчет времени перевода",
+          "CLASS": "Tdm.Unification.SmartTasks.SwitchTimeTechTask",
+          "SigOut": "../РасчВремПеревода",
+          "Number": "1"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "РасчВремПеревода",
+          "CODE": "РасчВремПеревода",
+          "Description": "Расчет времени перевода",
+          "CLASS": "Tdm.Unification.SmartTasks.VirtualUniObjData",
+          "ParamID": "88001",
+          "ParamType": "73"
+        }
+      }
+    ]
+  },
+  {
+    "name": "6",
+    "description": "6",
+    "type": "1000.2.1",
+    "id": "149",
+    "adk_type": "011.01.103",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "6",
+      "Description": "6",
+      "Type": "1000.2.1",
+      "ADKType": "011.01.103",
+      "ID": "149",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND (SwSection = 3 OR SwExclRules(0) = 1)"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND SwSection = 4"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND SwSection = 5"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "6",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND SwSection = 6"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "7",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND SwSection = 7"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND SwSection = 8"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "9",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND (SwSection = 3 OR SwExclRules(0) = 1)"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND SwSection = 4"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "11",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND SwSection = 5"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "12",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND SwSection = 6"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "13",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND SwSection = 7"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "14",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND SwSection = 8"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "15",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND (SwSection = 3 OR SwExclRules(0) = 1)"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "16",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND SwSection = 4"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "17",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND SwSection = 6"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "18",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND SwSection = 7"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "19",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND SwSection = 5"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "20",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND SwSection = 8"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "SwExclRules",
+          "CLASS": "SwExcludeRules_ObjData",
+          "FROM": "./SwitchRules.xml?/6"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "МК",
+          "Description": "Минусовой контроль",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП10/C4",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "ПК",
+          "Description": "Плюсовой контроль",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП10/C3",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "AddlShifting",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/4&sol;6СА"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "Main",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/4"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "NextPl",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/2-8СП"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "SwSection",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/6СП"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "NextMi",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/4СП"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "PrevSec",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/2АП"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Невозможность перевода стрелки на свободной стрелочной секции",
+          "Description": "Невозможность перевода стрелки на свободной стрелочной секции",
+          "CLASS": "Tdm.Unification.SmartTasks.Switch.FreeRCSectionSwitchInabilityTask",
+          "Number": "330",
+          "LostControlDSNumbers": "301, 302, 304, 311",
+          "AdkNumber": "15274"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "SwitchBusyLostControlTechTask",
+          "Description": "Потеря контроля при занятой или замкнутой стрелке",
+          "CLASS": "Tdm.Unification.SmartTasks.SwitchBusyLostControlTechTask",
+          "Number": "302",
+          "AdkNumber": "657"
+        }
+      }
+    ]
+  }
+]

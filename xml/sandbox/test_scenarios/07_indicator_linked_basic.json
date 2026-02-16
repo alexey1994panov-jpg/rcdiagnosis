@@ -1,0 +1,10 @@
+﻿{
+  "station": "Visochino",
+  "dt": 1,
+  "options": {},
+  "events": [
+    { "t": 1, "kind": "indicator", "name": "IЧ1УП", "state": 3 },
+    { "t": 2, "kind": "indicator", "name": "IЧ1УП", "state": 4 },
+    { "t": 3, "kind": "indicator", "name": "IЧ1УП", "state": 3 }
+  ]
+}

@@ -1,0 +1,155 @@
+[
+  {
+    "name": "Байпас",
+    "description": "Байпас",
+    "type": "1000.8.80",
+    "id": "869",
+    "adk_type": "008.80.01",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Байпас",
+      "Description": "Байпас",
+      "Type": "1000.8.80",
+      "ADKType": "008.80.01",
+      "ID": "869",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "БайпасВкл = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "БайпасВкл = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "БайпасВкл",
+          "Description": "Контроль включения Байпас",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП48/C3",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Байпас1",
+    "description": "Байпас1",
+    "type": "1000.8.80",
+    "id": "870",
+    "adk_type": "008.80.01",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Байпас1",
+      "Description": "Байпас1",
+      "Type": "1000.8.80",
+      "ADKType": "008.80.01",
+      "ID": "870",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "БайпасВкл = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "БайпасВкл = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "БайпасВкл",
+          "Description": "Контроль включения Байпас",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП48/C4",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Байпас2",
+    "description": "Байпас2",
+    "type": "1000.8.80",
+    "id": "871",
+    "adk_type": "008.80.01",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Байпас2",
+      "Description": "Байпас2",
+      "Type": "1000.8.80",
+      "ADKType": "008.80.01",
+      "ID": "871",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "БайпасВкл = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "БайпасВкл = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "БайпасВкл",
+          "Description": "Контроль включения Байпас",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП48/C5",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  }
+]

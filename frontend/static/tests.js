@@ -9,6 +9,14 @@ async function fetchJson(url, options) {
   return await resp.json();
 }
 
+function stripLegacyTargetRc(obj) {
+  if (!obj || typeof obj !== "object") return obj;
+  if (Object.prototype.hasOwnProperty.call(obj, "target_rc")) {
+    delete obj.target_rc;
+  }
+  return obj;
+}
+
 // Заполнить список тестов
 async function renderTestsList() {
   try {
@@ -50,11 +58,11 @@ async function loadSelectedTest() {
     const data = await fetchJson(`/tests/${encodeURIComponent(sel.value)}`);
 
     if (data.json) {
-      window.scenario = data.json;
+      window.scenario = stripLegacyTargetRc(data.json);
     } else if (data.scenario) {
-      window.scenario = data.scenario;
+      window.scenario = stripLegacyTargetRc(data.scenario);
     } else {
-      window.scenario = data;
+      window.scenario = stripLegacyTargetRc(data);
     }
 
     // Таблица сценария
@@ -65,7 +73,6 @@ async function loadSelectedTest() {
         console.error("rebuildScenarioTableFromScenario error", e);
       }
     }
-
     // Опции в форму
     if (typeof fillOptionsFormFromScenario === "function") {
       fillOptionsFormFromScenario();
@@ -101,7 +108,7 @@ async function saveCurrentAsTest() {
 
     const testData = {
       name,
-      scenario: window.scenario,
+      scenario: stripLegacyTargetRc(window.scenario),
       lastStatus: "unknown",
       comment: "",
     };

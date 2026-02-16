@@ -1,0 +1,7620 @@
+[
+  {
+    "name": "1КрейтВхНапр",
+    "description": "1КрейтВхНапр",
+    "type": "1000.8.60",
+    "id": "685",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "1КрейтВхНапр",
+      "Description": "1КрейтВхНапр",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "685",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП49/C13",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "1КрейтЗащ220",
+    "description": "1КрейтЗащ220",
+    "type": "1000.8.60",
+    "id": "682",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "1КрейтЗащ220",
+      "Description": "1КрейтЗащ220",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "682",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП49/C10",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "1КрейтЗащ24",
+    "description": "1КрейтЗащ24",
+    "type": "1000.8.60",
+    "id": "683",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "1КрейтЗащ24",
+      "Description": "1КрейтЗащ24",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "683",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП49/C11",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "1КрейтИстВ1",
+    "description": "1КрейтИстВ1",
+    "type": "1000.8.60",
+    "id": "690",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "1КрейтИстВ1",
+      "Description": "1КрейтИстВ1",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "690",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП49/C18",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "1КрейтИстВ2",
+    "description": "1КрейтИстВ2",
+    "type": "1000.8.60",
+    "id": "689",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "1КрейтИстВ2",
+      "Description": "1КрейтИстВ2",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "689",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП49/C17",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "1КрейтИстВ3",
+    "description": "1КрейтИстВ3",
+    "type": "1000.8.60",
+    "id": "688",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "1КрейтИстВ3",
+      "Description": "1КрейтИстВ3",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "688",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП49/C16",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "1КрейтИстВ4",
+    "description": "1КрейтИстВ4",
+    "type": "1000.8.60",
+    "id": "687",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "1КрейтИстВ4",
+      "Description": "1КрейтИстВ4",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "687",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП49/C15",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "1КрейтИстВ5",
+    "description": "1КрейтИстВ5",
+    "type": "1000.8.60",
+    "id": "686",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "1КрейтИстВ5",
+      "Description": "1КрейтИстВ5",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "686",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП49/C14",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "1КрейтТокЗащ",
+    "description": "1КрейтТокЗащ",
+    "type": "1000.8.60",
+    "id": "684",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "1КрейтТокЗащ",
+      "Description": "1КрейтТокЗащ",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "684",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП49/C12",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "2КрейтВхНапр",
+    "description": "2КрейтВхНапр",
+    "type": "1000.8.60",
+    "id": "665",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2КрейтВхНапр",
+      "Description": "2КрейтВхНапр",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "665",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП50/C3",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "2КрейтЗащ220",
+    "description": "2КрейтЗащ220",
+    "type": "1000.8.60",
+    "id": "691",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2КрейтЗащ220",
+      "Description": "2КрейтЗащ220",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "691",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП49/C20",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "2КрейтЗащ24",
+    "description": "2КрейтЗащ24",
+    "type": "1000.8.60",
+    "id": "663",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2КрейтЗащ24",
+      "Description": "2КрейтЗащ24",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "663",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП50/C1",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "2КрейтИстВ1",
+    "description": "2КрейтИстВ1",
+    "type": "1000.8.60",
+    "id": "670",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2КрейтИстВ1",
+      "Description": "2КрейтИстВ1",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "670",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП50/C8",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "2КрейтИстВ2",
+    "description": "2КрейтИстВ2",
+    "type": "1000.8.60",
+    "id": "669",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2КрейтИстВ2",
+      "Description": "2КрейтИстВ2",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "669",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП50/C7",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "2КрейтИстВ3",
+    "description": "2КрейтИстВ3",
+    "type": "1000.8.60",
+    "id": "668",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2КрейтИстВ3",
+      "Description": "2КрейтИстВ3",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "668",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП50/C6",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "2КрейтИстВ4",
+    "description": "2КрейтИстВ4",
+    "type": "1000.8.60",
+    "id": "667",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2КрейтИстВ4",
+      "Description": "2КрейтИстВ4",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "667",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП50/C5",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "2КрейтИстВ5",
+    "description": "2КрейтИстВ5",
+    "type": "1000.8.60",
+    "id": "666",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2КрейтИстВ5",
+      "Description": "2КрейтИстВ5",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "666",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП50/C4",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "2КрейтТокЗащ",
+    "description": "2КрейтТокЗащ",
+    "type": "1000.8.60",
+    "id": "664",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2КрейтТокЗащ",
+      "Description": "2КрейтТокЗащ",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "664",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП50/C2",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "3КрейтВхНапр",
+    "description": "3КрейтВхНапр",
+    "type": "1000.8.60",
+    "id": "674",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3КрейтВхНапр",
+      "Description": "3КрейтВхНапр",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "674",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП50/C13",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "3КрейтЗащ220",
+    "description": "3КрейтЗащ220",
+    "type": "1000.8.60",
+    "id": "671",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3КрейтЗащ220",
+      "Description": "3КрейтЗащ220",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "671",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП50/C10",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "3КрейтЗащ24",
+    "description": "3КрейтЗащ24",
+    "type": "1000.8.60",
+    "id": "672",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3КрейтЗащ24",
+      "Description": "3КрейтЗащ24",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "672",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП50/C11",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "3КрейтИстВ1",
+    "description": "3КрейтИстВ1",
+    "type": "1000.8.60",
+    "id": "679",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3КрейтИстВ1",
+      "Description": "3КрейтИстВ1",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "679",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП50/C18",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "3КрейтИстВ2",
+    "description": "3КрейтИстВ2",
+    "type": "1000.8.60",
+    "id": "678",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3КрейтИстВ2",
+      "Description": "3КрейтИстВ2",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "678",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП50/C17",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "3КрейтИстВ3",
+    "description": "3КрейтИстВ3",
+    "type": "1000.8.60",
+    "id": "677",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3КрейтИстВ3",
+      "Description": "3КрейтИстВ3",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "677",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП50/C16",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "3КрейтИстВ4",
+    "description": "3КрейтИстВ4",
+    "type": "1000.8.60",
+    "id": "676",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3КрейтИстВ4",
+      "Description": "3КрейтИстВ4",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "676",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП50/C15",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "3КрейтИстВ5",
+    "description": "3КрейтИстВ5",
+    "type": "1000.8.60",
+    "id": "675",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3КрейтИстВ5",
+      "Description": "3КрейтИстВ5",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "675",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП50/C14",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "3КрейтТокЗащ",
+    "description": "3КрейтТокЗащ",
+    "type": "1000.8.60",
+    "id": "673",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "3КрейтТокЗащ",
+      "Description": "3КрейтТокЗащ",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "673",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП50/C12",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "4КрейтВхНапр",
+    "description": "4КрейтВхНапр",
+    "type": "1000.8.60",
+    "id": "645",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "4КрейтВхНапр",
+      "Description": "4КрейтВхНапр",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "645",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП51/C3",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "4КрейтЗащ220",
+    "description": "4КрейтЗащ220",
+    "type": "1000.8.60",
+    "id": "680",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "4КрейтЗащ220",
+      "Description": "4КрейтЗащ220",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "680",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП50/C20",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "4КрейтЗащ24",
+    "description": "4КрейтЗащ24",
+    "type": "1000.8.60",
+    "id": "643",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "4КрейтЗащ24",
+      "Description": "4КрейтЗащ24",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "643",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП51/C1",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "4КрейтИстВ1",
+    "description": "4КрейтИстВ1",
+    "type": "1000.8.60",
+    "id": "650",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "4КрейтИстВ1",
+      "Description": "4КрейтИстВ1",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "650",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП51/C8",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "4КрейтИстВ2",
+    "description": "4КрейтИстВ2",
+    "type": "1000.8.60",
+    "id": "649",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "4КрейтИстВ2",
+      "Description": "4КрейтИстВ2",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "649",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП51/C7",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "4КрейтИстВ3",
+    "description": "4КрейтИстВ3",
+    "type": "1000.8.60",
+    "id": "648",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "4КрейтИстВ3",
+      "Description": "4КрейтИстВ3",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "648",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП51/C6",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "4КрейтИстВ4",
+    "description": "4КрейтИстВ4",
+    "type": "1000.8.60",
+    "id": "647",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "4КрейтИстВ4",
+      "Description": "4КрейтИстВ4",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "647",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП51/C5",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "4КрейтИстВ5",
+    "description": "4КрейтИстВ5",
+    "type": "1000.8.60",
+    "id": "646",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "4КрейтИстВ5",
+      "Description": "4КрейтИстВ5",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "646",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП51/C4",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "4КрейтТокЗащ",
+    "description": "4КрейтТокЗащ",
+    "type": "1000.8.60",
+    "id": "644",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "4КрейтТокЗащ",
+      "Description": "4КрейтТокЗащ",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "644",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП51/C2",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "5КрейтВхНапр",
+    "description": "5КрейтВхНапр",
+    "type": "1000.8.60",
+    "id": "654",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "5КрейтВхНапр",
+      "Description": "5КрейтВхНапр",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "654",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП51/C12",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "5КрейтЗащ220",
+    "description": "5КрейтЗащ220",
+    "type": "1000.8.60",
+    "id": "651",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "5КрейтЗащ220",
+      "Description": "5КрейтЗащ220",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "651",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП51/C9",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "5КрейтЗащ24",
+    "description": "5КрейтЗащ24",
+    "type": "1000.8.60",
+    "id": "652",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "5КрейтЗащ24",
+      "Description": "5КрейтЗащ24",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "652",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП51/C10",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "5КрейтИстВ1",
+    "description": "5КрейтИстВ1",
+    "type": "1000.8.60",
+    "id": "659",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "5КрейтИстВ1",
+      "Description": "5КрейтИстВ1",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "659",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП51/C17",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "5КрейтИстВ2",
+    "description": "5КрейтИстВ2",
+    "type": "1000.8.60",
+    "id": "658",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "5КрейтИстВ2",
+      "Description": "5КрейтИстВ2",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "658",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП51/C16",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "5КрейтИстВ3",
+    "description": "5КрейтИстВ3",
+    "type": "1000.8.60",
+    "id": "657",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "5КрейтИстВ3",
+      "Description": "5КрейтИстВ3",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "657",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП51/C15",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "5КрейтИстВ4",
+    "description": "5КрейтИстВ4",
+    "type": "1000.8.60",
+    "id": "656",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "5КрейтИстВ4",
+      "Description": "5КрейтИстВ4",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "656",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП51/C14",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "5КрейтИстВ5",
+    "description": "5КрейтИстВ5",
+    "type": "1000.8.60",
+    "id": "655",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "5КрейтИстВ5",
+      "Description": "5КрейтИстВ5",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "655",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП51/C13",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "5КрейтТокЗащ",
+    "description": "5КрейтТокЗащ",
+    "type": "1000.8.60",
+    "id": "653",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "5КрейтТокЗащ",
+      "Description": "5КрейтТокЗащ",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "653",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП51/C11",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "6КрейтВхНапр",
+    "description": "6КрейтВхНапр",
+    "type": "1000.8.60",
+    "id": "635",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "6КрейтВхНапр",
+      "Description": "6КрейтВхНапр",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "635",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП52/C3",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "6КрейтЗащ220",
+    "description": "6КрейтЗащ220",
+    "type": "1000.8.60",
+    "id": "660",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "6КрейтЗащ220",
+      "Description": "6КрейтЗащ220",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "660",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП51/C20",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "6КрейтЗащ24",
+    "description": "6КрейтЗащ24",
+    "type": "1000.8.60",
+    "id": "454",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "6КрейтЗащ24",
+      "Description": "6КрейтЗащ24",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "454",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП52/C1",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "6КрейтИстВ1",
+    "description": "6КрейтИстВ1",
+    "type": "1000.8.60",
+    "id": "640",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "6КрейтИстВ1",
+      "Description": "6КрейтИстВ1",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "640",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП52/C8",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "6КрейтИстВ2",
+    "description": "6КрейтИстВ2",
+    "type": "1000.8.60",
+    "id": "639",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "6КрейтИстВ2",
+      "Description": "6КрейтИстВ2",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "639",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП52/C7",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "6КрейтИстВ3",
+    "description": "6КрейтИстВ3",
+    "type": "1000.8.60",
+    "id": "638",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "6КрейтИстВ3",
+      "Description": "6КрейтИстВ3",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "638",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП52/C6",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "6КрейтИстВ4",
+    "description": "6КрейтИстВ4",
+    "type": "1000.8.60",
+    "id": "637",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "6КрейтИстВ4",
+      "Description": "6КрейтИстВ4",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "637",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП52/C5",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "6КрейтИстВ5",
+    "description": "6КрейтИстВ5",
+    "type": "1000.8.60",
+    "id": "636",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "6КрейтИстВ5",
+      "Description": "6КрейтИстВ5",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "636",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП52/C4",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "6КрейтТокЗащ",
+    "description": "6КрейтТокЗащ",
+    "type": "1000.8.60",
+    "id": "634",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "6КрейтТокЗащ",
+      "Description": "6КрейтТокЗащ",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "634",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП52/C2",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "U1П220",
+    "description": "U1П220",
+    "type": "1000.8.60",
+    "id": "792",
+    "adk_type": "008.60.118",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "U1П220",
+      "Description": "U1П220",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.118",
+      "ID": "792",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "100",
+              "Condition": "1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "Uпит",
+          "CLASS": "Tdm.Unification.UniObjData",
+          "CODE": "Uпит",
+          "ParamID": "79200108",
+          "ParamType": "12",
+          "Ref": "/Station/IOSys/ДЦЮГизмерения/ДЦИзмерения/ТИ5-16"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Завышение напряжения питания",
+          "Description": "Завышение напряжения питания",
+          "CLASS": "Tdm.Unification.SmartTasks.CondTechTask",
+          "Number": "35489",
+          "AdkNumber": "13223"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "NOT(IsDS(41188)) AND Uпит > TaskName/N_max AND Uпит < TaskName/Nкр_max",
+              "Delay": "TaskName/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "IsDS(41188)"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "Uпит <= TaskName/N_max",
+              "Delay": "TaskName/NT2_min"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Занижение напряжения питания",
+          "Description": "Занижение напряжения питания",
+          "CLASS": "Tdm.Unification.SmartTasks.CondTechTask",
+          "Number": "35490",
+          "AdkNumber": "13224"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "NOT(IsDS(41187)) AND Uпит < TaskName/N_min AND Uпит > TaskName/Nкр_min",
+              "Delay": "TaskName/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "IsDS(41187)"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "Uпит >= TaskName/N_min",
+              "Delay": "TaskName/NT2_min"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Критическое завышение напряжения питания",
+          "Description": "Критическое завышение напряжения питания",
+          "CLASS": "Tdm.Unification.SmartTasks.CondTechTask",
+          "Number": "35492",
+          "AdkNumber": "102872"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "Uпит > TaskName/Nкр_max",
+              "Delay": "TaskName/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "Uпит <= TaskName/N_max",
+              "Delay": "TaskName/NT2_min"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Критическое занижение напряжения питания",
+          "Description": "Критическое занижение напряжения питания",
+          "CLASS": "Tdm.Unification.SmartTasks.CondTechTask",
+          "Number": "35491",
+          "AdkNumber": "102873"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "Uпит < TaskName/Nкр_min",
+              "Delay": "TaskName/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "Uпит >= TaskName/N_min",
+              "Delay": "TaskName/NT2_min"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "U2П220",
+    "description": "U2П220",
+    "type": "1000.8.60",
+    "id": "793",
+    "adk_type": "008.60.118",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "U2П220",
+      "Description": "U2П220",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.118",
+      "ID": "793",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "100",
+              "Condition": "1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "Uпит",
+          "CLASS": "Tdm.Unification.UniObjData",
+          "CODE": "Uпит",
+          "ParamID": "79300109",
+          "ParamType": "12",
+          "Ref": "/Station/IOSys/ДЦЮГизмерения/ДЦИзмерения/ТИ5-17"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Завышение напряжения питания",
+          "Description": "Завышение напряжения питания",
+          "CLASS": "Tdm.Unification.SmartTasks.CondTechTask",
+          "Number": "35489",
+          "AdkNumber": "13223"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "NOT(IsDS(41188)) AND Uпит > TaskName/N_max AND Uпит < TaskName/Nкр_max",
+              "Delay": "TaskName/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "IsDS(41188)"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "Uпит <= TaskName/N_max",
+              "Delay": "TaskName/NT2_min"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Занижение напряжения питания",
+          "Description": "Занижение напряжения питания",
+          "CLASS": "Tdm.Unification.SmartTasks.CondTechTask",
+          "Number": "35490",
+          "AdkNumber": "13224"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "NOT(IsDS(41187)) AND Uпит < TaskName/N_min AND Uпит > TaskName/Nкр_min",
+              "Delay": "TaskName/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "IsDS(41187)"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "Uпит >= TaskName/N_min",
+              "Delay": "TaskName/NT2_min"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Критическое завышение напряжения питания",
+          "Description": "Критическое завышение напряжения питания",
+          "CLASS": "Tdm.Unification.SmartTasks.CondTechTask",
+          "Number": "35492",
+          "AdkNumber": "102872"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "Uпит > TaskName/Nкр_max",
+              "Delay": "TaskName/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "Uпит <= TaskName/N_max",
+              "Delay": "TaskName/NT2_min"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Критическое занижение напряжения питания",
+          "Description": "Критическое занижение напряжения питания",
+          "CLASS": "Tdm.Unification.SmartTasks.CondTechTask",
+          "Number": "35491",
+          "AdkNumber": "102873"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "Uпит < TaskName/Nкр_min",
+              "Delay": "TaskName/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "Uпит >= TaskName/N_min",
+              "Delay": "TaskName/NT2_min"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "UП24В",
+    "description": "UП24В",
+    "type": "1000.8.60",
+    "id": "795",
+    "adk_type": "008.60.118",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "UП24В",
+      "Description": "UП24В",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.118",
+      "ID": "795",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "100",
+              "Condition": "1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "Uпит",
+          "CLASS": "Tdm.Unification.UniObjData",
+          "CODE": "Uпит",
+          "ParamID": "79500111",
+          "ParamType": "12",
+          "Ref": "/Station/IOSys/ДЦЮГизмерения/ДЦИзмерения/ТИ5-19"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Завышение напряжения питания",
+          "Description": "Завышение напряжения питания",
+          "CLASS": "Tdm.Unification.SmartTasks.CondTechTask",
+          "Number": "35489",
+          "AdkNumber": "13223"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "NOT(IsDS(41188)) AND Uпит > TaskName/N_max AND Uпит < TaskName/Nкр_max",
+              "Delay": "TaskName/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "IsDS(41188)"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "Uпит <= TaskName/N_max",
+              "Delay": "TaskName/NT2_min"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Занижение напряжения питания",
+          "Description": "Занижение напряжения питания",
+          "CLASS": "Tdm.Unification.SmartTasks.CondTechTask",
+          "Number": "35490",
+          "AdkNumber": "13224"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "NOT(IsDS(41187)) AND Uпит < TaskName/N_min AND Uпит > TaskName/Nкр_min",
+              "Delay": "TaskName/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "IsDS(41187)"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "Uпит >= TaskName/N_min",
+              "Delay": "TaskName/NT2_min"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Критическое завышение напряжения питания",
+          "Description": "Критическое завышение напряжения питания",
+          "CLASS": "Tdm.Unification.SmartTasks.CondTechTask",
+          "Number": "35492",
+          "AdkNumber": "102872"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "Uпит > TaskName/Nкр_max",
+              "Delay": "TaskName/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "Uпит <= TaskName/N_max",
+              "Delay": "TaskName/NT2_min"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Критическое занижение напряжения питания",
+          "Description": "Критическое занижение напряжения питания",
+          "CLASS": "Tdm.Unification.SmartTasks.CondTechTask",
+          "Number": "35491",
+          "AdkNumber": "102873"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "Uпит < TaskName/Nкр_min",
+              "Delay": "TaskName/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "Uпит >= TaskName/N_min",
+              "Delay": "TaskName/NT2_min"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "UПХ220",
+    "description": "UПХ220",
+    "type": "1000.8.60",
+    "id": "794",
+    "adk_type": "008.60.118",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "UПХ220",
+      "Description": "UПХ220",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.118",
+      "ID": "794",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "100",
+              "Condition": "1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "Uпит",
+          "CLASS": "Tdm.Unification.UniObjData",
+          "CODE": "Uпит",
+          "ParamID": "79400110",
+          "ParamType": "12",
+          "Ref": "/Station/IOSys/ДЦЮГизмерения/ДЦИзмерения/ТИ5-18"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Завышение напряжения питания",
+          "Description": "Завышение напряжения питания",
+          "CLASS": "Tdm.Unification.SmartTasks.CondTechTask",
+          "Number": "35489",
+          "AdkNumber": "13223"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "NOT(IsDS(41188)) AND Uпит > TaskName/N_max AND Uпит < TaskName/Nкр_max",
+              "Delay": "TaskName/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "IsDS(41188)"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "Uпит <= TaskName/N_max",
+              "Delay": "TaskName/NT2_min"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Занижение напряжения питания",
+          "Description": "Занижение напряжения питания",
+          "CLASS": "Tdm.Unification.SmartTasks.CondTechTask",
+          "Number": "35490",
+          "AdkNumber": "13224"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "NOT(IsDS(41187)) AND Uпит < TaskName/N_min AND Uпит > TaskName/Nкр_min",
+              "Delay": "TaskName/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "IsDS(41187)"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "Uпит >= TaskName/N_min",
+              "Delay": "TaskName/NT2_min"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Критическое завышение напряжения питания",
+          "Description": "Критическое завышение напряжения питания",
+          "CLASS": "Tdm.Unification.SmartTasks.CondTechTask",
+          "Number": "35492",
+          "AdkNumber": "102872"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "Uпит > TaskName/Nкр_max",
+              "Delay": "TaskName/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "Uпит <= TaskName/N_max",
+              "Delay": "TaskName/NT2_min"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Критическое занижение напряжения питания",
+          "Description": "Критическое занижение напряжения питания",
+          "CLASS": "Tdm.Unification.SmartTasks.CondTechTask",
+          "Number": "35491",
+          "AdkNumber": "102873"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "Uпит < TaskName/Nкр_min",
+              "Delay": "TaskName/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "Uпит >= TaskName/N_min",
+              "Delay": "TaskName/NT2_min"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "А-ЩВП",
+    "description": "А-ЩВП",
+    "type": "1000.8.60",
+    "id": "872",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "А-ЩВП",
+      "Description": "А-ЩВП",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "872",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП45/C9",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "БатареяКонтактор",
+    "description": "БатареяКонтактор",
+    "type": "1000.8.60",
+    "id": "906",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "БатареяКонтактор",
+      "Description": "БатареяКонтактор",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "906",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП49/C6",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ВПС перевод",
+    "description": "ВПС перевод",
+    "type": "1000.8.60",
+    "id": "873",
+    "adk_type": "008.60.102",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ВПС перевод",
+      "Description": "ВПС перевод",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.102",
+      "ID": "873",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "AdkNumber": "5",
+              "Condition": "КТПС = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "4",
+              "Condition": "КТПС = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КТПС",
+          "Description": "Наличие рабочего тока перевода стрелок",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП6/C15",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "ВСФ",
+    "description": "ВСФ",
+    "type": "1000.8.60",
+    "id": "215",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ВСФ",
+      "Description": "ВСФ",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "215",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП6/C14",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ЗАЩ-ДСП1",
+    "description": "ЗАЩ-ДСП1",
+    "type": "1000.8.60",
+    "id": "912",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ЗАЩ-ДСП1",
+      "Description": "ЗАЩ-ДСП1",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "912",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП45/C18",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ЗАЩ-ДСП2",
+    "description": "ЗАЩ-ДСП2",
+    "type": "1000.8.60",
+    "id": "913",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ЗАЩ-ДСП2",
+      "Description": "ЗАЩ-ДСП2",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "913",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП45/C19",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Инверторы",
+    "description": "Инверторы",
+    "type": "1000.8.60",
+    "id": "905",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Инверторы",
+      "Description": "Инверторы",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "905",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП49/C1",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Источники=220",
+    "description": "Источники=220",
+    "type": "1000.8.60",
+    "id": "904",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Источники=220",
+      "Description": "Источники=220",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "904",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП49/C2",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Источники=24",
+    "description": "Источники=24",
+    "type": "1000.8.60",
+    "id": "903",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Источники=24",
+      "Description": "Источники=24",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "903",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП49/C3",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "кГрозозащита",
+    "description": "кГрозозащита",
+    "type": "1000.8.60",
+    "id": "925",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "кГрозозащита",
+      "Description": "кГрозозащита",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "925",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП48/C20",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Кнопка1фидер",
+    "description": "Кнопка1фидер",
+    "type": "1000.8.60",
+    "id": "914",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Кнопка1фидер",
+      "Description": "Кнопка1фидер",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "914",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП48/C18",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Кнопка2фидер",
+    "description": "Кнопка2фидер",
+    "type": "1000.8.60",
+    "id": "915",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Кнопка2фидер",
+      "Description": "Кнопка2фидер",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "915",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП48/C19",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Контактор1Отказ",
+    "description": "Контактор1Отказ",
+    "type": "1000.8.60",
+    "id": "907",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Контактор1Отказ",
+      "Description": "Контактор1Отказ",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "907",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП48/C16",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Контактор2Отказ",
+    "description": "Контактор2Отказ",
+    "type": "1000.8.60",
+    "id": "908",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Контактор2Отказ",
+      "Description": "Контактор2Отказ",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "908",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП48/C17",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПВз",
+    "description": "ПВз",
+    "type": "1000.8.60",
+    "id": "929",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПВз",
+      "Description": "ПВз",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "929",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП3/C3",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Питание стрелок",
+    "description": "Питание стрелок",
+    "type": "1000.8.60",
+    "id": "791",
+    "adk_type": "008.60.118",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Питание стрелок",
+      "Description": "Питание стрелок",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.118",
+      "ID": "791",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "100",
+              "Condition": "1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "UAB",
+          "CLASS": "Tdm.Unification.UniObjData",
+          "CODE": "UAB",
+          "ParamID": "79100105",
+          "ParamType": "9",
+          "Ref": "/Station/IOSys/ДЦЮГизмерения/ДЦИзмерения/ТИ5-4"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "UBC",
+          "CLASS": "Tdm.Unification.UniObjData",
+          "CODE": "UBC",
+          "ParamID": "79100106",
+          "ParamType": "9",
+          "Ref": "/Station/IOSys/ДЦЮГизмерения/ДЦИзмерения/ТИ5-5"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "UCA",
+          "CLASS": "Tdm.Unification.UniObjData",
+          "CODE": "UCA",
+          "ParamID": "79100107",
+          "ParamType": "9",
+          "Ref": "/Station/IOSys/ДЦЮГизмерения/ДЦИзмерения/ТИ5-6"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "IB",
+          "CLASS": "Tdm.Unification.UniObjData",
+          "CODE": "IB",
+          "ParamID": "79100103",
+          "ParamType": "60",
+          "Ref": "/Station/IOSys/ДЦЮГизмерения/ДЦИзмерения/ТИ5-2"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "IC",
+          "CLASS": "Tdm.Unification.UniObjData",
+          "CODE": "IC",
+          "ParamID": "79100104",
+          "ParamType": "60",
+          "Ref": "/Station/IOSys/ДЦЮГизмерения/ДЦИзмерения/ТИ5-3"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "IA",
+          "CLASS": "Tdm.Unification.UniObjData",
+          "CODE": "IA",
+          "ParamID": "79100102",
+          "ParamType": "60",
+          "Ref": "/Station/IOSys/ДЦЮГизмерения/ДЦИзмерения/ТИ5-1"
+        }
+      }
+    ]
+  },
+  {
+    "name": "ПЛ",
+    "description": "ПЛ",
+    "type": "1000.8.60",
+    "id": "928",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПЛ",
+      "Description": "ПЛ",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "928",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП5/C18",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ТокЗащита",
+    "description": "ТокЗащита",
+    "type": "1000.8.60",
+    "id": "898",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ТокЗащита",
+      "Description": "ТокЗащита",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "898",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП49/C5",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "УЩВП",
+    "description": "УЩВП",
+    "type": "1000.8.60",
+    "id": "127",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "УЩВП",
+      "Description": "УЩВП",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "127",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП45/C10",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Фидер гарант. пит Uб",
+    "description": "Фидер гарант. пит Uб",
+    "type": "1000.8.60",
+    "id": "797",
+    "adk_type": "008.60.118",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Фидер гарант. пит Uб",
+      "Description": "Фидер гарант. пит Uб",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.118",
+      "ID": "797",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "100",
+              "Condition": "1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "U1Ф",
+          "CLASS": "Tdm.Unification.UniObjData",
+          "CODE": "U1Ф",
+          "ParamID": "79700115",
+          "ParamType": "2",
+          "Ref": "/Station/IOSys/ДЦЮГизмерения/ДЦИзмерения/ТИ5-23"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "U2Ф",
+          "CLASS": "Tdm.Unification.UniObjData",
+          "CODE": "U2Ф",
+          "ParamID": "79700116",
+          "ParamType": "2",
+          "Ref": "/Station/IOSys/ДЦЮГизмерения/ДЦИзмерения/ТИ5-24"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "U3Ф",
+          "CLASS": "Tdm.Unification.UniObjData",
+          "CODE": "U3Ф",
+          "ParamID": "79700117",
+          "ParamType": "2",
+          "Ref": "/Station/IOSys/ДЦЮГизмерения/ДЦИзмерения/ТИ5-25"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Фидер гарант. пит Uг",
+    "description": "Фидер гарант. пит Uг",
+    "type": "1000.8.60",
+    "id": "796",
+    "adk_type": "008.60.118",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Фидер гарант. пит Uг",
+      "Description": "Фидер гарант. пит Uг",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.118",
+      "ID": "796",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "100",
+              "Condition": "1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "U1Ф",
+          "CLASS": "Tdm.Unification.UniObjData",
+          "CODE": "U1Ф",
+          "ParamID": "79600112",
+          "ParamType": "2",
+          "Ref": "/Station/IOSys/ДЦЮГизмерения/ДЦИзмерения/ТИ5-20"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "U2Ф",
+          "CLASS": "Tdm.Unification.UniObjData",
+          "CODE": "U2Ф",
+          "ParamID": "79600113",
+          "ParamType": "2",
+          "Ref": "/Station/IOSys/ДЦЮГизмерения/ДЦИзмерения/ТИ5-21"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "U3Ф",
+          "CLASS": "Tdm.Unification.UniObjData",
+          "CODE": "U3Ф",
+          "ParamID": "79600114",
+          "ParamType": "2",
+          "Ref": "/Station/IOSys/ДЦЮГизмерения/ДЦИзмерения/ТИ5-22"
+        }
+      }
+    ]
+  },
+  {
+    "name": "ЦПМ1",
+    "description": "ЦПМ1",
+    "type": "1000.8.60",
+    "id": "916",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ЦПМ1",
+      "Description": "ЦПМ1",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "916",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП45/C1",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ЦПМ2",
+    "description": "ЦПМ2",
+    "type": "1000.8.60",
+    "id": "917",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ЦПМ2",
+      "Description": "ЦПМ2",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "917",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП45/C2",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ШДМ1",
+    "description": "ШДМ1",
+    "type": "1000.8.60",
+    "id": "885",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ШДМ1",
+      "Description": "ШДМ1",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "885",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП46/C6",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ШДМ2",
+    "description": "ШДМ2",
+    "type": "1000.8.60",
+    "id": "888",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ШДМ2",
+      "Description": "ШДМ2",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "888",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП46/C7",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ШДМ3",
+    "description": "ШДМ3",
+    "type": "1000.8.60",
+    "id": "889",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ШДМ3",
+      "Description": "ШДМ3",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "889",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП46/C8",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ШРН-1П220",
+    "description": "ШРН-1П220",
+    "type": "1000.8.60",
+    "id": "890",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ШРН-1П220",
+      "Description": "ШРН-1П220",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "890",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП46/C3",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ШРН-2П220",
+    "description": "ШРН-2П220",
+    "type": "1000.8.60",
+    "id": "891",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ШРН-2П220",
+      "Description": "ШРН-2П220",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "891",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП46/C4",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ШРН-БП",
+    "description": "ШРН-БП",
+    "type": "1000.8.60",
+    "id": "892",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ШРН-БП",
+      "Description": "ШРН-БП",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "892",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП46/C1",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ШРН-ГП",
+    "description": "ШРН-ГП",
+    "type": "1000.8.60",
+    "id": "893",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ШРН-ГП",
+      "Description": "ШРН-ГП",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "893",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП46/C2",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ШРН-Изол.Тр",
+    "description": "ШРН-Изол.Тр",
+    "type": "1000.8.60",
+    "id": "894",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ШРН-Изол.Тр",
+      "Description": "ШРН-Изол.Тр",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "894",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП46/C13",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ШРН-ПХ220",
+    "description": "ШРН-ПХ220",
+    "type": "1000.8.60",
+    "id": "895",
+    "adk_type": "008.60.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ШРН-ПХ220",
+      "Description": "ШРН-ПХ220",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.100",
+      "ID": "895",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "16",
+              "Condition": "НеиспрПит = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "17",
+              "Condition": "НеиспрПит = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НеиспрПит",
+          "Description": "Контроль неисправности питающих устройств",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП46/C5",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NeisprUstrPit",
+          "Description": "Неисправность питающих устройств",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2106",
+          "WriteProtocol": "true",
+          "AdkNumber": "13007"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "НеиспрПит = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "НеиспрПит = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ШРН-ПХЭ",
+    "description": "ШРН-ПХЭ",
+    "type": "1000.8.60",
+    "id": "897",
+    "adk_type": "008.60.102",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ШРН-ПХЭ",
+      "Description": "ШРН-ПХЭ",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.102",
+      "ID": "897",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "AdkNumber": "2",
+              "Condition": "КЭО = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "3",
+              "Condition": "КЭО = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КЭО",
+          "Description": "Контроль включения электрообогрева электроприводов",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП46/C15",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "ШРН-ПХЭ(обогр)",
+    "description": "ШРН-ПХЭ(обогр)",
+    "type": "1000.8.60",
+    "id": "896",
+    "adk_type": "008.60.102",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ШРН-ПХЭ(обогр)",
+      "Description": "ШРН-ПХЭ(обогр)",
+      "Type": "1000.8.60",
+      "ADKType": "008.60.102",
+      "ID": "896",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "AdkNumber": "2",
+              "Condition": "КЭО = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "3",
+              "Condition": "КЭО = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КЭО",
+          "Description": "Контроль включения электрообогрева электроприводов",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП46/C14",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  }
+]

@@ -1,6 +1,5 @@
-// static/tabs.js
+﻿// static/tabs.js
 
-// Инициализация табов
 function initTabs() {
   const buttons = document.querySelectorAll(".tab-button");
   const contents = document.querySelectorAll(".tab-content");
@@ -8,7 +7,6 @@ function initTabs() {
   buttons.forEach((btn) => {
     btn.addEventListener("click", async () => {
       const tabId = btn.getAttribute("data-tab");
-      // Переключаем активный таб
       buttons.forEach((b) => b.classList.remove("active"));
       contents.forEach((c) => c.classList.remove("active"));
       btn.classList.add("active");
@@ -16,12 +14,10 @@ function initTabs() {
       if (targetContent) {
         targetContent.classList.add("active");
       }
-      // Ленивая загрузка фрагмента
       await loadTabFragment(tabId);
     });
   });
 
-  // При старте подгружаем первый активный таб
   const activeBtn = document.querySelector(".tab-button.active");
   if (activeBtn) {
     const firstTabId = activeBtn.getAttribute("data-tab");
@@ -30,36 +26,44 @@ function initTabs() {
 }
 window.initTabs = initTabs;
 
-// Карта табов и HTML-фрагментов
 const fragmentMap = {
-    "tab-lz-exc": "static/fragments/lz_all_exc.html",
-    "tab-ls-exc": "static/fragments/ls_all_exc.html",
-  //"tab-scenario" — статичный, без фрагмента
+  "tab-lz-exc": "static/fragments/lz_all_exc.html",
+  "tab-ls-exc": "static/fragments/ls_all_exc.html",
+  "tab-exc-config": "static/fragments/exceptions_config.html",
 };
 
-// Ленивая загрузка HTML-фрагмента для таба
 async function loadTabFragment(tabId) {
   if (!window.loadedFragments) {
     window.loadedFragments = {};
   }
+
+  const runTabInit = async () => {
+    if (tabId === "tab-exc-config" && typeof window.loadExceptionsConfig === "function") {
+      await window.loadExceptionsConfig();
+    }
+  };
+
   if (window.loadedFragments[tabId]) {
+    await runTabInit();
     return;
   }
 
   const url = fragmentMap[tabId];
   if (!url) {
-    // tab-scenario и прочие без HTML-фрагмента
+    window.loadedFragments[tabId] = true;
+    await runTabInit();
     return;
   }
 
   try {
-    const resp = await fetch(url);
+    const sep = url.includes("?") ? "&" : "?";
+    const bustUrl = `${url}${sep}_ts=${Date.now()}`;
+    const resp = await fetch(bustUrl, { cache: "no-store" });
     if (!resp.ok) {
       console.error("Failed to load fragment", url, resp.status);
       const container = document.getElementById(tabId);
       if (container) {
-        container.innerHTML =
-          `<p style="color:red;">Ошибка загрузки фрагмента (${resp.status})</p>`;
+        container.innerHTML = `<p style="color:red;">Ошибка загрузки фрагмента (${resp.status})</p>`;
       }
       return;
     }
@@ -71,8 +75,8 @@ async function loadTabFragment(tabId) {
     }
 
     window.loadedFragments[tabId] = true;
+    await runTabInit();
 
-    // После первой загрузки фрагмента подставляем значения по умолчанию
     if (window.scenario && window.scenario.options && Object.keys(window.scenario.options).length > 0) {
       applyDefaultsToFragment(tabId);
     }
@@ -85,192 +89,79 @@ async function loadTabFragment(tabId) {
   }
 }
 
-// Подстановка дефолтов с бэка в поля фрагмента
 function applyDefaultsToFragment(tabId) {
   const data = (window.scenario && window.scenario.options) || {};
   if (!data) return;
+  const legacyToCanonical = {
+    t_s0101: "ts01_lz1", t_lz01: "tlz_lz1", t_kon_v1: "tkon_lz1", enable_v1: "enable_lz1",
+    t_s0102: "ts01_lz2", t_s0202: "ts02_lz2", t_lz02: "tlz_lz2", t_kon_v2: "tkon_lz2", enable_v2: "enable_lz2",
+    t_s0103: "ts01_lz3", t_s0203: "ts02_lz3", t_lz03: "tlz_lz3", t_kon_v3: "tkon_lz3", enable_v3: "enable_lz3",
+    t_s0401: "ts01_lz4", t_lz04: "tlz_lz4", t_kon_v4: "tkon_lz4", enable_v4: "enable_lz4",
+    t_s05: "ts01_lz5", t_lz05: "tlz_lz5", t_kon_v5: "tkon_lz5", enable_v5: "enable_lz5",
+    t_s06: "ts01_lz6", t_lz06: "tlz_lz6", t_kon_v6: "tkon_lz6", enable_v6: "enable_lz6",
+    t_s07: "ts01_lz7", t_lz07: "tlz_lz7", t_kon_v7: "tkon_lz7", enable_v7: "enable_lz7",
+    t_s0108: "ts01_lz8", t_s0208: "ts02_lz8", t_lz08: "tlz_lz8", t_kon_v8: "tkon_lz8", enable_v8: "enable_lz8",
+    t_s0109: "ts01_lz9", t_lz09: "tlz_lz9", t_kon_v9: "tkon_lz9", enable_v9: "enable_lz9",
+    t_s0110: "ts01_lz10", t_s0210: "ts02_lz10", t_s0310: "ts03_lz10", t_lz10: "tlz_lz10", t_kon_v10: "tkon_lz10", enable_v10: "enable_lz10",
+    t_s11: "ts01_lz11", t_lz11: "tlz_lz11", t_kon_v11: "tkon_lz11", enable_v11: "enable_lz11",
+    t_s0112: "ts01_lz12", t_s0212: "ts02_lz12", t_lz12: "tlz_lz12", t_kon_v12: "tkon_lz12", enable_v12: "enable_lz12",
+    t_s0113: "ts01_lz13", t_s0213: "ts02_lz13", t_lz13: "tlz_lz13", t_kon_v13: "tkon_lz13", enable_v13: "enable_lz13",
+    t_c0101_ls: "ts01_ls1", t_ls01: "tlz_ls1", t_kon_ls1: "tkon_ls1",
+    t_s0102_ls: "ts01_ls2", t_s0202_ls: "ts02_ls2", t_ls0102: "tlz_ls2", t_kon_ls2: "tkon_ls2",
+    t_s0104_ls: "ts01_ls4", t_s0204_ls: "ts02_ls4", t_ls0104: "tlz01_ls4", t_ls0204: "tlz02_ls4", t_kon_ls4: "tkon_ls4",
+    t_s0105_ls: "ts01_ls5", t_ls05: "tlz_ls5", t_kon_ls5: "tkon_ls5",
+    t_s0106_ls: "ts01_ls6", t_ls06: "tlz_ls6", t_kon_ls6: "tkon_ls6",
+    t_s0109_ls: "ts01_ls9", t_ls0109: "tlz_ls9", t_kon_ls9: "tkon_ls9",
+  };
+  const canonicalToLegacy = Object.fromEntries(Object.entries(legacyToCanonical).map(([k, v]) => [v, k]));
 
   function setVal(id, key, type = "number") {
     const el = document.getElementById(id);
-    if (!el || !(key in data)) return;
-    if (type === "checkbox") {
-      el.checked = Boolean(data[key]);
-    } else if (type === "select") {
-      el.value = String(data[key]);
-    } else {
-      el.value = String(data[key]);
-    }
+    if (!el) return;
+    const val = data[key] ?? data[canonicalToLegacy[key]];
+    if (val === undefined || val === null) return;
+    if (type === "check") el.checked = Boolean(val);
+    else el.value = String(val);
   }
-  console.log("applyDefaultsToFragment", tabId, "data =", data);
-  // ЛЗ v1–v3
+
   if (tabId === "tab-lz-exc") {
-    // v1
-    setVal("ts0101", "t_s0101");
-    setVal("tlz01", "t_lz01");
-    setVal("tkonv1", "t_kon_v1");
-    setVal("tpausev1", "t_pause_v1");
-    setVal("enablev1", "enable_v1", "checkbox");
-    // v2
-    setVal("ts0102", "t_s0102");
-    setVal("ts0202", "t_s0202");
-    setVal("tlz02", "t_lz02");
-    setVal("tkonv2", "t_kon_v2");
-    setVal("tpausev2", "t_pause_v2");
-    setVal("enablev2", "enable_v2", "checkbox");
-    // v3
-    setVal("ts0103", "t_s0103");
-    setVal("ts0203", "t_s0203");
-    setVal("tlz03", "t_lz03");
-    setVal("tkonv3", "t_kon_v3");
-    setVal("tpausev3", "t_pause_v3");
-    setVal("enablev3", "enable_v3", "checkbox");
-    // v4
-    setVal("ts0401", "t_s0401");
-    setVal("tlz04", "t_lz04");
-    setVal("tkonv4", "t_kon_v4");
-    setVal("tpausev4", "t_pause_v4");
-    setVal("enablev4", "enable_v4", "checkbox");
-    // v5
-    setVal("ts05", "t_s05");
-    setVal("tlz05", "t_lz05");
-    setVal("tpk", "t_pk");
-    setVal("tkonv5", "t_kon_v5");
-    setVal("tpausev5", "t_pause_v5");
-    setVal("enablev5", "enable_v5", "checkbox");
-    // v6
-    setVal("ts06", "t_s06");
-    setVal("tlz06", "t_lz06");
-    setVal("tkonv6", "t_kon_v6");
-    setVal("tpausev6", "t_pause_v6");
-    setVal("enablev6", "enable_v6", "checkbox");
-    // v7
-    setVal("ts07", "t_s07");
-    setVal("tlz07", "t_lz07");
-    setVal("tkonv7", "t_kon_v7");
-    setVal("tpausev7", "t_pause_v7");
-    setVal("enablev7", "enable_v7", "checkbox");
-    // v8
-    setVal("ts0108", "t_s0108");
-    setVal("ts0208", "t_s0208");
-    setVal("tlz08", "t_lz08");
-    setVal("tkonv8", "t_kon_v8");
-    setVal("tpausev8", "t_pause_v8");
-    setVal("enablev8", "enable_v8", "checkbox");
-    // v9
-    setVal("ts0109", "t_s0109");
-    setVal("tlz09", "t_lz09");
-    setVal("tkonv9", "t_kon_v9");
-    setVal("tpausev9", "t_pause_v9");
-    setVal("enablev9", "enable_v9", "checkbox");
-    // v10
-    setVal("ts0110", "t_s0110");
-    setVal("ts0210", "t_s0210");
-    setVal("ts0310", "t_s0310");
-    setVal("tlz10", "t_lz10");
-    setVal("tkonv10", "t_kon_v10");
-    setVal("tpausev10", "t_pause_v10");
-    setVal("enablev10", "enable_v10", "checkbox");
-    // v11
-    setVal("ts11", "t_s11");
-    setVal("tlz11", "t_lz11");
-    setVal("tkonv11", "t_kon_v11");
-    setVal("tpausev11", "t_pause_v11");
-    setVal("enablev11", "enable_v11", "checkbox");
-    // v12
-    setVal("ts0112", "t_s0112");
-    setVal("ts0212", "t_s0212");
-    setVal("tlz12", "t_lz12");
-    setVal("tkonv12", "t_kon_v12");
-    setVal("tpausev12", "t_pause_v12");
-    setVal("enablev12", "enable_v12", "checkbox");
-    // v13
-    setVal("ts0113", "t_s0113");
-    setVal("ts0213", "t_s0213");
-    setVal("tlz13", "t_lz13");
-    setVal("tkonv13", "t_kon_v13");
-    setVal("tpausev13", "t_pause_v13");
-    setVal("enablev13", "enable_v13", "checkbox");
-    setVal("v13ctrlrcid", "v13_ctrl_rc_id", "select");
-    // Исключения ЛЗ
     setVal("tmu", "t_mu");
     setVal("trecentls", "t_recent_ls");
     setVal("tminmaneuverv8", "t_min_maneuver_v8");
-    setVal("enablelzexcmu", "enable_lz_exc_mu", "checkbox");
-    setVal("enablelzexcrecentls", "enable_lz_exc_recent_ls", "checkbox");
-    setVal("enablelzexcdsp", "enable_lz_exc_dsp", "checkbox");
-  } else if (tabId === "tab-ls-exc") {
-    // LS v1
-    setVal("tc0101ls", "t_c0101_ls");
-    setVal("tls01", "t_ls01");
-    setVal("tkonls1", "t_kon_ls1");
-    setVal("tpausels1", "t_pause_ls1");
-    setVal("enablels1", "enable_ls1", "checkbox");
-    // LS v2
-    setVal("ts0102ls", "t_s0102_ls");
-    setVal("ts0202ls", "t_s0202_ls");
-    setVal("tls0102", "t_ls0102");
-    setVal("tls0202", "t_ls0202");
-    setVal("tkonls2", "t_kon_ls2");
-    setVal("tpausels2", "t_pause_ls2");
-    setVal("enablels2", "enable_ls2", "checkbox");
-    // LS v4
-    setVal("ts0104ls", "t_s0104_ls");
-    setVal("ts0204ls", "t_s0204_ls");
-    setVal("tls0104", "t_ls0104");
-    setVal("tls0204", "t_ls0204");
-    setVal("tkonls4", "t_kon_ls4");
-    setVal("tpausels4", "t_pause_ls4");
-    setVal("enablels4", "enable_ls4", "checkbox");
-    // LS v5
-    setVal("ts0105ls", "t_s0105_ls");
-    setVal("tls05", "t_ls05");
-    setVal("tkonls5", "t_kon_ls5");
-    setVal("tpausels5", "t_pause_ls5");
-    setVal("enablels5", "enable_ls5", "checkbox");
-    // LS v6
-    setVal("ts0106ls", "t_s0106_ls");
-    setVal("tls06", "t_ls06");
-    setVal("tkonls6", "t_kon_ls6");
-    setVal("tpausels6", "t_pause_ls6");
-    setVal("enablels6", "enable_ls6", "checkbox");
-    // LS v9
-    setVal("ts0109ls", "t_s0109_ls");
-    setVal("ts0209ls", "t_s0209_ls");
-    setVal("tls0109", "t_ls0109");
-    setVal("tls0209", "t_ls0209");
-    setVal("tkonls9", "t_kon_ls9");
-    setVal("tpausels9", "t_pause_ls9");
-    setVal("enablels9", "enable_ls9", "checkbox");
-    // Исключения ЛС
+    setVal("enablelzexcmu", "enable_lz_exc_mu", "check");
+    setVal("enablelzexcrecentls", "enable_lz_exc_recent_ls", "check");
+    setVal("enablelzexcdsp", "enable_lz_exc_dsp", "check");
+    setVal("tpk", "t_pk");
+
+    setVal("ts0101", "ts01_lz1"); setVal("tlz01", "tlz_lz1"); setVal("tkonv1", "tkon_lz1"); setVal("enablev1", "enable_lz1", "check");
+    setVal("ts0102", "ts01_lz2"); setVal("ts0202", "ts02_lz2"); setVal("tlz02", "tlz_lz2"); setVal("tkonv2", "tkon_lz2"); setVal("enablev2", "enable_lz2", "check");
+    setVal("ts0103", "ts01_lz3"); setVal("ts0203", "ts02_lz3"); setVal("tlz03", "tlz_lz3"); setVal("tkonv3", "tkon_lz3"); setVal("enablev3", "enable_lz3", "check");
+    setVal("ts0401", "ts01_lz4"); setVal("tlz04", "tlz_lz4"); setVal("tkonv4", "tkon_lz4"); setVal("enablev4", "enable_lz4", "check");
+    setVal("ts05", "ts01_lz5"); setVal("tlz05", "tlz_lz5"); setVal("tkonv5", "tkon_lz5"); setVal("enablev5", "enable_lz5", "check");
+    setVal("ts06", "ts01_lz6"); setVal("tlz06", "tlz_lz6"); setVal("tkonv6", "tkon_lz6"); setVal("enablev6", "enable_lz6", "check");
+    setVal("ts07", "ts01_lz7"); setVal("tlz07", "tlz_lz7"); setVal("tkonv7", "tkon_lz7"); setVal("enablev7", "enable_lz7", "check");
+    setVal("ts0108", "ts01_lz8"); setVal("ts0208", "ts02_lz8"); setVal("tlz08", "tlz_lz8"); setVal("tkonv8", "tkon_lz8"); setVal("enablev8", "enable_lz8", "check");
+    setVal("ts0109", "ts01_lz9"); setVal("tlz09", "tlz_lz9"); setVal("tkonv9", "tkon_lz9"); setVal("enablev9", "enable_lz9", "check");
+    setVal("ts0110", "ts01_lz10"); setVal("ts0210", "ts02_lz10"); setVal("ts0310", "ts03_lz10"); setVal("tlz10", "tlz_lz10"); setVal("tkonv10", "tkon_lz10"); setVal("enablev10", "enable_lz10", "check");
+    setVal("ts11", "ts01_lz11"); setVal("tlz11", "tlz_lz11"); setVal("tkonv11", "tkon_lz11"); setVal("enablev11", "enable_lz11", "check");
+    setVal("ts0112", "ts01_lz12"); setVal("ts0212", "ts02_lz12"); setVal("tlz12", "tlz_lz12"); setVal("tkonv12", "tkon_lz12"); setVal("enablev12", "enable_lz12", "check");
+    setVal("ts0113", "ts01_lz13"); setVal("ts0213", "ts02_lz13"); setVal("tlz13", "tlz_lz13"); setVal("tkonv13", "tkon_lz13"); setVal("enablev13", "enable_lz13", "check");
+  }
+
+  if (tabId === "tab-ls-exc") {
     setVal("tlsmu", "t_ls_mu");
     setVal("tlsafterlz", "t_ls_after_lz");
     setVal("tlsdsp", "t_ls_dsp");
-    setVal("enablelsexcmu", "enable_ls_exc_mu", "checkbox");
-    setVal("enablelsexcafterlz", "enable_ls_exc_after_lz", "checkbox");
-    setVal("enablelsexcdsp", "enable_ls_exc_dsp", "checkbox");
+    setVal("enablelsexcmu", "enable_ls_exc_mu", "check");
+    setVal("enablelsexcafterlz", "enable_ls_exc_after_lz", "check");
+    setVal("enablelsexcdsp", "enable_ls_exc_dsp", "check");
+
+    setVal("tc0101ls", "ts01_ls1"); setVal("tls01", "tlz_ls1"); setVal("tkonls1", "tkon_ls1"); setVal("enablels1", "enable_ls1", "check");
+    setVal("ts0102ls", "ts01_ls2"); setVal("ts0202ls", "ts02_ls2"); setVal("tls0102", "tlz_ls2"); setVal("tkonls2", "tkon_ls2"); setVal("enablels2", "enable_ls2", "check");
+    setVal("ts0104ls", "ts01_ls4"); setVal("ts0204ls", "ts02_ls4"); setVal("tls0104", "tlz01_ls4"); setVal("tls0204", "tlz02_ls4"); setVal("tkonls4", "tkon_ls4"); setVal("enablels4", "enable_ls4", "check");
+    setVal("ts0105ls", "ts01_ls5"); setVal("tls05", "tlz_ls5"); setVal("tkonls5", "tkon_ls5"); setVal("enablels5", "enable_ls5", "check");
+    setVal("ts0106ls", "ts01_ls6"); setVal("tls06", "tlz_ls6"); setVal("tkonls6", "tkon_ls6"); setVal("enablels6", "enable_ls6", "check");
+    setVal("ts0109ls", "ts01_ls9"); setVal("tls0109", "tlz_ls9"); setVal("tkonls9", "tkon_ls9"); setVal("enablels9", "enable_ls9", "check");
   }
 }
 window.applyDefaultsToFragment = applyDefaultsToFragment;
-
-// Загрузка дефолтов с бэка
-async function loadDefaults() {
-  try {
-    const resp = await fetch("/defaults");
-    if (!resp.ok) {
-      console.error("Failed to load defaults, status", resp.status);
-      return;
-    }
-    const data = await resp.json();
-
-    if (!window.scenario) window.scenario = {};
-    window.scenario.options = data || {};
-    console.log("defaults from backend =", data);
-    console.log("scenario.options after defaults =", window.scenario.options);
-    Object.keys(window.loadedFragments || {}).forEach((tabId) => {
-      applyDefaultsToFragment(tabId);
-    });
-  } catch (e) {
-    console.error("Failed to load defaults", e);
-  }
-}
-window.loadDefaults = loadDefaults;

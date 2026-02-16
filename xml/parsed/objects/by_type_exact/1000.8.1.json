@@ -1,0 +1,74 @@
+[
+  {
+    "name": "СостБатарея",
+    "description": "СостБатарея",
+    "type": "1000.8.1",
+    "id": "930",
+    "adk_type": "008.01.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "СостБатарея",
+      "Description": "СостБатарея",
+      "Type": "1000.8.1",
+      "ADKType": "008.01.100",
+      "ID": "930",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "5",
+              "Condition": "Бат(0) = 0 AND КОБ(0) = 0 AND СНБ(0) = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "4",
+              "Condition": "Бат(0) = 1 OR КОБ(0) = 1 OR СНБ(0) = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "Бат",
+          "Description": "Контроль неисправности/разряда батареи",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП49/C8",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "BatOffTechTask",
+          "Description": "Разряд батареи",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2126",
+          "WriteProtocol": "true",
+          "AdkNumber": "11011"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "Бат = 1"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

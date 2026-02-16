@@ -1,0 +1,12 @@
+{
+  "group_count": 212,
+  "go_count": 352,
+  "go_class_counts": {
+    "DrawImgList": 37,
+    "DrawRailChain": 18,
+    "DrawSignal": 20,
+    "DrawSwitch": 8,
+    "DrawText": 102,
+    "DrawTextBox": 167
+  }
+}

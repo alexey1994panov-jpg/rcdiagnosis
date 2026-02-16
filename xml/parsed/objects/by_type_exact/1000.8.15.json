@@ -1,0 +1,76 @@
+[
+  {
+    "name": "КМГ",
+    "description": "КМГ",
+    "type": "1000.8.15",
+    "id": "31",
+    "adk_type": "008.15.102",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "КМГ",
+      "Description": "КМГ",
+      "Type": "1000.8.15",
+      "ADKType": "008.15.102",
+      "ID": "31",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "AdkNumber": "2",
+              "Condition": "КМГ = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "AdkNumber": "3",
+              "Condition": "КМГ = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КМГ",
+          "Description": "Контроль исправности комплекта мигания",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП8/C15",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "KMGCrash",
+          "Description": "Неисправность комплекта мигания",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2107",
+          "NormDelay": "$TdmScbDelay",
+          "WriteProtocol": "true",
+          "AdkNumber": "0"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КМГ = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

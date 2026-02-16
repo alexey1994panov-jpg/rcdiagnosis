@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "dsp_policy": {
+    "default": {
+      "enabled": false,
+      "mode": "detector_global",
+      "count_scope": "ctrl_occupied",
+      "variants": [8],
+      "t_maneuver": 600.0
+    },
+    "rc_overrides": {
+      "108": {
+        "enabled": true,
+        "mode": "detector_global",
+        "count_scope": "ctrl_occupied",
+        "variants": [8],
+        "t_maneuver": 10.0
+      }
+    }
+  },
+  "objects": [
+    {
+      "id": "exc_mu_001",
+      "kind": "MU",
+      "name": "Local MU example",
+      "target_rc_ids": ["108"],
+      "active_states": [6],
+      "description": "MU object affects selected RCs"
+    },
+    {
+      "id": "exc_nas_001",
+      "kind": "NAS",
+      "name": "NAS example",
+      "target_rc_ids": ["81", "83", "108", "59", "47","58","57"],
+      "active_states": [6],
+      "description": "NAS object affects selected RCs"
+    },
+    {
+      "id": "exc_chas_001",
+      "kind": "CHAS",
+      "name": "CHAS example",
+      "target_rc_ids": ["40", "36", "62","94","90", "104","98" ],
+      "active_states": [6],
+      "description": "CHAS object affects selected RCs"
+    },
+    {
+      "id": "exc_dsp_001",
+      "kind": "DSP",
+      "name": "DSP global example",
+      "target_rc_ids": ["40", "36", "62","94","90", "104","98","81", "83", "108", "59", "47","58","57" ],
+      "active_states": [6],
+      "description": "DSP object affects all RCs"
+    }
+  ]
+}

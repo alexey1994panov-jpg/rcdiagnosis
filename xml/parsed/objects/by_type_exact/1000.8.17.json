@@ -1,0 +1,568 @@
+[
+  {
+    "name": "АДГА",
+    "description": "АДГА",
+    "type": "1000.8.17",
+    "id": "692",
+    "adk_type": "008.17.106",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "АДГА",
+      "Description": "АДГА",
+      "Type": "1000.8.17",
+      "ADKType": "008.17.106",
+      "ID": "692",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "АДГА = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "АДГА = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "АДГА",
+          "Description": "Контроль аварии ДГА",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП45/C13",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "AvarDGA",
+          "Description": "Авария ДГА",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "41153",
+          "WriteProtocol": "true",
+          "AdkNumber": "746"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "АДГА = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "АДГА = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Активность ДГА",
+    "description": "Активность ДГА",
+    "type": "1000.8.17",
+    "id": "694",
+    "adk_type": "008.17.105",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Активность ДГА",
+      "Description": "Активность ДГА",
+      "Type": "1000.8.17",
+      "ADKType": "008.17.105",
+      "ID": "694",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "ДГАакт = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "ДГАакт = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "ДГАакт",
+          "Description": "Контроль активности ДГА",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП45/C11",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "DGAActiveTechTask",
+          "Description": "Активность ДГА",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2236",
+          "WriteProtocol": "true",
+          "AdkNumber": "435"
+        },
+        "children": [
+          {
+            "tag": "Regular",
+            "attrs": {
+              "Condition": "ДГАакт = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "ДГАакт = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Включение ДГА",
+    "description": "Включение ДГА",
+    "type": "1000.8.17",
+    "id": "693",
+    "adk_type": "008.17.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Включение ДГА",
+      "Description": "Включение ДГА",
+      "Type": "1000.8.17",
+      "ADKType": "008.17.100",
+      "ID": "693",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "ДГА = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "ДГА = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "ДГА",
+          "Description": "Контроль наличия ДГА",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП45/C12",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "U1Ф",
+          "CLASS": "Tdm.Unification.UniObjData",
+          "CODE": "U1Ф",
+          "ParamID": "69300015",
+          "ParamType": "2",
+          "Ref": "/Station/IOSys/ДЦЮГизмерения/ДЦИзмерения/ТИ1-16"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "U2Ф",
+          "CLASS": "Tdm.Unification.UniObjData",
+          "CODE": "U2Ф",
+          "ParamID": "69300016",
+          "ParamType": "2",
+          "Ref": "/Station/IOSys/ДЦЮГизмерения/ДЦИзмерения/ТИ1-17"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "U3Ф",
+          "CLASS": "Tdm.Unification.UniObjData",
+          "CODE": "U3Ф",
+          "ParamID": "69300017",
+          "ParamType": "2",
+          "Ref": "/Station/IOSys/ДЦЮГизмерения/ДЦИзмерения/ТИ1-18"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "DGAF1",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/Фидер 1"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "DGAF2",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/Фидер 2"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "VklDGA",
+          "Description": "Включение ДГА",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2135",
+          "NormDelay": "$TdmScbDelay",
+          "WriteProtocol": "true",
+          "AdkNumber": "747"
+        },
+        "children": [
+          {
+            "tag": "Regular",
+            "attrs": {
+              "Condition": "ДГА = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "ЗавНапрПитОтДГА",
+          "Description": "ЗавНапрПитОтДГА",
+          "CLASS": "Tdm.Unification.SmartTasks.CondTechTask",
+          "Number": "41244",
+          "AdkNumber": "750"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "(U1Ф > TaskName/N_max OR ...U*Ф > TaskName/N_max) AND ДГА = 1",
+              "Delay": "TaskName/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "U1Ф <= TaskName/N_max AND ...U*Ф <= TaskName/N_max",
+              "Delay": "TaskName/NT2_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "ДГА = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "ЗанНапрПитОтДГА",
+          "Description": "ЗанНапрПитОтДГА",
+          "CLASS": "Tdm.Unification.SmartTasks.CondTechTask",
+          "Number": "41245",
+          "AdkNumber": "749"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "(U1Ф < TaskName/N_min OR ...U*Ф < TaskName/N_min) AND ДГА = 1",
+              "Delay": "TaskName/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "U1Ф >= TaskName/N_min AND ...U*Ф >= TaskName/N_min",
+              "Delay": "TaskName/NT2_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "ДГА = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Запуск ДГА при наличии фидера",
+          "Description": "Запуск ДГА при наличии фидера",
+          "CLASS": "Tdm.Unification.SmartTasks.FiniteStateMachineTask.FiniteTask",
+          "Number": "41246",
+          "AdkNumber": "132855"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "NAME": "ST0"
+            },
+            "children": [
+              {
+                "tag": "Transition",
+                "attrs": {
+                  "Condition": "IsDS(41246)",
+                  "NextState": "ST2"
+                }
+              },
+              {
+                "tag": "Transition",
+                "attrs": {
+                  "Condition": "(DGAF1/ФН = 1 OR DGAF2/ФН = 1) AND ДГА = 0",
+                  "NextState": "ST1"
+                }
+              }
+            ]
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "NAME": "ST1"
+            },
+            "children": [
+              {
+                "tag": "Transition",
+                "attrs": {
+                  "Condition": "(DGAF1/ФН = 1 OR DGAF2/ФН = 1) AND ДГА = 1 AND ДГА.Duration >= NT1_min",
+                  "NextState": "ST2"
+                }
+              },
+              {
+                "tag": "Transition",
+                "attrs": {
+                  "Condition": "DGAF1/ФН = 0 AND DGAF2/ФН = 0",
+                  "NextState": "ST0"
+                }
+              }
+            ]
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "NAME": "ST2",
+              "OnEnter": "Activate",
+              "OnLeave": "Deactivate"
+            },
+            "children": [
+              {
+                "tag": "Transition",
+                "attrs": {
+                  "Condition": "ДГА = 0 AND ДГА.Duration >= NT2_min",
+                  "NextState": "ST0"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Незапуск ДГА при выключении фидеров",
+          "Description": "Незапуск ДГА при выключении фидеров",
+          "CLASS": "Tdm.Unification.SmartTasks.FiniteStateMachineTask.FiniteTask",
+          "Number": "41247",
+          "AdkNumber": "132854"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "NAME": "ST0"
+            },
+            "children": [
+              {
+                "tag": "Transition",
+                "attrs": {
+                  "Condition": "IsDS(41247)",
+                  "NextState": "ST2"
+                }
+              },
+              {
+                "tag": "Transition",
+                "attrs": {
+                  "Condition": "(DGAF1/ФН = 1 OR DGAF2/ФН = 1) AND ДГА = 0 AND ДГА.Duration >= NT1_min",
+                  "NextState": "ST1"
+                }
+              }
+            ]
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "NAME": "ST1"
+            },
+            "children": [
+              {
+                "tag": "Transition",
+                "attrs": {
+                  "Condition": "(DGAF1/ФН = 0 AND DGAF2/ФН = 0) AND ДГА = 0 AND ДГА.Duration >= NT2_min",
+                  "NextState": "ST2"
+                }
+              },
+              {
+                "tag": "Transition",
+                "attrs": {
+                  "Condition": "ДГА = 1",
+                  "NextState": "ST0"
+                }
+              }
+            ]
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "NAME": "ST2",
+              "OnEnter": "Activate",
+              "OnLeave": "Deactivate"
+            },
+            "children": [
+              {
+                "tag": "Transition",
+                "attrs": {
+                  "Condition": "ДГА = 1 OR (DGAF1/ФН = 1 AND DGAF1/ФН.Duration >= NT3_min) OR (DGAF2/ФН = 1 AND DGAF2/ФН.Duration >= NT3_min)",
+                  "NextState": "ST0"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ТДГА",
+    "description": "ТДГА",
+    "type": "1000.8.17",
+    "id": "128",
+    "adk_type": "008.17.107",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ТДГА",
+      "Description": "ТДГА",
+      "Type": "1000.8.17",
+      "ADKType": "008.17.107",
+      "ID": "128",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "Condition": "Топливо = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "Топливо = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "Топливо",
+          "Description": "Контроль наличия топлива",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП45/C14",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "FuelDownTechTask",
+          "Description": "Снижение уровня топлива ниже нормы",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "41156",
+          "WriteProtocol": "true",
+          "AdkNumber": "748"
+        },
+        "children": [
+          {
+            "tag": "Unstable",
+            "attrs": {
+              "Condition": "Топливо = 0",
+              "Delay": "5000"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "Топливо = 1",
+              "Delay": "5000"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

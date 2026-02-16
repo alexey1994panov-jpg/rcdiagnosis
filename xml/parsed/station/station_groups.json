@@ -1,0 +1,1274 @@
+[
+  {
+    "name": "1",
+    "obj": "/Station/Objects/1",
+    "class": "GOGroup",
+    "go_count": 3
+  },
+  {
+    "name": "1&sol;3СА",
+    "obj": "/Station/Objects/1&sol;3СА",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "10",
+    "obj": "/Station/Objects/10",
+    "class": "GOGroup",
+    "go_count": 3
+  },
+  {
+    "name": "10-12СП",
+    "obj": "/Station/Objects/10-12СП",
+    "class": "GOGroup",
+    "go_count": 3
+  },
+  {
+    "name": "10СА",
+    "obj": "/Station/Objects/10СА",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "11НУКС",
+    "obj": "/Station/Objects/11НУКС",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "12АВ",
+    "obj": "/Station/Objects/12АВ",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "12НУКС",
+    "obj": "/Station/Objects/12НУКС",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "12СА",
+    "obj": "/Station/Objects/12СА",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "12СБ",
+    "obj": "/Station/Objects/12СБ",
+    "class": "GOGroup",
+    "go_count": 2
+  },
+  {
+    "name": "14-16СП",
+    "obj": "/Station/Objects/14-16СП",
+    "class": "GOGroup",
+    "go_count": 3
+  },
+  {
+    "name": "14АВ",
+    "obj": "/Station/Objects/14АВ",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "14СА",
+    "obj": "/Station/Objects/14СА",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "14СБ",
+    "obj": "/Station/Objects/14СБ",
+    "class": "GOGroup",
+    "go_count": 2
+  },
+  {
+    "name": "16",
+    "obj": "/Station/Objects/16",
+    "class": "GOGroup",
+    "go_count": 3
+  },
+  {
+    "name": "16СА",
+    "obj": "/Station/Objects/16СА",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "1-7СП",
+    "obj": "/Station/Objects/1-7СП",
+    "class": "GOGroup",
+    "go_count": 4
+  },
+  {
+    "name": "1АП",
+    "obj": "/Station/Objects/1АП",
+    "class": "GOGroup",
+    "go_count": 6
+  },
+  {
+    "name": "1НДСО",
+    "obj": "/Station/Objects/1НДСО",
+    "class": "GOGroup",
+    "go_count": 2
+  },
+  {
+    "name": "1НКП",
+    "obj": "/Station/Objects/1НКП",
+    "class": "GOGroup",
+    "go_count": 2
+  },
+  {
+    "name": "1НКПН (К-ОК)",
+    "obj": "/Station/Objects/1НКПН (К-ОК)",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "1НО&sol;1ЧП",
+    "obj": "/Station/Objects/1НО&sol;1ЧП",
+    "class": "GOGroup",
+    "go_count": 2
+  },
+  {
+    "name": "1НПН (Н-ОН)",
+    "obj": "/Station/Objects/1НПН (Н-ОН)",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "1П",
+    "obj": "/Station/Objects/1П",
+    "class": "GOGroup",
+    "go_count": 6
+  },
+  {
+    "name": "1ЧДСО",
+    "obj": "/Station/Objects/1ЧДСО",
+    "class": "GOGroup",
+    "go_count": 2
+  },
+  {
+    "name": "1ЧКП",
+    "obj": "/Station/Objects/1ЧКП",
+    "class": "GOGroup",
+    "go_count": 2
+  },
+  {
+    "name": "1ЧКПН (К-ОК)",
+    "obj": "/Station/Objects/1ЧКПН (К-ОК)",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "1ЧО&sol;1НП",
+    "obj": "/Station/Objects/1ЧО&sol;1НП",
+    "class": "GOGroup",
+    "go_count": 2
+  },
+  {
+    "name": "1ЧПН (Н-ОН)",
+    "obj": "/Station/Objects/1ЧПН (Н-ОН)",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "2",
+    "obj": "/Station/Objects/2",
+    "class": "GOGroup",
+    "go_count": 3
+  },
+  {
+    "name": "21ЧУКС",
+    "obj": "/Station/Objects/21ЧУКС",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "22ЧУКС",
+    "obj": "/Station/Objects/22ЧУКС",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "2-8СП",
+    "obj": "/Station/Objects/2-8СП",
+    "class": "GOGroup",
+    "go_count": 3
+  },
+  {
+    "name": "2АП",
+    "obj": "/Station/Objects/2АП",
+    "class": "GOGroup",
+    "go_count": 6
+  },
+  {
+    "name": "2НДСО",
+    "obj": "/Station/Objects/2НДСО",
+    "class": "GOGroup",
+    "go_count": 2
+  },
+  {
+    "name": "2НКП",
+    "obj": "/Station/Objects/2НКП",
+    "class": "GOGroup",
+    "go_count": 2
+  },
+  {
+    "name": "2НКПН (К-ОК)",
+    "obj": "/Station/Objects/2НКПН (К-ОК)",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "2НО&sol;2ЧП",
+    "obj": "/Station/Objects/2НО&sol;2ЧП",
+    "class": "GOGroup",
+    "go_count": 2
+  },
+  {
+    "name": "2НПН (Н-ОН)",
+    "obj": "/Station/Objects/2НПН (Н-ОН)",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "2П",
+    "obj": "/Station/Objects/2П",
+    "class": "GOGroup",
+    "go_count": 6
+  },
+  {
+    "name": "2СА",
+    "obj": "/Station/Objects/2СА",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "2ЧДСО",
+    "obj": "/Station/Objects/2ЧДСО",
+    "class": "GOGroup",
+    "go_count": 2
+  },
+  {
+    "name": "2ЧКП",
+    "obj": "/Station/Objects/2ЧКП",
+    "class": "GOGroup",
+    "go_count": 2
+  },
+  {
+    "name": "2ЧКПН (К-ОК)",
+    "obj": "/Station/Objects/2ЧКПН (К-ОК)",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "2ЧО&sol;2НП",
+    "obj": "/Station/Objects/2ЧО&sol;2НП",
+    "class": "GOGroup",
+    "go_count": 2
+  },
+  {
+    "name": "2ЧПН (Н-ОН)",
+    "obj": "/Station/Objects/2ЧПН (Н-ОН)",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "3",
+    "obj": "/Station/Objects/3",
+    "class": "GOGroup",
+    "go_count": 3
+  },
+  {
+    "name": "31НУКС",
+    "obj": "/Station/Objects/31НУКС",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "32НУКС",
+    "obj": "/Station/Objects/32НУКС",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "3П",
+    "obj": "/Station/Objects/3П",
+    "class": "GOGroup",
+    "go_count": 6
+  },
+  {
+    "name": "3СП",
+    "obj": "/Station/Objects/3СП",
+    "class": "GOGroup",
+    "go_count": 3
+  },
+  {
+    "name": "4",
+    "obj": "/Station/Objects/4",
+    "class": "GOGroup",
+    "go_count": 3
+  },
+  {
+    "name": "4&sol;6СА",
+    "obj": "/Station/Objects/4&sol;6СА",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "41ЧУКС",
+    "obj": "/Station/Objects/41ЧУКС",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "42ЧУКС",
+    "obj": "/Station/Objects/42ЧУКС",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "4П",
+    "obj": "/Station/Objects/4П",
+    "class": "GOGroup",
+    "go_count": 6
+  },
+  {
+    "name": "4СП",
+    "obj": "/Station/Objects/4СП",
+    "class": "GOGroup",
+    "go_count": 3
+  },
+  {
+    "name": "5",
+    "obj": "/Station/Objects/5",
+    "class": "GOGroup",
+    "go_count": 3
+  },
+  {
+    "name": "5СА",
+    "obj": "/Station/Objects/5СА",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "6",
+    "obj": "/Station/Objects/6",
+    "class": "GOGroup",
+    "go_count": 3
+  },
+  {
+    "name": "6СП",
+    "obj": "/Station/Objects/6СП",
+    "class": "GOGroup",
+    "go_count": 3
+  },
+  {
+    "name": "7АВ",
+    "obj": "/Station/Objects/7АВ",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "7СА",
+    "obj": "/Station/Objects/7СА",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "7СБ",
+    "obj": "/Station/Objects/7СБ",
+    "class": "GOGroup",
+    "go_count": 2
+  },
+  {
+    "name": "8АВ",
+    "obj": "/Station/Objects/8АВ",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "8СА",
+    "obj": "/Station/Objects/8СА",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "8СБ",
+    "obj": "/Station/Objects/8СБ",
+    "class": "GOGroup",
+    "go_count": 2
+  },
+  {
+    "name": "IIН1УП",
+    "obj": "/Station/Objects/IIН1УП",
+    "class": "GOGroup",
+    "go_count": 2
+  },
+  {
+    "name": "IIН2УП",
+    "obj": "/Station/Objects/IIН2УП",
+    "class": "GOGroup",
+    "go_count": 2
+  },
+  {
+    "name": "IIЧ1ПП",
+    "obj": "/Station/Objects/IIЧ1ПП",
+    "class": "GOGroup",
+    "go_count": 2
+  },
+  {
+    "name": "IIЧ2ПП",
+    "obj": "/Station/Objects/IIЧ2ПП",
+    "class": "GOGroup",
+    "go_count": 2
+  },
+  {
+    "name": "IIЧ3ПП",
+    "obj": "/Station/Objects/IIЧ3ПП",
+    "class": "GOGroup",
+    "go_count": 2
+  },
+  {
+    "name": "IН1ПП",
+    "obj": "/Station/Objects/IН1ПП",
+    "class": "GOGroup",
+    "go_count": 2
+  },
+  {
+    "name": "IН2ПП",
+    "obj": "/Station/Objects/IН2ПП",
+    "class": "GOGroup",
+    "go_count": 2
+  },
+  {
+    "name": "IН3ПП",
+    "obj": "/Station/Objects/IН3ПП",
+    "class": "GOGroup",
+    "go_count": 2
+  },
+  {
+    "name": "IЧ1УП",
+    "obj": "/Station/Objects/IЧ1УП",
+    "class": "GOGroup",
+    "go_count": 2
+  },
+  {
+    "name": "IЧ2УП",
+    "obj": "/Station/Objects/IЧ2УП",
+    "class": "GOGroup",
+    "go_count": 2
+  },
+  {
+    "name": "Авария ПП1 (ПП1А)",
+    "obj": "/Station/Objects/Авария ПП1 (ПП1А)",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "Авария ПП3 (ПП3А)",
+    "obj": "/Station/Objects/Авария ПП3 (ПП3А)",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "АДГА",
+    "obj": "/Station/Objects/АДГА",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "Активность ДГА",
+    "obj": "/Station/Objects/Активность ДГА",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "АОТУ",
+    "obj": "/Station/Objects/АОТУ",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "ВВ ПП1, ПП3",
+    "obj": "/Station/Objects/ВВ ПП1, ПП3",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "ВВД ОТУ",
+    "obj": "/Station/Objects/ВВД ОТУ",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "Включение ДГА",
+    "obj": "/Station/Objects/Включение ДГА",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "ВС",
+    "obj": "/Station/Objects/ВС",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "ДЕНЬ",
+    "obj": "/Station/Objects/ДЕНЬ",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "ДУ",
+    "obj": "/Station/Objects/ДУ",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "ИВ",
+    "obj": "/Station/Objects/ИВ",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "Извещение ПП1 (ПП1И)",
+    "obj": "/Station/Objects/Извещение ПП1 (ПП1И)",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "Извещение ПП3 (ППЗИ)",
+    "obj": "/Station/Objects/Извещение ПП3 (ППЗИ)",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "Изостыки",
+    "obj": "",
+    "class": "GOGroup",
+    "go_count": 23
+  },
+  {
+    "name": "Имя станции",
+    "obj": "",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "КМГ",
+    "obj": "/Station/Objects/КМГ",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "КПА",
+    "obj": "/Station/Objects/КПА",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "КПП",
+    "obj": "/Station/Objects/КПП",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "М1",
+    "obj": "/Station/Objects/М1",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "М1К",
+    "obj": "/Station/Objects/М1К",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "М2",
+    "obj": "/Station/Objects/М2",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "М2К",
+    "obj": "/Station/Objects/М2К",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "М3",
+    "obj": "/Station/Objects/М3",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "М3К",
+    "obj": "/Station/Objects/М3К",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "М4",
+    "obj": "/Station/Objects/М4",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "М4К",
+    "obj": "/Station/Objects/М4К",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "МАКЕТ",
+    "obj": "/Station/Objects/МАКЕТ",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "МАКЕТ(-)",
+    "obj": "/Station/Objects/МАКЕТ(-)",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "МАКЕТ(+)",
+    "obj": "/Station/Objects/МАКЕТ(+)",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "МВ",
+    "obj": "/Station/Objects/МВ",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "Н",
+    "obj": "/Station/Objects/Н",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "Н1",
+    "obj": "/Station/Objects/Н1",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "Н1АС",
+    "obj": "/Station/Objects/Н1АС",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "Н1К",
+    "obj": "/Station/Objects/Н1К",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "Н1СО",
+    "obj": "/Station/Objects/Н1СО",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "Н2",
+    "obj": "/Station/Objects/Н2",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "Н2К",
+    "obj": "/Station/Objects/Н2К",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "Н2СО",
+    "obj": "/Station/Objects/Н2СО",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "Н4",
+    "obj": "/Station/Objects/Н4",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "Н4К",
+    "obj": "/Station/Objects/Н4К",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "Н4СО",
+    "obj": "/Station/Objects/Н4СО",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "НАС",
+    "obj": "/Station/Objects/НАС",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "НД",
+    "obj": "/Station/Objects/НД",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "НДК",
+    "obj": "/Station/Objects/НДК",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "НДП",
+    "obj": "/Station/Objects/НДП",
+    "class": "GOGroup",
+    "go_count": 4
+  },
+  {
+    "name": "НДСО",
+    "obj": "/Station/Objects/НДСО",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "Неисправность ПП1 (ПП1НП)",
+    "obj": "/Station/Objects/Неисправность ПП1 (ПП1НП)",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "Неисправность ПП3 (ПП3НП)",
+    "obj": "/Station/Objects/Неисправность ПП3 (ПП3НП)",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "НИКС",
+    "obj": "/Station/Objects/НИКС",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "НКЖ",
+    "obj": "/Station/Objects/НКЖ",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "НКК",
+    "obj": "/Station/Objects/НКК",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "НМ1",
+    "obj": "/Station/Objects/НМ1",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "НМ1АС",
+    "obj": "/Station/Objects/НМ1АС",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "НМ1К",
+    "obj": "/Station/Objects/НМ1К",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "НМ1СО",
+    "obj": "/Station/Objects/НМ1СО",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "НМ2",
+    "obj": "/Station/Objects/НМ2",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "НМ2К",
+    "obj": "/Station/Objects/НМ2К",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "НМ2СО",
+    "obj": "/Station/Objects/НМ2СО",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "НМ3",
+    "obj": "/Station/Objects/НМ3",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "НМ3К",
+    "obj": "/Station/Objects/НМ3К",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "НМ3СО",
+    "obj": "/Station/Objects/НМ3СО",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "НП",
+    "obj": "/Station/Objects/НП",
+    "class": "GOGroup",
+    "go_count": 4
+  },
+  {
+    "name": "НПТ",
+    "obj": "/Station/Objects/НПТ",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "НСО",
+    "obj": "/Station/Objects/НСО",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "НТревога1",
+    "obj": "/Station/Objects/НТревога1",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "НТревога2",
+    "obj": "/Station/Objects/НТревога2",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "НУКСзК",
+    "obj": "/Station/Objects/НУКСзК",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "ОВ",
+    "obj": "/Station/Objects/ОВ",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "ПА1НСН",
+    "obj": "/Station/Objects/ПА1НСН",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "ПА1ЧСН",
+    "obj": "/Station/Objects/ПА1ЧСН",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "ПА2НСН",
+    "obj": "/Station/Objects/ПА2НСН",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "ПА2ЧСН",
+    "obj": "/Station/Objects/ПА2ЧСН",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "ПАКС",
+    "obj": "/Station/Objects/ПАКС",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "ПАПС",
+    "obj": "/Station/Objects/ПАПС",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "ПАРз",
+    "obj": "/Station/Objects/ПАРз",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "ПАРИ",
+    "obj": "/Station/Objects/ПАРИ",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "ПАСА",
+    "obj": "/Station/Objects/ПАСА",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "ПВ",
+    "obj": "/Station/Objects/ПВ",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "ПешПер1",
+    "obj": "/Station/Objects/ПешПер1",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "ПешПер3",
+    "obj": "/Station/Objects/ПешПер3",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "Пикеты",
+    "obj": "",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "Полюс БВВ",
+    "obj": "/Station/Objects/Полюс БВВ",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "ПРВ",
+    "obj": "/Station/Objects/ПРВ",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "Предварительное извещение ПП1 (ПП1ПИ)",
+    "obj": "/Station/Objects/Предварительное извещение ПП1 (ПП1ПИ)",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "Предварительное извещение ПП3 (ПП3ПИ)",
+    "obj": "/Station/Objects/Предварительное извещение ПП3 (ПП3ПИ)",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "ПТ",
+    "obj": "/Station/Objects/ПТ",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "Размыкание стрелок Рз",
+    "obj": "/Station/Objects/Размыкание стрелок Рз",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "Рамки",
+    "obj": "",
+    "class": "GOGroup",
+    "go_count": 19
+  },
+  {
+    "name": "РУ",
+    "obj": "/Station/Objects/РУ",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "Ручное закрытие ПП1 (ПП1зП)",
+    "obj": "/Station/Objects/Ручное закрытие ПП1 (ПП1зП)",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "Ручное закрытие ПП3 (ПП3зП)",
+    "obj": "/Station/Objects/Ручное закрытие ПП3 (ПП3зП)",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "САУТ",
+    "obj": "/Station/Objects/САУТ",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "СЗ",
+    "obj": "/Station/Objects/СЗ",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "СУ",
+    "obj": "/Station/Objects/СУ",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "ТДГА",
+    "obj": "/Station/Objects/ТДГА",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "Указатели",
+    "obj": "",
+    "class": "GOGroup",
+    "go_count": 2
+  },
+  {
+    "name": "Фидер 1",
+    "obj": "/Station/Objects/Фидер 1",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "Фидер 1 Активность",
+    "obj": "/Station/Objects/Фидер 1 Активность",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "Фидер 2",
+    "obj": "/Station/Objects/Фидер 2",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "Фидер 2 Активность",
+    "obj": "/Station/Objects/Фидер 2 Активность",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "Ч",
+    "obj": "/Station/Objects/Ч",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "Ч1",
+    "obj": "/Station/Objects/Ч1",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "Ч1К",
+    "obj": "/Station/Objects/Ч1К",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "Ч1СО",
+    "obj": "/Station/Objects/Ч1СО",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "Ч2",
+    "obj": "/Station/Objects/Ч2",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "Ч2АС",
+    "obj": "/Station/Objects/Ч2АС",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "Ч2К",
+    "obj": "/Station/Objects/Ч2К",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "Ч2СО",
+    "obj": "/Station/Objects/Ч2СО",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "Ч3",
+    "obj": "/Station/Objects/Ч3",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "Ч3К",
+    "obj": "/Station/Objects/Ч3К",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "Ч3СО",
+    "obj": "/Station/Objects/Ч3СО",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "ЧАС",
+    "obj": "/Station/Objects/ЧАС",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "ЧД",
+    "obj": "/Station/Objects/ЧД",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "ЧДК",
+    "obj": "/Station/Objects/ЧДК",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "ЧДП",
+    "obj": "/Station/Objects/ЧДП",
+    "class": "GOGroup",
+    "go_count": 4
+  },
+  {
+    "name": "ЧДСО",
+    "obj": "/Station/Objects/ЧДСО",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "ЧИКС",
+    "obj": "/Station/Objects/ЧИКС",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "ЧК",
+    "obj": "/Station/Objects/ЧК",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "ЧКЖ",
+    "obj": "/Station/Objects/ЧКЖ",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "ЧМ1",
+    "obj": "/Station/Objects/ЧМ1",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "ЧМ1К",
+    "obj": "/Station/Objects/ЧМ1К",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "ЧМ1СО",
+    "obj": "/Station/Objects/ЧМ1СО",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "ЧМ2",
+    "obj": "/Station/Objects/ЧМ2",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "ЧМ2АС",
+    "obj": "/Station/Objects/ЧМ2АС",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "ЧМ2К",
+    "obj": "/Station/Objects/ЧМ2К",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "ЧМ2СО",
+    "obj": "/Station/Objects/ЧМ2СО",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "ЧМ4",
+    "obj": "/Station/Objects/ЧМ4",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "ЧМ4К",
+    "obj": "/Station/Objects/ЧМ4К",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "ЧМ4СО",
+    "obj": "/Station/Objects/ЧМ4СО",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "ЧП",
+    "obj": "/Station/Objects/ЧП",
+    "class": "GOGroup",
+    "go_count": 4
+  },
+  {
+    "name": "ЧСО",
+    "obj": "/Station/Objects/ЧСО",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "ЧТревога1",
+    "obj": "/Station/Objects/ЧТревога1",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "ЧТревога2",
+    "obj": "/Station/Objects/ЧТревога2",
+    "class": "GOGroup",
+    "go_count": 1
+  },
+  {
+    "name": "ЧУКСзК",
+    "obj": "/Station/Objects/ЧУКСзК",
+    "class": "GOGroup",
+    "go_count": 1
+  }
+]

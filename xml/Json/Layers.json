@@ -1,0 +1,737 @@
+[
+  {
+    "$type": "layer",
+    "$id": "layer52",
+    "name": "Default",
+    "isReadonly": false
+  },
+  {
+    "$type": "layer",
+    "$id": "layer53",
+    "name": "Зоны",
+    "isReadonly": false
+  },
+  {
+    "$type": "layer",
+    "$id": "layer54",
+    "name": "Коды АЛСН",
+    "isReadonly": false
+  },
+  {
+    "$type": "layer",
+    "$id": "layer55",
+    "name": "Напряжение на входе ПП",
+    "isReadonly": false
+  },
+  {
+    "$type": "layer",
+    "$id": "layer56",
+    "name": "Напряжение на выходе ПГ",
+    "isReadonly": false
+  },
+  {
+    "$type": "layer",
+    "$id": "layer57",
+    "name": "Напряжение на выходе ПФ",
+    "isReadonly": false
+  },
+  {
+    "$type": "layer",
+    "$id": "layer58",
+    "name": "Напряжения питания",
+    "isReadonly": false
+  },
+  {
+    "$type": "layer",
+    "$id": "layer59",
+    "name": "Напряжения РЦ",
+    "isReadonly": false
+  },
+  {
+    "$type": "layer",
+    "$id": "layer60",
+    "name": "Светофоры",
+    "isReadonly": true
+  },
+  {
+    "$type": "layer",
+    "$id": "layer61",
+    "name": "Только для чтения",
+    "isReadonly": true
+  },
+  {
+    "$type": "layer",
+    "$id": "layer62",
+    "name": "Имена секции",
+    "isReadonly": false
+  },
+  {
+    "$type": "layer",
+    "$id": "layer63",
+    "name": "Cчетчики осей (абс.)",
+    "isReadonly": false
+  },
+  {
+    "$type": "layer",
+    "$id": "layer73",
+    "name": "Описатели отцепов",
+    "isReadonly": false
+  },
+  {
+    "$type": "layer",
+    "$id": "layer74",
+    "name": "Скорость по РИС ",
+    "isReadonly": false
+  },
+  {
+    "$type": "layer",
+    "$id": "layer75",
+    "name": "Cчетчики осей (росп.)",
+    "isReadonly": false
+  },
+  {
+    "$type": "layer",
+    "$id": "layer77",
+    "name": "Контроль КРЛ",
+    "isReadonly": false
+  },
+  {
+    "$type": "layer",
+    "$id": "layer78",
+    "name": "Напряжение на питающем конце РЦ АБТЦ-М",
+    "isReadonly": false
+  },
+  {
+    "$type": "layer",
+    "$id": "layer79",
+    "name": "Напряжение на релейном конце РЦ АБТЦ-М",
+    "isReadonly": false
+  },
+  {
+    "$type": "layer",
+    "$id": "layer80",
+    "name": "Скорость по ДСО",
+    "isReadonly": false
+  },
+  {
+    "$type": "layer",
+    "$id": "layer81",
+    "name": "Скорость следования состава",
+    "isReadonly": false
+  },
+  {
+    "$type": "layer",
+    "$id": "layer82",
+    "name": "Напряжение на путевой обмотке реле",
+    "isReadonly": false
+  },
+  {
+    "$type": "layer",
+    "$id": "layer83",
+    "name": "Номер статива",
+    "isReadonly": false
+  },
+  {
+    "$type": "layer",
+    "$id": "layer84",
+    "name": "Ток АРС",
+    "isReadonly": false
+  },
+  {
+    "$type": "layer",
+    "$id": "layer85",
+    "name": "Параметры стрелки",
+    "isReadonly": false
+  },
+  {
+    "$type": "layer",
+    "$id": "layer86",
+    "name": "Частота АРС",
+    "isReadonly": false
+  },
+  {
+    "$type": "layer",
+    "$id": "layer87",
+    "name": "Допустимая скорость АРС",
+    "isReadonly": false
+  },
+  {
+    "$type": "layer",
+    "$id": "layer88",
+    "name": "Диагностика высоковольтных кабелей",
+    "isReadonly": false
+  },
+  {
+    "$type": "layer",
+    "$id": "layer89",
+    "name": "Диагностика трансформаторов",
+    "isReadonly": false
+  },
+  {
+    "$type": "layer",
+    "$id": "layer90",
+    "name": "Ресурс оборудования",
+    "isReadonly": false
+  },
+  {
+    "$type": "layer",
+    "$id": "layer91",
+    "name": "Сопротивление изоляции",
+    "isReadonly": false
+  },
+  {
+    "$type": "layer",
+    "$id": "layer92",
+    "name": "Угол сдвига ",
+    "isReadonly": false
+  },
+  {
+    "$type": "layer",
+    "$id": "layer93",
+    "name": "Время",
+    "isReadonly": false
+  },
+  {
+    "$type": "layer",
+    "$id": "layer94",
+    "name": "Кодирование ",
+    "isReadonly": false
+  },
+  {
+    "$type": "layer",
+    "$id": "layer95",
+    "name": "Количество ПЕ и осей",
+    "isReadonly": false
+  },
+  {
+    "$type": "layer",
+    "$id": "layer96",
+    "name": "Координаты и скорость ПЕ АРС",
+    "isReadonly": false
+  },
+  {
+    "$type": "layer",
+    "$id": "layer97",
+    "name": "Свойства ПЕ АРС",
+    "isReadonly": false
+  },
+  {
+    "$type": "layer",
+    "$id": "layer98",
+    "name": "Максимальная скорость",
+    "isReadonly": false
+  },
+  {
+    "$type": "layer",
+    "$id": "layer99",
+    "name": "Напряжение на выходе блока БВС-4Л",
+    "isReadonly": false
+  },
+  {
+    "$type": "layer",
+    "$id": "layer100",
+    "name": "Диагностика",
+    "isReadonly": false
+  },
+  {
+    "$type": "layer",
+    "$id": "layer101",
+    "name": "Напряжение питания ПТ",
+    "isReadonly": false
+  },
+  {
+    "$type": "layer",
+    "$id": "layer102",
+    "name": "Т1",
+    "isReadonly": false
+  },
+  {
+    "$type": "layer",
+    "$id": "layer103",
+    "name": "Т2",
+    "isReadonly": false
+  },
+  {
+    "$type": "layer",
+    "$id": "layer104",
+    "name": "Т3",
+    "isReadonly": false
+  },
+  {
+    "$type": "layer",
+    "$id": "layer105",
+    "name": "Напряжение на путевом реле",
+    "isReadonly": false
+  },
+  {
+    "$type": "layer",
+    "$id": "layer106",
+    "name": "Напряжение лучей питания РЦ",
+    "isReadonly": false
+  },
+  {
+    "$type": "layer",
+    "$id": "layer107",
+    "name": "Напряжение на питающем конце РЦ",
+    "isReadonly": false
+  },
+  {
+    "$type": "layer",
+    "$id": "layer108",
+    "name": "Напряжение на выходе ПП",
+    "isReadonly": false
+  },
+  {
+    "$type": "layer",
+    "$id": "layer109",
+    "name": "Напряжение на релейном конце",
+    "isReadonly": false
+  },
+  {
+    "$type": "layer",
+    "$id": "layer110",
+    "name": "Напряжение на выходе ПП и путевых реле",
+    "isReadonly": false
+  },
+  {
+    "$type": "layer",
+    "$id": "layer111",
+    "name": "Ограничение скорости АРС",
+    "isReadonly": false
+  },
+  {
+    "$type": "layerGroup",
+    "$id": "layerGroup1",
+    "id": 1,
+    "layers": [
+      {
+        "$ref": "layer52"
+      },
+      {
+        "$ref": "layer61"
+      }
+    ]
+  },
+  {
+    "$type": "layerGroup",
+    "$id": "layerGroup4",
+    "id": 4,
+    "layers": []
+  },
+  {
+    "$type": "layerGroup",
+    "$id": "layerGroup8",
+    "id": 8,
+    "layers": [
+      {
+        "$ref": "layer58"
+      },
+      {
+        "$ref": "layer106"
+      }
+    ]
+  },
+  {
+    "$type": "layerGroup",
+    "$id": "layerGroup12",
+    "id": 12,
+    "layers": [
+      {
+        "$ref": "layer53"
+      }
+    ]
+  },
+  {
+    "$type": "layerGroup",
+    "$id": "layerGroup24",
+    "id": 24,
+    "layers": [
+      {
+        "$ref": "layer59"
+      },
+      {
+        "$ref": "layer105"
+      }
+    ]
+  },
+  {
+    "$type": "layerGroup",
+    "$id": "layerGroup25",
+    "id": 25,
+    "layers": [
+      {
+        "$ref": "layer60"
+      }
+    ]
+  },
+  {
+    "$type": "layerGroup",
+    "$id": "layerGroup26",
+    "id": 26,
+    "layers": [
+      {
+        "$ref": "layer54"
+      }
+    ]
+  },
+  {
+    "$type": "layerGroup",
+    "$id": "layerGroup28",
+    "id": 28,
+    "layers": [
+      {
+        "$ref": "layer55"
+      }
+    ]
+  },
+  {
+    "$type": "layerGroup",
+    "$id": "layerGroup34",
+    "id": 34,
+    "layers": [
+      {
+        "$ref": "layer56"
+      }
+    ]
+  },
+  {
+    "$type": "layerGroup",
+    "$id": "layerGroup35",
+    "id": 35,
+    "layers": [
+      {
+        "$ref": "layer57"
+      }
+    ]
+  },
+  {
+    "$type": "layerGroup",
+    "$id": "layerGroup45",
+    "id": 45,
+    "layers": [
+      {
+        "$ref": "layer63"
+      }
+    ]
+  },
+  {
+    "$type": "layerGroup",
+    "$id": "layerGroup48",
+    "id": 48,
+    "layers": [
+      {
+        "$ref": "layer73"
+      }
+    ]
+  },
+  {
+    "$type": "layerGroup",
+    "$id": "layerGroup49",
+    "id": 49,
+    "layers": [
+      {
+        "$ref": "layer75"
+      }
+    ]
+  },
+  {
+    "$type": "layerGroup",
+    "$id": "layerGroup50",
+    "id": 50,
+    "layers": [
+      {
+        "$ref": "layer74"
+      }
+    ]
+  },
+  {
+    "$type": "layerGroup",
+    "$id": "layerGroup51",
+    "id": 51,
+    "layers": [
+      {
+        "$ref": "layer74"
+      }
+    ]
+  },
+  {
+    "$type": "layerGroup",
+    "$id": "layerGroup53",
+    "id": 53,
+    "layers": [
+      {
+        "$ref": "layer79"
+      }
+    ]
+  },
+  {
+    "$type": "layerGroup",
+    "$id": "layerGroup54",
+    "id": 54,
+    "layers": [
+      {
+        "$ref": "layer78"
+      }
+    ]
+  },
+  {
+    "$type": "layerGroup",
+    "$id": "layerGroup55",
+    "id": 55,
+    "layers": [
+      {
+        "$ref": "layer77"
+      }
+    ]
+  },
+  {
+    "$type": "layerGroup",
+    "$id": "layerGroup57",
+    "id": 57,
+    "layers": [
+      {
+        "$ref": "layer58"
+      }
+    ]
+  },
+  {
+    "$type": "layerGroup",
+    "$id": "layerGroup58",
+    "id": 58,
+    "layers": [
+      {
+        "$ref": "layer81"
+      }
+    ]
+  },
+  {
+    "$type": "layerGroup",
+    "$id": "layerGroup60",
+    "id": 60,
+    "layers": [
+      {
+        "$ref": "layer83"
+      }
+    ]
+  },
+  {
+    "$type": "layerGroup",
+    "$id": "layerGroup61",
+    "id": 61,
+    "layers": [
+      {
+        "$ref": "layer84"
+      }
+    ]
+  },
+  {
+    "$type": "layerGroup",
+    "$id": "layerGroup62",
+    "id": 62,
+    "layers": [
+      {
+        "$ref": "layer85"
+      }
+    ]
+  },
+  {
+    "$type": "layerGroup",
+    "$id": "layerGroup63",
+    "id": 63,
+    "layers": [
+      {
+        "$ref": "layer86"
+      }
+    ]
+  },
+  {
+    "$type": "layerGroup",
+    "$id": "layerGroup64",
+    "id": 64,
+    "layers": [
+      {
+        "$ref": "layer87"
+      }
+    ]
+  },
+  {
+    "$type": "layerGroup",
+    "$id": "layerGroup65",
+    "id": 65,
+    "layers": [
+      {
+        "$ref": "layer89"
+      }
+    ]
+  },
+  {
+    "$type": "layerGroup",
+    "$id": "layerGroup66",
+    "id": 66,
+    "layers": [
+      {
+        "$ref": "layer88"
+      }
+    ]
+  },
+  {
+    "$type": "layerGroup",
+    "$id": "layerGroup67",
+    "id": 67,
+    "layers": [
+      {
+        "$ref": "layer90"
+      }
+    ]
+  },
+  {
+    "$type": "layerGroup",
+    "$id": "layerGroup68",
+    "id": 68,
+    "layers": [
+      {
+        "$ref": "layer91"
+      }
+    ]
+  },
+  {
+    "$type": "layerGroup",
+    "$id": "layerGroup69",
+    "id": 69,
+    "layers": [
+      {
+        "$ref": "layer95"
+      }
+    ]
+  },
+  {
+    "$type": "layerGroup",
+    "$id": "layerGroup70",
+    "id": 70,
+    "layers": [
+      {
+        "$ref": "layer97"
+      }
+    ]
+  },
+  {
+    "$type": "layerGroup",
+    "$id": "layerGroup71",
+    "id": 71,
+    "layers": [
+      {
+        "$ref": "layer96"
+      }
+    ]
+  },
+  {
+    "$type": "layerGroup",
+    "$id": "layerGroup72",
+    "id": 72,
+    "layers": [
+      {
+        "$ref": "layer98"
+      }
+    ]
+  },
+  {
+    "$type": "layerGroup",
+    "$id": "layerGroup73",
+    "id": 73,
+    "layers": [
+      {
+        "$ref": "layer62"
+      }
+    ]
+  },
+  {
+    "$type": "layerGroup",
+    "$id": "layerGroup74",
+    "id": 74,
+    "layers": [
+      {
+        "$ref": "layer100"
+      }
+    ]
+  },
+  {
+    "$type": "layerGroup",
+    "$id": "layerGroup75",
+    "id": 75,
+    "layers": [
+      {
+        "$ref": "layer102"
+      }
+    ]
+  },
+  {
+    "$type": "layerGroup",
+    "$id": "layerGroup76",
+    "id": 76,
+    "layers": [
+      {
+        "$ref": "layer103"
+      }
+    ]
+  },
+  {
+    "$type": "layerGroup",
+    "$id": "layerGroup77",
+    "id": 77,
+    "layers": [
+      {
+        "$ref": "layer104"
+      }
+    ]
+  },
+  {
+    "$type": "layerGroup",
+    "$id": "layerGroup78",
+    "id": 78,
+    "layers": [
+      {
+        "$ref": "layer108"
+      }
+    ]
+  },
+  {
+    "$type": "layerGroup",
+    "$id": "layerGroup79",
+    "id": 79,
+    "layers": [
+      {
+        "$ref": "layer107"
+      }
+    ]
+  },
+  {
+    "$type": "layerGroup",
+    "$id": "layerGroup80",
+    "id": 80,
+    "layers": [
+      {
+        "$ref": "layer109"
+      }
+    ]
+  },
+  {
+    "$type": "layerGroup",
+    "$id": "layerGroup81",
+    "id": 81,
+    "layers": [
+      {
+        "$ref": "layer110"
+      }
+    ]
+  },
+  {
+    "$type": "layerGroup",
+    "$id": "layerGroup82",
+    "id": 82,
+    "layers": [
+      {
+        "$ref": "layer111"
+      }
+    ]
+  }
+]

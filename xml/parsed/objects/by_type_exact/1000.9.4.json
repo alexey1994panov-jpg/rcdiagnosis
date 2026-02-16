@@ -1,0 +1,1361 @@
+[
+  {
+    "name": "1&sol;3СА",
+    "description": "1/3СА",
+    "type": "1000.9.4",
+    "id": "8",
+    "adk_type": "011.04.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "1&sol;3СА",
+      "Description": "1/3СА",
+      "Type": "1000.9.4",
+      "ADKType": "011.04.07",
+      "ID": "8",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "AdkNumber": "2",
+              "Condition": "СА = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "3",
+              "Condition": "СА = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СА",
+          "Description": "Контроль вспомогательного перевода",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП6/C1",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Вспомогательный перевод стрелок",
+          "Description": "Вспомогательный перевод стрелок",
+          "CLASS": "Tdm.Unification.SmartTasks.CondTechTask",
+          "Number": "41265",
+          "AdkNumber": "13228"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "СА = 1",
+              "Delay": "TaskName/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "СА = 0",
+              "Delay": "TaskName/NT2_min"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "10СА",
+    "description": "10СА",
+    "type": "1000.9.4",
+    "id": "15",
+    "adk_type": "011.04.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "10СА",
+      "Description": "10СА",
+      "Type": "1000.9.4",
+      "ADKType": "011.04.07",
+      "ID": "15",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "AdkNumber": "2",
+              "Condition": "СА = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "3",
+              "Condition": "СА = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СА",
+          "Description": "Контроль вспомогательного перевода",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП7/C4",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Вспомогательный перевод стрелок",
+          "Description": "Вспомогательный перевод стрелок",
+          "CLASS": "Tdm.Unification.SmartTasks.CondTechTask",
+          "Number": "41265",
+          "AdkNumber": "13228"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "СА = 1",
+              "Delay": "TaskName/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "СА = 0",
+              "Delay": "TaskName/NT2_min"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "12АВ",
+    "description": "12АВ",
+    "type": "1000.9.4",
+    "id": "112",
+    "adk_type": "011.04.12",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "12АВ",
+      "Description": "12АВ",
+      "Type": "1000.9.4",
+      "ADKType": "011.04.12",
+      "ID": "112",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "АВПК = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "АВПК = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "АВ",
+          "Description": "Контроль автовозврата",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП37/C15",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "АВПК",
+          "Description": "Контроль плюсового положения автовозврата",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП37/C15",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "12СА",
+    "description": "12СА",
+    "type": "1000.9.4",
+    "id": "16",
+    "adk_type": "011.04.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "12СА",
+      "Description": "12СА",
+      "Type": "1000.9.4",
+      "ADKType": "011.04.07",
+      "ID": "16",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "AdkNumber": "2",
+              "Condition": "СА = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "3",
+              "Condition": "СА = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СА",
+          "Description": "Контроль вспомогательного перевода",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП7/C5",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Вспомогательный перевод стрелок",
+          "Description": "Вспомогательный перевод стрелок",
+          "CLASS": "Tdm.Unification.SmartTasks.CondTechTask",
+          "Number": "41265",
+          "AdkNumber": "13228"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "СА = 1",
+              "Delay": "TaskName/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "СА = 0",
+              "Delay": "TaskName/NT2_min"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "14АВ",
+    "description": "14АВ",
+    "type": "1000.9.4",
+    "id": "72",
+    "adk_type": "011.04.12",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "14АВ",
+      "Description": "14АВ",
+      "Type": "1000.9.4",
+      "ADKType": "011.04.12",
+      "ID": "72",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "АВПК = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "АВПК = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "АВ",
+          "Description": "Контроль автовозврата",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП21/C13",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "АВПК",
+          "Description": "Контроль плюсового положения автовозврата",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП21/C13",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "14СА",
+    "description": "14СА",
+    "type": "1000.9.4",
+    "id": "17",
+    "adk_type": "011.04.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "14СА",
+      "Description": "14СА",
+      "Type": "1000.9.4",
+      "ADKType": "011.04.07",
+      "ID": "17",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "AdkNumber": "2",
+              "Condition": "СА = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "3",
+              "Condition": "СА = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СА",
+          "Description": "Контроль вспомогательного перевода",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП7/C6",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Вспомогательный перевод стрелок",
+          "Description": "Вспомогательный перевод стрелок",
+          "CLASS": "Tdm.Unification.SmartTasks.CondTechTask",
+          "Number": "41265",
+          "AdkNumber": "13228"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "СА = 1",
+              "Delay": "TaskName/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "СА = 0",
+              "Delay": "TaskName/NT2_min"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "16СА",
+    "description": "16СА",
+    "type": "1000.9.4",
+    "id": "18",
+    "adk_type": "011.04.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "16СА",
+      "Description": "16СА",
+      "Type": "1000.9.4",
+      "ADKType": "011.04.07",
+      "ID": "18",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "AdkNumber": "2",
+              "Condition": "СА = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "3",
+              "Condition": "СА = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СА",
+          "Description": "Контроль вспомогательного перевода",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП7/C7",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Вспомогательный перевод стрелок",
+          "Description": "Вспомогательный перевод стрелок",
+          "CLASS": "Tdm.Unification.SmartTasks.CondTechTask",
+          "Number": "41265",
+          "AdkNumber": "13228"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "СА = 1",
+              "Delay": "TaskName/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "СА = 0",
+              "Delay": "TaskName/NT2_min"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "2СА",
+    "description": "2СА",
+    "type": "1000.9.4",
+    "id": "12",
+    "adk_type": "011.04.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "2СА",
+      "Description": "2СА",
+      "Type": "1000.9.4",
+      "ADKType": "011.04.07",
+      "ID": "12",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "AdkNumber": "2",
+              "Condition": "СА = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "3",
+              "Condition": "СА = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СА",
+          "Description": "Контроль вспомогательного перевода",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП7/C1",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Вспомогательный перевод стрелок",
+          "Description": "Вспомогательный перевод стрелок",
+          "CLASS": "Tdm.Unification.SmartTasks.CondTechTask",
+          "Number": "41265",
+          "AdkNumber": "13228"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "СА = 1",
+              "Delay": "TaskName/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "СА = 0",
+              "Delay": "TaskName/NT2_min"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "4&sol;6СА",
+    "description": "4/6СА",
+    "type": "1000.9.4",
+    "id": "13",
+    "adk_type": "011.04.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "4&sol;6СА",
+      "Description": "4/6СА",
+      "Type": "1000.9.4",
+      "ADKType": "011.04.07",
+      "ID": "13",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "AdkNumber": "2",
+              "Condition": "СА = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "3",
+              "Condition": "СА = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СА",
+          "Description": "Контроль вспомогательного перевода",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП7/C2",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Вспомогательный перевод стрелок",
+          "Description": "Вспомогательный перевод стрелок",
+          "CLASS": "Tdm.Unification.SmartTasks.CondTechTask",
+          "Number": "41265",
+          "AdkNumber": "13228"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "СА = 1",
+              "Delay": "TaskName/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "СА = 0",
+              "Delay": "TaskName/NT2_min"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "5СА",
+    "description": "5СА",
+    "type": "1000.9.4",
+    "id": "9",
+    "adk_type": "011.04.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "5СА",
+      "Description": "5СА",
+      "Type": "1000.9.4",
+      "ADKType": "011.04.07",
+      "ID": "9",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "AdkNumber": "2",
+              "Condition": "СА = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "3",
+              "Condition": "СА = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СА",
+          "Description": "Контроль вспомогательного перевода",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП6/C2",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Вспомогательный перевод стрелок",
+          "Description": "Вспомогательный перевод стрелок",
+          "CLASS": "Tdm.Unification.SmartTasks.CondTechTask",
+          "Number": "41265",
+          "AdkNumber": "13228"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "СА = 1",
+              "Delay": "TaskName/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "СА = 0",
+              "Delay": "TaskName/NT2_min"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "7АВ",
+    "description": "7АВ",
+    "type": "1000.9.4",
+    "id": "85",
+    "adk_type": "011.04.12",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "7АВ",
+      "Description": "7АВ",
+      "Type": "1000.9.4",
+      "ADKType": "011.04.12",
+      "ID": "85",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "АВПК = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "АВПК = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "АВ",
+          "Description": "Контроль автовозврата",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП27/C18",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "АВПК",
+          "Description": "Контроль плюсового положения автовозврата",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП27/C18",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "7СА",
+    "description": "7СА",
+    "type": "1000.9.4",
+    "id": "10",
+    "adk_type": "011.04.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "7СА",
+      "Description": "7СА",
+      "Type": "1000.9.4",
+      "ADKType": "011.04.07",
+      "ID": "10",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "AdkNumber": "2",
+              "Condition": "СА = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "3",
+              "Condition": "СА = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СА",
+          "Description": "Контроль вспомогательного перевода",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП6/C3",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Вспомогательный перевод стрелок",
+          "Description": "Вспомогательный перевод стрелок",
+          "CLASS": "Tdm.Unification.SmartTasks.CondTechTask",
+          "Number": "41265",
+          "AdkNumber": "13228"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "СА = 1",
+              "Delay": "TaskName/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "СА = 0",
+              "Delay": "TaskName/NT2_min"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "8АВ",
+    "description": "8АВ",
+    "type": "1000.9.4",
+    "id": "35",
+    "adk_type": "011.04.12",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "8АВ",
+      "Description": "8АВ",
+      "Type": "1000.9.4",
+      "ADKType": "011.04.12",
+      "ID": "35",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "АВПК = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "АВПК = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "АВ",
+          "Description": "Контроль автовозврата",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП10/C8",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "АВПК",
+          "Description": "Контроль плюсового положения автовозврата",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП10/C8",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "8СА",
+    "description": "8СА",
+    "type": "1000.9.4",
+    "id": "14",
+    "adk_type": "011.04.07",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "8СА",
+      "Description": "8СА",
+      "Type": "1000.9.4",
+      "ADKType": "011.04.07",
+      "ID": "14",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "AdkNumber": "2",
+              "Condition": "СА = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "3",
+              "Condition": "СА = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "СА",
+          "Description": "Контроль вспомогательного перевода",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП7/C3",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "Вспомогательный перевод стрелок",
+          "Description": "Вспомогательный перевод стрелок",
+          "CLASS": "Tdm.Unification.SmartTasks.CondTechTask",
+          "Number": "41265",
+          "AdkNumber": "13228"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "СА = 1",
+              "Delay": "TaskName/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "СА = 0",
+              "Delay": "TaskName/NT2_min"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "МАКЕТ",
+    "description": "МАКЕТ",
+    "type": "1000.9.4",
+    "id": "11",
+    "adk_type": "011.04.15",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МАКЕТ",
+      "Description": "МАКЕТ",
+      "Type": "1000.9.4",
+      "ADKType": "011.04.15",
+      "ID": "11",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "МакетВкл = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "3",
+              "Condition": "МакетВкл = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "МакетВкл",
+          "Description": "Контроль включения макета",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП6/C13",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МАКЕТ(-)",
+    "description": "МАКЕТ(-)",
+    "type": "1000.9.4",
+    "id": "927",
+    "adk_type": "011.04.15",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МАКЕТ(-)",
+      "Description": "МАКЕТ(-)",
+      "Type": "1000.9.4",
+      "ADKType": "011.04.15",
+      "ID": "927",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "МакетМК = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "МакетМК = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "МакетМК",
+          "Description": "Контроль минусового положения макета",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП6/C11",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "МАКЕТ(+)",
+    "description": "МАКЕТ(+)",
+    "type": "1000.9.4",
+    "id": "926",
+    "adk_type": "011.04.15",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "МАКЕТ(+)",
+      "Description": "МАКЕТ(+)",
+      "Type": "1000.9.4",
+      "ADKType": "011.04.15",
+      "ID": "926",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "МакетПК = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "МакетПК = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "МакетПК",
+          "Description": "Контроль плюсового положения макета",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП6/C12",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "НКЖ",
+    "description": "НКЖ",
+    "type": "1000.9.4",
+    "id": "133",
+    "adk_type": "004.04.01",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "НКЖ",
+      "Description": "НКЖ",
+      "Type": "1000.9.4",
+      "ADKType": "004.04.01",
+      "ID": "133",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КЖ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "11",
+              "AdkNumber": "3",
+              "Condition": "КЖ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КЖ",
+          "Description": "Контроль изъятия ключа - жезла",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП40/C9",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Размыкание стрелок Рз",
+    "description": "Размыкание стрелок Рз",
+    "type": "1000.9.4",
+    "id": "176",
+    "adk_type": "011.04.04",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Размыкание стрелок Рз",
+      "Description": "Размыкание стрелок Рз",
+      "Type": "1000.9.4",
+      "ADKType": "011.04.04",
+      "ID": "176",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "2",
+              "Condition": "ЗамСтр = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "3",
+              "Condition": "ЗамСтр = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "ЗамСтр",
+          "Description": "Контроль замыкающего реле",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП2/C4",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "ЧКЖ",
+    "description": "ЧКЖ",
+    "type": "1000.9.4",
+    "id": "146",
+    "adk_type": "004.04.01",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ЧКЖ",
+      "Description": "ЧКЖ",
+      "Type": "1000.9.4",
+      "ADKType": "004.04.01",
+      "ID": "146",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КЖ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "11",
+              "AdkNumber": "3",
+              "Condition": "КЖ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КЖ",
+          "Description": "Контроль изъятия ключа - жезла",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП43/C9",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  }
+]

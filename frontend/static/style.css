@@ -1,4 +1,4 @@
-body {
+﻿body {
   font-family: Arial, sans-serif;
   font-size: 14px;
   margin: 20px;
@@ -24,12 +24,30 @@ table td {
   font-size: 13px;
 }
 
+.col-hidden {
+  display: none;
+}
+
 th {
   background: #f0f0f0;
 }
 
 .controls {
   margin: 10px 0;
+}
+
+.controls-compact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.controls-compact label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
 }
 
 .controls input[type="number"] {
@@ -46,7 +64,7 @@ th {
   margin-bottom: 20px;
 }
 
-/* Подсветка состояний РЦ (совместимо с app.js и scenario.js) */
+/* РџРѕРґСЃРІРµС‚РєР° СЃРѕСЃС‚РѕСЏРЅРёР№ Р Р¦ (СЃРѕРІРјРµСЃС‚РёРјРѕ СЃ app.js Рё scenario.js) */
 .rc-state-free {
   background-color: rgba(128, 128, 128, 0.25);
 }
@@ -59,7 +77,7 @@ th {
   background-color: rgba(0, 160, 255, 0.25);
 }
 
-/* Состояния стрелок (совместимо с swClassForValue) */
+/* РЎРѕСЃС‚РѕСЏРЅРёСЏ СЃС‚СЂРµР»РѕРє (СЃРѕРІРјРµСЃС‚РёРјРѕ СЃ swClassForValue) */
 .sw-state-plus {
   background-color: rgba(0, 200, 0, 0.35);
 }
@@ -72,16 +90,19 @@ th {
   background-color: rgba(0, 160, 255, 0.25);
 }
 
-/* Схема участка (контейнер) */
+/* РЎС…РµРјР° СѓС‡Р°СЃС‚РєР° (РєРѕРЅС‚РµР№РЅРµСЂ) */
 .track-scheme {
   margin: 15px 0;
   padding: 10px;
   border: 1px solid #ccc;
-  display: inline-block;
+  display: block;
   position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: auto;
 }
 
-/* Индикаторы местного управления и автодействий */
+/* РРЅРґРёРєР°С‚РѕСЂС‹ РјРµСЃС‚РЅРѕРіРѕ СѓРїСЂР°РІР»РµРЅРёСЏ Рё Р°РІС‚РѕРґРµР№СЃС‚РІРёР№ */
 .mu-indicator,
 .aa-indicator {
   display: inline-block;
@@ -101,7 +122,7 @@ th {
   color: #fff;
 }
 
-/* Лента времени (контейнер) */
+/* Р›РµРЅС‚Р° РІСЂРµРјРµРЅРё (РєРѕРЅС‚РµР№РЅРµСЂ) */
 .timebar {
   margin: 10px 0;
 }
@@ -115,7 +136,7 @@ th {
   overflow: hidden;
 }
 
-/* Сегмент внутри гибкого контейнера timebarcontainer */
+/* РЎРµРіРјРµРЅС‚ РІРЅСѓС‚СЂРё РіРёР±РєРѕРіРѕ РєРѕРЅС‚РµР№РЅРµСЂР° timebarcontainer */
 .timebar-segment {
   height: 100%;
   background-color: #ddd;
@@ -123,43 +144,48 @@ th {
   border: none;
 }
 
-/* ЛЗ внутри сегмента */
+/* Р›Р— РІРЅСѓС‚СЂРё СЃРµРіРјРµРЅС‚Р° */
 .timebar-segment-lz {
   background-color: rgba(255, 0, 0, 0.35);
 }
 
-/* Открытие/закрытие детекторов */
+/* РћС‚РєСЂС‹С‚РёРµ/Р·Р°РєСЂС‹С‚РёРµ РґРµС‚РµРєС‚РѕСЂРѕРІ */
 .timebar-segment-open {
   border: 2px solid #008000;
 }
 
-/* Закрытие */
+/* Р—Р°РєСЂС‹С‚РёРµ */
 .timebar-segment-closed {
   border: none;
 }
 
-/* Подавленная ЛЗ (исключения, lz_suppressed:*) */
+/* РџРѕРґР°РІР»РµРЅРЅР°СЏ Р›Р— (РёСЃРєР»СЋС‡РµРЅРёСЏ, lz_suppressed:*) */
 .timebar-segment-suppressed {
   border-bottom: 3px dotted #ff8800;
 }
 
-/* Выделенный сегмент: замкнутый контур */
+/* Р’С‹РґРµР»РµРЅРЅС‹Р№ СЃРµРіРјРµРЅС‚: Р·Р°РјРєРЅСѓС‚С‹Р№ РєРѕРЅС‚СѓСЂ */
 .timebar-segment-selected {
   outline: 2px solid #000;
   outline-offset: -1px;
 }
 
-/* Выбранная строка таймлайна */
+/* Р’С‹Р±СЂР°РЅРЅР°СЏ СЃС‚СЂРѕРєР° С‚Р°Р№РјР»Р°Р№РЅР° */
 tr.timeline-selected {
   background-color: #ffeeba;
 }
 
-/* Для старой подсветки */
+.timeline-end-row td {
+  background: #fafafa;
+  font-style: italic;
+}
+
+/* Р”Р»СЏ СЃС‚Р°СЂРѕР№ РїРѕРґСЃРІРµС‚РєРё */
 tr.selected-row {
   outline: 2px solid #000;
 }
 
-/* Компактное оформление блоков настроек логики */
+/* РљРѕРјРїР°РєС‚РЅРѕРµ РѕС„РѕСЂРјР»РµРЅРёРµ Р±Р»РѕРєРѕРІ РЅР°СЃС‚СЂРѕРµРє Р»РѕРіРёРєРё */
 .logic-table {
   width: 100%;
   border-collapse: separate;
@@ -197,7 +223,7 @@ tr.selected-row {
   border: none;
 }
 
-/* Лёгкая фоновая подсветка вариантов */
+/* Р›С‘РіРєР°СЏ С„РѕРЅРѕРІР°СЏ РїРѕРґСЃРІРµС‚РєР° РІР°СЂРёР°РЅС‚РѕРІ */
 .logic-variant-v1  { background-color: rgba(156, 214, 248, 0.06); }
 .logic-variant-v2  { background-color: rgba(0, 200, 0, 0.06); }
 .logic-variant-v3  { background-color: rgba(255, 215, 0, 0.06); }
@@ -206,8 +232,18 @@ tr.selected-row {
 .logic-variant-ls1 { background-color: rgba(128, 0, 128, 0.06); }
 .logic-variant-ls2 { background-color: rgba(255, 140, 0, 0.06); }
 .logic-variant-ls4 { background-color: rgba(0, 128, 128, 0.06); }
+.logic-variant-exc { background-color: rgba(255, 153, 0, 0.12); border: 1px solid #f5b66a; }
 
-/* --- SVG-схема участка --- */
+.logic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px;
+}
+
+.logic-grid .logic-variant {
+  width: 100%;
+}
+`n/* --- SVG-СЃС…РµРјР° СѓС‡Р°СЃС‚РєР° --- */
 
 .rc-line {
   stroke: #00b5b5;
@@ -222,7 +258,7 @@ tr.selected-row {
   stroke-width: 4;
 }
 
-/* Толщина по ПК/МК */
+/* РўРѕР»С‰РёРЅР° РїРѕ РџРљ/РњРљ */
 .rc-main-thick {
   stroke-width: 8;
 }
@@ -239,14 +275,14 @@ tr.selected-row {
   stroke-width: 3;
 }
 
-/* Подчёркивания (сторона ПК) */
+/* РџРѕРґС‡С‘СЂРєРёРІР°РЅРёСЏ (СЃС‚РѕСЂРѕРЅР° РџРљ) */
 .pk-line {
   stroke: #000;
   stroke-width: 3;
   stroke-linecap: round;
 }
 
-/* Подписи РЦ и стрелок */
+/* РџРѕРґРїРёСЃРё Р Р¦ Рё СЃС‚СЂРµР»РѕРє */
 .rc-label {
   font-size: 18px;
   font-weight: bold;
@@ -258,16 +294,16 @@ tr.selected-row {
   text-anchor: middle;
 }
 
-/* Базовый круг светофора */
+/* Р‘Р°Р·РѕРІС‹Р№ РєСЂСѓРі СЃРІРµС‚РѕС„РѕСЂР° */
 .signal-circle {
   stroke: #000;
   stroke-width: 3;
-  fill: #00b5b5; /* фон по умолчанию */
+  fill: #00b5b5; /* С„РѕРЅ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ */
 }
 
-/* Состояния светофоров:
+/* РЎРѕСЃС‚РѕСЏРЅРёСЏ СЃРІРµС‚РѕС„РѕСЂРѕРІ:
    - SVG: fill
-   - таблица сценария: background-color */
+   - С‚Р°Р±Р»РёС†Р° СЃС†РµРЅР°СЂРёСЏ: background-color */
 .signal-free {
   fill: #00c000;
   background-color: rgba(0, 192, 0, 0.25);
@@ -288,7 +324,7 @@ tr.selected-row {
   background-color: rgba(0, 181, 181, 0.25);
 }
 
-/* Маневровые специальные состояния */
+/* РњР°РЅРµРІСЂРѕРІС‹Рµ СЃРїРµС†РёР°Р»СЊРЅС‹Рµ СЃРѕСЃС‚РѕСЏРЅРёСЏ */
 .signal-maneuver-forbidden {
   fill: #0000ff;
   background-color: rgba(0, 0, 255, 0.25);
@@ -306,7 +342,7 @@ tr.selected-row {
   border: 2px solid #ff0000;
 }
 
-/* Поездные агрегированные состояния */
+/* РџРѕРµР·РґРЅС‹Рµ Р°РіСЂРµРіРёСЂРѕРІР°РЅРЅС‹Рµ СЃРѕСЃС‚РѕСЏРЅРёСЏ */
 .signal-open {
   fill: #00c000;
   background-color: rgba(0, 192, 0, 0.25);
@@ -317,29 +353,29 @@ tr.selected-row {
   background-color: rgba(255, 0, 0, 0.25);
 }
 
-/* Базовый цвет линий РЦ (если нет состояния) */
+/* Р‘Р°Р·РѕРІС‹Р№ С†РІРµС‚ Р»РёРЅРёР№ Р Р¦ (РµСЃР»Рё РЅРµС‚ СЃРѕСЃС‚РѕСЏРЅРёСЏ) */
 .rc-line {
   stroke: #00b5b5;
   stroke-linecap: round;
 }
 
-/* Цветовая подсветка РЦ на SVG по состоянию */
+/* Р¦РІРµС‚РѕРІР°СЏ РїРѕРґСЃРІРµС‚РєР° Р Р¦ РЅР° SVG РїРѕ СЃРѕСЃС‚РѕСЏРЅРёСЋ */
 .rc-line-free {
-  stroke: #808080; /* свободна, серая */
+  stroke: #808080; /* СЃРІРѕР±РѕРґРЅР°, СЃРµСЂР°СЏ */
 }
 
 .rc-line-locked {
-  stroke: #ffd700; /* замкнута, жёлтая */
+  stroke: #ffd700; /* Р·Р°РјРєРЅСѓС‚Р°, Р¶С‘Р»С‚Р°СЏ */
 }
 
 .rc-line-occupied {
-  stroke: #ff0000; /* занята, красная */
+  stroke: #ff0000; /* Р·Р°РЅСЏС‚Р°, РєСЂР°СЃРЅР°СЏ */
 }
 
-/* Цвет индикатора стрелки по положению/контролю */
+/* Р¦РІРµС‚ РёРЅРґРёРєР°С‚РѕСЂР° СЃС‚СЂРµР»РєРё РїРѕ РїРѕР»РѕР¶РµРЅРёСЋ/РєРѕРЅС‚СЂРѕР»СЋ */
 .sw-indicator-plus {
-  color: #00c000; /* для HTML */
-  fill:  #00c000; /* для SVG <text> */
+  color: #00c000; /* РґР»СЏ HTML */
+  fill:  #00c000; /* РґР»СЏ SVG <text> */
 }
 
 .sw-indicator-minus {
@@ -356,3 +392,43 @@ tr.selected-row {
   color: #ff0000;
   fill:  #ff0000;
 }
+
+#indicatorpresetpanel label {
+  margin-right: 10px;
+}
+
+.flag-badge {
+  display: inline-block;
+  padding: 1px 6px;
+  margin: 1px 4px 1px 0;
+  border-radius: 10px;
+  font-size: 11px;
+  white-space: nowrap;
+  border: 1px solid #ccc;
+  background: #f7f7f7;
+}
+
+.flag-badge-supp {
+  border-color: #d18700;
+  background: #fff0d4;
+  color: #8a4d00;
+}
+
+.flag-badge-exc {
+  border-color: #1f6feb;
+  background: #dbeafe;
+  color: #0b3a75;
+}
+
+.flag-badge-lz {
+  border-color: rgba(210, 120, 0, 0.55);
+  background: rgba(255, 165, 0, 0.22);
+  color: #7a4100;
+}
+
+.flag-badge-ls {
+  border-color: rgba(180, 0, 0, 0.45);
+  background: rgba(255, 0, 0, 0.16);
+  color: #7a0000;
+}
+

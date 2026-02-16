@@ -1,0 +1,503 @@
+[
+  {
+    "name": "12СБ",
+    "description": "12СБ",
+    "type": "1000.9.13",
+    "id": "111",
+    "adk_type": "007.13.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "12СБ",
+      "Description": "12СБ",
+      "Type": "1000.9.13",
+      "ADKType": "007.13.100",
+      "ID": "111",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND (SwSection = 3 OR SwSection = 4 OR SwSection = 5 OR SwSection = 6 OR SwSection = 7 OR SwSection = 8)"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND (SwSection = 3 OR SwSection = 4 OR SwSection = 5 OR SwSection = 6 OR SwSection = 7 OR SwSection = 8)"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND (SwSection = 3 OR SwSection = 4 OR SwSection = 5 OR SwSection = 6 OR SwSection = 7 OR SwSection = 8)"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "МК",
+          "Description": "Минусовой контроль",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП37/C14",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "ПК",
+          "Description": "Плюсовой контроль",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП37/C13",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "AddlShifting",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/8СА"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "SwSection",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/10-12СП"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "KSBAV",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/12АВ"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "SwitchLostControl",
+          "Description": "ПотеряКонтр",
+          "CLASS": "Tdm.Unification.SmartTasks.SwitchMuLostControlTechTask",
+          "Number": "41531",
+          "AdkNumber": "417"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "SwitchBusyLostControlTechTask",
+          "Description": "Потеря контроля при занятой или замкнутой стрелке",
+          "CLASS": "Tdm.Unification.SmartTasks.SwitchBusyLostControlTechTask",
+          "Number": "41530",
+          "AdkNumber": "657"
+        }
+      }
+    ]
+  },
+  {
+    "name": "14СБ",
+    "description": "14СБ",
+    "type": "1000.9.13",
+    "id": "71",
+    "adk_type": "007.13.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "14СБ",
+      "Description": "14СБ",
+      "Type": "1000.9.13",
+      "ADKType": "007.13.100",
+      "ID": "71",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND (SwSection = 3 OR SwSection = 4 OR SwSection = 5 OR SwSection = 6 OR SwSection = 7 OR SwSection = 8)"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND (SwSection = 3 OR SwSection = 4 OR SwSection = 5 OR SwSection = 6 OR SwSection = 7 OR SwSection = 8)"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND (SwSection = 3 OR SwSection = 4 OR SwSection = 5 OR SwSection = 6 OR SwSection = 7 OR SwSection = 8)"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "МК",
+          "Description": "Минусовой контроль",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП21/C12",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "ПК",
+          "Description": "Плюсовой контроль",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП21/C11",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "AddlShifting",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/14СА"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "KSBAV",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/14АВ"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "SwSection",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/14-16СП"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "SwitchLostControl",
+          "Description": "ПотеряКонтр",
+          "CLASS": "Tdm.Unification.SmartTasks.SwitchMuLostControlTechTask",
+          "Number": "41531",
+          "AdkNumber": "417"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "SwitchBusyLostControlTechTask",
+          "Description": "Потеря контроля при занятой или замкнутой стрелке",
+          "CLASS": "Tdm.Unification.SmartTasks.SwitchBusyLostControlTechTask",
+          "Number": "41530",
+          "AdkNumber": "657"
+        }
+      }
+    ]
+  },
+  {
+    "name": "7СБ",
+    "description": "7СБ",
+    "type": "1000.9.13",
+    "id": "84",
+    "adk_type": "007.13.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "7СБ",
+      "Description": "7СБ",
+      "Type": "1000.9.13",
+      "ADKType": "007.13.100",
+      "ID": "84",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND (SwSection = 3 OR SwSection = 4 OR SwSection = 5 OR SwSection = 6 OR SwSection = 7 OR SwSection = 8)"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND (SwSection = 3 OR SwSection = 4 OR SwSection = 5 OR SwSection = 6 OR SwSection = 7 OR SwSection = 8)"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND (SwSection = 3 OR SwSection = 4 OR SwSection = 5 OR SwSection = 6 OR SwSection = 7 OR SwSection = 8)"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "МК",
+          "Description": "Минусовой контроль",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП27/C17",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "ПК",
+          "Description": "Плюсовой контроль",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП27/C16",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "AddlShifting",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/7СА"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "SwSection",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/1-7СП"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "KSBAV",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/7АВ"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "SwitchLostControl",
+          "Description": "ПотеряКонтр",
+          "CLASS": "Tdm.Unification.SmartTasks.SwitchMuLostControlTechTask",
+          "Number": "41531",
+          "AdkNumber": "417"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "SwitchBusyLostControlTechTask",
+          "Description": "Потеря контроля при занятой или замкнутой стрелке",
+          "CLASS": "Tdm.Unification.SmartTasks.SwitchBusyLostControlTechTask",
+          "Number": "41530",
+          "AdkNumber": "657"
+        }
+      }
+    ]
+  },
+  {
+    "name": "8СБ",
+    "description": "8СБ",
+    "type": "1000.9.13",
+    "id": "34",
+    "adk_type": "007.13.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "8СБ",
+      "Description": "8СБ",
+      "Type": "1000.9.13",
+      "ADKType": "007.13.100",
+      "ID": "34",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "ПК = 1 AND МК(0) = 0 AND (SwSection = 3 OR SwSection = 4 OR SwSection = 5 OR SwSection = 6 OR SwSection = 7 OR SwSection = 8)"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "10",
+              "Condition": "ПК = 0 AND МК(1) = 1 AND (SwSection = 3 OR SwSection = 4 OR SwSection = 5 OR SwSection = 6 OR SwSection = 7 OR SwSection = 8)"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "ПК = 0 AND МК(0) = 0 AND (SwSection = 3 OR SwSection = 4 OR SwSection = 5 OR SwSection = 6 OR SwSection = 7 OR SwSection = 8)"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "МК",
+          "Description": "Минусовой контроль",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП10/C7",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "ПК",
+          "Description": "Плюсовой контроль",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП10/C6",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "AddlShifting",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/8СА"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "KSBAV",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/8АВ"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "SwSection",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/2-8СП"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "SwitchLostControl",
+          "Description": "ПотеряКонтр",
+          "CLASS": "Tdm.Unification.SmartTasks.SwitchMuLostControlTechTask",
+          "Number": "41531",
+          "AdkNumber": "417"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "SwitchBusyLostControlTechTask",
+          "Description": "Потеря контроля при занятой или замкнутой стрелке",
+          "CLASS": "Tdm.Unification.SmartTasks.SwitchBusyLostControlTechTask",
+          "Number": "41530",
+          "AdkNumber": "657"
+        }
+      }
+    ]
+  },
+  {
+    "name": "РУ",
+    "description": "РУ",
+    "type": "1000.9.13",
+    "id": "119",
+    "adk_type": "037.13.01",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "РУ",
+      "Description": "РУ",
+      "Type": "1000.9.13",
+      "ADKType": "037.13.01",
+      "ID": "119",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "РУ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "AdkNumber": "3",
+              "Condition": "РУ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "РУ",
+          "Description": "Контроль резервного управления станцией",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП44/C4",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  }
+]

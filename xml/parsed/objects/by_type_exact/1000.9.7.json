@@ -1,0 +1,481 @@
+[
+  {
+    "name": "ВВ ПП1, ПП3",
+    "description": "ВВ ПП1, ПП3",
+    "type": "1000.9.7",
+    "id": "76",
+    "adk_type": "037.07.01",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ВВ ПП1, ПП3",
+      "Description": "ВВ ПП1, ПП3",
+      "Type": "1000.9.7",
+      "ADKType": "037.07.01",
+      "ID": "76",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "БВН = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "БВН = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "БВН",
+          "Description": "Контроль включения блока выдержки времени",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП22/C9",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "ВВД ОТУ",
+    "description": "ВВД ОТУ",
+    "type": "1000.9.7",
+    "id": "157",
+    "adk_type": "037.07.01",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ВВД ОТУ",
+      "Description": "ВВД ОТУ",
+      "Type": "1000.9.7",
+      "ADKType": "037.07.01",
+      "ID": "157",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "БВН = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "БВН = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "БВН",
+          "Description": "Контроль включения блока выдержки времени",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП1/C1",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "НТревога1",
+    "description": "НТревога1",
+    "type": "1000.9.7",
+    "id": "325",
+    "adk_type": "007.07.03",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "НТревога1",
+      "Description": "НТревога1",
+      "Type": "1000.9.7",
+      "ADKType": "007.07.03",
+      "ID": "325",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "10",
+              "Condition": "1КТСМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "12",
+              "Condition": "1КТСМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "1КТСМ",
+          "Description": "Контроль работы КТСМ \"Тревога 1\"",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП23/C11",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "KTSMTrevoga1",
+          "Description": "Тревога 1",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "41160",
+          "WriteProtocol": "true",
+          "AdkNumber": "17519"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "1КТСМ = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "1КТСМ = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "НТревога2",
+    "description": "НТревога2",
+    "type": "1000.9.7",
+    "id": "326",
+    "adk_type": "007.07.03",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "НТревога2",
+      "Description": "НТревога2",
+      "Type": "1000.9.7",
+      "ADKType": "007.07.03",
+      "ID": "326",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "10",
+              "Condition": "2КТСМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "13",
+              "Condition": "2КТСМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "2КТСМ",
+          "Description": "Контроль работы КТСМ \"Тревога 2\"",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП23/C12",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "KTSMTrevoga2",
+          "Description": "Тревога 2",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "41160",
+          "WriteProtocol": "true",
+          "AdkNumber": "17520"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "2КТСМ = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "2КТСМ = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Полюс БВВ",
+    "description": "Полюс БВВ",
+    "type": "1000.9.7",
+    "id": "192",
+    "adk_type": "037.07.01",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Полюс БВВ",
+      "Description": "Полюс БВВ",
+      "Type": "1000.9.7",
+      "ADKType": "037.07.01",
+      "ID": "192",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "БВН = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "БВН = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "БВН",
+          "Description": "Контроль включения блока выдержки времени",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП3/C8",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "ЧТревога1",
+    "description": "ЧТревога1",
+    "type": "1000.9.7",
+    "id": "327",
+    "adk_type": "007.07.03",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ЧТревога1",
+      "Description": "ЧТревога1",
+      "Type": "1000.9.7",
+      "ADKType": "007.07.03",
+      "ID": "327",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "10",
+              "Condition": "1КТСМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "12",
+              "Condition": "1КТСМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "1КТСМ",
+          "Description": "Контроль работы КТСМ \"Тревога 1\"",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП23/C13",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "KTSMTrevoga1",
+          "Description": "Тревога 1",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "41160",
+          "WriteProtocol": "true",
+          "AdkNumber": "17519"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "1КТСМ = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "1КТСМ = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ЧТревога2",
+    "description": "ЧТревога2",
+    "type": "1000.9.7",
+    "id": "328",
+    "adk_type": "007.07.03",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ЧТревога2",
+      "Description": "ЧТревога2",
+      "Type": "1000.9.7",
+      "ADKType": "007.07.03",
+      "ID": "328",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "10",
+              "Condition": "2КТСМ = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "13",
+              "Condition": "2КТСМ = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "2КТСМ",
+          "Description": "Контроль работы КТСМ \"Тревога 2\"",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП23/C14",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "KTSMTrevoga2",
+          "Description": "Тревога 2",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "41160",
+          "WriteProtocol": "true",
+          "AdkNumber": "17520"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "2КТСМ = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "2КТСМ = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,206 @@
+[
+  {
+    "name": "ПешПер1",
+    "description": "ПешПер1",
+    "type": "1000.18.1",
+    "id": "123",
+    "adk_type": "042.01.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПешПер1",
+      "Description": "ПешПер1",
+      "Type": "1000.18.1",
+      "ADKType": "042.01.100",
+      "ID": "123",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "Закр = 0 AND Перех.неиспр(0) = 0 AND ИП(0) = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "3",
+              "Condition": "Закр = 0 AND Перех.неиспр(0) = 1 AND ИП(0) = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "4",
+              "Condition": "Закр = 0 AND Перех.неиспр(0) = 1 AND ИП(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "5",
+              "Condition": "Закр = 0 AND Перех.неиспр(0) = 0 AND ИП(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "AdkNumber": "6",
+              "Condition": "Закр = 1 AND Перех.неиспр(0) = 0 AND ИП(0) = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "AdkNumber": "7",
+              "Condition": "Закр = 1 AND Перех.неиспр(0) = 0 AND ИП(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "AdkNumber": "8",
+              "Condition": "Закр = 1 AND Перех.неиспр(0) = 1 AND ИП(0) = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "AdkNumber": "9",
+              "Condition": "Закр = 1 AND Перех.неиспр(0) = 1 AND ИП(0) = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "Закр",
+          "Description": "Контроль закрытия",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП47/C2",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "ПешПер3",
+    "description": "ПешПер3",
+    "type": "1000.18.1",
+    "id": "125",
+    "adk_type": "042.01.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПешПер3",
+      "Description": "ПешПер3",
+      "Type": "1000.18.1",
+      "ADKType": "042.01.100",
+      "ID": "125",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "Закр = 0 AND Перех.неиспр(0) = 0 AND ИП(0) = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "3",
+              "Condition": "Закр = 0 AND Перех.неиспр(0) = 1 AND ИП(0) = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "4",
+              "Condition": "Закр = 0 AND Перех.неиспр(0) = 1 AND ИП(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "5",
+              "Condition": "Закр = 0 AND Перех.неиспр(0) = 0 AND ИП(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "AdkNumber": "6",
+              "Condition": "Закр = 1 AND Перех.неиспр(0) = 0 AND ИП(0) = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "AdkNumber": "7",
+              "Condition": "Закр = 1 AND Перех.неиспр(0) = 0 AND ИП(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "AdkNumber": "8",
+              "Condition": "Закр = 1 AND Перех.неиспр(0) = 1 AND ИП(0) = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "AdkNumber": "9",
+              "Condition": "Закр = 1 AND Перех.неиспр(0) = 1 AND ИП(0) = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "Закр",
+          "Description": "Контроль закрытия",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП47/C12",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  }
+]

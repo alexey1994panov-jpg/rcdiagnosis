@@ -1,455 +1,109 @@
-<table class="logic-table">
-  <tr>
-    <td class="logic-col">
-      <table class="logic-variant logic-variant-v1">
-        <thead>
-          <tr><th colspan="2">ЛЗ v1</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>TS01.01, с</td>
-            <td><input id="ts0101" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TLZ01, с</td>
-            <td><input id="tlz01" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TKONv1, с</td>
-            <td><input id="tkonv1" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>Пауза после ЛЗ</td>
-            <td><input id="tpausev1" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>Включить v1</td>
-            <td><input id="enablev1" type="checkbox"></td>
-          </tr>
-        </tbody>
-      </table>
-    </td>
+﻿<div class="logic-grid">
+  <table class="logic-variant logic-variant-exc"><thead><tr><th colspan="2">Исключения ЛЗ</th></tr></thead><tbody>
+    <tr><td>TMU, с</td><td><input id="tmu" type="number" step="0.1"></td></tr>
+    <tr><td>TRECENT_LS, с</td><td><input id="trecentls" type="number" step="0.1"></td></tr>
+    <tr><td>TMIN_MANEUVER v8, с</td><td><input id="tminmaneuverv8" type="number" step="0.1"></td></tr>
+    <tr><td>MU-исключение</td><td><input id="enablelzexcmu" type="checkbox"></td></tr>
+    <tr><td>Исключение по недавней ЛС</td><td><input id="enablelzexcrecentls" type="checkbox"></td></tr>
+    <tr><td>Исключение по ДСП</td><td><input id="enablelzexcdsp" type="checkbox"></td></tr>
+  </tbody></table>
 
-    <td class="logic-col">
-      <table class="logic-variant logic-variant-v2">
-        <thead>
-          <tr><th colspan="2">ЛЗ v2</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>TS01.02, с</td>
-            <td><input id="ts0102" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TS02.02, с</td>
-            <td><input id="ts0202" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TLZ02, с</td>
-            <td><input id="tlz02" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TKONv2, с</td>
-            <td><input id="tkonv2" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>Пауза после ЛЗ</td>
-            <td><input id="tpausev2" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>Включить v2</td>
-            <td><input id="enablev2" type="checkbox"></td>
-          </tr>
-        </tbody>
-      </table>
-    </td>
+  <table class="logic-variant logic-variant-v1"><thead><tr><th colspan="2">ЛЗ v1</th></tr></thead><tbody>
+    <tr><td>TS01_LZ1, с</td><td><input id="ts0101" type="number" step="0.1"></td></tr>
+    <tr><td>TLZ_LZ1, с</td><td><input id="tlz01" type="number" step="0.1"></td></tr>
+    <tr><td>TKON_LZ1, с</td><td><input id="tkonv1" type="number" step="0.1"></td></tr>
+    <tr><td>Включить v1</td><td><input id="enablev1" type="checkbox"></td></tr>
+  </tbody></table>
 
-    <td class="logic-col">
-      <table class="logic-variant logic-variant-v3">
-        <thead>
-          <tr><th colspan="2">ЛЗ v3</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>TS01.03, с</td>
-            <td><input id="ts0103" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TS02.03, с</td>
-            <td><input id="ts0203" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TLZ03, с</td>
-            <td><input id="tlz03" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TKONv3, с</td>
-            <td><input id="tkonv3" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>Пауза после ЛЗ</td>
-            <td><input id="tpausev3" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>Включить v3</td>
-            <td><input id="enablev3" type="checkbox"></td>
-          </tr>
-        </tbody>
-      </table>
-    </td>
-    <td class="logic-col">
-      <table class="logic-variant">
-        <thead>
-          <tr><th colspan="2">ЛЗ v4 (смежность)</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>TS04.01, с</td>
-            <td><input id="ts0401" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TLZ04, с</td>
-            <td><input id="tlz04" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TKONv4, с</td>
-            <td><input id="tkonv4" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>Пауза после ЛЗ</td>
-            <td><input id="tpausev4" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>Включить v4</td>
-            <td><input id="enablev4" type="checkbox"></td>
-          </tr>
-        </tbody>
-      </table>
-    </td>
-  </tr>
-  <tr>
+  <table class="logic-variant logic-variant-v2"><thead><tr><th colspan="2">ЛЗ v2</th></tr></thead><tbody>
+    <tr><td>TS01_LZ2, с</td><td><input id="ts0102" type="number" step="0.1"></td></tr>
+    <tr><td>TS02_LZ2, с</td><td><input id="ts0202" type="number" step="0.1"></td></tr>
+    <tr><td>TLZ_LZ2, с</td><td><input id="tlz02" type="number" step="0.1"></td></tr>
+    <tr><td>TKON_LZ2, с</td><td><input id="tkonv2" type="number" step="0.1"></td></tr>
+    <tr><td>Включить v2</td><td><input id="enablev2" type="checkbox"></td></tr>
+  </tbody></table>
 
-    <td class="logic-col">
-      <table class="logic-variant">
-        <thead>
-          <tr><th colspan="2">ЛЗ v5 (с замыканием маршрута)</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>TS05, с</td>
-            <td><input id="ts05" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TLZ05, с</td>
-            <td><input id="tlz05" type="number" step="0.1"></td>
-          </tr>
-          
-          <tr>
-            <td>TKONv5, с</td>
-            <td><input id="tkonv5" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>Пауза после ЛЗ</td>
-            <td><input id="tpausev5" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>Включить v5</td>
-            <td><input id="enablev5" type="checkbox"></td>
-          </tr>
-        </tbody>
-      </table>
-    </td>
+  <table class="logic-variant logic-variant-v3"><thead><tr><th colspan="2">ЛЗ v3</th></tr></thead><tbody>
+    <tr><td>TS01_LZ3, с</td><td><input id="ts0103" type="number" step="0.1"></td></tr>
+    <tr><td>TS02_LZ3, с</td><td><input id="ts0203" type="number" step="0.1"></td></tr>
+    <tr><td>TLZ_LZ3, с</td><td><input id="tlz03" type="number" step="0.1"></td></tr>
+    <tr><td>TKON_LZ3, с</td><td><input id="tkonv3" type="number" step="0.1"></td></tr>
+    <tr><td>Включить v3</td><td><input id="enablev3" type="checkbox"></td></tr>
+  </tbody></table>
 
-    <td class="logic-col">
-      <table class="logic-variant">
-        <thead>
-          <tr><th colspan="2">ЛЗ v6 (без замыкания)</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>TS06, с</td>
-            <td><input id="ts06" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TLZ06, с</td>
-            <td><input id="tlz06" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TKONv6, с</td>
-            <td><input id="tkonv6" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>Пауза после ЛЗ</td>
-            <td><input id="tpausev6" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>Включить v6</td>
-            <td><input id="enablev6" type="checkbox"></td>
-          </tr>
-        </tbody>
-      </table>
-    </td>
-    <td class="logic-col">
-      <table class="logic-variant">
-        <thead>
-          <tr><th colspan="2">ЛЗ v7 (бесстрелочная)</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>TS07, с</td>
-            <td><input id="ts07" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TLZ07, с</td>
-            <td><input id="tlz07" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TKONv7, с</td>
-            <td><input id="tkonv7" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>Пауза после ЛЗ</td>
-            <td><input id="tpausev7" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>Включить v7</td>
-            <td><input id="enablev7" type="checkbox"></td>
-          </tr>
-        </tbody>
-      </table>
-    </td>
-    <td class="logic-col">
-      <table class="logic-variant logic-variant-v8">
-        <thead>
-          <tr><th colspan="2">ЛЗ v8 (3 ветки + манёвры)</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>TS01.08, с</td>
-            <td><input id="ts0108" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TS02.08, с</td>
-            <td><input id="ts0208" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TLZ08, с</td>
-            <td><input id="tlz08" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TKONv8, с</td>
-            <td><input id="tkonv8" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>Пауза после ЛЗ</td>
-            <td><input id="tpausev8" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>Включить v8</td>
-            <td><input id="enablev8" type="checkbox"></td>
-          </tr>
-        </tbody>
-      </table>
-    </td>
-  </tr>
-  </tr>
-    <td class="logic-col">
-      <table class="logic-variant">
-        <thead>
-          <tr><th colspan="2">ЛЗ v9 (окно между смежными)</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>TS01.09, с</td>
-            <td><input id="ts0109" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TLZ09, с</td>
-            <td><input id="tlz09" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TKONv9, с</td>
-            <td><input id="tkonv9" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>Пауза после ЛЗ</td>
-            <td><input id="tpausev9" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>Включить v9</td>
-            <td><input id="enablev9" type="checkbox"></td>
-          </tr>
-        </tbody>
-      </table>
-    </td>
-    <td class="logic-col">
-      <table class="logic-variant">
-        <thead>
-          <tr><th colspan="2">ЛЗ v10 (3 фазы смежных)</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>TS01.10, с</td>
-            <td><input id="ts0110" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TS02.10, с</td>
-            <td><input id="ts0210" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TS03.10, с</td>
-            <td><input id="ts0310" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TLZ10, с</td>
-            <td><input id="tlz10" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TKONv10, с</td>
-            <td><input id="tkonv10" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>Пауза после ЛЗ</td>
-            <td><input id="tpausev10" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>Включить v10</td>
-            <td><input id="enablev10" type="checkbox"></td>
-          </tr>
-        </tbody>
-      </table>
-    </td>
-    <td class="logic-col">
-      <table class="logic-variant">
-        <thead>
-          <tr><th colspan="2">ЛЗ v11 (по светофорам)</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>TS11, с</td>
-            <td><input id="ts11" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TLZ11, с</td>
-            <td><input id="tlz11" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TKONv11, с</td>
-            <td><input id="tkonv11" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>Пауза после ЛЗ</td>
-            <td><input id="tpausev11" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>Включить v11</td>
-            <td><input id="enablev11" type="checkbox"></td>
-          </tr>
-        </tbody>
-      </table>
-    </td>
-    <td class="logic-col">
-      <table class="logic-variant">
-        <thead>
-          <tr><th colspan="2">ЛЗ v12 (смежная РЦ не контролируется)</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>TS01.12, с</td>
-            <td><input id="ts0112" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TS02.12, с</td>
-            <td><input id="ts0212" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TLZ12, с</td>
-            <td><input id="tlz12" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TKONv12, с</td>
-            <td><input id="tkonv12" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>Пауза после ЛЗ</td>
-            <td><input id="tpausev12" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>Включить v12</td>
-            <td><input id="enablev12" type="checkbox"></td>
-          </tr>
-        </tbody>
-      </table>
-    </td>
-  </tr>
-  </tr>
-    <td class="logic-col">
-      <table class="logic-variant">
-        <thead>
-          <tr><th colspan="2">ЛЗ v13 (смежная РЦ замкнута + светофоры)</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>TS01.13, с</td>
-            <td><input id="ts0113" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TS02.13, с</td>
-            <td><input id="ts0213" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TLZ13, с</td>
-            <td><input id="tlz13" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TKONv13, с</td>
-            <td><input id="tkonv13" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>Пауза после ЛЗ</td>
-            <td><input id="tpausev13" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>Включить v13</td>
-            <td><input id="enablev13" type="checkbox"></td>
-          </tr>
-          
-        </tbody>
-      </table>
-    </td>
-    <td class="logic-col">
-      <table class="logic-variant">
-        <thead>
-          <tr><th colspan="2">Исключения ЛЗ</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>TMU, с</td>
-            <td><input id="tmu" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TRECENT_LS, с</td>
-            <td><input id="trecentls" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>TMIN_MANEUVER v8, с</td>
-            <td><input id="tminmaneuverv8" type="number" step="0.1"></td>
-          </tr>
-          <tr>
-            <td>Разрешить MU-исключения ЛЗ</td>
-            <td><input id="enablelzexcmu" type="checkbox"></td>
-          </tr>
-          <tr>
-            <td>Разрешить исключения по недавней ЛС</td>
-            <td><input id="enablelzexcrecentls" type="checkbox"></td>
-          </tr>
-          <tr>
-            <td>Разрешить исключения по ДСП auto-action</td>
-            <td><input id="enablelzexcdsp" type="checkbox"></td>
-          </tr>
-        </tbody>
-      </table>
-    </td>
-  </tr>
+  <table class="logic-variant"><thead><tr><th colspan="2">ЛЗ v4</th></tr></thead><tbody>
+    <tr><td>TS01_LZ4, с</td><td><input id="ts0401" type="number" step="0.1"></td></tr>
+    <tr><td>TLZ_LZ4, с</td><td><input id="tlz04" type="number" step="0.1"></td></tr>
+    <tr><td>TKON_LZ4, с</td><td><input id="tkonv4" type="number" step="0.1"></td></tr>
+    <tr><td>Включить v4</td><td><input id="enablev4" type="checkbox"></td></tr>
+  </tbody></table>
 
-</table>
+  <table class="logic-variant"><thead><tr><th colspan="2">ЛЗ v5</th></tr></thead><tbody>
+    <tr><td>TS01_LZ5, с</td><td><input id="ts05" type="number" step="0.1"></td></tr>
+    <tr><td>TLZ_LZ5, с</td><td><input id="tlz05" type="number" step="0.1"></td></tr>
+    <tr><td>T_PK, с</td><td><input id="tpk" type="number" step="0.1"></td></tr>
+    <tr><td>TKON_LZ5, с</td><td><input id="tkonv5" type="number" step="0.1"></td></tr>
+    <tr><td>Включить v5</td><td><input id="enablev5" type="checkbox"></td></tr>
+  </tbody></table>
+
+  <table class="logic-variant"><thead><tr><th colspan="2">ЛЗ v6</th></tr></thead><tbody>
+    <tr><td>TS01_LZ6, с</td><td><input id="ts06" type="number" step="0.1"></td></tr>
+    <tr><td>TLZ_LZ6, с</td><td><input id="tlz06" type="number" step="0.1"></td></tr>
+    <tr><td>TKON_LZ6, с</td><td><input id="tkonv6" type="number" step="0.1"></td></tr>
+    <tr><td>Включить v6</td><td><input id="enablev6" type="checkbox"></td></tr>
+  </tbody></table>
+
+  <table class="logic-variant"><thead><tr><th colspan="2">ЛЗ v7</th></tr></thead><tbody>
+    <tr><td>TS01_LZ7, с</td><td><input id="ts07" type="number" step="0.1"></td></tr>
+    <tr><td>TLZ_LZ7, с</td><td><input id="tlz07" type="number" step="0.1"></td></tr>
+    <tr><td>TKON_LZ7, с</td><td><input id="tkonv7" type="number" step="0.1"></td></tr>
+    <tr><td>Включить v7</td><td><input id="enablev7" type="checkbox"></td></tr>
+  </tbody></table>
+
+  <table class="logic-variant logic-variant-v8"><thead><tr><th colspan="2">ЛЗ v8</th></tr></thead><tbody>
+    <tr><td>TS01_LZ8, с</td><td><input id="ts0108" type="number" step="0.1"></td></tr>
+    <tr><td>TS02_LZ8, с</td><td><input id="ts0208" type="number" step="0.1"></td></tr>
+    <tr><td>TLZ_LZ8, с</td><td><input id="tlz08" type="number" step="0.1"></td></tr>
+    <tr><td>TKON_LZ8, с</td><td><input id="tkonv8" type="number" step="0.1"></td></tr>
+    <tr><td>Включить v8</td><td><input id="enablev8" type="checkbox"></td></tr>
+  </tbody></table>
+
+  <table class="logic-variant"><thead><tr><th colspan="2">ЛЗ v9</th></tr></thead><tbody>
+    <tr><td>TS01_LZ9, с</td><td><input id="ts0109" type="number" step="0.1"></td></tr>
+    <tr><td>TLZ_LZ9, с</td><td><input id="tlz09" type="number" step="0.1"></td></tr>
+    <tr><td>TKON_LZ9, с</td><td><input id="tkonv9" type="number" step="0.1"></td></tr>
+    <tr><td>Включить v9</td><td><input id="enablev9" type="checkbox"></td></tr>
+  </tbody></table>
+
+  <table class="logic-variant"><thead><tr><th colspan="2">ЛЗ v10</th></tr></thead><tbody>
+    <tr><td>TS01_LZ10, с</td><td><input id="ts0110" type="number" step="0.1"></td></tr>
+    <tr><td>TS02_LZ10, с</td><td><input id="ts0210" type="number" step="0.1"></td></tr>
+    <tr><td>TS03_LZ10, с</td><td><input id="ts0310" type="number" step="0.1"></td></tr>
+    <tr><td>TLZ_LZ10, с</td><td><input id="tlz10" type="number" step="0.1"></td></tr>
+    <tr><td>TKON_LZ10, с</td><td><input id="tkonv10" type="number" step="0.1"></td></tr>
+    <tr><td>Включить v10</td><td><input id="enablev10" type="checkbox"></td></tr>
+  </tbody></table>
+
+  <table class="logic-variant"><thead><tr><th colspan="2">ЛЗ v11</th></tr></thead><tbody>
+    <tr><td>TS01_LZ11, с</td><td><input id="ts11" type="number" step="0.1"></td></tr>
+    <tr><td>TLZ_LZ11, с</td><td><input id="tlz11" type="number" step="0.1"></td></tr>
+    <tr><td>TKON_LZ11, с</td><td><input id="tkonv11" type="number" step="0.1"></td></tr>
+    <tr><td>Включить v11</td><td><input id="enablev11" type="checkbox"></td></tr>
+  </tbody></table>
+
+  <table class="logic-variant"><thead><tr><th colspan="2">ЛЗ v12</th></tr></thead><tbody>
+    <tr><td>TS01_LZ12, с</td><td><input id="ts0112" type="number" step="0.1"></td></tr>
+    <tr><td>TS02_LZ12, с</td><td><input id="ts0212" type="number" step="0.1"></td></tr>
+    <tr><td>TLZ_LZ12, с</td><td><input id="tlz12" type="number" step="0.1"></td></tr>
+    <tr><td>TKON_LZ12, с</td><td><input id="tkonv12" type="number" step="0.1"></td></tr>
+    <tr><td>Включить v12</td><td><input id="enablev12" type="checkbox"></td></tr>
+  </tbody></table>
+
+  <table class="logic-variant"><thead><tr><th colspan="2">ЛЗ v13</th></tr></thead><tbody>
+    <tr><td>TS01_LZ13, с</td><td><input id="ts0113" type="number" step="0.1"></td></tr>
+    <tr><td>TS02_LZ13, с</td><td><input id="ts0213" type="number" step="0.1"></td></tr>
+    <tr><td>TLZ_LZ13, с</td><td><input id="tlz13" type="number" step="0.1"></td></tr>
+    <tr><td>TKON_LZ13, с</td><td><input id="tkonv13" type="number" step="0.1"></td></tr>
+    <tr><td>Включить v13</td><td><input id="enablev13" type="checkbox"></td></tr>
+  </tbody></table>
+</div>

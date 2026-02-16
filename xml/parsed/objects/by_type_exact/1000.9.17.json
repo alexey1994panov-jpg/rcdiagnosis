@@ -1,0 +1,2752 @@
+[
+  {
+    "name": "М1К",
+    "description": "М1К",
+    "type": "1000.9.17",
+    "id": "357",
+    "adk_type": "002.17.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "М1К",
+      "Description": "М1К",
+      "Type": "1000.9.17",
+      "ADKType": "002.17.02",
+      "ID": "357",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КН(0) = 0 AND ППР(0) = 0 AND КНМ(0) = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "6",
+              "Condition": "КН(0) = 0 AND ППР(0) = 0 AND КНМ(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "КН(0) = 1 OR ППР(0) = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль маневрового кнопочного реле светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ext": "BinaryLogic",
+          "Ref1": "/Station/IOSys/ДЦРКП/ДЦРКП27/C4",
+          "Ref2": "/Station/IOSys/ДЦРКП/ДЦРКП27/C6",
+          "Logic": "OR"
+        }
+      }
+    ]
+  },
+  {
+    "name": "М2К",
+    "description": "М2К",
+    "type": "1000.9.17",
+    "id": "39",
+    "adk_type": "002.17.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "М2К",
+      "Description": "М2К",
+      "Type": "1000.9.17",
+      "ADKType": "002.17.02",
+      "ID": "39",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КН(0) = 0 AND ППР(0) = 0 AND КНМ(0) = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "6",
+              "Condition": "КН(0) = 0 AND ППР(0) = 0 AND КНМ(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "КН(0) = 1 OR ППР(0) = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КН",
+          "Description": "Контроль кнопочного реле светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП11/C6",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль маневрового кнопочного реле светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП11/C4",
+          "Ext": "UnaryLogic"
+        }
+      }
+    ]
+  },
+  {
+    "name": "М3К",
+    "description": "М3К",
+    "type": "1000.9.17",
+    "id": "96",
+    "adk_type": "002.17.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "М3К",
+      "Description": "М3К",
+      "Type": "1000.9.17",
+      "ADKType": "002.17.02",
+      "ID": "96",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КН(0) = 0 AND ППР(0) = 0 AND КНМ(0) = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "6",
+              "Condition": "КН(0) = 0 AND ППР(0) = 0 AND КНМ(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "КН(0) = 1 OR ППР(0) = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль маневрового кнопочного реле светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ext": "BinaryLogic",
+          "Ref1": "/Station/IOSys/ДЦРКП/ДЦРКП31/C9",
+          "Ref2": "/Station/IOSys/ДЦРКП/ДЦРКП31/C11",
+          "Logic": "OR"
+        }
+      }
+    ]
+  },
+  {
+    "name": "М4К",
+    "description": "М4К",
+    "type": "1000.9.17",
+    "id": "56",
+    "adk_type": "002.17.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "М4К",
+      "Description": "М4К",
+      "Type": "1000.9.17",
+      "ADKType": "002.17.02",
+      "ID": "56",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КН(0) = 0 AND ППР(0) = 0 AND КНМ(0) = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "6",
+              "Condition": "КН(0) = 0 AND ППР(0) = 0 AND КНМ(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "КН(0) = 1 OR ППР(0) = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль маневрового кнопочного реле светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ext": "BinaryLogic",
+          "Ref1": "/Station/IOSys/ДЦРКП/ДЦРКП16/C4",
+          "Ref2": "/Station/IOSys/ДЦРКП/ДЦРКП16/C5",
+          "Logic": "OR"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Н1К",
+    "description": "Н1К",
+    "type": "1000.9.17",
+    "id": "45",
+    "adk_type": "002.17.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Н1К",
+      "Description": "Н1К",
+      "Type": "1000.9.17",
+      "ADKType": "002.17.02",
+      "ID": "45",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КН(0) = 0 AND ППР(0) = 0 AND КНМ(0) = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "6",
+              "Condition": "КН(0) = 0 AND ППР(0) = 0 AND КНМ(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "КН(0) = 1 OR ППР(0) = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КН",
+          "Description": "Контроль кнопочного реле светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ext": "Tdm.Unification.MultiDiscreteLogic",
+          "Ref1": "/Station/IOSys/ДЦРКП/ДЦРКП13/C1",
+          "Ref2": "/Station/IOSys/ДЦРКП/ДЦРКП13/C2",
+          "Ref3": "/Station/IOSys/ДЦРКП/ДЦРКП17/C1",
+          "Logic": "OR"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль маневрового кнопочного реле светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ext": "BinaryLogic",
+          "Ref1": "/Station/IOSys/ДЦРКП/ДЦРКП13/C3",
+          "Ref2": "/Station/IOSys/ДЦРКП/ДЦРКП13/C15",
+          "Logic": "OR"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Н1СО",
+    "description": "Н1СО",
+    "type": "1000.9.17",
+    "id": "48",
+    "adk_type": "002.17.22",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Н1СО",
+      "Description": "Н1СО",
+      "Type": "1000.9.17",
+      "ADKType": "002.17.22",
+      "ID": "48",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "Signal/С = 1 AND НПС = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "(Signal/С = 0 AND НПС = 1) OR (Signal/С = 1 AND НПС = 0) OR (Signal/С = 0 AND НПС = 0)"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НПС",
+          "Description": "Контроль несоответствия показаний светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП13/C18",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "Signal",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/Н1"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NesootvPokaz",
+          "Description": "Несоответствие показаний светофора",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "35488",
+          "WriteProtocol": "true",
+          "AdkNumber": "685"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "Signal/С = 1 AND НПС = 1",
+              "Delay": "Несоответствие показаний светофора/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "(Signal/С = 0 AND НПС = 1) OR (Signal/С = 1 AND НПС = 0)",
+              "Delay": "Несоответствие показаний светофора/NT2_min"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Н2К",
+    "description": "Н2К",
+    "type": "1000.9.17",
+    "id": "60",
+    "adk_type": "002.17.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Н2К",
+      "Description": "Н2К",
+      "Type": "1000.9.17",
+      "ADKType": "002.17.02",
+      "ID": "60",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КН(0) = 0 AND ППР(0) = 0 AND КНМ(0) = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "6",
+              "Condition": "КН(0) = 0 AND ППР(0) = 0 AND КНМ(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "КН(0) = 1 OR ППР(0) = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КН",
+          "Description": "Контроль кнопочного реле светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ext": "BinaryLogic",
+          "Ref1": "/Station/IOSys/ДЦРКП/ДЦРКП18/C1",
+          "Ref2": "/Station/IOSys/ДЦРКП/ДЦРКП18/C2",
+          "Logic": "OR"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль маневрового кнопочного реле светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ext": "BinaryLogic",
+          "Ref1": "/Station/IOSys/ДЦРКП/ДЦРКП18/C3",
+          "Ref2": "/Station/IOSys/ДЦРКП/ДЦРКП18/C15",
+          "Logic": "OR"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Н2СО",
+    "description": "Н2СО",
+    "type": "1000.9.17",
+    "id": "70",
+    "adk_type": "002.17.22",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Н2СО",
+      "Description": "Н2СО",
+      "Type": "1000.9.17",
+      "ADKType": "002.17.22",
+      "ID": "70",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "Signal/С = 1 AND НПС = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "(Signal/С = 0 AND НПС = 1) OR (Signal/С = 1 AND НПС = 0) OR (Signal/С = 0 AND НПС = 0)"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НПС",
+          "Description": "Контроль несоответствия показаний светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП21/C6",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "Signal",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/Н2"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NesootvPokaz",
+          "Description": "Несоответствие показаний светофора",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "35488",
+          "WriteProtocol": "true",
+          "AdkNumber": "685"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "Signal/С = 1 AND НПС = 1",
+              "Delay": "Несоответствие показаний светофора/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "(Signal/С = 0 AND НПС = 1) OR (Signal/С = 1 AND НПС = 0)",
+              "Delay": "Несоответствие показаний светофора/NT2_min"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Н4К",
+    "description": "Н4К",
+    "type": "1000.9.17",
+    "id": "63",
+    "adk_type": "002.17.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Н4К",
+      "Description": "Н4К",
+      "Type": "1000.9.17",
+      "ADKType": "002.17.02",
+      "ID": "63",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КН(0) = 0 AND ППР(0) = 0 AND КНМ(0) = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "6",
+              "Condition": "КН(0) = 0 AND ППР(0) = 0 AND КНМ(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "КН(0) = 1 OR ППР(0) = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КН",
+          "Description": "Контроль кнопочного реле светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ext": "BinaryLogic",
+          "Ref1": "/Station/IOSys/ДЦРКП/ДЦРКП19/C1",
+          "Ref2": "/Station/IOSys/ДЦРКП/ДЦРКП19/C2",
+          "Logic": "OR"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль маневрового кнопочного реле светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ext": "BinaryLogic",
+          "Ref1": "/Station/IOSys/ДЦРКП/ДЦРКП19/C3",
+          "Ref2": "/Station/IOSys/ДЦРКП/ДЦРКП19/C15",
+          "Logic": "OR"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Н4СО",
+    "description": "Н4СО",
+    "type": "1000.9.17",
+    "id": "66",
+    "adk_type": "002.17.22",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Н4СО",
+      "Description": "Н4СО",
+      "Type": "1000.9.17",
+      "ADKType": "002.17.22",
+      "ID": "66",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "Signal/С = 1 AND НПС = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "(Signal/С = 0 AND НПС = 1) OR (Signal/С = 1 AND НПС = 0) OR (Signal/С = 0 AND НПС = 0)"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НПС",
+          "Description": "Контроль несоответствия показаний светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП19/C18",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "Signal",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/Н4"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NesootvPokaz",
+          "Description": "Несоответствие показаний светофора",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "35488",
+          "WriteProtocol": "true",
+          "AdkNumber": "685"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "Signal/С = 1 AND НПС = 1",
+              "Delay": "Несоответствие показаний светофора/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "(Signal/С = 0 AND НПС = 1) OR (Signal/С = 1 AND НПС = 0)",
+              "Delay": "Несоответствие показаний светофора/NT2_min"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "НДК",
+    "description": "НДК",
+    "type": "1000.9.17",
+    "id": "99",
+    "adk_type": "002.17.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "НДК",
+      "Description": "НДК",
+      "Type": "1000.9.17",
+      "ADKType": "002.17.02",
+      "ID": "99",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КН(0) = 0 AND ППР(0) = 0 AND КНМ(0) = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "6",
+              "Condition": "КН(0) = 0 AND ППР(0) = 0 AND КНМ(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "КН(0) = 1 OR ППР(0) = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КН",
+          "Description": "Контроль кнопочного реле светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ext": "BinaryLogic",
+          "Ref1": "/Station/IOSys/ДЦРКП/ДЦРКП34/C1",
+          "Ref2": "/Station/IOSys/ДЦРКП/ДЦРКП34/C2",
+          "Logic": "OR"
+        }
+      }
+    ]
+  },
+  {
+    "name": "НДСО",
+    "description": "НДСО",
+    "type": "1000.9.17",
+    "id": "101",
+    "adk_type": "002.17.22",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "НДСО",
+      "Description": "НДСО",
+      "Type": "1000.9.17",
+      "ADKType": "002.17.22",
+      "ID": "101",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "Signal/С = 1 AND НПС = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "(Signal/С = 0 AND НПС = 1) OR (Signal/С = 1 AND НПС = 0) OR (Signal/С = 0 AND НПС = 0)"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НПС",
+          "Description": "Контроль несоответствия показаний светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП34/C16",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "Signal",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/НД"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NesootvPokaz",
+          "Description": "Несоответствие показаний светофора",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "35488",
+          "WriteProtocol": "true",
+          "AdkNumber": "685"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "Signal/С = 1 AND НПС = 1",
+              "Delay": "Несоответствие показаний светофора/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "(Signal/С = 0 AND НПС = 1) OR (Signal/С = 1 AND НПС = 0)",
+              "Delay": "Несоответствие показаний светофора/NT2_min"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "НКК",
+    "description": "НКК",
+    "type": "1000.9.17",
+    "id": "151",
+    "adk_type": "002.17.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "НКК",
+      "Description": "НКК",
+      "Type": "1000.9.17",
+      "ADKType": "002.17.02",
+      "ID": "151",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КН(0) = 0 AND ППР(0) = 0 AND КНМ(0) = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "6",
+              "Condition": "КН(0) = 0 AND ППР(0) = 0 AND КНМ(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "КН(0) = 1 OR ППР(0) = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КН",
+          "Description": "Контроль кнопочного реле светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ext": "Tdm.Unification.MultiDiscreteLogic",
+          "Ref1": "/Station/IOSys/ДЦРКП/ДЦРКП25/C1",
+          "Ref2": "/Station/IOSys/ДЦРКП/ДЦРКП25/C2",
+          "Ref3": "/Station/IOSys/ДЦРКП/ДЦРКП26/C2",
+          "Logic": "OR"
+        }
+      }
+    ]
+  },
+  {
+    "name": "НМ1К",
+    "description": "НМ1К",
+    "type": "1000.9.17",
+    "id": "106",
+    "adk_type": "002.17.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "НМ1К",
+      "Description": "НМ1К",
+      "Type": "1000.9.17",
+      "ADKType": "002.17.02",
+      "ID": "106",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КН(0) = 0 AND ППР(0) = 0 AND КНМ(0) = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "6",
+              "Condition": "КН(0) = 0 AND ППР(0) = 0 AND КНМ(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "КН(0) = 1 OR ППР(0) = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КН",
+          "Description": "Контроль кнопочного реле светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ext": "Tdm.Unification.MultiDiscreteLogic",
+          "Ref1": "/Station/IOSys/ДЦРКП/ДЦРКП36/C1",
+          "Ref2": "/Station/IOSys/ДЦРКП/ДЦРКП36/C2",
+          "Ref3": "/Station/IOSys/ДЦРКП/ДЦРКП37/C1",
+          "Logic": "OR"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль маневрового кнопочного реле светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ext": "BinaryLogic",
+          "Ref1": "/Station/IOSys/ДЦРКП/ДЦРКП36/C3",
+          "Ref2": "/Station/IOSys/ДЦРКП/ДЦРКП36/C15",
+          "Logic": "OR"
+        }
+      }
+    ]
+  },
+  {
+    "name": "НМ1СО",
+    "description": "НМ1СО",
+    "type": "1000.9.17",
+    "id": "109",
+    "adk_type": "002.17.22",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "НМ1СО",
+      "Description": "НМ1СО",
+      "Type": "1000.9.17",
+      "ADKType": "002.17.22",
+      "ID": "109",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "Signal/С = 1 AND НПС = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "(Signal/С = 0 AND НПС = 1) OR (Signal/С = 1 AND НПС = 0) OR (Signal/С = 0 AND НПС = 0)"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НПС",
+          "Description": "Контроль несоответствия показаний светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП37/C6",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "Signal",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/НМ1"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NesootvPokaz",
+          "Description": "Несоответствие показаний светофора",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "35488",
+          "WriteProtocol": "true",
+          "AdkNumber": "685"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "Signal/С = 1 AND НПС = 1",
+              "Delay": "Несоответствие показаний светофора/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "(Signal/С = 0 AND НПС = 1) OR (Signal/С = 1 AND НПС = 0)",
+              "Delay": "Несоответствие показаний светофора/NT2_min"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "НМ2К",
+    "description": "НМ2К",
+    "type": "1000.9.17",
+    "id": "152",
+    "adk_type": "002.17.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "НМ2К",
+      "Description": "НМ2К",
+      "Type": "1000.9.17",
+      "ADKType": "002.17.02",
+      "ID": "152",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КН(0) = 0 AND ППР(0) = 0 AND КНМ(0) = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "6",
+              "Condition": "КН(0) = 0 AND ППР(0) = 0 AND КНМ(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "КН(0) = 1 OR ППР(0) = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КН",
+          "Description": "Контроль кнопочного реле светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ext": "BinaryLogic",
+          "Ref1": "/Station/IOSys/ДЦРКП/ДЦРКП29/C1",
+          "Ref2": "/Station/IOSys/ДЦРКП/ДЦРКП29/C2",
+          "Logic": "OR"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль маневрового кнопочного реле светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ext": "BinaryLogic",
+          "Ref1": "/Station/IOSys/ДЦРКП/ДЦРКП29/C3",
+          "Ref2": "/Station/IOSys/ДЦРКП/ДЦРКП29/C15",
+          "Logic": "OR"
+        }
+      }
+    ]
+  },
+  {
+    "name": "НМ2СО",
+    "description": "НМ2СО",
+    "type": "1000.9.17",
+    "id": "97",
+    "adk_type": "002.17.22",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "НМ2СО",
+      "Description": "НМ2СО",
+      "Type": "1000.9.17",
+      "ADKType": "002.17.22",
+      "ID": "97",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "Signal/С = 1 AND НПС = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "(Signal/С = 0 AND НПС = 1) OR (Signal/С = 1 AND НПС = 0) OR (Signal/С = 0 AND НПС = 0)"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НПС",
+          "Description": "Контроль несоответствия показаний светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП32/C6",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "Signal",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/НМ2"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NesootvPokaz",
+          "Description": "Несоответствие показаний светофора",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "35488",
+          "WriteProtocol": "true",
+          "AdkNumber": "685"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "Signal/С = 1 AND НПС = 1",
+              "Delay": "Несоответствие показаний светофора/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "(Signal/С = 0 AND НПС = 1) OR (Signal/С = 1 AND НПС = 0)",
+              "Delay": "Несоответствие показаний светофора/NT2_min"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "НМ3К",
+    "description": "НМ3К",
+    "type": "1000.9.17",
+    "id": "102",
+    "adk_type": "002.17.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "НМ3К",
+      "Description": "НМ3К",
+      "Type": "1000.9.17",
+      "ADKType": "002.17.02",
+      "ID": "102",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КН(0) = 0 AND ППР(0) = 0 AND КНМ(0) = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "6",
+              "Condition": "КН(0) = 0 AND ППР(0) = 0 AND КНМ(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "КН(0) = 1 OR ППР(0) = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КН",
+          "Description": "Контроль кнопочного реле светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ext": "BinaryLogic",
+          "Ref1": "/Station/IOSys/ДЦРКП/ДЦРКП35/C1",
+          "Ref2": "/Station/IOSys/ДЦРКП/ДЦРКП35/C2",
+          "Logic": "OR"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль маневрового кнопочного реле светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ext": "BinaryLogic",
+          "Ref1": "/Station/IOSys/ДЦРКП/ДЦРКП35/C3",
+          "Ref2": "/Station/IOSys/ДЦРКП/ДЦРКП35/C15",
+          "Logic": "OR"
+        }
+      }
+    ]
+  },
+  {
+    "name": "НМ3СО",
+    "description": "НМ3СО",
+    "type": "1000.9.17",
+    "id": "105",
+    "adk_type": "002.17.22",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "НМ3СО",
+      "Description": "НМ3СО",
+      "Type": "1000.9.17",
+      "ADKType": "002.17.22",
+      "ID": "105",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "Signal/С = 1 AND НПС = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "(Signal/С = 0 AND НПС = 1) OR (Signal/С = 1 AND НПС = 0) OR (Signal/С = 0 AND НПС = 0)"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НПС",
+          "Description": "Контроль несоответствия показаний светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП35/C18",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "Signal",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/НМ3"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NesootvPokaz",
+          "Description": "Несоответствие показаний светофора",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "35488",
+          "WriteProtocol": "true",
+          "AdkNumber": "685"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "Signal/С = 1 AND НПС = 1",
+              "Delay": "Несоответствие показаний светофора/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "(Signal/С = 0 AND НПС = 1) OR (Signal/С = 1 AND НПС = 0)",
+              "Delay": "Несоответствие показаний светофора/NT2_min"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "НСО",
+    "description": "НСО",
+    "type": "1000.9.17",
+    "id": "79",
+    "adk_type": "002.17.22",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "НСО",
+      "Description": "НСО",
+      "Type": "1000.9.17",
+      "ADKType": "002.17.22",
+      "ID": "79",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "Signal/С = 1 AND НПС = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "(Signal/С = 0 AND НПС = 1) OR (Signal/С = 1 AND НПС = 0) OR (Signal/С = 0 AND НПС = 0)"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НПС",
+          "Description": "Контроль несоответствия показаний светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП25/C16",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "Signal",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/Н"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NesootvPokaz",
+          "Description": "Несоответствие показаний светофора",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "35488",
+          "WriteProtocol": "true",
+          "AdkNumber": "685"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "Signal/С = 1 AND НПС = 1",
+              "Delay": "Несоответствие показаний светофора/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "(Signal/С = 0 AND НПС = 1) OR (Signal/С = 1 AND НПС = 0)",
+              "Delay": "Несоответствие показаний светофора/NT2_min"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Ч1К",
+    "description": "Ч1К",
+    "type": "1000.9.17",
+    "id": "113",
+    "adk_type": "002.17.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Ч1К",
+      "Description": "Ч1К",
+      "Type": "1000.9.17",
+      "ADKType": "002.17.02",
+      "ID": "113",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КН(0) = 0 AND ППР(0) = 0 AND КНМ(0) = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "6",
+              "Condition": "КН(0) = 0 AND ППР(0) = 0 AND КНМ(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "КН(0) = 1 OR ППР(0) = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КН",
+          "Description": "Контроль кнопочного реле светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ext": "BinaryLogic",
+          "Ref1": "/Station/IOSys/ДЦРКП/ДЦРКП38/C1",
+          "Ref2": "/Station/IOSys/ДЦРКП/ДЦРКП38/C2",
+          "Logic": "OR"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль маневрового кнопочного реле светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ext": "BinaryLogic",
+          "Ref1": "/Station/IOSys/ДЦРКП/ДЦРКП38/C3",
+          "Ref2": "/Station/IOSys/ДЦРКП/ДЦРКП38/C15",
+          "Logic": "OR"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Ч1СО",
+    "description": "Ч1СО",
+    "type": "1000.9.17",
+    "id": "115",
+    "adk_type": "002.17.22",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Ч1СО",
+      "Description": "Ч1СО",
+      "Type": "1000.9.17",
+      "ADKType": "002.17.22",
+      "ID": "115",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "Signal/С = 1 AND НПС = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "(Signal/С = 0 AND НПС = 1) OR (Signal/С = 1 AND НПС = 0) OR (Signal/С = 0 AND НПС = 0)"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НПС",
+          "Description": "Контроль несоответствия показаний светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП38/C16",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "Signal",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/Ч1"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NesootvPokaz",
+          "Description": "Несоответствие показаний светофора",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "35488",
+          "WriteProtocol": "true",
+          "AdkNumber": "685"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "Signal/С = 1 AND НПС = 1",
+              "Delay": "Несоответствие показаний светофора/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "(Signal/С = 0 AND НПС = 1) OR (Signal/С = 1 AND НПС = 0)",
+              "Delay": "Несоответствие показаний светофора/NT2_min"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Ч2К",
+    "description": "Ч2К",
+    "type": "1000.9.17",
+    "id": "91",
+    "adk_type": "002.17.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Ч2К",
+      "Description": "Ч2К",
+      "Type": "1000.9.17",
+      "ADKType": "002.17.02",
+      "ID": "91",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КН(0) = 0 AND ППР(0) = 0 AND КНМ(0) = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "6",
+              "Condition": "КН(0) = 0 AND ППР(0) = 0 AND КНМ(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "КН(0) = 1 OR ППР(0) = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КН",
+          "Description": "Контроль кнопочного реле светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ext": "Tdm.Unification.MultiDiscreteLogic",
+          "Ref1": "/Station/IOSys/ДЦРКП/ДЦРКП30/C1",
+          "Ref2": "/Station/IOSys/ДЦРКП/ДЦРКП30/C2",
+          "Ref3": "/Station/IOSys/ДЦРКП/ДЦРКП32/C1",
+          "Logic": "OR"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль маневрового кнопочного реле светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ext": "BinaryLogic",
+          "Ref1": "/Station/IOSys/ДЦРКП/ДЦРКП30/C3",
+          "Ref2": "/Station/IOSys/ДЦРКП/ДЦРКП30/C15",
+          "Logic": "OR"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Ч2СО",
+    "description": "Ч2СО",
+    "type": "1000.9.17",
+    "id": "93",
+    "adk_type": "002.17.22",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Ч2СО",
+      "Description": "Ч2СО",
+      "Type": "1000.9.17",
+      "ADKType": "002.17.22",
+      "ID": "93",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "Signal/С = 1 AND НПС = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "(Signal/С = 0 AND НПС = 1) OR (Signal/С = 1 AND НПС = 0) OR (Signal/С = 0 AND НПС = 0)"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НПС",
+          "Description": "Контроль несоответствия показаний светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП30/C16",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "Signal",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/Ч2"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NesootvPokaz",
+          "Description": "Несоответствие показаний светофора",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "35488",
+          "WriteProtocol": "true",
+          "AdkNumber": "685"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "Signal/С = 1 AND НПС = 1",
+              "Delay": "Несоответствие показаний светофора/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "(Signal/С = 0 AND НПС = 1) OR (Signal/С = 1 AND НПС = 0)",
+              "Delay": "Несоответствие показаний светофора/NT2_min"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Ч3К",
+    "description": "Ч3К",
+    "type": "1000.9.17",
+    "id": "116",
+    "adk_type": "002.17.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Ч3К",
+      "Description": "Ч3К",
+      "Type": "1000.9.17",
+      "ADKType": "002.17.02",
+      "ID": "116",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КН(0) = 0 AND ППР(0) = 0 AND КНМ(0) = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "6",
+              "Condition": "КН(0) = 0 AND ППР(0) = 0 AND КНМ(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "КН(0) = 1 OR ППР(0) = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КН",
+          "Description": "Контроль кнопочного реле светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ext": "BinaryLogic",
+          "Ref1": "/Station/IOSys/ДЦРКП/ДЦРКП39/C1",
+          "Ref2": "/Station/IOSys/ДЦРКП/ДЦРКП39/C2",
+          "Logic": "OR"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль маневрового кнопочного реле светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ext": "BinaryLogic",
+          "Ref1": "/Station/IOSys/ДЦРКП/ДЦРКП39/C3",
+          "Ref2": "/Station/IOSys/ДЦРКП/ДЦРКП39/C15",
+          "Logic": "OR"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Ч3СО",
+    "description": "Ч3СО",
+    "type": "1000.9.17",
+    "id": "118",
+    "adk_type": "002.17.22",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "Ч3СО",
+      "Description": "Ч3СО",
+      "Type": "1000.9.17",
+      "ADKType": "002.17.22",
+      "ID": "118",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "Signal/С = 1 AND НПС = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "(Signal/С = 0 AND НПС = 1) OR (Signal/С = 1 AND НПС = 0) OR (Signal/С = 0 AND НПС = 0)"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НПС",
+          "Description": "Контроль несоответствия показаний светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП39/C16",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "Signal",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/Ч3"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NesootvPokaz",
+          "Description": "Несоответствие показаний светофора",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "35488",
+          "WriteProtocol": "true",
+          "AdkNumber": "685"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "Signal/С = 1 AND НПС = 1",
+              "Delay": "Несоответствие показаний светофора/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "(Signal/С = 0 AND НПС = 1) OR (Signal/С = 1 AND НПС = 0)",
+              "Delay": "Несоответствие показаний светофора/NT2_min"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ЧДК",
+    "description": "ЧДК",
+    "type": "1000.9.17",
+    "id": "52",
+    "adk_type": "002.17.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ЧДК",
+      "Description": "ЧДК",
+      "Type": "1000.9.17",
+      "ADKType": "002.17.02",
+      "ID": "52",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КН(0) = 0 AND ППР(0) = 0 AND КНМ(0) = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "6",
+              "Condition": "КН(0) = 0 AND ППР(0) = 0 AND КНМ(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "КН(0) = 1 OR ППР(0) = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КН",
+          "Description": "Контроль кнопочного реле светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ext": "BinaryLogic",
+          "Ref1": "/Station/IOSys/ДЦРКП/ДЦРКП15/C1",
+          "Ref2": "/Station/IOSys/ДЦРКП/ДЦРКП15/C2",
+          "Logic": "OR"
+        }
+      }
+    ]
+  },
+  {
+    "name": "ЧДСО",
+    "description": "ЧДСО",
+    "type": "1000.9.17",
+    "id": "54",
+    "adk_type": "002.17.22",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ЧДСО",
+      "Description": "ЧДСО",
+      "Type": "1000.9.17",
+      "ADKType": "002.17.22",
+      "ID": "54",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "Signal/С = 1 AND НПС = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "(Signal/С = 0 AND НПС = 1) OR (Signal/С = 1 AND НПС = 0) OR (Signal/С = 0 AND НПС = 0)"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НПС",
+          "Description": "Контроль несоответствия показаний светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП15/C16",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "Signal",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/ЧД"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NesootvPokaz",
+          "Description": "Несоответствие показаний светофора",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "35488",
+          "WriteProtocol": "true",
+          "AdkNumber": "685"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "Signal/С = 1 AND НПС = 1",
+              "Delay": "Несоответствие показаний светофора/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "(Signal/С = 0 AND НПС = 1) OR (Signal/С = 1 AND НПС = 0)",
+              "Delay": "Несоответствие показаний светофора/NT2_min"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ЧК",
+    "description": "ЧК",
+    "type": "1000.9.17",
+    "id": "41",
+    "adk_type": "002.17.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ЧК",
+      "Description": "ЧК",
+      "Type": "1000.9.17",
+      "ADKType": "002.17.02",
+      "ID": "41",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КН(0) = 0 AND ППР(0) = 0 AND КНМ(0) = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "6",
+              "Condition": "КН(0) = 0 AND ППР(0) = 0 AND КНМ(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "КН(0) = 1 OR ППР(0) = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КН",
+          "Description": "Контроль кнопочного реле светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ext": "Tdm.Unification.MultiDiscreteLogic",
+          "Ref1": "/Station/IOSys/ДЦРКП/ДЦРКП9/C1",
+          "Ref2": "/Station/IOSys/ДЦРКП/ДЦРКП9/C2",
+          "Ref3": "/Station/IOSys/ДЦРКП/ДЦРКП9/C12",
+          "Logic": "OR"
+        }
+      }
+    ]
+  },
+  {
+    "name": "ЧМ1К",
+    "description": "ЧМ1К",
+    "type": "1000.9.17",
+    "id": "49",
+    "adk_type": "002.17.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ЧМ1К",
+      "Description": "ЧМ1К",
+      "Type": "1000.9.17",
+      "ADKType": "002.17.02",
+      "ID": "49",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КН(0) = 0 AND ППР(0) = 0 AND КНМ(0) = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "6",
+              "Condition": "КН(0) = 0 AND ППР(0) = 0 AND КНМ(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "КН(0) = 1 OR ППР(0) = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КН",
+          "Description": "Контроль кнопочного реле светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ext": "BinaryLogic",
+          "Ref1": "/Station/IOSys/ДЦРКП/ДЦРКП14/C1",
+          "Ref2": "/Station/IOSys/ДЦРКП/ДЦРКП14/C2",
+          "Logic": "OR"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль маневрового кнопочного реле светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ext": "BinaryLogic",
+          "Ref1": "/Station/IOSys/ДЦРКП/ДЦРКП14/C3",
+          "Ref2": "/Station/IOSys/ДЦРКП/ДЦРКП14/C15",
+          "Logic": "OR"
+        }
+      }
+    ]
+  },
+  {
+    "name": "ЧМ1СО",
+    "description": "ЧМ1СО",
+    "type": "1000.9.17",
+    "id": "51",
+    "adk_type": "002.17.22",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ЧМ1СО",
+      "Description": "ЧМ1СО",
+      "Type": "1000.9.17",
+      "ADKType": "002.17.22",
+      "ID": "51",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "Signal/С = 1 AND НПС = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "(Signal/С = 0 AND НПС = 1) OR (Signal/С = 1 AND НПС = 0) OR (Signal/С = 0 AND НПС = 0)"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НПС",
+          "Description": "Контроль несоответствия показаний светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП14/C16",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "Signal",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/ЧМ1"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NesootvPokaz",
+          "Description": "Несоответствие показаний светофора",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "35488",
+          "WriteProtocol": "true",
+          "AdkNumber": "685"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "Signal/С = 1 AND НПС = 1",
+              "Delay": "Несоответствие показаний светофора/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "(Signal/С = 0 AND НПС = 1) OR (Signal/С = 1 AND НПС = 0)",
+              "Delay": "Несоответствие показаний светофора/NT2_min"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ЧМ2К",
+    "description": "ЧМ2К",
+    "type": "1000.9.17",
+    "id": "67",
+    "adk_type": "002.17.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ЧМ2К",
+      "Description": "ЧМ2К",
+      "Type": "1000.9.17",
+      "ADKType": "002.17.02",
+      "ID": "67",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КН(0) = 0 AND ППР(0) = 0 AND КНМ(0) = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "6",
+              "Condition": "КН(0) = 0 AND ППР(0) = 0 AND КНМ(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "КН(0) = 1 OR ППР(0) = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КН",
+          "Description": "Контроль кнопочного реле светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ext": "Tdm.Unification.MultiDiscreteLogic",
+          "Ref1": "/Station/IOSys/ДЦРКП/ДЦРКП20/C1",
+          "Ref2": "/Station/IOSys/ДЦРКП/ДЦРКП20/C2",
+          "Ref3": "/Station/IOSys/ДЦРКП/ДЦРКП21/C1",
+          "Logic": "OR"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль маневрового кнопочного реле светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ext": "BinaryLogic",
+          "Ref1": "/Station/IOSys/ДЦРКП/ДЦРКП20/C3",
+          "Ref2": "/Station/IOSys/ДЦРКП/ДЦРКП20/C15",
+          "Logic": "OR"
+        }
+      }
+    ]
+  },
+  {
+    "name": "ЧМ2СО",
+    "description": "ЧМ2СО",
+    "type": "1000.9.17",
+    "id": "69",
+    "adk_type": "002.17.22",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ЧМ2СО",
+      "Description": "ЧМ2СО",
+      "Type": "1000.9.17",
+      "ADKType": "002.17.22",
+      "ID": "69",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "Signal/С = 1 AND НПС = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "(Signal/С = 0 AND НПС = 1) OR (Signal/С = 1 AND НПС = 0) OR (Signal/С = 0 AND НПС = 0)"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НПС",
+          "Description": "Контроль несоответствия показаний светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП20/C16",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "Signal",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/ЧМ2"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NesootvPokaz",
+          "Description": "Несоответствие показаний светофора",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "35488",
+          "WriteProtocol": "true",
+          "AdkNumber": "685"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "Signal/С = 1 AND НПС = 1",
+              "Delay": "Несоответствие показаний светофора/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "(Signal/С = 0 AND НПС = 1) OR (Signal/С = 1 AND НПС = 0)",
+              "Delay": "Несоответствие показаний светофора/NT2_min"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ЧМ4К",
+    "description": "ЧМ4К",
+    "type": "1000.9.17",
+    "id": "74",
+    "adk_type": "002.17.02",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ЧМ4К",
+      "Description": "ЧМ4К",
+      "Type": "1000.9.17",
+      "ADKType": "002.17.02",
+      "ID": "74",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "КН(0) = 0 AND ППР(0) = 0 AND КНМ(0) = 0"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "6",
+              "Condition": "КН(0) = 0 AND ППР(0) = 0 AND КНМ(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "8",
+              "Condition": "КН(0) = 1 OR ППР(0) = 1"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КН",
+          "Description": "Контроль кнопочного реле светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ext": "BinaryLogic",
+          "Ref1": "/Station/IOSys/ДЦРКП/ДЦРКП22/C1",
+          "Ref2": "/Station/IOSys/ДЦРКП/ДЦРКП22/C2",
+          "Logic": "OR"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КНМ",
+          "Description": "Контроль маневрового кнопочного реле светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ext": "BinaryLogic",
+          "Ref1": "/Station/IOSys/ДЦРКП/ДЦРКП22/C3",
+          "Ref2": "/Station/IOSys/ДЦРКП/ДЦРКП22/C15",
+          "Logic": "OR"
+        }
+      }
+    ]
+  },
+  {
+    "name": "ЧМ4СО",
+    "description": "ЧМ4СО",
+    "type": "1000.9.17",
+    "id": "77",
+    "adk_type": "002.17.22",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ЧМ4СО",
+      "Description": "ЧМ4СО",
+      "Type": "1000.9.17",
+      "ADKType": "002.17.22",
+      "ID": "77",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "Signal/С = 1 AND НПС = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "(Signal/С = 0 AND НПС = 1) OR (Signal/С = 1 AND НПС = 0) OR (Signal/С = 0 AND НПС = 0)"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НПС",
+          "Description": "Контроль несоответствия показаний светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП22/C18",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "Signal",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/ЧМ4"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NesootvPokaz",
+          "Description": "Несоответствие показаний светофора",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "35488",
+          "WriteProtocol": "true",
+          "AdkNumber": "685"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "Signal/С = 1 AND НПС = 1",
+              "Delay": "Несоответствие показаний светофора/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "(Signal/С = 0 AND НПС = 1) OR (Signal/С = 1 AND НПС = 0)",
+              "Delay": "Несоответствие показаний светофора/NT2_min"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ЧСО",
+    "description": "ЧСО",
+    "type": "1000.9.17",
+    "id": "44",
+    "adk_type": "002.17.22",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ЧСО",
+      "Description": "ЧСО",
+      "Type": "1000.9.17",
+      "ADKType": "002.17.22",
+      "ID": "44",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "UniCondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "5",
+              "Condition": "Signal/С = 1 AND НПС = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "Condition": "(Signal/С = 0 AND НПС = 1) OR (Signal/С = 1 AND НПС = 0) OR (Signal/С = 0 AND НПС = 0)"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "НПС",
+          "Description": "Контроль несоответствия показаний светофора",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП9/C16",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "Signal",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/Objects/Ч"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "NesootvPokaz",
+          "Description": "Несоответствие показаний светофора",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "35488",
+          "WriteProtocol": "true",
+          "AdkNumber": "685"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "Signal/С = 1 AND НПС = 1",
+              "Delay": "Несоответствие показаний светофора/NT1_min"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "(Signal/С = 0 AND НПС = 1) OR (Signal/С = 1 AND НПС = 0)",
+              "Delay": "Несоответствие показаний светофора/NT2_min"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,4985 @@
+[
+  {
+    "name": "КПА",
+    "description": "КПА",
+    "type": "1000.8.21",
+    "id": "2",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "КПА",
+      "Description": "КПА",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "2",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП(0) = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПА",
+          "Description": "Контроль аварии питания схемы перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП2/C14",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "KPA",
+          "Description": "Неисправность схемы контроля предохранителей",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2151",
+          "WriteProtocol": "true",
+          "AdkNumber": "2"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПА = 1",
+              "Delay": "1300"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПА = 0",
+              "Delay": "1300"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "КПП",
+    "description": "КПП",
+    "type": "1000.8.21",
+    "id": "3",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "КПП",
+      "Description": "КПП",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "3",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП2/C15",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР1-21П",
+    "description": "ПР1-21П",
+    "type": "1000.8.21",
+    "id": "195",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР1-21П",
+      "Description": "ПР1-21П",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "195",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП4/C1",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР1-22П",
+    "description": "ПР1-22П",
+    "type": "1000.8.21",
+    "id": "204",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР1-22П",
+      "Description": "ПР1-22П",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "204",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП4/C6",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР1-23П",
+    "description": "ПР1-23П",
+    "type": "1000.8.21",
+    "id": "206",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР1-23П",
+      "Description": "ПР1-23П",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "206",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП4/C9",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР1-24П",
+    "description": "ПР1-24П",
+    "type": "1000.8.21",
+    "id": "208",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР1-24П",
+      "Description": "ПР1-24П",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "208",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП4/C12",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР1-25П",
+    "description": "ПР1-25П",
+    "type": "1000.8.21",
+    "id": "210",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР1-25П",
+      "Description": "ПР1-25П",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "210",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП4/C16",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР1-31П",
+    "description": "ПР1-31П",
+    "type": "1000.8.21",
+    "id": "238",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР1-31П",
+      "Description": "ПР1-31П",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "238",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП12/C1",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР1-32П",
+    "description": "ПР1-32П",
+    "type": "1000.8.21",
+    "id": "240",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР1-32П",
+      "Description": "ПР1-32П",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "240",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП12/C6",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР1-33П",
+    "description": "ПР1-33П",
+    "type": "1000.8.21",
+    "id": "242",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР1-33П",
+      "Description": "ПР1-33П",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "242",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП12/C9",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР1-34П",
+    "description": "ПР1-34П",
+    "type": "1000.8.21",
+    "id": "244",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР1-34П",
+      "Description": "ПР1-34П",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "244",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП12/C12",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР1-35П",
+    "description": "ПР1-35П",
+    "type": "1000.8.21",
+    "id": "246",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР1-35П",
+      "Description": "ПР1-35П",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "246",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП12/C16",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР1-41П",
+    "description": "ПР1-41П",
+    "type": "1000.8.21",
+    "id": "331",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР1-41П",
+      "Description": "ПР1-41П",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "331",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП24/C1",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР1-42П",
+    "description": "ПР1-42П",
+    "type": "1000.8.21",
+    "id": "333",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР1-42П",
+      "Description": "ПР1-42П",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "333",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП24/C6",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР1-43П",
+    "description": "ПР1-43П",
+    "type": "1000.8.21",
+    "id": "335",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР1-43П",
+      "Description": "ПР1-43П",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "335",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП24/C9",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР1-44П",
+    "description": "ПР1-44П",
+    "type": "1000.8.21",
+    "id": "337",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР1-44П",
+      "Description": "ПР1-44П",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "337",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП24/C12",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР1-БВВ",
+    "description": "ПР1-БВВ",
+    "type": "1000.8.21",
+    "id": "190",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР1-БВВ",
+      "Description": "ПР1-БВВ",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "190",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП3/C6",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР1-ЛП-ОТУ",
+    "description": "ПР1-ЛП-ОТУ",
+    "type": "1000.8.21",
+    "id": "186",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР1-ЛП-ОТУ",
+      "Description": "ПР1-ЛП-ОТУ",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "186",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП2/C19",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР1-ПВз",
+    "description": "ПР1-ПВз",
+    "type": "1000.8.21",
+    "id": "189",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР1-ПВз",
+      "Description": "ПР1-ПВз",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "189",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП3/C2",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР1-П-ДУ",
+    "description": "ПР1-П-ДУ",
+    "type": "1000.8.21",
+    "id": "424",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР1-П-ДУ",
+      "Description": "ПР1-П-ДУ",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "424",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП44/C1",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР1-Пз",
+    "description": "ПР1-Пз",
+    "type": "1000.8.21",
+    "id": "428",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР1-Пз",
+      "Description": "ПР1-Пз",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "428",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП44/C11",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР1-ПК",
+    "description": "ПР1-ПК",
+    "type": "1000.8.21",
+    "id": "177",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР1-ПК",
+      "Description": "ПР1-ПК",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "177",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП2/C6",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР1-ПЛ",
+    "description": "ПР1-ПЛ",
+    "type": "1000.8.21",
+    "id": "213",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР1-ПЛ",
+      "Description": "ПР1-ПЛ",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "213",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП5/C16",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР1-П-ОТУ",
+    "description": "ПР1-П-ОТУ",
+    "type": "1000.8.21",
+    "id": "171",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР1-П-ОТУ",
+      "Description": "ПР1-П-ОТУ",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "171",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП1/C19",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР1-ПСП",
+    "description": "ПР1-ПСП",
+    "type": "1000.8.21",
+    "id": "173",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР1-ПСП",
+      "Description": "ПР1-ПСП",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "173",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП2/C1",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР1-ТС2",
+    "description": "ПР1-ТС2",
+    "type": "1000.8.21",
+    "id": "180",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР1-ТС2",
+      "Description": "ПР1-ТС2",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "180",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП2/C11",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР1-ТС3",
+    "description": "ПР1-ТС3",
+    "type": "1000.8.21",
+    "id": "234",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР1-ТС3",
+      "Description": "ПР1-ТС3",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "234",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП11/C16",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР1-ТС4",
+    "description": "ПР1-ТС4",
+    "type": "1000.8.21",
+    "id": "353",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР1-ТС4",
+      "Description": "ПР1-ТС4",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "353",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП26/C16",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР2-21П",
+    "description": "ПР2-21П",
+    "type": "1000.8.21",
+    "id": "197",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР2-21П",
+      "Description": "ПР2-21П",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "197",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП4/C2",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР2-22П",
+    "description": "ПР2-22П",
+    "type": "1000.8.21",
+    "id": "205",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР2-22П",
+      "Description": "ПР2-22П",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "205",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП4/C7",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР2-23П",
+    "description": "ПР2-23П",
+    "type": "1000.8.21",
+    "id": "207",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР2-23П",
+      "Description": "ПР2-23П",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "207",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП4/C10",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР2-24П",
+    "description": "ПР2-24П",
+    "type": "1000.8.21",
+    "id": "209",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР2-24П",
+      "Description": "ПР2-24П",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "209",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП4/C13",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР2-25П",
+    "description": "ПР2-25П",
+    "type": "1000.8.21",
+    "id": "211",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР2-25П",
+      "Description": "ПР2-25П",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "211",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП4/C17",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР2-31П",
+    "description": "ПР2-31П",
+    "type": "1000.8.21",
+    "id": "239",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР2-31П",
+      "Description": "ПР2-31П",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "239",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП12/C2",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР2-32П",
+    "description": "ПР2-32П",
+    "type": "1000.8.21",
+    "id": "241",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР2-32П",
+      "Description": "ПР2-32П",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "241",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП12/C7",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР2-33П",
+    "description": "ПР2-33П",
+    "type": "1000.8.21",
+    "id": "243",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР2-33П",
+      "Description": "ПР2-33П",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "243",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП12/C10",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР2-34П",
+    "description": "ПР2-34П",
+    "type": "1000.8.21",
+    "id": "245",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР2-34П",
+      "Description": "ПР2-34П",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "245",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП12/C13",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР2-35П",
+    "description": "ПР2-35П",
+    "type": "1000.8.21",
+    "id": "247",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР2-35П",
+      "Description": "ПР2-35П",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "247",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП12/C17",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР2-41П",
+    "description": "ПР2-41П",
+    "type": "1000.8.21",
+    "id": "332",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР2-41П",
+      "Description": "ПР2-41П",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "332",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП24/C2",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР2-42П",
+    "description": "ПР2-42П",
+    "type": "1000.8.21",
+    "id": "334",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР2-42П",
+      "Description": "ПР2-42П",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "334",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП24/C7",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР2-43П",
+    "description": "ПР2-43П",
+    "type": "1000.8.21",
+    "id": "336",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР2-43П",
+      "Description": "ПР2-43П",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "336",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП24/C10",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР2-44П",
+    "description": "ПР2-44П",
+    "type": "1000.8.21",
+    "id": "338",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР2-44П",
+      "Description": "ПР2-44П",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "338",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП24/C13",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР2-БВВ",
+    "description": "ПР2-БВВ",
+    "type": "1000.8.21",
+    "id": "191",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР2-БВВ",
+      "Description": "ПР2-БВВ",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "191",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП3/C7",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР2-ЛП-ОТУ",
+    "description": "ПР2-ЛП-ОТУ",
+    "type": "1000.8.21",
+    "id": "187",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР2-ЛП-ОТУ",
+      "Description": "ПР2-ЛП-ОТУ",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "187",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП2/C20",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР2-ПВз",
+    "description": "ПР2-ПВз",
+    "type": "1000.8.21",
+    "id": "188",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР2-ПВз",
+      "Description": "ПР2-ПВз",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "188",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП3/C1",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР2-П-ДУ",
+    "description": "ПР2-П-ДУ",
+    "type": "1000.8.21",
+    "id": "425",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР2-П-ДУ",
+      "Description": "ПР2-П-ДУ",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "425",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП44/C2",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР2-Пз",
+    "description": "ПР2-Пз",
+    "type": "1000.8.21",
+    "id": "429",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР2-Пз",
+      "Description": "ПР2-Пз",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "429",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП44/C12",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР2-ПК",
+    "description": "ПР2-ПК",
+    "type": "1000.8.21",
+    "id": "178",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР2-ПК",
+      "Description": "ПР2-ПК",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "178",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП2/C7",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР2-ПЛ",
+    "description": "ПР2-ПЛ",
+    "type": "1000.8.21",
+    "id": "214",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР2-ПЛ",
+      "Description": "ПР2-ПЛ",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "214",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП5/C17",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР2-П-ОТУ",
+    "description": "ПР2-П-ОТУ",
+    "type": "1000.8.21",
+    "id": "172",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР2-П-ОТУ",
+      "Description": "ПР2-П-ОТУ",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "172",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП1/C20",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР2-ПСП",
+    "description": "ПР2-ПСП",
+    "type": "1000.8.21",
+    "id": "174",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР2-ПСП",
+      "Description": "ПР2-ПСП",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "174",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП2/C2",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР2-ТС2",
+    "description": "ПР2-ТС2",
+    "type": "1000.8.21",
+    "id": "181",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР2-ТС2",
+      "Description": "ПР2-ТС2",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "181",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП2/C12",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР2-ТС3",
+    "description": "ПР2-ТС3",
+    "type": "1000.8.21",
+    "id": "235",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР2-ТС3",
+      "Description": "ПР2-ТС3",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "235",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП11/C17",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ПР2-ТС4",
+    "description": "ПР2-ТС4",
+    "type": "1000.8.21",
+    "id": "354",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ПР2-ТС4",
+      "Description": "ПР2-ТС4",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "354",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП26/C17",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ЦП1",
+    "description": "ЦП1",
+    "type": "1000.8.21",
+    "id": "322",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ЦП1",
+      "Description": "ЦП1",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "322",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП23/C4",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ЦП2",
+    "description": "ЦП2",
+    "type": "1000.8.21",
+    "id": "323",
+    "adk_type": "008.21.100",
+    "class": "UniObject",
+    "attrs": {
+      "NAME": "ЦП2",
+      "Description": "ЦП2",
+      "Type": "1000.8.21",
+      "ADKType": "008.21.100",
+      "ID": "323",
+      "CLASS": "UniObject"
+    },
+    "children": [
+      {
+        "tag": "ObjState",
+        "attrs": {
+          "NAME": "STATE",
+          "CLASS": "Tdm.Scb.CondState"
+        },
+        "children": [
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "2",
+              "Condition": "КПА(0) = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "3",
+              "AdkNumber": "5",
+              "Condition": "КПА(0) = 0 AND КПП = 1"
+            }
+          },
+          {
+            "tag": "State",
+            "attrs": {
+              "Number": "4",
+              "AdkNumber": "7",
+              "Condition": "КПА(0) = 0 AND КПП = 0"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "ObjData",
+        "attrs": {
+          "NAME": "КПП",
+          "Description": "Контроль перегорания предохранителей",
+          "CLASS": "Tdm.ObjData",
+          "Ref": "/Station/IOSys/ДЦРКП/ДЦРКП23/C5",
+          "Inv": "yes",
+          "Ext": "UnaryLogic"
+        }
+      },
+      {
+        "tag": "ObjTask",
+        "attrs": {
+          "NAME": "PPO",
+          "Description": "Перегорание предохранителя",
+          "CLASS": "Tdm.Scb.CondTechTask",
+          "Number": "2100",
+          "WriteProtocol": "true",
+          "AdkNumber": "756"
+        },
+        "children": [
+          {
+            "tag": "Refusal",
+            "attrs": {
+              "Condition": "КПП = 1",
+              "Delay": "$TdmScbDelay"
+            }
+          },
+          {
+            "tag": "Normal",
+            "attrs": {
+              "Condition": "КПП = 0",
+              "Delay": "$TdmScbDelay"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -260,11 +260,13 @@ class BaseDetector:
                 break
 
             cond = self._cond(self.current_phase_id, step)
+            
+            # DEBUG: Log phase state
+            prev, ctrl, nxt = self._get_effective_neighbors(step)
+            print(f"DEBUG {id(self)}: {self.config.variant_name} ph={self.current_phase_id} timer={self.timer:.2f}/{phase.duration:.2f} cond={cond} rem={remaining:.2f} prev={prev} ctrl={ctrl} nxt={nxt}")
+
             if not cond:
-                # Для фаз, требующих валидных соседей с обеих сторон, потеря контроля
-                # над любой стороной должна сбрасывать прогресс варианта полностью.
-                # Иначе возможен "доскок" до открытия из поздней фазы после долгого
-                # no-control на стрелке (например, LS2/LZ2/LZ3 при BOTH).
+                # Для фаз, Requiring neighbors...
                 modes = getattr(step, "modes", {}) or {}
                 if (
                     phase.requires_neighbors == NeighborRequirement.BOTH
@@ -273,6 +275,7 @@ class BaseDetector:
                         or not modes.get("next_control_ok", True)
                     )
                 ):
+                    print(f"DEBUG {id(self)}: RESET due to control loss! modes={modes}")
                     self.timer = 0.0
                     self.current_phase_id = self.config.initial_phase_id
                     break
@@ -358,11 +361,11 @@ class BaseDetector:
 
     def update(self, step: Any, dt: float) -> Tuple[bool, bool]:
         """
-        РћСЃРЅРѕРІРЅРѕР№ РјРµС‚РѕРґ РѕР±РЅРѕРІР»РµРЅРёСЏ.
-        
-        Returns:
-            (opened, closed): С„Р»Р°РіРё РїРµСЂРµС…РѕРґРѕРІ СЃРѕСЃС‚РѕСЏРЅРёР№
+        Обновление состояния детектора на шаге dt.
         """
+        prev, ctrl, nxt = self._get_effective_neighbors(step)
+        print(f"DEBUG {id(self)}: {self.config.variant_name} phase={self.current_phase_id} prev={prev} ctrl={ctrl} nxt={nxt} rc_states={{k:v for k,v in step.rc_states.items() if k in (prev, ctrl, nxt)}}")
+        
         opened = False
         closed = False
         self.last_open_offset = None

@@ -25,8 +25,10 @@ class BaseVariantWrapper:
         was_active = self.active
         self.active = any(det.active for det in self.detectors)
         
-        opened = (not was_active) and self.active
-        closed = was_active and (any(r[1] for r in results) or not self.active)
+        # Р˜РЎРџР РђР’Р›Р•РќРћ: opened/closed РґРѕР»Р¶РЅС‹ СѓС‡РёС‚С‹РІР°С‚СЊ СЂРµР·СѓР»СЊС‚Р°С‚С‹ РІРµС‚РѕРє, 
+        # Р° РЅРµ С‚РѕР»СЊРєРѕ С„РёРЅР°Р»СЊРЅС‹Р№ СЃС‚РµР№С‚ self.active (РІР°Р¶РЅРѕ РґР»СЏ РґР»РёРЅРЅС‹С… dt)
+        opened = any(r[0] for r in results)
+        closed = any(r[1] for r in results)
 
         if opened:
             opened_offsets = [

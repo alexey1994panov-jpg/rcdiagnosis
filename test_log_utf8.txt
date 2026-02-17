@@ -1,0 +1,227 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.14.0, pytest-9.0.2, pluggy-1.6.0
+rootdir: C:\Users\PanovAA\rcdiagnosis
+configfile: pytest.ini
+plugins: anyio-4.12.0
+collected 1 item
+
+tools\tests\test_detectors_engine_v2.py DEBUG: _find_phys_neighbor links=[('59', '110', 1)] sw_states={'110': 3}
+DEBUG: _find_phys_neighbor links=[('83', '88', 1)] sw_states={'88': 3}
+DEBUG 2180511181056: v2_branch phase=0 prev=59 ctrl=108 nxt=83 rc_states={k:v for k,v in step.rc_states.items() if k in (prev, ctrl, nxt)}
+DEBUG 2180511181056: v2_branch ph=0 timer=0.00/2.00 cond=True rem=1.00 prev=59 ctrl=108 nxt=83
+DEBUG 2180511534288: v2_branch phase=0 prev=59 ctrl=108 nxt=83 rc_states={k:v for k,v in step.rc_states.items() if k in (prev, ctrl, nxt)}
+DEBUG 2180511534288: v2_branch ph=0 timer=0.00/2.00 cond=False rem=1.00 prev=59 ctrl=108 nxt=83
+DEBUG: _find_phys_neighbor links=[('59', '110', 1)] sw_states={'110': 3}
+DEBUG: _find_phys_neighbor links=[('83', '88', 1)] sw_states={'88': 3}
+DEBUG: _find_phys_neighbor links=[('59', '110', 1)] sw_states={'110': 3}
+DEBUG: _find_phys_neighbor links=[('83', '88', 1)] sw_states={'88': 3}
+DEBUG 2180511181056: v2_branch phase=0 prev=59 ctrl=108 nxt=83 rc_states={k:v for k,v in step.rc_states.items() if k in (prev, ctrl, nxt)}
+DEBUG 2180511181056: v2_branch ph=0 timer=1.00/2.00 cond=True rem=1.00 prev=59 ctrl=108 nxt=83
+DEBUG 2180511534288: v2_branch phase=0 prev=59 ctrl=108 nxt=83 rc_states={k:v for k,v in step.rc_states.items() if k in (prev, ctrl, nxt)}
+DEBUG 2180511534288: v2_branch ph=0 timer=0.00/2.00 cond=False rem=1.00 prev=59 ctrl=108 nxt=83
+DEBUG: _find_phys_neighbor links=[('59', '110', 1)] sw_states={'110': 3}
+DEBUG: _find_phys_neighbor links=[('83', '88', 1)] sw_states={'88': 3}
+DEBUG: _find_phys_neighbor links=[('59', '110', 1)] sw_states={'110': 3}
+DEBUG: _find_phys_neighbor links=[('83', '88', 1)] sw_states={'88': 3}
+DEBUG 2180511181056: v2_branch phase=1 prev=59 ctrl=108 nxt=83 rc_states={k:v for k,v in step.rc_states.items() if k in (prev, ctrl, nxt)}
+DEBUG 2180511181056: v2_branch ph=1 timer=0.00/2.00 cond=True rem=2.00 prev=59 ctrl=108 nxt=83
+DEBUG 2180511534288: v2_branch phase=0 prev=59 ctrl=108 nxt=83 rc_states={k:v for k,v in step.rc_states.items() if k in (prev, ctrl, nxt)}
+DEBUG 2180511534288: v2_branch ph=0 timer=0.00/2.00 cond=False rem=2.00 prev=59 ctrl=108 nxt=83
+DEBUG: _find_phys_neighbor links=[('59', '110', 1)] sw_states={'110': 3}
+DEBUG: _find_phys_neighbor links=[('83', '88', 1)] sw_states={'88': 3}
+DEBUG: _find_phys_neighbor links=[('59', '110', 1)] sw_states={'110': 3}
+DEBUG: _find_phys_neighbor links=[('83', '88', 1)] sw_states={'88': 3}
+DEBUG 2180511181056: v2_branch phase=2 prev=59 ctrl=108 nxt=83 rc_states={k:v for k,v in step.rc_states.items() if k in (prev, ctrl, nxt)}
+DEBUG 2180511181056: v2_branch ph=2 timer=0.00/2.00 cond=False rem=3.00 prev=59 ctrl=108 nxt=83
+DEBUG 2180511534288: v2_branch phase=0 prev=59 ctrl=108 nxt=83 rc_states={k:v for k,v in step.rc_states.items() if k in (prev, ctrl, nxt)}
+DEBUG 2180511534288: v2_branch ph=0 timer=0.00/2.00 cond=False rem=3.00 prev=59 ctrl=108 nxt=83
+DEBUG: _find_phys_neighbor links=[('59', '110', 1)] sw_states={'110': 3}
+DEBUG: _find_phys_neighbor links=[('83', '88', 1)] sw_states={'88': 3}
+DEBUG: _find_phys_neighbor links=[('59', '110', 1)] sw_states={'110': 3}
+DEBUG: _find_phys_neighbor links=[('83', '88', 1)] sw_states={'88': 3}
+DEBUG 2180511181056: v2_branch phase=2 prev=59 ctrl=108 nxt=83 rc_states={k:v for k,v in step.rc_states.items() if k in (prev, ctrl, nxt)}
+DEBUG 2180511181056: v2_branch ph=2 timer=0.00/2.00 cond=True rem=4.00 prev=59 ctrl=108 nxt=83
+DEBUG 2180511534288: v2_branch phase=0 prev=59 ctrl=108 nxt=83 rc_states={k:v for k,v in step.rc_states.items() if k in (prev, ctrl, nxt)}
+DEBUG 2180511534288: v2_branch ph=0 timer=0.00/2.00 cond=False rem=4.00 prev=59 ctrl=108 nxt=83
+DEBUG: _find_phys_neighbor links=[('59', '110', 1)] sw_states={'110': 3}
+DEBUG: _find_phys_neighbor links=[('83', '88', 1)] sw_states={'88': 3}
+DEBUG: _find_phys_neighbor links=[('59', '110', 1)] sw_states={'110': 3}
+DEBUG: _find_phys_neighbor links=[('83', '88', 1)] sw_states={'88': 3}
+DEBUG 2180511181056: v2_branch phase=0 prev=59 ctrl=108 nxt=83 rc_states={k:v for k,v in step.rc_states.items() if k in (prev, ctrl, nxt)}
+DEBUG 2180511181056: v2_branch ph=0 timer=0.00/2.00 cond=True rem=5.00 prev=59 ctrl=108 nxt=83
+DEBUG 2180511181056: v2_branch ph=1 timer=0.00/2.00 cond=False rem=3.00 prev=59 ctrl=108 nxt=83
+DEBUG 2180511534288: v2_branch phase=0 prev=59 ctrl=108 nxt=83 rc_states={k:v for k,v in step.rc_states.items() if k in (prev, ctrl, nxt)}
+DEBUG 2180511534288: v2_branch ph=0 timer=0.00/2.00 cond=False rem=5.00 prev=59 ctrl=108 nxt=83
+DEBUG: _find_phys_neighbor links=[('59', '110', 1)] sw_states={'110': 3}
+DEBUG: _find_phys_neighbor links=[('83', '88', 1)] sw_states={'88': 3}
+DEBUG: _find_phys_neighbor links=[('59', '110', 1)] sw_states={'110': 3}
+DEBUG: _find_phys_neighbor links=[('83', '88', 1)] sw_states={'88': 3}
+DEBUG 2180511181056: v2_branch phase=1 prev=59 ctrl=108 nxt=83 rc_states={k:v for k,v in step.rc_states.items() if k in (prev, ctrl, nxt)}
+DEBUG 2180511181056: v2_branch ph=1 timer=0.00/2.00 cond=False rem=6.00 prev=59 ctrl=108 nxt=83
+DEBUG 2180511534288: v2_branch phase=0 prev=59 ctrl=108 nxt=83 rc_states={k:v for k,v in step.rc_states.items() if k in (prev, ctrl, nxt)}
+DEBUG 2180511534288: v2_branch ph=0 timer=0.00/2.00 cond=False rem=6.00 prev=59 ctrl=108 nxt=83
+DEBUG: _find_phys_neighbor links=[('59', '110', 1)] sw_states={'110': 3}
+DEBUG: _find_phys_neighbor links=[('83', '88', 1)] sw_states={'88': 3}
+DEBUG: _find_phys_neighbor links=[('59', '110', 1)] sw_states={'110': 3}
+DEBUG: _find_phys_neighbor links=[('83', '88', 1)] sw_states={'88': 3}
+DEBUG 2180511181056: v2_branch phase=1 prev=59 ctrl=108 nxt=83 rc_states={k:v for k,v in step.rc_states.items() if k in (prev, ctrl, nxt)}
+DEBUG 2180511181056: v2_branch ph=1 timer=0.00/2.00 cond=False rem=7.00 prev=59 ctrl=108 nxt=83
+DEBUG 2180511534288: v2_branch phase=0 prev=59 ctrl=108 nxt=83 rc_states={k:v for k,v in step.rc_states.items() if k in (prev, ctrl, nxt)}
+DEBUG 2180511534288: v2_branch ph=0 timer=0.00/2.00 cond=False rem=7.00 prev=59 ctrl=108 nxt=83
+DEBUG: _find_phys_neighbor links=[('59', '110', 1)] sw_states={'110': 3}
+DEBUG: _find_phys_neighbor links=[('83', '88', 1)] sw_states={'88': 3}
+DEBUG: _find_phys_neighbor links=[('59', '110', 1)] sw_states={'110': 3}
+DEBUG: _find_phys_neighbor links=[('83', '88', 1)] sw_states={'88': 3}
+DEBUG 2180511181056: v2_branch phase=1 prev=59 ctrl=108 nxt=83 rc_states={k:v for k,v in step.rc_states.items() if k in (prev, ctrl, nxt)}
+DEBUG 2180511181056: v2_branch ph=1 timer=0.00/2.00 cond=False rem=8.00 prev=59 ctrl=108 nxt=83
+DEBUG 2180511534288: v2_branch phase=0 prev=59 ctrl=108 nxt=83 rc_states={k:v for k,v in step.rc_states.items() if k in (prev, ctrl, nxt)}
+DEBUG 2180511534288: v2_branch ph=0 timer=0.00/2.00 cond=False rem=8.00 prev=59 ctrl=108 nxt=83
+1: t=0.0, rc={'59': 6, '108': 3, '83': 3}, variant=0, lz=False, flags=[]
+2: t=1.0, rc={'59': 6, '108': 3, '83': 3}, variant=0, lz=False, flags=[]
+3: t=2.0, rc={'59': 6, '108': 6, '83': 3}, variant=0, lz=False, flags=['no_lz_when_occupied']
+4: t=4.0, rc={'59': 6, '108': 6, '83': 3}, variant=0, lz=False, flags=['no_lz_when_occupied']
+5: t=7.0, rc={'59': 6, '108': 3, '83': 3}, variant=0, lz=False, flags=[]
+6: t=11.0, rc={'59': 6, '108': 3, '83': 3}, variant=0, lz=False, flags=[]
+7: t=16.0, rc={'59': 3, '108': 3, '83': 3}, variant=0, lz=False, flags=[]
+8: t=22.0, rc={'59': 3, '108': 3, '83': 3}, variant=0, lz=False, flags=[]
+9: t=29.0, rc={'59': 3, '108': 3, '83': 3}, variant=0, lz=False, flags=[]
+F
+
+================================== FAILURES ===================================
+_____________________ test_v2_108_full_cycle_like_legacy ______________________
+
+    def test_v2_108_full_cycle_like_legacy():
+        """
+        ╨Р╨╜╨░╨╗╨╛╨│ ╤Б╤В╨░╤А╨╛╨│╨╛ simulate_1p ╨┤╨╗╤П v2 ╨╜╨░ 108:
+        ts01_lz2 = 2.0, ts02_lz2 = 2.0, tlz_lz2 = 2.0, tkon_lz2 = 3.0, ╤И╨░╨│ dt = 1.0.
+        ╨Ю╨╢╨╕╨┤╨░╨╡╨╝: ╨╡╤Б╤В╤М open, ╨╡╤Б╤В╤М ╨░╨║╤В╨╕╨▓╨╜╨░╤П ╨Ы╨Ч v2, ╨╡╤Б╤В╤М ╨╖╨░╨║╤А╤Л╤В╨╕╨╡.
+        """
+        det_cfg = DetectorsConfig(
+            ctrl_rc_id="108",          # 108 (ID)
+            prev_rc_name="59",   # ╨╕╨╝╤П
+            ctrl_rc_name="108",
+            next_rc_name="83",
+            ts01_lz1=0.0,             # ╨Ю╤В╨║╨╗╤О╤З╨░╨╡╨╝ v1
+            tlz_lz1=0.0,
+            tkon_lz1=0.0,
+            enable_lz1=False,
+            ts01_lz2=2.0,             # ╨в╨░╨╣╨╝╨╕╨╜╨│╨╕ ╨┤╨╗╤П v2
+            ts02_lz2=2.0,
+            tlz_lz2=2.0,
+            tkon_lz2=2.0,
+            enable_lz2=True,
+            ts01_lz3=3.0,
+            tlz_lz3=3.0,
+            ts02_lz3=3.0,
+            tkon_lz3=3.0,
+            enable_lz3=False,
+            ts01_lz7 = 3.0,
+            tlz_lz7 = 3.0,
+            tkon_lz7 = 3.0,
+            enable_lz7 = False,
+            ts01_lz8 = 3.0,
+        ts02_lz8 = 3.0,
+        tlz_lz8 = 3.0,
+        tkon_lz8 = 3.0,
+    	enable_lz8 = False,
+        )
+    
+        sim_cfg = SimulationConfig(
+            t_pk=30.0,
+            detectors_config=det_cfg,
+        )
+    
+        # \u0420\u2019\u0420\u0452\u0420\u2013\u0420\u045c\u0420\u045b: rc_states \u0420\xb7\u0420\xb0\u0420\u0491\u0420\xb0\u0421\u2018\u0420\u0458 \u0420\u0457\u0420\u0455 \u0420\x98\u0420\u045a\u0420\u2022\u0420\u045c\u0420\u0452\u0420\u045a, \u0420\u0454\u0420\xb0\u0420\u0454 \u0420\u0455\u0420\xb6\u0420\u0451\u0420\u0491\u0420\xb0\u0420\xb5\u0421\u201a Variant2Detector.
+        scenario = [
+            # 0тАУ2 c: 1-0-0 (╤Д╨░╨╖╨░ 1)
+            ScenarioStep(
+                t=1.0,
+                rc_states={"59": 6, "108": 3, "83": 3},
+                switch_states={"87": 3, "88": 3, "110": 3},
+                signal_states={},
+                modes={},
+            ),
+            ScenarioStep(
+                t=1.0,
+                rc_states={"59": 6, "108": 3, "83": 3},
+                switch_states={"87": 3, "88": 3, "110": 3},
+                signal_states={},
+                modes={},
+            ),
+            # 2тАУ4 c: 1-1-0 (╤Д╨░╨╖╨░ 2)
+            ScenarioStep(
+                t=2.0,
+                rc_states={"59": 6, "108": 6, "83": 3},
+                switch_states={"87": 3, "88": 3, "110": 3},
+                signal_states={},
+                modes={},
+            ),
+            ScenarioStep(
+                t=3.0,
+                rc_states={"59": 6, "108": 6, "83": 3},
+                switch_states={"87": 3, "88": 3, "110": 3},
+                signal_states={},
+                modes={},
+            ),
+            # 4тАУ6 c: 1-0-0 (╤Д╨░╨╖╨░ 3, ╨╛╤В╨║╤А╤Л╤В╨╕╨╡)
+            ScenarioStep(
+                t=4.0,
+                rc_states={"59": 6, "108": 3, "83": 3},
+                switch_states={"87": 3, "88": 3, "110": 3},
+                signal_states={},
+                modes={},
+            ),
+            ScenarioStep(
+                t=5.0,
+                rc_states={"59": 6, "108": 3, "83": 3},
+                switch_states={"87": 3, "88": 3, "110": 3},
+                signal_states={},
+                modes={},
+            ),
+            # 6тАУ9 c: 0-0-0 (╨╖╨░╨▓╨╡╤А╤И╨╡╨╜╨╕╨╡ ╨┐╨╛ tkon_lz2)
+            ScenarioStep(
+                t=6.0,
+                rc_states={"59": 3, "108": 3, "83": 3},
+                switch_states={"87": 3, "88": 3, "110": 3},
+                signal_states={},
+                modes={},
+            ),
+            ScenarioStep(
+                t=7.0,
+                rc_states={"59": 3, "108": 3, "83": 3},
+                switch_states={"87": 3, "88": 3, "110": 3},
+                signal_states={},
+                modes={},
+            ),
+            ScenarioStep(
+                t=8.0,
+                rc_states={"59": 3, "108": 3, "83": 3},
+                switch_states={"87": 3, "88": 3, "110": 3},
+                signal_states={},
+                modes={},
+            ),
+        ]
+    
+        ctx = SimulationContext(
+            config=sim_cfg,
+            scenario=scenario,
+            ctrl_rc_id="108",
+        )
+    
+        timeline = ctx.run()
+    
+        for i, st in enumerate(timeline, start=1):
+            print(
+                f"{i}: t={st.t}, rc={st.rc_states}, "
+                f"variant={st.lz_variant}, lz={st.lz_state}, flags={st.flags}"
+            )
+    
+>       assert any("llz_v2_open" in s.flags for s in timeline), "╨Э╨╡╤В llz_v2_open"
+E       AssertionError: ╨Э╨╡╤В llz_v2_open
+E       assert False
+E        +  where False = any(<generator object test_v2_108_full_cycle_like_legacy.<locals>.<genexpr> at 0x000001FBB0943D30>)
+
+tools\tests\test_detectors_engine_v2.py:131: AssertionError
+=========================== short test summary info ===========================
+FAILED tools/tests/test_detectors_engine_v2.py::test_v2_108_full_cycle_like_legacy
+============================== 1 failed in 0.17s ==============================

@@ -34,21 +34,23 @@ def test_ls5_83_prev_branch_full_cycle():
         ScenarioStep(
             t=3.0,
             rc_states={"86": 7, "83": 4, "81": 3},
-            switch_states={"150": 9}, # СЃРѕРµРґРёРЅРµРЅРёРµ 86
+            # Sw1(87)=9 (MINUS) connects 83 to 86
+            # Sw3(150)=9 (MINUS) connects 86 to 83
+            switch_states={"87": 9, "150": 9},
             signal_states={}, modes={},
         ),
         # 3-6СЃ: Р¤Р°Р·Р° 1 - РћР±Рµ СЃРјРµР¶РЅС‹Рµ Р·Р°РЅСЏС‚С‹+Р·Р°РјРєРЅСѓС‚С‹ (7), Ctrl СЃРІРѕР±РѕРґРЅР°+Р·Р°РјРєРЅСѓС‚Р° (4) в†’ РѕС‚РєСЂС‹С‚РёРµ
         ScenarioStep(
             t=3.0,
             rc_states={"86": 7, "83": 4, "81": 7},
-            switch_states={"150": 9},
+            switch_states={"87": 9, "150": 9},
             signal_states={}, modes={},
         ),
         # 6-10СЃ: Р—Р°РІРµСЂС€РµРЅРёРµ - С†РµРЅС‚СЂ Р·Р°РЅСЏС‚ (7) в†’ Р·Р°РєСЂС‹С‚РёРµ
         ScenarioStep(
             t=4.0,
             rc_states={"86": 7, "83": 7, "81": 7},
-            switch_states={"150": 9},
+            switch_states={"87": 9, "150": 9},
             signal_states={}, modes={},
         ),
     ]
@@ -86,21 +88,23 @@ def test_ls5_108_next_branch_full_cycle():
         ScenarioStep(
             t=3.0,
             rc_states={"59": 3, "108": 4, "83": 7},
-            switch_states={"110": 3, "88": 3},
+            # Sw1(87)=3 and Sw5(88)=3 connect 108 to 83
+            # Sw10(110)=3 connects 108 to 59
+            switch_states={"87": 3, "88": 3, "110": 3},
             signal_states={}, modes={},
         ),
         # 3-6СЃ: Р¤Р°Р·Р° 1 - РћР±Рµ СЃРјРµР¶РЅС‹Рµ Р·Р°РЅСЏС‚С‹+Р·Р°РјРєРЅСѓС‚С‹ (7), Ctrl СЃРІРѕР±РѕРґРЅР°+Р·Р°РјРєРЅСѓС‚Р° (4) в†’ РѕС‚РєСЂС‹С‚РёРµ
         ScenarioStep(
             t=3.0,
             rc_states={"59": 7, "108": 4, "83": 7},
-            switch_states={"110": 3, "88": 3},
+            switch_states={"87": 3, "88": 3, "110": 3},
             signal_states={}, modes={},
         ),
         # 6-10СЃ: Р—Р°РІРµСЂС€РµРЅРёРµ - С†РµРЅС‚СЂ Р·Р°РЅСЏС‚ (7) в†’ Р·Р°РєСЂС‹С‚РёРµ
         ScenarioStep(
             t=4.0,
             rc_states={"59": 7, "108": 7, "83": 7},
-            switch_states={"110": 3, "88": 3},
+            switch_states={"87": 3, "88": 3, "110": 3},
             signal_states={}, modes={},
         ),
     ]
@@ -116,4 +120,37 @@ def test_ls5_108_next_branch_full_cycle():
     assert any("lls_5_open" in s.flags for s in timeline), "РќРµС‚ lls_5_open"
     assert any("lls_5" in s.flags and s.lz_variant == 105 for s in timeline), "LLS_5 РЅРµ Р°РєС‚РёРІРЅР°"
     assert any("lls_5_closed" in s.flags for s in timeline), "РќРµС‚ lls_5_closed"
+
+
+def test_ls5_81_boundary_must_not_open():
+    """
+    РўРµСЃС‚ РЅР° 81 (РќРџ) - РіСЂР°РЅРёС‡РЅР°СЏ Р Р¦.
+    LS5 С‚СЂРµР±СѓРµС‚ BOTH СЃРѕСЃРµРґРµР№.
+    РЈ РќРџ С‚РѕР»СЊРєРѕ РѕРґРёРЅ СЃРѕСЃРµРґ (83).
+    РћР¶РёРґР°РµРј: LLS5 РЅРµ РѕС‚РєСЂС‹РІР°РµС‚СЃСЏ.
+    """
+    det_cfg = DetectorsConfig(
+        ctrl_rc_id="81",
+        prev_rc_name="83",
+        ctrl_rc_name="81",
+        next_rc_name="",
+        enable_ls5=True,
+        ts01_ls5=1.0,
+        tlz_ls5=1.0,
+        tkon_ls5=1.0,
+    )
+    sim_cfg = SimulationConfig(t_pk=30.0, detectors_config=det_cfg)
+    
+    scenario = [
+        # Center free+locked (4), neighbors occupied+locked (7)
+        ScenarioStep(t=2.0, rc_states={"83": 7, "81": 4}, switch_states={}, signal_states={}, modes={}),
+        # Both occupied+locked (7)
+        ScenarioStep(t=2.0, rc_states={"83": 7, "81": 7}, switch_states={}, signal_states={}, modes={}),
+    ]
+    
+    ctx = SimulationContext(config=sim_cfg, scenario=scenario, ctrl_rc_id="81")
+    timeline = ctx.run()
+    
+    assert not any("lls_5_open" in s.flags for s in timeline), "LS5 РЅРµ РґРѕР»Р¶РµРЅ РѕС‚РєСЂС‹РІР°С‚СЊСЃСЏ РЅР° РіСЂР°РЅРёС†Рµ (BOTH requirement)"
+
 

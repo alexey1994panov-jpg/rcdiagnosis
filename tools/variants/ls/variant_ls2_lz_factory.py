@@ -79,7 +79,7 @@ def _make_branch_detector(
         initial_phase_id=0,
         phases=phases,
         t_kon=tkon,
-        completion_mode=CompletionMode.FREE_TIME,
+        completion_mode=CompletionMode.OCCUPIED_TIME,
         variant_name="ls2_branch",
     )
     

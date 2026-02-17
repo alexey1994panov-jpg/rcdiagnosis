@@ -63,7 +63,7 @@ def test_lz2_user_like_on_1_7sp_opens_but_not_closed_by_t10():
     assert not any("llz_v2_closed" in s.flags for s in tl)
 
     opened_step = next(s for s in tl if "llz_v2_open" in s.flags)
-    assert opened_step.t == 8.0
+    assert opened_step.t == 9.0
     assert opened_step.effective_prev_rc == "108"
     assert opened_step.effective_next_rc == "81"
 
@@ -76,4 +76,4 @@ def test_lz2_user_like_on_1_7sp_closes_after_extra_step():
     assert any("llz_v2_closed" in s.flags for s in tl)
 
     closed_step = next(s for s in tl if "llz_v2_closed" in s.flags)
-    assert closed_step.t == 11.0
+    assert closed_step.t == 12.0

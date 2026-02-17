@@ -57,10 +57,12 @@ def test_ls1_108_prev_nc_full_cycle():
 
     scenario = [
         # 0-3СЃ: C0101 - 0-1-0 (С†РµРЅС‚СЂ Р·Р°РЅСЏС‚ 108, РєСЂР°СЏ СЃРІРѕР±РѕРґРЅС‹ 59/83)
-        # Р”Р»СЏ 108: 59 = prev, 83 = next. РќСѓР¶РЅС‹ Sw10=+ (ID 110), Sw5=+ (ID 88)
+        # Р”Р»СЏ 108: 59 = prev,
         ScenarioStep(
             t=3.0,
             rc_states={"59": 3, "108": 6, "83": 3},
+            # Sw10(110)=3 (PLUS) connects 59 to 108
+            # Sw1(87)=3 (PLUS) and Sw5(88)=3 (PLUS) connect 83 to 108
             switch_states={"110": 3, "88": 3, "87": 3},
             signal_states={},
             modes={},
@@ -69,14 +71,15 @@ def test_ls1_108_prev_nc_full_cycle():
         ScenarioStep(
             t=3.0,
             rc_states={"59": 3, "108": 3, "83": 3},
-            switch_states={"110": 15, "88": 15, "87": 15},
+            # Sw10(110)=15 (No Control) -> Neighbor 59 is NOT controlled
+            switch_states={"110": 15, "88": 3, "87": 3},
             signal_states={},
             modes={},
         ),
-        # 6-10СЃ: Р—Р°РІРµСЂС€РµРЅРёРµ - 0-0-0 (РІСЃРµ СЃРІРѕР±РѕРґРЅС‹) в‰Ґ tkon_ls1=3.0 в†’ Р·Р°РєСЂС‹С‚РёРµ
+        # 6-10с: Завершение - 108 занята ≥ tkon_ls1=3.0 → закрытие
         ScenarioStep(
             t=4.0,
-            rc_states={"59": 3, "108": 3, "83": 3},
+            rc_states={"59": 3, "108": 6, "83": 3},  # 108 занята для закрытия
             switch_states={"110": 3, "88": 3, "87": 3},
             signal_states={},
             modes={},
@@ -141,7 +144,7 @@ def test_ls1_59_next_nc_full_cycle():
 
     scenario = [
         # 0-2СЃ: C0101 - 0-1-0 (С†РµРЅС‚СЂ Р·Р°РЅСЏС‚Р° 59, РєСЂР°СЏ 47/108 СЃРІРѕР±РѕРґРЅС‹)
-        # Р”Р»СЏ 59: 47 = prev (Р±РµР·СѓСЃР»РѕРІРЅС‹Р№), 108 = next. РќСѓР¶РЅР° Sw10=+ (ID 110)
+        # Р”Р»СЏ 59: 47 = prev (Р±РµР·СѓСЃР»РѕРІРЅС‹Р№),
         ScenarioStep(
             t=2.0,
             rc_states={"47": 3, "59": 6, "108": 3},
@@ -157,10 +160,10 @@ def test_ls1_59_next_nc_full_cycle():
             signal_states={},
             modes={},
         ),
-        # 4-7СЃ: Р—Р°РІРµСЂС€РµРЅРёРµ - 0-0-0 (РІСЃРµ СЃРІРѕР±РѕРґРЅС‹) в†’ Р·Р°РєСЂС‹С‚РёРµ
+        # 4-7с: Завершение - 59 занята ≥ tkon_ls1=2.0 → закрытие
         ScenarioStep(
             t=3.0,
-            rc_states={"47": 3, "59": 3, "108": 3},
+            rc_states={"47": 3, "59": 6, "108": 3},  # 59 занята для закрытия
             switch_states={"110": 3},
             signal_states={},
             modes={},
@@ -224,7 +227,9 @@ def test_ls1_83_both_nc_full_cycle():
         ScenarioStep(
             t=3.0,
             rc_states={"86": 3, "83": 6, "81": 3},
-            switch_states={"150": 9},  # 150 РІ РњРёРЅСѓСЃРµ (9) РґР»СЏ СЃРѕРµРґРёРЅРµРЅРёСЏ 86
+            # Sw1(87)=9 (MINUS) connects 83 to 86
+            # Sw3(150)=9 (MINUS) connects 86 to 83
+            switch_states={"87": 9, "150": 9},
             signal_states={},
             modes={},
         ),
@@ -232,14 +237,16 @@ def test_ls1_83_both_nc_full_cycle():
         ScenarioStep(
             t=3.0,
             rc_states={"86": 3, "83": 3, "81": 3},
-            switch_states={"150": 9},
+            # Switch stays in MINUS -> neighbor 86 is adjacent
+            # BUT we set it to some other state to test LOSS OF CONTROL
+            switch_states={"87": 0, "150": 9}, 
             signal_states={},
             modes={},
         ),
-        # 6-10СЃ: Р—Р°РІРµСЂС€РµРЅРёРµ - 0-0-0 (РІСЃРµ СЃРІРѕР±РѕРґРЅС‹) в†’ Р·Р°РєСЂС‹С‚РёРµ
+        # 6-10с: Завершение - 83 занята ≥ tkon_ls1=3.0 → закрытие
         ScenarioStep(
             t=4.0,
-            rc_states={"86": 3, "83": 3, "81": 3},
+            rc_states={"86": 3, "83": 6, "81": 3},  # 83 занята для закрытия
             switch_states={"150": 9},
             signal_states={},
             modes={},
@@ -344,4 +351,37 @@ def test_ls1_65_no_open_no_nc():
     # РџСЂРѕРІРµСЂСЏРµРј, С‡С‚Рѕ Р›РЎ1 РќР• РѕС‚РєСЂС‹Р»Р°СЃСЊ (РЅРµС‚ NC)
     assert not any("lls_1_open" in s.flags for s in timeline), "lls_1_open РЅРµ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ (РЅРµС‚ NC)"
     assert not any("lls_1" in s.flags for s in timeline), "lls_1 РЅРµ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ Р°РєС‚РёРІРЅРѕ (РЅРµС‚ NC)"
+
+
+def test_ls1_81_boundary_must_not_open():
+    """
+    РўРµСЃС‚ РЅР° 81 (РќРџ) - РіСЂР°РЅРёС‡РЅР°СЏ Р Р¦.
+    Р”РѕР»Р¶РЅР° СЃС‚СЂРѕРіРѕ С‚СЂРµР±РѕРІР°С‚СЊ BOTH СЃРѕСЃРµРґРµР№.
+    РЈ РќРџ С‚РѕР»СЊРєРѕ РѕРґРёРЅ СЃРѕСЃРµРґ (83), РІС‚РѕСЂРѕРіРѕ РЅРµС‚.
+    РћР¶РёРґР°РµРј: Р›РЎ1 РЅРµ РѕС‚РєСЂС‹РІР°РµС‚СЃСЏ.
+    """
+    det_cfg = DetectorsConfig(
+        ctrl_rc_id="81",
+        prev_rc_name="83",
+        ctrl_rc_name="81",
+        next_rc_name="",  # РќРµС‚ СЃРѕСЃРµРґР°
+        enable_ls1=True,
+        ts01_ls1=1.0,
+        tlz_ls1=1.0,
+        tkon_ls1=1.0,
+    )
+    sim_cfg = SimulationConfig(t_pk=30.0, detectors_config=det_cfg)
+    
+    scenario = [
+        # Center occupied, neighbor free
+        ScenarioStep(t=2.0, rc_states={"83": 3, "81": 6}, switch_states={}, signal_states={}, modes={}),
+        # Center free, neighbor free
+        ScenarioStep(t=2.0, rc_states={"83": 3, "81": 3}, switch_states={}, signal_states={}, modes={}),
+    ]
+    
+    ctx = SimulationContext(config=sim_cfg, scenario=scenario, ctrl_rc_id="81")
+    timeline = ctx.run()
+    
+    assert not any("lls_1_open" in s.flags for s in timeline), "LS1 РЅРµ РґРѕР»Р¶РµРЅ РѕС‚РєСЂС‹РІР°С‚СЊСЃСЏ РЅР° РіСЂР°РЅРёС†Рµ (BOTH requirement)"
+
 

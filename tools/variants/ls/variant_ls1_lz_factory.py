@@ -86,7 +86,7 @@ def make_ls1_detector(
         initial_phase_id=0,
         phases=phases,
         t_kon=float(tkon_ls1),
-        completion_mode=CompletionMode.OCCUPIED_TIME,
+        completion_mode=CompletionMode.OCCUPIED_TIME,  # ЛС закрывается когда РЦ занята
         variant_name="ls1",
     )
     

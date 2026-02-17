@@ -1,18 +1,30 @@
 ﻿# -*- coding: utf-8 -*-
-from typing import Any, Tuple, Optional
+from typing import Any, Optional, Tuple
+
 from core.base_detector import CompletionMode
-from core.variants_common import get_mask_by_id, rc_is_free, rc_is_occupied
+from core.variants_common import (
+    mask_rc_0_0l_0,
+    mask_rc_ctrl_0_adj_occ,
+    mask_rc_ctrl_1_adj_free_or_nc,
+    mask_rc_ctrl_1_adj_occ,
+    mask_rc_ctrl_1_next_occ,
+    mask_rc_ctrl_1_prev_occ,
+    rc_is_free,
+    rc_is_occupied,
+)
+
 
 class TimingDetectorLZ9:
     """
-    РЎРїРµС†РёР°Р»РёР·РёСЂРѕРІР°РЅРЅС‹Р№ РґРµС‚РµРєС‚РѕСЂ РґР»СЏ LZ9 (РџСЂРѕР±РѕР№ СЃС‚С‹РєР°).
-    Р’РјРµСЃС‚Рѕ Р¶РµСЃС‚РєРёС… С„Р°Р· РёСЃРїРѕР»СЊР·СѓРµС‚ Р·Р°РјРµСЂ РІСЂРµРјРµРЅРё РјРµР¶РґСѓ СЃРѕР±С‹С‚РёСЏРјРё Р·Р°РЅСЏС‚РёСЏ.
-    
-    Р›РѕРіРёРєР°:
-    1. Phase 0 (Given): РћР¶РёРґР°РЅРёРµ 0-0-0 (РёР»Рё NC) РІ С‚РµС‡РµРЅРёРµ ts01_lz9.
-    2. Phase 1 (Wait): РћР¶РёРґР°РЅРёРµ РЅР°С‡Р°Р»Р° Р·Р°РЅСЏС‚РёСЏ С†РµРЅС‚СЂР° РёР»Рё СЃРѕСЃРµРґР°.
-    3. РћС‚РєСЂС‹С‚РёРµ: Р•СЃР»Рё РѕР±Р° Р·Р°РЅСЏР»РёСЃСЊ СЃ СЂР°Р·РЅРёС†РµР№ <= tlz_lz9.
+    Специализированный детектор для LZ9 (пробой стыка).
+
+    Логика:
+    1. Фаза given: ожидание базового условия (контролируемая свободна, смежные свободны/NC)
+       в течение ts01_lz9.
+    2. Фаза wait: фиксация времени занятия контролируемой и смежной РЦ.
+    3. Открытие: если оба события произошли в окне |dt| <= tlz_lz9.
     """
+
     def __init__(
         self,
         ctrl_rc_id: str,
@@ -24,18 +36,18 @@ class TimingDetectorLZ9:
         self.ts01_lz9 = ts01_lz9
         self.tlz_lz9 = tlz_lz9
         self.t_kon = t_kon
-        
-        # РњР°СЃРєРё
-        self.mask_given = get_mask_by_id(32)
-        self.mask_ctrl_occ = get_mask_by_id(33)
-        self.mask_adj_occ = get_mask_by_id(34)
-        self.mask_both_occ = get_mask_by_id(35)
-        self.mask_prev_occ = get_mask_by_id(36)
-        self.mask_next_occ = get_mask_by_id(37)
-        
+
+        # Маски (явные канонические ссылки)
+        self.mask_given = mask_rc_0_0l_0
+        self.mask_ctrl_occ = mask_rc_ctrl_1_adj_free_or_nc
+        self.mask_adj_occ = mask_rc_ctrl_0_adj_occ
+        self.mask_both_occ = mask_rc_ctrl_1_adj_occ
+        self.mask_prev_occ = mask_rc_ctrl_1_prev_occ
+        self.mask_next_occ = mask_rc_ctrl_1_next_occ
+
         self.reset()
 
-    def reset(self):
+    def reset(self) -> None:
         self.phase = "given"
         self.timer = 0.0
         self.active = False
@@ -47,8 +59,7 @@ class TimingDetectorLZ9:
         self.global_time += dt
         opened = False
         closed = False
-        
-        # РџРѕР»СѓС‡Р°РµРј СЌС„С„РµРєС‚РёРІРЅС‹С… СЃРѕСЃРµРґРµР№
+
         prev = getattr(step, "effective_prev_rc", None)
         ctrl = self.ctrl_rc_id
         nxt = getattr(step, "effective_next_rc", None)
@@ -63,13 +74,13 @@ class TimingDetectorLZ9:
                         self.timer = 0.0
                 else:
                     self.timer = 0.0
-            
+
             elif self.phase == "wait":
-                # Р¤РёРєСЃРёСЂСѓРµРј РІСЂРµРјСЏ РїРµСЂРІРѕРіРѕ Р·Р°РЅСЏС‚РёСЏ
+                # Фиксируем время занятия контролируемой РЦ
                 if self.t_ctrl_occ is None and rc_is_occupied(step.rc_states.get(ctrl, 0)):
                     self.t_ctrl_occ = self.global_time
-                
-                # РЇРІРЅРѕ РїРѕРєСЂС‹РІР°РµРј РѕР±Р° РЅР°РїСЂР°РІР»РµРЅРёСЏ + Р°РіСЂРµРіРёСЂРѕРІР°РЅРЅСѓСЋ РјР°СЃРєСѓ.
+
+                # Проверяем занятие смежной РЦ по всем допустимым условиям
                 is_adj_occ = (
                     self.mask_adj_occ(step, prev, ctrl, nxt)
                     or self.mask_both_occ(step, prev, ctrl, nxt)
@@ -78,8 +89,8 @@ class TimingDetectorLZ9:
                 )
                 if self.t_adj_occ is None and is_adj_occ:
                     self.t_adj_occ = self.global_time
-                
-                # Р•СЃР»Рё РѕР±Р° Р·Р°РЅСЏР»РёСЃСЊ, РїСЂРѕРІРµСЂСЏРµРј РґРµР»СЊС‚Сѓ
+
+                # Проверка окна синхронности
                 if self.t_ctrl_occ is not None and self.t_adj_occ is not None:
                     delta = abs(self.t_ctrl_occ - self.t_adj_occ)
                     if delta <= self.tlz_lz9:
@@ -87,19 +98,16 @@ class TimingDetectorLZ9:
                         self.active = True
                         self.phase = "active"
                         self.timer = 0.0
-                    else:
-                        pass
-                
-                # Р•СЃР»Рё РїСЂРѕС€Р»Рѕ СЃР»РёС€РєРѕРј РјРЅРѕРіРѕ РІСЂРµРјРµРЅРё СЃ РїРµСЂРІРѕРіРѕ СЃРѕР±С‹С‚РёСЏ, СЃР±СЂР°СЃС‹РІР°РµРј РѕР¶РёРґР°РЅРёРµ
+
+                # Если второе событие не пришло в окно, возвращаемся к given
                 first_t = self.t_ctrl_occ or self.t_adj_occ
                 if first_t is not None and (self.global_time - first_t) > self.tlz_lz9:
-                    # РћРєРЅРѕ Р·Р°С…Р»РѕРїРЅСѓР»РѕСЃСЊ, СЃР±СЂРѕСЃ Рє idle (РЅРѕ РµСЃР»Рё РІСЃРµ РµС‰Рµ Given, РјРѕР¶РЅРѕ РІ Given)
                     self.t_ctrl_occ = None
                     self.t_adj_occ = None
-                    self.phase = "given" # Р’РѕР·РІСЂР°С‚ Рє РїСЂРѕРІРµСЂРєРµ Р”Р°РЅРѕ
+                    self.phase = "given"
 
         else:
-            # РђРєС‚РёРІРµРЅ. Р—Р°РІРµСЂС€РµРЅРёРµ РїРѕ Рў_РљРћРќ (СЃРІРѕР±РѕРґРЅРѕСЃС‚СЊ С†РµРЅС‚СЂР°)
+            # Завершение по t_kon: контролируемая должна быть свободна непрерывно
             st_ctrl = step.rc_states.get(ctrl, 0)
             if rc_is_free(st_ctrl):
                 self.timer += dt
@@ -108,8 +116,9 @@ class TimingDetectorLZ9:
                     self.reset()
             else:
                 self.timer = 0.0
-                
+
         return opened, closed
+
 
 def make_lz9_detector(
     ctrl_rc_id: str,
@@ -118,5 +127,3 @@ def make_lz9_detector(
     t_kon: float,
 ) -> TimingDetectorLZ9:
     return TimingDetectorLZ9(ctrl_rc_id, ts01_lz9, tlz_lz9, t_kon)
-
-

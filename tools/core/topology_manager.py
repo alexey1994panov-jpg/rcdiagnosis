@@ -204,9 +204,13 @@ class UniversalTopologyManager:
         """
         from core.uni_states import sw_is_plus, sw_is_minus  # Р»РѕРєР°Р»СЊРЅС‹Р№ РёРјРїРѕСЂС‚
 
+        if links:
+            print(f"DEBUG: _find_phys_neighbor links={links} sw_states={ {k:v for k,v in switch_states.items() if k in [l[1] for l in links if l[1]]} }")
+        
         # РЎРЅР°С‡Р°Р»Р° Р±С‹СЃС‚СЂС‹Р№ РїСѓС‚СЊ: Р±РµР·СѓСЃР»РѕРІРЅС‹Рµ СЃРІСЏР·Рё (РІРѕРѕР±С‰Рµ Р±РµР· SwID)
         for target_rc, sw_id, required_state in links:
             if sw_id is None or required_state < 0:
+                # if target_rc == "83": print(f"DEBUG: FOUND UNCONDITIONAL {target_rc}")
                 return target_rc
 
         # Р“СЂСѓРїРїРёСЂСѓРµРј СЃС‚СЂРµР»РѕС‡РЅС‹Рµ СЃРІСЏР·Рё РїРѕ target_rc

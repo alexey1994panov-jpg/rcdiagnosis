@@ -33,26 +33,29 @@ def build_flags_simple(
     curr_free = rc_is_free(rc_state)
     curr_occ = rc_is_occupied(rc_state)
 
-    # РђРєС‚РёРІРЅРѕСЃС‚СЊ РґРµС‚РµРєС‚РѕСЂРѕРІ вЂ” РёР· РѕР±СЉРµРєС‚РѕРІ (РЅРѕРІР°СЏ СЃС‚СЂСѓРєС‚СѓСЂР°)
-    v1_active = det_state.v1.active if det_state.v1 else False
-    v2_active = det_state.v2.active if det_state.v2 else False
-    v3_active = det_state.v3.active if det_state.v3 else False
-    v4_active = det_state.v4.active if det_state.v4 else False
-    v5_active = det_state.v5.active if det_state.v5 else False
-    v6_active = det_state.v6.active if det_state.v6 else False
-    v7_active = det_state.v7.active if det_state.v7 else False
-    v8_active = det_state.v8.active if det_state.v8 else False
-    ls9_active = det_state.ls9.active if det_state.ls9 else False
-    ls1_active = det_state.ls1.active if det_state.ls1 else False
-    ls2_active = det_state.ls2.active if det_state.ls2 else False
-    ls4_active = det_state.ls4.active if det_state.ls4 else False
-    ls5_active = det_state.ls5.active if det_state.ls5 else False
-    lz9_active = det_state.lz9.active if det_state.lz9 else False
-    lz12_active = det_state.lz12.active if det_state.lz12 else False
-    lz11_active = det_state.lz11.active if det_state.lz11 else False
-    lz13_active = det_state.lz13.active if det_state.lz13 else False
-    lz10_active = det_state.lz10.active if det_state.lz10 else False
-    ls6_active = det_state.ls6.active if det_state.ls6 else False
+    # РђРєС‚РёРІРЅРѕСЃС‚СЊ РґРµС‚РµРєС‚РѕСЂРѕРІ вЂ” РёР· РѕР±СЉРµРєС‚РѕРІ Рё СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ РѕС‚РєСЂС‹С‚РёСЏ/Р·Р°РєСЂС‹С‚РёСЏ
+    # Р’Р°Р¶РЅРѕ РґР»СЏ СЃРёРјСѓР»СЏС†РёР№ СЃ Р±РѕР»СЊС€РёРј dt, РіРґРµ Р›Р— РјРѕР¶РµС‚ РѕС‚РєСЂС‹С‚СЊСЃСЏ Рё Р·Р°РєСЂС‹С‚СЊСЃСЏ Р·Р° РѕРґРёРЅ С€Р°Рі.
+    v1_active = (det_state.v1.active if det_state.v1 else False) or det_result.lz1_open or det_result.lz1_closed
+    v2_active = (det_state.v2.active if det_state.v2 else False) or det_result.lz2_open or det_result.lz2_closed
+    v3_active = (det_state.v3.active if det_state.v3 else False) or det_result.lz3_open or det_result.lz3_closed
+    v4_active = (det_state.v4.active if det_state.v4 else False) or det_result.lz4_open or det_result.lz4_closed
+    v5_active = (det_state.v5.active if det_state.v5 else False) or det_result.lz5_open or det_result.lz5_closed
+    v6_active = (det_state.v6.active if det_state.v6 else False) or det_result.lz6_open or det_result.lz6_closed
+    v7_active = (det_state.v7.active if det_state.v7 else False) or det_result.lz7_open or det_result.lz7_closed
+    v8_active = (det_state.v8.active if det_state.v8 else False) or det_result.lz8_open or det_result.lz8_closed
+    
+    ls9_active = (det_state.ls9.active if det_state.ls9 else False) or det_result.ls9_open or det_result.ls9_closed
+    ls1_active = (det_state.ls1.active if det_state.ls1 else False) or det_result.ls1_open or det_result.ls1_closed
+    ls2_active = (det_state.ls2.active if det_state.ls2 else False) or det_result.ls2_open or det_result.ls2_closed
+    ls4_active = (det_state.ls4.active if det_state.ls4 else False) or det_result.ls4_open or det_result.ls4_closed
+    ls5_active = (det_state.ls5.active if det_state.ls5 else False) or det_result.ls5_open or det_result.ls5_closed
+    ls6_active = (det_state.ls6.active if det_state.ls6 else False) or det_result.ls6_open or det_result.ls6_closed
+
+    lz9_active = (det_state.lz9.active if det_state.lz9 else False) or det_result.lz9_open or det_result.lz9_closed
+    lz12_active = (det_state.lz12.active if det_state.lz12 else False) or det_result.lz12_open or det_result.lz12_closed
+    lz11_active = (det_state.lz11.active if det_state.lz11 else False) or det_result.lz11_open or det_result.lz11_closed
+    lz13_active = (det_state.lz13.active if det_state.lz13 else False) or det_result.lz13_open or det_result.lz13_closed
+    lz10_active = (det_state.lz10.active if det_state.lz10 else False) or det_result.lz10_open or det_result.lz10_closed
 
     # РќРѕРјРµСЂ РІР°СЂРёР°РЅС‚Р°: РїСЂРёРѕСЂРёС‚РµС‚ ls9 > ls1 > v8 > v7 > v3 > v2 > v1
     variant = 0
@@ -135,23 +138,48 @@ def build_flags_simple(
     if ls6_active and "lls_6" not in flags:
         flags.append("lls_6")
     
-    # Р¤Р»Р°РіРё РѕС‚РєСЂС‹С‚РёСЏ/Р·Р°РєСЂС‹С‚РёСЏ
-    if det_result.ls5_open: flags.append("lls_5_open")
-    if det_result.ls5_closed: flags.append("lls_5_closed")
-    if det_result.lz9_open: flags.append("llz_v9_open")
-    if det_result.lz9_closed: flags.append("llz_v9_closed")
-    if det_result.lz12_open: flags.append("llz_v12_open")
-    if det_result.lz12_closed: flags.append("llz_v12_closed")
-    if det_result.lz11_open: flags.append("llz_v11_open")
-    if det_result.lz11_closed: flags.append("llz_v11_closed")
-    if det_result.lz13_open: flags.append("llz_v13_open")
-    if det_result.lz13_closed: flags.append("llz_v13_closed")
+    # Р¤Р»Р°РіРё    
+    # Флаги открытия/закрытия ЛЗ
+    if det_result.lz1_open: flags.append("llz_v1_open")
+    if det_result.lz1_closed: flags.append("llz_v1_closed")
+    if det_result.lz2_open: flags.append("llz_v2_open")
+    if det_result.lz2_closed: flags.append("llz_v2_closed")
+    if det_result.lz3_open: flags.append("llz_v3_open")
+    if det_result.lz3_closed: flags.append("llz_v3_closed")
     if det_result.lz4_open: flags.append("llz_v4_open")
     if det_result.lz4_closed: flags.append("llz_v4_closed")
+    if det_result.lz5_open: flags.append("llz_v5_open")
+    if det_result.lz5_closed: flags.append("llz_v5_closed")
+    if det_result.lz6_open: flags.append("llz_v6_open")
+    if det_result.lz6_closed: flags.append("llz_v6_closed")
+    if det_result.lz7_open: flags.append("llz_v7_open")
+    if det_result.lz7_closed: flags.append("llz_v7_closed")
+    if det_result.lz8_open: flags.append("llz_v8_open")
+    if det_result.lz8_closed: flags.append("llz_v8_closed")
+    if det_result.lz9_open: flags.append("llz_v9_open")
+    if det_result.lz9_closed: flags.append("llz_v9_closed")
     if det_result.lz10_open: flags.append("llz_v10_open")
     if det_result.lz10_closed: flags.append("llz_v10_closed")
+    if det_result.lz11_open: flags.append("llz_v11_open")
+    if det_result.lz11_closed: flags.append("llz_v11_closed")
+    if det_result.lz12_open: flags.append("llz_v12_open")
+    if det_result.lz12_closed: flags.append("llz_v12_closed")
+    if det_result.lz13_open: flags.append("llz_v13_open")
+    if det_result.lz13_closed: flags.append("llz_v13_closed")
+    
+    # Флаги открытия/закрытия ЛС
+    if det_result.ls1_open: flags.append("lls_1_open")
+    if det_result.ls1_closed: flags.append("lls_1_closed")
+    if det_result.ls2_open: flags.append("lls_2_open")
+    if det_result.ls2_closed: flags.append("lls_2_closed")
+    if det_result.ls4_open: flags.append("lls_4_open")
+    if det_result.ls4_closed: flags.append("lls_4_closed")
+    if det_result.ls5_open: flags.append("lls_5_open")
+    if det_result.ls5_closed: flags.append("lls_5_closed")
     if det_result.ls6_open: flags.append("lls_6_open")
     if det_result.ls6_closed: flags.append("lls_6_closed")
+    if det_result.ls9_open: flags.append("lls_9_open")
+    if det_result.ls9_closed: flags.append("lls_9_closed")
 
     # Р‘Р°Р·РѕРІР°СЏ Р›Р—/Р›РЎ: РїРѕ Р°РєС‚РёРІРЅРѕСЃС‚Рё Р»СЋР±РѕРіРѕ РґРµС‚РµРєС‚РѕСЂР°
     lz = bool(
@@ -168,4 +196,3 @@ def build_flags_simple(
     _ = switch_states
 
     return FlagsResult(flags=flags, lz=lz, variant=variant)
-

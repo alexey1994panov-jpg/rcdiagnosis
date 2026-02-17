@@ -166,8 +166,8 @@ def mask_x0x(step: Any, prev: Optional[str], ctrl: str, next: Optional[str]) -> 
     return rc_is_free(s_ctrl)
 
 
-def mask_x0x_occ(step: Any, prev: Optional[str], ctrl: str, next: Optional[str]) -> bool:
-    """X-0-X ():  ,   ."""
+def mask_x1x(step: Any, prev: Optional[str], ctrl: str, next: Optional[str]) -> bool:
+    """X-1-X: no_adjacent, контролируемая занята."""
     if not ctrl:
         return False
     if prev is not None or next is not None:
@@ -199,8 +199,8 @@ def mask_00x(step: Any, prev: Optional[str], ctrl: str, next: Optional[str]) -> 
     return rc_is_free(s_ctrl) and next_ok
 
 
-def mask_00x_occ(step: Any, prev: Optional[str], ctrl: str, next: Optional[str]) -> bool:
-    """0-0-X      1  no_prev."""
+def mask_01x(step: Any, prev: Optional[str], ctrl: str, next: Optional[str]) -> bool:
+    """0-1-X: no_prev, next свободна, контролируемая занята."""
     if not ctrl or next is None:
         return False
     
@@ -238,8 +238,8 @@ def mask_x00(step: Any, prev: Optional[str], ctrl: str, next: Optional[str]) -> 
     return prev_ok and rc_is_free(s_ctrl)
 
 
-def mask_x00_occ(step: Any, prev: Optional[str], ctrl: str, next: Optional[str]) -> bool:
-    """X-0-0      1  no_next."""
+def mask_x10(step: Any, prev: Optional[str], ctrl: str, next: Optional[str]) -> bool:
+    """X-1-0: no_next, prev свободна, контролируемая занята."""
     if not ctrl or prev is None:
         return False
     
@@ -253,6 +253,12 @@ def mask_x00_occ(step: Any, prev: Optional[str], ctrl: str, next: Optional[str])
         return False
 
     return prev_ok and rc_is_occupied(s_ctrl)
+
+
+# Backward-compatible aliases for old v7 names
+mask_x0x_occ = mask_x1x
+mask_00x_occ = mask_01x
+mask_x00_occ = mask_x10
 
 
 # ============================================================================
@@ -287,10 +293,10 @@ def mask_011_or_111(step: Any, prev: Optional[str], ctrl: str, next: Optional[st
     return rc_is_occupied(s_ctrl) and rc_is_occupied(s_next)
 
 
-def mask_01x_or_x10(step: Any, prev: Optional[str], ctrl: str, next: Optional[str]) -> bool:
+def mask_01X_or_X10(step: Any, prev: Optional[str], ctrl: str, next: Optional[str]) -> bool:
     """
-    0-1-X  X-1-0: ctrl ,  (prev   next ).
-     : None  "" (  =  )
+    01X | X10: контролируемая занята, хотя бы одна смежная свободна.
+    Для отсутствующей смежной (None) условие свободы считается истинным.
     """
     if not ctrl:
         return False
@@ -304,6 +310,10 @@ def mask_01x_or_x10(step: Any, prev: Optional[str], ctrl: str, next: Optional[st
     next_free = rc_is_free(s_next) if next else True  # None = 
     
     return curr_occ and (prev_free or next_free)
+
+
+# Backward-compatible alias (old non-canonical name)
+mask_01x_or_x10 = mask_01X_or_X10
 
 # ============================================================================
 #   v5 ( ,   )
@@ -652,11 +662,11 @@ mask_rc_0_0_1 = mask_001
 mask_rc_0_1_1 = mask_011
 
 mask_rc_x_0_x = mask_x0x
-mask_rc_x_1_x = mask_x0x_occ
+mask_rc_x_1_x = mask_x1x
 mask_rc_0_0_x = mask_00x
-mask_rc_0_1_x = mask_00x_occ
+mask_rc_0_1_x = mask_01x
 mask_rc_x_0_0 = mask_x00
-mask_rc_x_1_0 = mask_x00_occ
+mask_rc_x_1_0 = mask_x10
 
 mask_rc_0 = mask_ctrl_free
 mask_rc_1 = mask_ctrl_occupied
@@ -792,7 +802,7 @@ def get_mask_by_id(mask_id: int) -> callable:
         101: mask_001_or_000,
         102: mask_110_or_111,
         103: mask_011_or_111,
-        104: mask_01x_or_x10,
+        104: mask_01X_or_X10,
 
         # Compatibility alias
         106: mask_001_or_000,

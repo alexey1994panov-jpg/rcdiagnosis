@@ -196,22 +196,49 @@ class DetectorsResult:
     """Результат обновления детекторов."""
     opened: bool = False
     closed: bool = False
-    ls5_open: bool = False
-    ls5_closed: bool = False
-    lz9_open: bool = False
-    lz9_closed: bool = False
-    lz12_open: bool = False
-    lz12_closed: bool = False
-    lz11_open: bool = False
-    lz11_closed: bool = False
-    lz13_open: bool = False
-    lz13_closed: bool = False
+    
+    # ЛЗ варианты
+    lz1_open: bool = False
+    lz1_closed: bool = False
+    lz2_open: bool = False
+    lz2_closed: bool = False
+    lz3_open: bool = False
+    lz3_closed: bool = False
     lz4_open: bool = False
     lz4_closed: bool = False
+    lz5_open: bool = False
+    lz5_closed: bool = False
+    lz6_open: bool = False
+    lz6_closed: bool = False
+    lz7_open: bool = False
+    lz7_closed: bool = False
+    lz8_open: bool = False
+    lz8_closed: bool = False
+    lz9_open: bool = False
+    lz9_closed: bool = False
     lz10_open: bool = False
     lz10_closed: bool = False
+    lz11_open: bool = False
+    lz11_closed: bool = False
+    lz12_open: bool = False
+    lz12_closed: bool = False
+    lz13_open: bool = False
+    lz13_closed: bool = False
+    
+    # ЛС варианты
+    ls1_open: bool = False
+    ls1_closed: bool = False
+    ls2_open: bool = False
+    ls2_closed: bool = False
+    ls4_open: bool = False
+    ls4_closed: bool = False
+    ls5_open: bool = False
+    ls5_closed: bool = False
     ls6_open: bool = False
     ls6_closed: bool = False
+    ls9_open: bool = False
+    ls9_closed: bool = False
+    
     active_variant: int = 0
     open_offset: Optional[float] = None
     close_offset: Optional[float] = None

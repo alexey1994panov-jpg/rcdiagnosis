@@ -1,4 +1,4 @@
-﻿# variant2_lz_factory.py вЂ” Р Р•Р¤РђРљРўРћР РРќР“: РґРµРєР»Р°СЂР°С‚РёРІРЅС‹Р№ СЃС‚РёР»СЊ, РіРѕС‚РѕРІ Рє РїРµСЂРµРЅРѕСЃСѓ РЅР° C
+﻿# variant2_lz_factory.py вЂ” Р Р•Р¤РђРљРўРћР Р˜РќР“: РґРµРєР»Р°СЂР°С‚РёРІРЅС‹Р№ СЃС‚РёР»СЊ, РіРѕС‚РѕРІ Рє РїРµСЂРµРЅРѕСЃСѓ РЅР° C
 
 from typing import Any, Optional, Tuple
 
@@ -26,6 +26,9 @@ def _make_branch_detector(
     tlz_lz2: float,
     ts02_lz2: float,
     tkon_lz2: float,
+    prev_rc_name: Optional[str] = None,
+    ctrl_rc_name: str = "",
+    next_rc_name: Optional[str] = None,
 ) -> BaseDetector:
     """РЈРЅРёРІРµСЂСЃР°Р»СЊРЅР°СЏ С„Р°Р±СЂРёРєР° РѕРґРЅРѕР№ РІРµС‚РєРё v2."""
     
@@ -70,7 +73,12 @@ def _make_branch_detector(
         variant_name="v2_branch",
     )
     
-    return BaseDetector(config=config)
+    return BaseDetector(
+        config=config,
+        prev_rc_name=prev_rc_name,
+        ctrl_rc_name=ctrl_rc_name,
+        next_rc_name=next_rc_name
+    )
 
 
 def make_lz2_detector(
@@ -92,6 +100,9 @@ def make_lz2_detector(
         MASK_110, mask_110,
         MASK_100_or_000, mask_100_or_000,
         ts01_lz2, tlz_lz2, ts02_lz2, tkon_lz2,
+        prev_rc_name=prev_rc_name,
+        ctrl_rc_name=ctrl_rc_name,
+        next_rc_name=next_rc_name,
     )
     
     det_next = _make_branch_detector(
@@ -99,9 +110,12 @@ def make_lz2_detector(
         MASK_011, mask_011,
         MASK_001_or_000, mask_001_or_000,
         ts01_lz2, tlz_lz2, ts02_lz2, tkon_lz2,
+        prev_rc_name=prev_rc_name,
+        ctrl_rc_name=ctrl_rc_name,
+        next_rc_name=next_rc_name,
     )
     
-    # в†ђ Р’РћР—Р’Р РђР©РђР•Рњ РћР‘РЃР РўРљРЈ РЎ Р”Р•РўР•РљРўРћР РђРњР
+    # в†ђ Р’РћР—Р’Р РђР©РђР•Рњ РћР‘РЃР РўРљРЈ РЎ Р”Р•РўР•РљРўРћР РђРњР˜
     return BaseVariantWrapper([det_prev, det_next])
 
 # =========================================================================
@@ -135,10 +149,9 @@ V2_SCHEMA_NEXT_BRANCH = {
 V2_SCHEMA = {
     "variant_id": 2,
     "variant_name": "lz2",
-    "description": "Р—Р°РЅСЏС‚РѕСЃС‚СЊ РѕРґРЅРѕРіРѕ РёР· СЃРѕСЃРµРґРµР№: 100в†’110в†’(100|000) РР›Р 001в†’011в†’(001|000)",
+    "description": "Р—Р°РЅСЏС‚РѕСЃС‚СЊ РѕРґРЅРѕРіРѕ РёР· СЃРѕСЃРµРґРµР№: 100в†’110в†’(100|000) Р˜Р›Р˜ 001в†’011в†’(001|000)",
     "branches": [V2_SCHEMA_PREV_BRANCH, V2_SCHEMA_NEXT_BRANCH],
     "completion": {"mode": "FREE_TIME"},
     "parameters": ["ts01_lz2", "ts02_lz2", "tlz_lz2", "tkon_lz2"],
     "topology": "dynamic",  # NEW: РїРѕРґРґРµСЂР¶РєР° РґРёРЅР°РјРёС‡РµСЃРєРѕР№ С‚РѕРїРѕР»РѕРіРёРё
 }
-

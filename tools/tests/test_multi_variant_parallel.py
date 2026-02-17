@@ -90,10 +90,19 @@ def test_multi_variants_parallel_on_different_ctrl_rc() -> None:
             modes={},
         ),
         # t3..t4
-        # 108=free (LS9 close)
+        # 108=free (LS9 close trigger step 1)
         ScenarioStep(
             t=1.0,
             rc_states={"108": 3, "83": 3, "59": 3},
+            switch_states={},
+            signal_states={"114": 15, "107": 15},
+            modes={},
+        ),
+        # t4..t5
+        # 108=occ (LS9 close trigger step 2 - OCCUPIED_TIME)
+        ScenarioStep(
+            t=1.0,
+            rc_states={"108": 6, "83": 3, "59": 3},
             switch_states={},
             signal_states={"114": 15, "107": 15},
             modes={},

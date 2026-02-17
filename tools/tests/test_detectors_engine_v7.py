@@ -1,4 +1,5 @@
-﻿from core.sim_core import SimulationConfig, SimulationContext, ScenarioStep
+﻿# -*- coding: utf-8 -*-
+from core.sim_core import SimulationConfig, SimulationContext, ScenarioStep
 from core.detectors_engine import DetectorsConfig
 
 
@@ -12,9 +13,9 @@ def test_v7_108_from_json_like_legacy():
     """
     det_cfg = DetectorsConfig(
         ctrl_rc_id="108",          # 1П (ID)
-        prev_rc_name="10-12СП",    # РёРјСЏ
-        ctrl_rc_name="1П",
-        next_rc_name="1-7СП",
+        prev_rc_name="59",    # РёРјСЏ
+        ctrl_rc_name="108",
+        next_rc_name="83",
         ts01_lz1=0.0,              # v1 РѕС‚РєР»СЋС‡РµРЅР°
         tlz_lz1=0.0,
         tkon_lz1=0.0,
@@ -53,7 +54,7 @@ def test_v7_108_from_json_like_legacy():
         # Р”РђРќРћ: 1П СЃРІРѕР±РѕРґРЅР°, СЃС‚СЂРµР»РєРё РЅРµ РІРµРґСѓС‚ (РІ РјРёРЅСѓСЃРµ)
         ScenarioStep(
             t=35.0,
-            rc_states={"10-12СП": 3, "1П": 3, "1-7СП": 3},
+            rc_states={"59": 3, "108": 3, "83": 3},
             switch_states={"87": 9, "88": 9, "110": 3},
             signal_states={},
             modes={},
@@ -61,7 +62,7 @@ def test_v7_108_from_json_like_legacy():
         ),
         ScenarioStep(
             t=3.0,
-            rc_states={"10-12СП": 3, "1П": 3, "1-7СП": 3},
+            rc_states={"59": 3, "108": 3, "83": 3},
             switch_states={"87": 9, "88": 9, "110": 3},
             signal_states={},
             modes={},
@@ -70,7 +71,7 @@ def test_v7_108_from_json_like_legacy():
         # РљРћР“Р”Рђ: 1П Р·Р°РЅСЏС‚Р°, СЃС‚СЂРµР»РєРё РІСЃС‘ С‚Р°Рє Р¶Рµ РІ РјРёРЅСѓСЃРµ
         ScenarioStep(
             t=3.0,
-            rc_states={"10-12СП": 3, "1П": 6, "1-7СП": 3},
+            rc_states={"59": 3, "108": 6, "83": 3},
             switch_states={"87": 9, "88": 9, "110": 3},
             signal_states={},
             modes={},
@@ -78,7 +79,7 @@ def test_v7_108_from_json_like_legacy():
         ),
         ScenarioStep(
             t=3.0,
-            rc_states={"10-12СП": 3, "1П": 6, "1-7СП": 3},
+            rc_states={"59": 3, "108": 6, "83": 3},
             switch_states={"87": 9, "88": 9, "110": 3},
             signal_states={},
             modes={},
@@ -87,7 +88,7 @@ def test_v7_108_from_json_like_legacy():
         # Р—Р°РІРµСЂС€РµРЅРёРµ: 1П СЃРЅРѕРІР° СЃРІРѕР±РѕРґРЅР°, СЃС‚СЂРµР»РєРё РїРѕвЂ‘РїСЂРµР¶РЅРµРјСѓ РІ РјРёРЅСѓСЃРµ
         ScenarioStep(
             t=15.0,
-            rc_states={"10-12СП": 3, "1П": 3, "1-7СП": 3},
+            rc_states={"59": 3, "108": 3, "83": 3},
             switch_states={"87": 9, "88": 9, "110": 3},
             signal_states={},
             modes={},
@@ -95,7 +96,7 @@ def test_v7_108_from_json_like_legacy():
         ),
         ScenarioStep(
             t=3.0,
-            rc_states={"10-12СП": 3, "1П": 3, "1-7СП": 3},
+            rc_states={"59": 3, "108": 3, "83": 3},
             switch_states={"87": 9, "88": 9, "110": 3},
             signal_states={},
             modes={},
@@ -130,9 +131,9 @@ def test_v7_108_minus_branch_from_json():
     """
     det_cfg = DetectorsConfig(
         ctrl_rc_id="108",
-        prev_rc_name="10-12СП",
-        ctrl_rc_name="1П",
-        next_rc_name="1-7СП",
+        prev_rc_name="59",
+        ctrl_rc_name="108",
+        next_rc_name="83",
         ts01_lz1=0.0,
         tlz_lz1=0.0,
         tkon_lz1=0.0,
@@ -170,7 +171,7 @@ def test_v7_108_minus_branch_from_json():
         # Р”РђРќРћ: 1П СЃРІРѕР±РѕРґРЅР°, СЃС‚СЂРµР»РєРё РЅРµ РІРµРґСѓС‚ (РІ РјРёРЅСѓСЃРµ)
         ScenarioStep(
             t=35.0,
-            rc_states={"10-12СП": 3, "1П": 3, "1-7СП": 3},
+            rc_states={"59": 3, "108": 3, "83": 3},
             switch_states={"87": 9, "88": 9, "110": 9},
             signal_states={},
             modes={},
@@ -178,7 +179,7 @@ def test_v7_108_minus_branch_from_json():
         ),
         ScenarioStep(
             t=3.0,
-            rc_states={"10-12СП": 3, "1П": 3, "1-7СП": 3},
+            rc_states={"59": 3, "108": 3, "83": 3},
             switch_states={"87": 9, "88": 9, "110": 9},
             signal_states={},
             modes={},
@@ -187,7 +188,7 @@ def test_v7_108_minus_branch_from_json():
         # РљРћР“Р”Рђ: 1П Р·Р°РЅСЏС‚Р°, СЃС‚СЂРµР»РєРё РІСЃС‘ С‚Р°Рє Р¶Рµ РІ РјРёРЅСѓСЃРµ
         ScenarioStep(
             t=3.0,
-            rc_states={"10-12СП": 3, "1П": 6, "1-7СП": 3},
+            rc_states={"59": 3, "108": 6, "83": 3},
             switch_states={"87": 9, "88": 9, "110": 9},
             signal_states={},
             modes={},
@@ -195,7 +196,7 @@ def test_v7_108_minus_branch_from_json():
         ),
         ScenarioStep(
             t=3.0,
-            rc_states={"10-12СП": 3, "1П": 6, "1-7СП": 3},
+            rc_states={"59": 3, "108": 6, "83": 3},
             switch_states={"87": 9, "88": 9, "110": 9},
             signal_states={},
             modes={},
@@ -204,7 +205,7 @@ def test_v7_108_minus_branch_from_json():
         # Р—Р°РІРµСЂС€РµРЅРёРµ: 1П СЃРЅРѕРІР° СЃРІРѕР±РѕРґРЅР°, СЃС‚СЂРµР»РєРё РїРѕвЂ‘РїСЂРµР¶РЅРµРјСѓ РІ РјРёРЅСѓСЃРµ
         ScenarioStep(
             t=15.0,
-            rc_states={"10-12СП": 3, "1П": 3, "1-7СП": 3},
+            rc_states={"59": 3, "108": 3, "83": 3},
             switch_states={"87": 9, "88": 9, "110": 9},
             signal_states={},
             modes={},
@@ -212,7 +213,7 @@ def test_v7_108_minus_branch_from_json():
         ),
         ScenarioStep(
             t=3.0,
-            rc_states={"10-12СП": 3, "1П": 3, "1-7СП": 3},
+            rc_states={"59": 3, "108": 3, "83": 3},
             switch_states={"87": 9, "88": 9, "110": 9},
             signal_states={},
             modes={},
@@ -251,9 +252,9 @@ def test_v7_user_json_on_1p_must_not_open() -> None:
     """
     det_cfg = DetectorsConfig(
         ctrl_rc_id="108",
-        prev_rc_name="10-12СП",
-        ctrl_rc_name="1П",
-        next_rc_name="1-7СП",
+        prev_rc_name="59",
+        ctrl_rc_name="108",
+        next_rc_name="83",
         enable_lz1=False,
         enable_lz2=False,
         enable_lz3=False,
@@ -270,28 +271,28 @@ def test_v7_user_json_on_1p_must_not_open() -> None:
     scenario = [
         ScenarioStep(
             t=5.0,
-            rc_states={"10-12СП": 6, "1П": 6, "1-7СП": 3},
+            rc_states={"59": 6, "108": 6, "83": 3},
             switch_states=sw_plus,
             signal_states={},
             modes={},
         ),
         ScenarioStep(
             t=7.0,
-            rc_states={"10-12СП": 6, "1П": 3, "1-7СП": 3},
+            rc_states={"59": 6, "108": 3, "83": 3},
             switch_states=sw_plus,
             signal_states={},
             modes={},
         ),
         ScenarioStep(
             t=7.0,
-            rc_states={"10-12СП": 6, "1П": 6, "1-7СП": 3},
+            rc_states={"59": 6, "108": 6, "83": 3},
             switch_states=sw_plus,
             signal_states={},
             modes={},
         ),
         ScenarioStep(
             t=9.0,
-            rc_states={"10-12СП": 6, "1П": 6, "1-7СП": 3},
+            rc_states={"59": 6, "108": 6, "83": 3},
             switch_states=sw_plus,
             signal_states={},
             modes={},
@@ -313,9 +314,9 @@ def test_v7_must_not_open_when_both_neighbors_exist_and_free() -> None:
     """
     det_cfg = DetectorsConfig(
         ctrl_rc_id="108",
-        prev_rc_name="10-12СП",
-        ctrl_rc_name="1П",
-        next_rc_name="1-7СП",
+        prev_rc_name="59",
+        ctrl_rc_name="108",
+        next_rc_name="83",
         enable_lz1=False,
         enable_lz2=False,
         enable_lz3=False,
@@ -327,9 +328,9 @@ def test_v7_must_not_open_when_both_neighbors_exist_and_free() -> None:
     sim_cfg = SimulationConfig(t_pk=30.0, detectors_config=det_cfg)
     sw_plus = {"87": 3, "88": 3, "110": 3}
     scenario = [
-        ScenarioStep(t=3.0, rc_states={"10-12СП": 3, "1П": 6, "1-7СП": 3}, switch_states=sw_plus, signal_states={}, modes={}),
-        ScenarioStep(t=3.0, rc_states={"10-12СП": 3, "1П": 3, "1-7СП": 3}, switch_states=sw_plus, signal_states={}, modes={}),
-        ScenarioStep(t=6.0, rc_states={"10-12СП": 3, "1П": 6, "1-7СП": 3}, switch_states=sw_plus, signal_states={}, modes={}),
+        ScenarioStep(t=3.0, rc_states={"59": 3, "108": 6, "83": 3}, switch_states=sw_plus, signal_states={}, modes={}),
+        ScenarioStep(t=3.0, rc_states={"59": 3, "108": 3, "83": 3}, switch_states=sw_plus, signal_states={}, modes={}),
+        ScenarioStep(t=6.0, rc_states={"59": 3, "108": 6, "83": 3}, switch_states=sw_plus, signal_states={}, modes={}),
     ]
     timeline = list(SimulationContext(config=sim_cfg, scenario=scenario, ctrl_rc_id="108").run())
     assert not any("llz_v7_open" in s.flags for s in timeline)

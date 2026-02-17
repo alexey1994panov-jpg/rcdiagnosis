@@ -510,10 +510,10 @@ def update_detectors(
         _capture_offsets(det_state.v1, opened, closed)
         if opened:
             result.opened = True
-            result.flags.append("llz_v1_open")
+            result.lz1_open = True
         if closed:
             result.closed = True
-            result.flags.append("llz_v1_closed")
+            result.lz1_closed = True
         if det_state.v1.active:
             variants_active.append(1)
     
@@ -523,10 +523,10 @@ def update_detectors(
         _capture_offsets(det_state.v2, opened, closed)
         if opened:
             result.opened = True
-            result.flags.append("llz_v2_open")
+            result.lz2_open = True
         if closed:
             result.closed = True
-            result.flags.append("llz_v2_closed")
+            result.lz2_closed = True
         if det_state.v2.active:
             variants_active.append(2)
     
@@ -536,10 +536,10 @@ def update_detectors(
         _capture_offsets(det_state.v3, opened, closed)
         if opened:
             result.opened = True
-            result.flags.append("llz_v3_open")
+            result.lz3_open = True
         if closed:
             result.closed = True
-            result.flags.append("llz_v3_closed")
+            result.lz3_closed = True
         if det_state.v3.active:
             variants_active.append(3)
 
@@ -562,20 +562,23 @@ def update_detectors(
         _capture_offsets(det_state.v5, opened, closed)
         if opened:
             result.opened = True
-            result.flags.append("llz_v5_open")
+            result.lz5_open = True
         if closed:
             result.closed = True
-            result.flags.append("llz_v5_closed")
+            result.lz5_closed = True
         if det_state.v5.active:
             variants_active.append(5)
 
+    # v6
     if det_state.v6:
         opened, closed = det_state.v6.update(step_adapter, dt)
         _capture_offsets(det_state.v6, opened, closed)
         if opened:
-            result.flags.append("llz_v6_open")
+            result.opened = True
+            result.lz6_open = True
         if closed:
-            result.flags.append("llz_v6_closed")
+            result.closed = True
+            result.lz6_closed = True
         if det_state.v6.active:
             variants_active.append(6)
     
@@ -585,10 +588,10 @@ def update_detectors(
         _capture_offsets(det_state.v7, opened, closed)
         if opened:
             result.opened = True
-            result.flags.append("llz_v7_open")
+            result.lz7_open = True
         if closed:
             result.closed = True
-            result.flags.append("llz_v7_closed")
+            result.lz7_closed = True
         if det_state.v7.active:
             variants_active.append(7)
     
@@ -598,10 +601,10 @@ def update_detectors(
         _capture_offsets(det_state.v8, opened, closed)
         if opened:
             result.opened = True
-            result.flags.append("llz_v8_open")
+            result.lz8_open = True
         if closed:
             result.closed = True
-            result.flags.append("llz_v8_closed")
+            result.lz8_closed = True
         if det_state.v8.active:
             variants_active.append(8)
     
@@ -611,10 +614,10 @@ def update_detectors(
         _capture_offsets(det_state.ls9, opened, closed)
         if opened:
             result.opened = True
-            result.flags.append("lls_9_open")
+            result.ls9_open = True
         if closed:
             result.closed = True
-            result.flags.append("lls_9_closed")
+            result.ls9_closed = True
         if det_state.ls9.active:
             variants_active.append(109)  # LS9 = 100 + 9
     
@@ -624,10 +627,10 @@ def update_detectors(
         _capture_offsets(det_state.ls1, opened, closed)
         if opened:
             result.opened = True
-            result.flags.append("lls_1_open")
+            result.ls1_open = True
         if closed:
             result.closed = True
-            result.flags.append("lls_1_closed")
+            result.ls1_closed = True
         if det_state.ls1.active:
             variants_active.append(101)  # LS1 = 100 + 1
 
@@ -637,10 +640,10 @@ def update_detectors(
         _capture_offsets(det_state.ls2, opened, closed)
         if opened:
             result.opened = True
-            result.flags.append("lls_2_open")
+            result.ls2_open = True
         if closed:
             result.closed = True
-            result.flags.append("lls_2_closed")
+            result.ls2_closed = True
         if det_state.ls2.active:
             # LS2 РјРѕР¶РµС‚ РёРјРµС‚СЊ РЅРµСЃРєРѕР»СЊРєРѕ Р°РєС‚РёРІРЅС‹С… РІРµС‚РѕРє РІ РѕР±РµСЂС‚РєРµ, 
             # РЅРѕ РјС‹ РїСЂРѕСЃС‚Рѕ РїРѕРјРµС‡Р°РµРј С‡С‚Рѕ РІР°СЂРёР°РЅС‚ 102 Р°РєС‚РёРІРµРЅ
@@ -652,10 +655,10 @@ def update_detectors(
         _capture_offsets(det_state.ls4, opened, closed)
         if opened:
             result.opened = True
-            result.flags.append("lls_4_open")
+            result.ls4_open = True
         if closed:
             result.closed = True
-            result.flags.append("lls_4_closed")
+            result.ls4_closed = True
         if det_state.ls4.active:
             variants_active.append(104)
 

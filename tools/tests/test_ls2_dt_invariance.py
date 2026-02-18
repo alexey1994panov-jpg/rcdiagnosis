@@ -59,7 +59,7 @@ def test_ls2_invariant_for_grouped_and_expanded_steps() -> None:
     )
     sim_cfg = SimulationConfig(t_pk=30.0, detectors_config=det_cfg)
 
-    # 110 -> 100 -> 110 -> 000
+    # 110 -> 100 -> 110 -> 110 -> 000
     s110 = {"59": 6, "108": 6, "83": 3}
     s100 = {"59": 6, "108": 3, "83": 3}
     s000 = {"59": 3, "108": 3, "83": 3}
@@ -69,12 +69,14 @@ def test_ls2_invariant_for_grouped_and_expanded_steps() -> None:
         ScenarioStep(t=3.0, rc_states=s110, switch_states=sw, signal_states={}, modes={}),
         ScenarioStep(t=3.0, rc_states=s100, switch_states=sw, signal_states={}, modes={}),
         ScenarioStep(t=4.0, rc_states=s110, switch_states=sw, signal_states={}, modes={}),
+        ScenarioStep(t=3.0, rc_states=s110, switch_states=sw, signal_states={}, modes={}),
         ScenarioStep(t=5.0, rc_states=s000, switch_states=sw, signal_states={}, modes={}),
     ]
     expanded = (
         [ScenarioStep(t=1.0, rc_states=s110, switch_states=sw, signal_states={}, modes={}) for _ in range(3)]
         + [ScenarioStep(t=1.0, rc_states=s100, switch_states=sw, signal_states={}, modes={}) for _ in range(3)]
         + [ScenarioStep(t=1.0, rc_states=s110, switch_states=sw, signal_states={}, modes={}) for _ in range(4)]
+        + [ScenarioStep(t=1.0, rc_states=s110, switch_states=sw, signal_states={}, modes={}) for _ in range(3)]
         + [ScenarioStep(t=1.0, rc_states=s000, switch_states=sw, signal_states={}, modes={}) for _ in range(5)]
     )
 

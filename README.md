@@ -7,9 +7,8 @@
 git clone https://github.com/alexey1994panov-jpg/rcdiagnosis.git
 cd rcdiagnosis
 python -m venv .venv
-.venv\Scripts\activate
-python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
+& .\.venv\Scripts\python.exe -m pip install --upgrade pip
+& .\.venv\Scripts\python.exe -m pip install -r requirements.txt
 powershell -ExecutionPolicy Bypass -File .\scripts\run_server.ps1
 ```
 
@@ -83,6 +82,11 @@ python -m pytest -q
 python -c "import api.engine_app as e; print(bool(e.app))"
 ```
 
+Smoke-проверка запуска API (одной командой):
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\smoke_test.ps1
+```
+
 ## Где что смотреть
 - Детекторы и фазы: `tools/core/detectors_engine.py`
 - Фазовые исключения: `tools/core/detectors/phase_exceptions.py`
@@ -101,23 +105,39 @@ cd rcdiagnosis
 3. Создать и активировать виртуальное окружение:
 ```powershell
 python -m venv .venv
-.venv\Scripts\activate
+& .\.venv\Scripts\python.exe --version
 ```
 4. Установить базовые зависимости:
 ```powershell
-python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
+& .\.venv\Scripts\python.exe -m pip install --upgrade pip
+& .\.venv\Scripts\python.exe -m pip install -r requirements.txt
 ```
+
+## Параллельная копия (проверка инструкции рядом с текущим проектом)
+```powershell
+cd ..
+git clone https://github.com/alexey1994panov-jpg/rcdiagnosis.git rcdiagnosis_smoke
+cd .\rcdiagnosis_smoke
+python -m venv .venv
+& .\.venv\Scripts\python.exe -m pip install --upgrade pip
+& .\.venv\Scripts\python.exe -m pip install -r requirements.txt
+powershell -ExecutionPolicy Bypass -File .\scripts\smoke_test.ps1
+```
+Ожидаемый результат в конце: `[smoke] SUCCESS`.
 
 ## Запуск как сервер (доступ с другого ПК)
 1. На компьютере-сервере запустить:
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\scripts\run_server.ps1
 ```
+Явное задание адреса и порта:
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\run_server.ps1 -BindHost 0.0.0.0 -Port 8000
+```
 
 Или напрямую:
 ```powershell
-python -m uvicorn api.app:app --host 0.0.0.0 --port 8000
+& .\.venv\Scripts\python.exe -m uvicorn api.app:app --host 0.0.0.0 --port 8000
 ```
 Для dev-режима со слежением: `powershell -ExecutionPolicy Bypass -File .\scripts\run_server.ps1 -Reload`.
 2. Разрешить входящее правило в брандмауэре Windows для порта `8000` (TCP).
@@ -134,6 +154,16 @@ ipconfig
 ## Важно по фронтенду
 - Фронтенд раздается этим же FastAPI-приложением (маршрут `/`), поэтому отдельный веб-сервер для статики не нужен.
 - Если открывать фронтенд не через `http://<IP>:8000/`, а как отдельный origin, может понадобиться настройка CORS.
+
+## Troubleshooting
+- Ошибка PowerShell `VariableNotWritable` / `Не удается перезаписать переменную Host`:
+  используйте обновлённый параметр `-BindHost` (или запускайте скрипт без `-Host`).
+- Если не работает активация `.venv\Scripts\activate` из-за ExecutionPolicy:
+  не активируйте окружение, а запускайте команды через `& .\.venv\Scripts\python.exe ...`.
+- Если в окружении нет `pip` после `python -m venv .venv`:
+  попробуйте другой Python (рекомендуется 3.11–3.13) или переустановите Python с компонентом `pip`.
+- Для полной smoke-проверки с тестами:
+  `powershell -ExecutionPolicy Bypass -File .\scripts\smoke_test.ps1 -RunPytest`.
 
 ## Текущий статус
 - MVP рабочий: симуляция + детекторы + исключения + API + фронтенд-панель сценариев.

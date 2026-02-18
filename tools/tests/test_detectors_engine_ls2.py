@@ -61,9 +61,16 @@ def test_ls2_108_prev_branch_full_cycle():
             switch_states={"110": 3, "88": 3},
             signal_states={}, modes={},
         ),
-        # 10-15СЃ: Р—Р°РІРµСЂС€РµРЅРёРµ - 000 (РІСЃРµ СЃРІРѕР±РѕРґРЅС‹) в†’ Р·Р°РєСЂС‹С‚РёРµ
+        # 10-14СЃ: Р—Р°РІРµСЂС€РµРЅРёРµ - 110 (OCCUPIED_TIME)
         ScenarioStep(
-            t=5.0,
+            t=4.0,
+            rc_states={"59": 6, "108": 6, "83": 3},
+            switch_states={"110": 3, "88": 3},
+            signal_states={}, modes={},
+        ),
+        # 14-15СЃ: РїРѕСЃС‚-С„Р°Р·Р° 000
+        ScenarioStep(
+            t=1.0,
             rc_states={"59": 3, "108": 3, "83": 3},
             switch_states={"110": 3, "88": 3},
             signal_states={}, modes={},
@@ -80,7 +87,7 @@ def test_ls2_108_prev_branch_full_cycle():
 
     assert any("lls_2_open" in s.flags for s in timeline), "РќРµС‚ lls_2_open"
     assert any("lls_2" in s.flags and s.lz_variant == 102 for s in timeline), "LLS_2 РЅРµ Р°РєС‚РёРІРЅР°"
-    assert any("lls_2_closed" in s.flags for s in timeline), "РќРµС‚ lls_1_closed"
+    assert any("lls_2_closed" in s.flags for s in timeline), "РќРµС‚ lls_2_closed"
 
 
 def test_ls2_59_next_branch_full_cycle():
@@ -120,9 +127,16 @@ def test_ls2_59_next_branch_full_cycle():
             switch_states={"110": 3},
             signal_states={}, modes={},
         ),
-        # 6-9СЃ: Р—Р°РІРµСЂС€РµРЅРёРµ - 000 в†’ Р·Р°РєСЂС‹С‚РёРµ
+        # 6-8СЃ: Р—Р°РІРµСЂС€РµРЅРёРµ - 011 (OCCUPIED_TIME)
         ScenarioStep(
-            t=3.0,
+            t=2.0,
+            rc_states={"47": 3, "59": 6, "108": 6},
+            switch_states={"110": 3},
+            signal_states={}, modes={},
+        ),
+        # 8-9СЃ: РїРѕСЃС‚-С„Р°Р·Р° 000
+        ScenarioStep(
+            t=1.0,
             rc_states={"47": 3, "59": 3, "108": 3},
             switch_states={"110": 3},
             signal_states={}, modes={},
@@ -146,8 +160,8 @@ def test_ls2_user_scenario_split_1s_open_and_close():
     """
     Проверка user-сценария (5s -> 7s -> 7s -> 9s) для LS2 на 1П:
     - должно быть открытие LS2;
-    - закрытие должно происходить только после добавленного хвоста свободного
-      состояния ctrl на время >= tkon_ls2.
+    - закрытие должно происходить после удержания занятого состояния ctrl
+      на время >= tkon_ls2 (OCCUPIED_TIME).
     """
     det_cfg = DetectorsConfig(
         ctrl_rc_id="108",

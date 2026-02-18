@@ -3,6 +3,10 @@
 Проект для моделирования станции, расчета состояний РЦ/стрелок/сигналов и детектирования ДС (ЛЗ/ЛС) по сценариям.
 
 ## Быстрый старт (5 минут)
+Требования:
+- Windows + PowerShell
+- Python `3.11–3.13` (рекомендуется)
+
 ```powershell
 git clone https://github.com/alexey1994panov-jpg/rcdiagnosis.git
 cd rcdiagnosis
@@ -15,6 +19,12 @@ powershell -ExecutionPolicy Bypass -File .\scripts\run_server.ps1
 После запуска откройте:
 - локально: `http://127.0.0.1:8000/`
 - в сети: `http://<IP_СЕРВЕРА>:8000/`
+
+Быстрая проверка установки:
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\smoke_test.ps1
+```
+Ожидаемый результат: `[smoke] SUCCESS`.
 
 ## Цель MVP
 - воспроизводить сценарии по шагам времени;

@@ -16,6 +16,7 @@ from core.detectors_engine import (
     DetectorsState,
     init_detectors_engine,
 )
+from core.detectors.types import DetectorsConfig
 from core.sim_types import ScenarioStep, SimulationConfig, TimelineStep
 from exceptions.exceptions_engine import (
     build_exception_context,
